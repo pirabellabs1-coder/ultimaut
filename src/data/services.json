@@ -1,0 +1,382 @@
+[
+  {
+    "slug": "decalaminage-hydrogene",
+    "nom": "Décalaminage hydrogène",
+    "titreCourt": "Décalaminage hydrogène",
+    "local": true,
+    "couleurCarte": "blanc",
+    "icone": "hydrogen",
+    "prixIndicatif": "Dès 80 €",
+    "accroche": "Redonnez du souffle à votre moteur et éliminez la calamine, sans aucun démontage.",
+    "intro": "Le décalaminage à l'hydrogène est une opération d'entretien moteur qui élimine la calamine accumulée dans la chambre de combustion, sur les soupapes, les injecteurs, la vanne EGR et le turbo — sans démontage et sans produit chimique agressif. Spécialiste de cette technique à Cholet, Ultimauto redonne souplesse, agrément et propreté à votre moteur en moins d'une heure.",
+    "description": "Au fil des kilomètres, la combustion dépose une couche de calamine (résidus de carbone) sur les pièces internes du moteur. Ce phénomène, particulièrement marqué sur les véhicules diesel et les trajets courts ou urbains, étouffe progressivement la mécanique : les soupapes ferment mal, les injecteurs se calaminent, la vanne EGR se grippe et le turbo s'encrasse. Les conséquences sont concrètes : reprises molles, consommation en hausse, fumées à l'échappement, ralenti instable et, parfois, voyant moteur allumé. Le décalaminage à l'hydrogène apporte une réponse propre et non invasive à cet encrassement. À l'aide d'une station professionnelle, nous produisons de l'hydrogène par électrolyse de l'eau déminéralisée, puis nous l'injectons dans le circuit d'admission, moteur tournant. L'hydrogène améliore la qualité de la combustion et aide à décoller puis à brûler une partie des dépôts carbonés, qui sont ensuite évacués par l'échappement. En 30 à 60 minutes selon la cylindrée, votre moteur retrouve un fonctionnement plus souple et des émissions réduites. C'est une intervention sans démontage, sans solvant versé dans le moteur, que nous recommandons aussi bien en entretien préventif régulier qu'en traitement curatif sur un moteur déjà encrassé, notamment avant un contrôle technique.",
+    "pourquoi": "Beaucoup d'automobilistes pensent qu'un moteur qui « manque de pêche » est condamné à de coûteuses réparations. Dans bien des cas, l'encrassement par la calamine est en cause — et il est réversible. Le décalaminage hydrogène agit comme une cure de propreté : il prolonge la durée de vie des organes sensibles (turbo, EGR, FAP), limite la surconsommation et participe à réduire les émissions polluantes. C'est une démarche économique et écologique, qui entretient votre véhicule plutôt que de remplacer des pièces.",
+    "methode": [
+      { "titre": "Production d'hydrogène par électrolyse", "texte": "Notre station décompose l'eau déminéralisée en hydrogène et oxygène. Aucun produit chimique n'est introduit dans le moteur : seul un gaz propre est injecté dans l'admission." },
+      { "titre": "Injection dans l'admission, moteur tournant", "texte": "L'hydrogène est aspiré par le moteur en fonctionnement. Il élève la température et la qualité de combustion, ce qui décolle progressivement la calamine des soupapes, de la chambre et des injecteurs." },
+      { "titre": "Combustion et évacuation des résidus", "texte": "Les dépôts décollés sont brûlés puis évacués naturellement par la ligne d'échappement. À la fin du cycle, le ralenti se stabilise et les fumées diminuent visiblement." }
+    ],
+    "benefices": [
+      "Moteur plus souple, plus silencieux et reprises retrouvées",
+      "Réduction de la consommation de carburant et des fumées",
+      "Entretien préventif du turbo, de la vanne EGR et du FAP",
+      "Aucun démontage, aucun produit chimique agressif dans le moteur",
+      "Intervention rapide : 30 à 60 minutes"
+    ],
+    "symptomes": [
+      { "titre": "Perte de puissance et reprises molles", "texte": "La calamine sur les soupapes et les injecteurs dégrade le remplissage et la combustion : le moteur répond moins bien, surtout à bas régime." },
+      { "titre": "Surconsommation de carburant", "texte": "Un moteur encrassé brûle moins efficacement le carburant ; la consommation grimpe sans changement de votre conduite." },
+      { "titre": "Fumées noires ou grises à l'échappement", "texte": "Les dépôts et une combustion incomplète se traduisent par des fumées anormales, signe d'un moteur qui respire mal." },
+      { "titre": "Ralenti instable et à-coups", "texte": "Un encrassement des soupapes et de la vanne EGR provoque un ralenti irrégulier, des broutements et des à-coups en conduite." },
+      { "titre": "Voyant moteur ou anti-pollution allumé", "texte": "L'encrassement de l'EGR ou du circuit d'admission peut déclencher des codes défaut et l'allumage d'un voyant au tableau de bord." }
+    ],
+    "etapes": [
+      { "titre": "Échange et diagnostic", "texte": "Nous faisons le point sur l'historique du véhicule, votre usage et les symptômes, puis nous lisons les éventuels codes défaut." },
+      { "titre": "Branchement de la station hydrogène", "texte": "La station professionnelle est raccordée au circuit d'admission, sans aucun démontage du moteur." },
+      { "titre": "Injection d'hydrogène (30 à 60 min)", "texte": "L'hydrogène est injecté moteur tournant pendant la durée adaptée à la cylindrée et au niveau d'encrassement." },
+      { "titre": "Contrôle du ralenti et des fumées", "texte": "Nous vérifions la stabilité du ralenti, le comportement moteur et la diminution des fumées." },
+      { "titre": "Conseils personnalisés", "texte": "Nous vous recommandons une fréquence d'entretien adaptée à votre usage et, si besoin, des prestations complémentaires." }
+    ],
+    "casUsage": [
+      "Véhicules diesel à dominante urbaine ou petits trajets",
+      "Voitures essence qui ont perdu en agrément",
+      "Avant un contrôle technique (réduction des fumées)",
+      "Entretien préventif tous les 15 000 à 30 000 km",
+      "Utilitaires et flottes à fort kilométrage"
+    ],
+    "faqLocale": [
+      { "q": "À quelle fréquence faire un décalaminage ?", "r": "Pour un usage majoritairement urbain ou de petits trajets, un décalaminage tous les 15 000 à 30 000 km constitue un bon rythme d'entretien préventif. Sur un véhicule déjà encrassé, il agit comme une opération curative ponctuelle. Nous vous conseillons selon votre kilométrage et votre type de trajets." },
+      { "q": "Le décalaminage hydrogène est-il sans risque pour le moteur ?", "r": "Oui. La méthode n'implique aucun démontage ni produit chimique versé dans le moteur : on injecte uniquement de l'hydrogène dans l'admission, moteur tournant. C'est une opération douce et maîtrisée, réalisée avec une station professionnelle et un protocole adapté à chaque motorisation." },
+      { "q": "Combien de temps dure l'intervention ?", "r": "Comptez en général 30 à 60 minutes selon la cylindrée et le niveau d'encrassement. Vous pouvez patienter sur place ou convenir d'un créneau adapté à votre emploi du temps." },
+      { "q": "Le décalaminage remplace-t-il un nettoyage FAP ?", "r": "Non, ce sont deux opérations complémentaires. Le décalaminage entretient l'ensemble du circuit (soupapes, EGR, turbo) ; le nettoyage FAP cible spécifiquement un filtre à particules colmaté. Après diagnostic, nous vous orientons vers la solution adaptée." },
+      { "q": "Vais-je vraiment sentir la différence ?", "r": "Sur un moteur encrassé, la plupart des conducteurs constatent un ralenti plus stable, des reprises plus franches et une diminution des fumées. Sur un véhicule peu encrassé, le bénéfice est surtout préventif : on entretient les organes sensibles avant qu'ils ne posent problème." },
+      { "q": "Puis-je rouler normalement juste après ?", "r": "Oui, vous repartez immédiatement avec votre véhicule. Nous conseillons simplement une conduite un peu dynamique sur les kilomètres suivants pour favoriser l'évacuation des derniers résidus." }
+    ]
+  },
+  {
+    "slug": "nettoyage-fap",
+    "nom": "Nettoyage du filtre à particules (FAP)",
+    "titreCourt": "Nettoyage FAP",
+    "local": true,
+    "couleurCarte": "vert",
+    "icone": "filter",
+    "prixIndicatif": "Dès 250 €",
+    "accroche": "Un FAP colmaté ? On le nettoie en profondeur, pour une fraction du prix d'un remplacement.",
+    "intro": "Le nettoyage du filtre à particules (FAP) restaure la capacité de filtration et de régénération d'un filtre colmaté, sans passer par un remplacement souvent hors de prix. Chez Ultimauto, nous réalisons un nettoyage chimique en profondeur, suivi d'un diagnostic électronique et de l'effacement des défauts — décalaminage hydrogène offert avec chaque formule.",
+    "description": "Le filtre à particules retient les suies issues de la combustion du diesel avant qu'elles ne soient rejetées dans l'atmosphère. En conditions idéales, il se régénère seul en roulant : à haute température, les particules accumulées sont brûlées. Mais sur les trajets courts, en ville ou à faible vitesse, ces régénérations échouent souvent. Le FAP se charge alors en suies puis en cendres, la contre-pression augmente, le calculateur déclenche un mode dégradé et le voyant s'allume. Le réflexe d'un remplacement neuf coûte fréquemment plusieurs centaines à plusieurs milliers d'euros. Le nettoyage FAP est une alternative bien plus économique et écologique. Nous déposons le filtre, puis nous procédons à un nettoyage chimique en profondeur pour dissoudre et évacuer les suies, les cendres et les résidus incrustés dans les canaux en céramique, sans détériorer la structure du filtre. Après rinçage, nous contrôlons la contre-pression et le débit, nous reposons le filtre, puis nous effaçons les défauts liés à l'encrassement et réalisons un essai. Une fois traité, le FAP retrouve sa capacité de filtration et de régénération d'origine. C'est la solution idéale pour prolonger la vie de votre véhicule diesel sans exploser votre budget — et, chez Ultimauto, chaque formule de nettoyage FAP s'accompagne d'un décalaminage hydrogène offert pour repartir sur des bases saines.",
+    "pourquoi": "Remplacer un FAP coûte cher, parfois plus que la valeur d'usage du véhicule. Pourtant, tant que la céramique n'est ni fondue ni fissurée, le filtre peut presque toujours être nettoyé et retrouver ses performances. Choisir le nettoyage, c'est faire un choix économique (jusqu'à cinq fois moins cher qu'un FAP neuf), écologique (on conserve la pièce d'origine) et durable, à condition d'identifier et de corriger la cause de l'encrassement.",
+    "methode": [
+      { "titre": "Dépose et inspection du filtre", "texte": "Le FAP est déposé puis inspecté. Nous vérifions que la céramique n'est ni fondue ni fissurée — condition pour un nettoyage efficace et durable." },
+      { "titre": "Nettoyage chimique en profondeur", "texte": "Un traitement chimique dissout les suies et les cendres incrustées dans les milliers de canaux du filtre, là où un simple additif ne suffit plus." },
+      { "titre": "Rinçage, contrôle et effacement des défauts", "texte": "Après rinçage, nous mesurons la contre-pression, reposons le filtre, effaçons les codes défaut et réalisons un essai routier de validation." }
+    ],
+    "benefices": [
+      "Jusqu'à 5 fois moins cher qu'un FAP neuf",
+      "Restitution de la capacité de filtration et de régénération",
+      "Fin du mode dégradé et des régénérations à répétition",
+      "Solution écologique : on conserve la pièce d'origine",
+      "Décalaminage hydrogène offert avec chaque formule"
+    ],
+    "symptomes": [
+      { "titre": "Voyant FAP ou anti-pollution allumé", "texte": "Le calculateur détecte un filtre trop chargé et prévient le conducteur par un voyant dédié au tableau de bord." },
+      { "titre": "Passage en mode dégradé", "texte": "Pour protéger le moteur, l'électronique bride la puissance : le véhicule devient mou et la vitesse est parfois limitée." },
+      { "titre": "Régénérations très fréquentes ou impossibles", "texte": "Le véhicule tente sans cesse de régénérer, ou n'y parvient plus, notamment sur les trajets courts et urbains." },
+      { "titre": "Surconsommation et odeur marquée", "texte": "Les régénérations à répétition et l'encrassement augmentent la consommation et provoquent une odeur d'échappement caractéristique." },
+      { "titre": "Perte de puissance et fumées", "texte": "Un FAP colmaté gêne l'évacuation des gaz, ce qui se traduit par une perte de puissance et des fumées plus importantes." }
+    ],
+    "etapes": [
+      { "titre": "Diagnostic électronique", "texte": "Nous lisons les défauts, vérifions la contre-pression et confirmons que le FAP est bien à l'origine du problème." },
+      { "titre": "Dépose du filtre à particules", "texte": "Le FAP est démonté avec soin pour permettre un nettoyage complet, canal par canal." },
+      { "titre": "Nettoyage chimique en profondeur", "texte": "Suies et cendres sont dissoutes et évacuées, sans agresser la structure céramique du filtre." },
+      { "titre": "Contrôle de la contre-pression", "texte": "Nous vérifions le débit et la contre-pression pour valider l'efficacité du nettoyage." },
+      { "titre": "Repose, effacement des défauts et essai", "texte": "Le filtre est reposé, les codes défaut effacés, et un essai routier confirme le bon fonctionnement." }
+    ],
+    "casUsage": [
+      "Véhicules diesel à usage urbain ou petits trajets",
+      "Voyant FAP allumé ou mode dégradé déclenché",
+      "Régénérations à répétition qui n'aboutissent pas",
+      "Alternative économique au remplacement du FAP",
+      "Avant une revente, pour repartir sur un système sain"
+    ],
+    "faqLocale": [
+      { "q": "Nettoyage ou remplacement du FAP : que choisir ?", "r": "Tant que la structure du filtre n'est pas fondue ou fissurée, le nettoyage est presque toujours possible et bien plus économique qu'un FAP neuf. Nous vérifions l'état du filtre avant toute intervention et vous conseillons en toute transparence — sans nettoyage facturé si le filtre est irrécupérable." },
+      { "q": "Combien de temps faut-il pour nettoyer un FAP ?", "r": "Selon le modèle et l'accessibilité de la pièce, l'opération se réalise généralement dans la journée. Nous vous communiquons un délai précis lors de la prise de rendez-vous, et organisons l'intervention pour limiter votre immobilisation." },
+      { "q": "Pourquoi mon FAP se colmate-t-il aussi vite ?", "r": "Les trajets courts et la conduite en ville empêchent le filtre d'atteindre la température nécessaire à sa régénération. Un EGR ou un turbo encrassé, ou un additif manquant, peuvent aussi être en cause. Nous identifions l'origine du problème pour éviter une récidive rapide." },
+      { "q": "Le décalaminage est-il vraiment offert ?", "r": "Oui : chaque formule de nettoyage FAP chez Ultimauto inclut un décalaminage hydrogène offert. Cela permet de nettoyer l'ensemble du circuit et de repartir sur des bases saines, pour un résultat plus durable." },
+      { "q": "Le nettoyage FAP est-il durable ?", "r": "Oui, un FAP correctement nettoyé retrouve ses performances d'origine. Pour préserver le résultat, nous vous conseillons sur votre usage et, si besoin, sur un entretien complémentaire. Rouler régulièrement sur route ou autoroute aide aussi le filtre à se régénérer." },
+      { "q": "Mon véhicule est en mode dégradé, est-ce grave ?", "r": "Le mode dégradé est une protection : il limite la puissance pour éviter d'endommager le moteur. Ce n'est pas une fatalité, mais il ne faut pas l'ignorer. Un nettoyage FAP avec effacement des défauts rétablit le fonctionnement normal dans la grande majorité des cas." }
+    ]
+  },
+  {
+    "slug": "reprogrammation-moteur",
+    "nom": "Reprogrammation moteur",
+    "titreCourt": "Reprogrammation moteur",
+    "local": true,
+    "couleurCarte": "bleu",
+    "icone": "gauge",
+    "prixIndicatif": "Dès 350 €",
+    "accroche": "Plus de couple, plus d'agrément, une consommation maîtrisée : une cartographie sur mesure.",
+    "intro": "La reprogrammation moteur (ou cartographie) optimise les paramètres du calculateur pour exploiter le potentiel réel de votre motorisation. En Stage 1, on gagne en puissance et surtout en couple, là où cela se ressent le plus : à bas et moyen régime. Ultimauto travaille à partir de la cartographie d'origine, l'adapte à votre moteur, puis valide le résultat — Stage 1 à 350 €.",
+    "description": "Les constructeurs bridicent volontairement leurs moteurs pour des raisons de gammes commerciales, de normes et de marges de sécurité. Deux véhicules au moteur identique peuvent ainsi être vendus avec des puissances différentes. La reprogrammation moteur consiste à modifier les paramètres de gestion du calculateur (ECU) — pression de suralimentation, débit d'injection, avance — pour libérer une partie de ce potentiel, dans le respect de la fiabilité de la mécanique. Une cartographie Stage 1 bien réalisée apporte un gain de puissance et, surtout, un gain de couple disponible plus tôt dans les tours. Concrètement, le véhicule devient plus souple, les reprises sont plus franches, les dépassements plus sereins et, sur autoroute à allure stabilisée, la consommation est souvent réduite grâce au surplus de couple. Chez Ultimauto, nous commençons par un diagnostic et une vérification de l'état mécanique, car on ne reprogramme pas un moteur fatigué. Nous lisons ensuite la cartographie d'origine, que nous conservons précieusement, puis nous développons une cartographie adaptée à votre moteur avant de l'écrire et de contrôler le comportement du véhicule. Nous proposons également l'optimisation de fonctions annexes : conversion à l'éthanol E85, gestion des problèmes de FAP, d'EGR ou d'AdBlue, dans un cadre d'utilisation que nous vous expliquons en toute transparence.",
+    "pourquoi": "Une reprogrammation, ce n'est pas « pousser » un moteur au-delà du raisonnable : c'est exploiter intelligemment une marge laissée par le constructeur. Le bénéfice principal est l'agrément au quotidien — un moteur qui répond, qui tracte, qui double sans forcer. Bien menée, sur une mécanique en bon état, une cartographie Stage 1 reste dans les marges de fiabilité et peut même réduire la consommation à conduite équivalente. Et parce que nous conservons la cartographie d'origine, le retour en arrière est toujours possible.",
+    "methode": [
+      { "titre": "Diagnostic et état mécanique", "texte": "Avant toute chose, nous vérifions que le moteur est en bon état. Une reprogrammation se fait sur une base saine, jamais sur une mécanique fatiguée." },
+      { "titre": "Lecture et développement de la cartographie", "texte": "Nous lisons la cartographie d'origine (sauvegardée), puis nous l'adaptons spécifiquement à votre moteur plutôt que d'appliquer un fichier générique." },
+      { "titre": "Écriture, contrôle et essai", "texte": "La nouvelle cartographie est écrite dans le calculateur, puis nous contrôlons les paramètres et réalisons un essai routier avec compte rendu." }
+    ],
+    "benefices": [
+      "Gain de puissance et surtout de couple (chevaux et Nm)",
+      "Reprises plus franches, conduite plus agréable",
+      "Consommation souvent réduite à allure stabilisée",
+      "Cartographie adaptée spécifiquement à votre moteur",
+      "Cartographie d'origine conservée : retour arrière possible"
+    ],
+    "symptomes": [
+      { "titre": "Manque de couple à bas régime", "texte": "Le moteur semble creux tant qu'il n'est pas dans les tours ; une cartographie rend le couple disponible plus tôt." },
+      { "titre": "Reprises et dépassements laborieux", "texte": "Charger le véhicule, tracter ou doubler demande de pousser le moteur : le Stage 1 apporte de la marge." },
+      { "titre": "Conduite peu agréable au quotidien", "texte": "Sur les motorisations bridées, on regrette un manque de répondant ; l'optimisation transforme l'agrément." },
+      { "titre": "Envie d'optimiser la consommation", "texte": "À allure stabilisée, plus de couple permet souvent de moins solliciter le moteur et de réduire la consommation." },
+      { "titre": "Projet de conversion E85", "texte": "Pour rouler au bioéthanol en toute sérénité, une reprogrammation adaptée est nécessaire." }
+    ],
+    "etapes": [
+      { "titre": "Diagnostic complet", "texte": "Nous vérifions l'état mécanique et électronique du véhicule et échangeons sur vos objectifs (agrément, conso, E85…)." },
+      { "titre": "Lecture de la cartographie d'origine", "texte": "La cartographie constructeur est lue et sauvegardée, garantissant un retour en arrière possible." },
+      { "titre": "Développement / adaptation", "texte": "Nous adaptons la cartographie à votre moteur précis, sans pousser les organes au-delà du raisonnable." },
+      { "titre": "Écriture et contrôles", "texte": "La nouvelle cartographie est écrite, puis nous contrôlons les paramètres moteur." },
+      { "titre": "Essai routier et compte rendu", "texte": "Un essai valide le comportement et nous vous remettons un compte rendu de l'intervention." }
+    ],
+    "casUsage": [
+      "Recherche d'agrément et de souplesse au quotidien",
+      "Tractage (caravane, remorque) ou véhicule chargé",
+      "Optimisation de la consommation sur longs trajets",
+      "Conversion au bioéthanol E85",
+      "Gestion FAP / EGR / AdBlue (cadre réservé hors route)"
+    ],
+    "legalNote": "Certaines options (gestion FAP, EGR, AdBlue, suppression du start & stop) modifient le comportement anti-pollution du véhicule. Elles sont proposées dans un cadre strictement réservé à un usage non soumis à homologation route (circuit fermé, compétition, export ou véhicule non destiné à la voie publique). Le client demeure responsable du respect de la réglementation. Nous vous conseillons en toute transparence.",
+    "faqLocale": [
+      { "q": "Quels gains de puissance puis-je espérer ?", "r": "Les gains dépendent de la motorisation. En Stage 1, on observe couramment de l'ordre de +20 à +30 % de puissance et de couple sur un turbo diesel ou essence. Notre simulateur en ligne vous donne une estimation indicative pour votre véhicule, confirmée ensuite selon votre motorisation." },
+      { "q": "La reprogrammation est-elle fiable pour le moteur ?", "r": "Une cartographie Stage 1 sérieuse reste dans les marges de fiabilité de la mécanique. Nous vérifions l'état du moteur avant toute intervention et travaillons une cartographie adaptée, sans pousser les organes au-delà du raisonnable. C'est précisément ce sérieux qui distingue une reprogrammation de qualité." },
+      { "q": "Peut-on revenir à la cartographie d'origine ?", "r": "Oui. Nous conservons systématiquement la cartographie d'origine, ce qui permet de remettre le calculateur dans son état initial à tout moment, par exemple avant une revente ou un passage en concession." },
+      { "q": "La consommation augmente-t-elle après une reprogrammation ?", "r": "À conduite équivalente, la consommation est généralement stable, voire réduite à allure stabilisée grâce au surplus de couple. Tout dépend ensuite de la façon dont on exploite les nouvelles performances : la sobriété reste entre vos mains." },
+      { "q": "Combien coûte une reprogrammation Stage 1 ?", "r": "La reprogrammation Stage 1 est à 350 €. Nous proposons aussi la conversion E85 à 450 € et différents packs (AdBlue, EGR, FAP). Pour toute combinaison spécifique, demandez-nous un devis personnalisé et gratuit." },
+      { "q": "La reprogrammation est-elle compatible avec mon véhicule ?", "r": "La grande majorité des motorisations turbo, diesel comme essence, sont compatibles. Lors du diagnostic, nous confirmons la faisabilité pour votre modèle précis et vous présentons les gains réalistes attendus." }
+    ]
+  },
+  {
+    "slug": "suppression-adblue",
+    "nom": "Suppression AdBlue",
+    "titreCourt": "Suppression AdBlue",
+    "local": true,
+    "couleurCarte": "bleu-fonce",
+    "icone": "droplet",
+    "prixIndicatif": "Dès 350 €",
+    "accroche": "Pannes du système SCR à répétition ? Une solution durable pour en finir avec l'AdBlue.",
+    "intro": "L'AdBlue (système SCR) est une source fréquente de pannes coûteuses sur les diesels récents : comptes à rebours, blocage au démarrage, voyants, injecteur ou pompe défaillants. La gestion du problème AdBlue par Ultimauto neutralise durablement ces défauts après diagnostic — une prestation strictement encadrée, réservée à un usage hors voie publique.",
+    "description": "L'AdBlue est une solution à base d'urée injectée dans la ligne d'échappement (système SCR) pour réduire les oxydes d'azote (NOx) des moteurs diesel récents. Sur le papier, le principe est vertueux ; en pratique, le système SCR est devenu l'une des principales sources de pannes coûteuses : injecteur d'AdBlue bouché, pompe ou réservoir défaillant, sonde NOx hors service, cristallisation de l'urée, calculateur SCR capricieux. Le scénario est presque toujours le même : un message d'alerte s'affiche (« démarrage impossible dans X km »), le véhicule passe en mode dégradé, et les devis constructeur grimpent très vite à plusieurs centaines, voire plusieurs milliers d'euros. La gestion du problème AdBlue consiste à reparamétrer la gestion du système SCR pour neutraliser ces défauts et blocages récurrents. Chez Ultimauto, nous réalisons cette opération avec un matériel professionnel, après un diagnostic complet et une étude de faisabilité. Nous vous présentons toujours l'ensemble des options, y compris les réparations conformes, afin que vous décidiez en connaissance de cause. Attention : cette prestation modifie un dispositif anti-pollution. Elle est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export, véhicule non homologué route). Nous vous informons clairement du cadre légal avant toute décision, car la transparence est au cœur de notre métier.",
+    "pourquoi": "Quand le système SCR tombe en panne, l'automobiliste se retrouve souvent pris au piège : véhicule bloqué, devis constructeur disproportionné, immobilisation. Comprendre les options est essentiel. Notre rôle est d'abord de diagnostiquer précisément la panne, puis de vous exposer clairement les solutions — réparation conforme ou gestion du système — avec leurs implications, notamment réglementaires. Vous gardez la décision ; nous apportons l'expertise et la franchise.",
+    "methode": [
+      { "titre": "Diagnostic complet du système SCR", "texte": "Nous lisons les défauts, identifions le composant en cause (injecteur, pompe, sonde NOx, calculateur) et évaluons l'ampleur de la panne." },
+      { "titre": "Information sur le cadre légal", "texte": "Nous vous expliquons clairement le cadre réglementaire et les options possibles, y compris la réparation conforme, avant toute décision." },
+      { "titre": "Reparamétrage et contrôles", "texte": "Si la prestation est retenue dans son cadre autorisé, nous reparamétrons la gestion AdBlue, effaçons les défauts et validons par un essai." }
+    ],
+    "benefices": [
+      "Fin des comptes à rebours et blocages au démarrage",
+      "Plus de pannes coûteuses liées à la pompe ou l'injecteur SCR",
+      "Économie d'AdBlue et d'entretien du système",
+      "Diagnostic complet et solution durable",
+      "Conseil transparent sur le cadre d'utilisation légal"
+    ],
+    "symptomes": [
+      { "titre": "Message « démarrage impossible dans X km »", "texte": "Le compte à rebours du système SCR menace de bloquer le redémarrage du véhicule : la panne devient urgente." },
+      { "titre": "Voyant SCR ou anti-pollution allumé", "texte": "Un voyant dédié signale un défaut du système de réduction des NOx qu'il ne faut pas ignorer." },
+      { "titre": "Pompe, injecteur ou sonde NOx défaillants", "texte": "Ces composants sensibles tombent fréquemment en panne et entraînent des réparations onéreuses chez le constructeur." },
+      { "titre": "Cristallisation de l'AdBlue", "texte": "L'urée cristallise et bouche le circuit, provoquant des défauts à répétition difficiles à résoudre durablement." },
+      { "titre": "Devis constructeur très élevé", "texte": "La réparation d'origine atteint souvent plusieurs centaines à plusieurs milliers d'euros, parfois plus que la valeur du véhicule." }
+    ],
+    "etapes": [
+      { "titre": "Diagnostic et lecture des défauts", "texte": "Nous réalisons un diagnostic complet du système SCR pour identifier précisément l'origine de la panne." },
+      { "titre": "Étude de faisabilité et cadre légal", "texte": "Nous évaluons la faisabilité et vous informons du cadre réglementaire, sans rien vous cacher." },
+      { "titre": "Reparamétrage du système", "texte": "Dans le cadre autorisé, nous reparamétrons la gestion AdBlue / SCR avec un matériel professionnel." },
+      { "titre": "Effacement des défauts et contrôles", "texte": "Les codes défaut sont effacés et nous contrôlons le bon fonctionnement de l'ensemble." },
+      { "titre": "Essai et remise du véhicule", "texte": "Un essai valide l'intervention, et nous vous remettons le véhicule avec un compte rendu clair." }
+    ],
+    "casUsage": [
+      "Système SCR en panne et devis constructeur excessif",
+      "Comptes à rebours et blocages répétés",
+      "Véhicules destinés à l'export ou au circuit fermé",
+      "Engins et véhicules non homologués pour la route",
+      "Recherche d'un avis transparent avant décision"
+    ],
+    "legalNote": "La suppression / gestion AdBlue modifie un système anti-pollution d'origine. En France, elle n'est pas autorisée sur un véhicule circulant sur la voie publique : cette prestation est proposée exclusivement pour un usage sur circuit fermé, en compétition, à l'export ou sur un véhicule non homologué pour la route. Le client demeure responsable du respect de la réglementation en vigueur. Nous vous conseillons en toute transparence avant toute intervention.",
+    "faqLocale": [
+      { "q": "La suppression AdBlue est-elle légale sur route ?", "r": "Non. Modifier un dispositif anti-pollution sur un véhicule circulant sur la voie publique n'est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit, compétition, export, véhicule non homologué). Nous vous informons clairement de ce cadre avant toute décision." },
+      { "q": "Pourquoi le système AdBlue tombe-t-il souvent en panne ?", "r": "Les composants du système SCR (injecteur, pompe, sonde NOx, calculateur) sont sensibles et la cristallisation de l'urée est fréquente. Les réparations d'origine sont coûteuses, ce qui pousse de nombreux automobilistes à chercher des alternatives et à se renseigner sur leurs options." },
+      { "q": "Faut-il un diagnostic avant l'intervention ?", "r": "Oui, systématiquement. Nous réalisons un diagnostic complet du système SCR, étudions la faisabilité et vous informons du cadre légal avant toute décision. Aucun engagement n'est pris sans cette étape." },
+      { "q": "Proposez-vous aussi la réparation classique du système SCR ?", "r": "Nous vous présentons l'ensemble des options possibles, y compris les réparations conformes, afin que vous choisissiez la solution la plus adaptée à votre situation et à l'usage de votre véhicule." },
+      { "q": "Combien coûte la gestion d'un problème AdBlue ?", "r": "La gestion du problème AdBlue est proposée à partir de 350 €. Des packs combinés existent (AdBlue + Stage 1 à 500 €, AdBlue + EGR + FAP à 550 €). Un devis précis vous est remis après diagnostic." },
+      { "q": "Combien de temps le véhicule est-il immobilisé ?", "r": "Après diagnostic, l'intervention se réalise généralement dans la journée. Nous organisons le rendez-vous pour limiter votre immobilisation et vous tenons informé à chaque étape." }
+    ]
+  },
+  {
+    "slug": "destruction-dodeurs",
+    "nom": "Destruction d'odeurs",
+    "titreCourt": "Destruction d'odeurs",
+    "local": false,
+    "couleurCarte": "vert",
+    "icone": "air",
+    "prixIndicatif": "Dès 79 €",
+    "accroche": "Un habitacle sain et frais grâce à un traitement à l'ozone et à la vapeur sèche, 100 % naturel.",
+    "intro": "Tabac, animaux, humidité, transpiration, hydrocarbures… les mauvaises odeurs s'incrustent dans les tissus et le système de ventilation. La destruction d'odeurs Ultimauto associe un traitement à l'ozone et une diffusion de vapeur sèche aux huiles essentielles pour décontaminer et assainir votre habitacle en profondeur, sans aucun produit chimique — dès 79 €.",
+    "description": "L'intérieur de votre véhicule est un espace clos où vous passez de nombreuses heures, et il peut vite devenir un nid à mauvaises odeurs et à contamination microbiologique. Une simple aération ou un désodorisant masquent le problème sans le traiter ; pire, ils peuvent piéger l'humidité et favoriser les moisissures. Notre traitement de destruction d'odeurs repose sur un double procédé naturel et complémentaire. D'abord, l'ozone (O3), généré par un appareil professionnel, est un oxydant naturel qui pénètre chaque recoin de l'habitacle, du coffre et du circuit de ventilation : il neutralise au niveau moléculaire les molécules odorantes, les bactéries, les virus et les champignons en suspension. Ensuite, une diffusion de vapeur sèche infusée d'huiles essentielles s'infiltre dans les sièges et les textiles poreux pour neutraliser les allergènes et apporter une fraîcheur durable, sans humidité résiduelle qui favoriserait les réapparitions. Ce traitement est entièrement naturel : il n'utilise aucun produit ni substance chimique et ne laisse donc ni résidu ni odeur désagréable. Il agit efficacement contre la contamination de l'air et restaure un intérieur sain, décontaminé et frais. C'est la solution idéale après l'achat d'un véhicule d'occasion, en cas d'odeurs tenaces, pour les propriétaires d'animaux, ou simplement pour assainir l'habitacle de toute la famille.",
+    "pourquoi": "Au-delà du confort, un habitacle malodorant signale souvent une contamination microbiologique qui peut gêner les passagers sensibles ou allergiques. Traiter à la source, plutôt que masquer, protège votre santé, votre confort et la valeur de revente de votre véhicule. Notre méthode, sans solvant, est respectueuse de votre voiture comme de l'environnement, et son effet se prolonge plusieurs mois.",
+    "methode": [
+      { "titre": "Traitement à l'ozone", "texte": "Un générateur professionnel diffuse de l'ozone en circuit fermé pendant 30 à 45 minutes. Il neutralise les molécules odorantes, bactéries et virus au cœur de l'habitacle et de la ventilation." },
+      { "titre": "Diffusion de vapeur sèche aux huiles essentielles", "texte": "La vapeur sèche infusée d'huiles essentielles s'infiltre dans les sièges et textiles, neutralise les allergènes et apporte une fraîcheur durable, sans humidité résiduelle." },
+      { "titre": "Contrôle et restitution", "texte": "Après ventilation, l'habitacle est sain et frais. Le traitement complet dure 1 à 2 heures, sans immobilisation prolongée." }
+    ],
+    "benefices": [
+      "Élimination des odeurs à la source, pas un simple masquage",
+      "Traitement 100 % naturel, sans solvant ni résidu chimique",
+      "Action assainissante sur bactéries, virus et allergènes",
+      "Fraîcheur durable et confort retrouvé",
+      "Valorise votre véhicule avant une revente"
+    ],
+    "symptomes": [
+      { "titre": "Odeur de tabac persistante", "texte": "Les résidus de nicotine s'incrustent dans les tissus et la ventilation ; ils résistent à l'aération et aux désodorisants classiques." },
+      { "titre": "Odeurs d'animaux domestiques", "texte": "Poils, urine et squames imprègnent les tapis et les sièges et déclenchent parfois des allergies." },
+      { "titre": "Moisissures et humidité", "texte": "Après un hiver pluvieux, l'humidité renfermée génère des spores et une odeur de moisi tenace." },
+      { "titre": "Transpiration, vomissements, urine", "texte": "Ces accidents du quotidien laissent des odeurs profondes dans les textiles, difficiles à éliminer sans traitement." },
+      { "titre": "Odeurs d'hydrocarbures", "texte": "Des traces d'essence ou de diesel peuvent imprégner l'habitacle et nécessitent un traitement oxydant." }
+    ],
+    "etapes": [
+      { "titre": "Diagnostic et repérage des sources", "texte": "Nous identifions l'origine des odeurs (tabac, animaux, humidité, hydrocarbures) pour adapter le traitement." },
+      { "titre": "Préparation de l'habitacle", "texte": "Nous préparons le véhicule, portes et vitres fermées, pour un traitement en circuit fermé efficace." },
+      { "titre": "Traitement à l'ozone", "texte": "Le générateur diffuse l'ozone qui neutralise odeurs et contaminants au niveau moléculaire." },
+      { "titre": "Vapeur sèche aux huiles essentielles", "texte": "La diffusion parfume et assainit durablement, sans humidité résiduelle." },
+      { "titre": "Ventilation et restitution", "texte": "Après ventilation, vous récupérez un habitacle frais, sain et prêt à l'usage." }
+    ],
+    "casUsage": [
+      "Achat d'un véhicule d'occasion",
+      "Propriétaires d'animaux domestiques",
+      "Arrêt du tabac ou véhicule de fumeur",
+      "Habitacle humide ou moisi après l'hiver",
+      "Préparation à la revente du véhicule"
+    ],
+    "faqLocale": [
+      { "q": "Le traitement est-il vraiment efficace contre les moisissures ?", "r": "Oui. Le traitement à l'ozone combiné à la vapeur sèche élimine la grande majorité des spores et neutralise l'odeur de moisi en pénétrant les tissus et les conduits d'aération. Comme il ne laisse pas d'humidité résiduelle, il prévient aussi les récidives, particulièrement utiles dans notre région humide en hiver." },
+      { "q": "Combien coûte une destruction d'odeurs ?", "r": "Le traitement démarre à 79 € pour une voiture standard et 99 € pour un utilitaire. Un pack « Hygiène Complète » à 149 € associe la destruction d'odeurs au décalaminage hydrogène. Une analyse d'air est disponible en option." },
+      { "q": "Le traitement est-il sans danger pour les enfants et les animaux ?", "r": "Oui, il est 100 % naturel et hypoallergénique. L'ozone se décompose en oxygène pur et nos huiles essentielles sont choisies pour leur innocuité. Après traitement, nous ventilons l'habitacle ; il est ensuite parfaitement utilisable par toute la famille." },
+      { "q": "Combien de temps dure l'intervention ?", "r": "Comptez 1 à 2 heures selon le volume du véhicule et l'intensité des odeurs. C'est une intervention rapide, sans immobilisation prolongée, idéale à caler dans une matinée ou un après-midi." },
+      { "q": "L'effet est-il durable ?", "r": "Oui, la fraîcheur se maintient généralement plusieurs mois. La durée dépend de l'usage du véhicule et de la source initiale ; en cas d'odeur très installée, un second passage peut être conseillé pour un résultat optimal." },
+      { "q": "Peut-on combiner avec d'autres prestations ?", "r": "Tout à fait. La destruction d'odeurs se combine idéalement avec le pressing des sièges pour un habitacle impeccable, ou avec le décalaminage via notre pack « Hygiène Complète ». Nous vous proposons la combinaison la plus pertinente." }
+    ]
+  },
+  {
+    "slug": "pressing-siege-auto",
+    "nom": "Pressing siège auto",
+    "titreCourt": "Pressing siège auto",
+    "local": false,
+    "couleurCarte": "blanc",
+    "icone": "seat",
+    "prixIndicatif": "Dès 69 €",
+    "accroche": "Sièges, tapis et moquettes nettoyés en profondeur par injection-extraction. Un habitacle comme neuf.",
+    "intro": "Taches, auréoles, salissures incrustées : le pressing auto Ultimauto nettoie en profondeur sièges, tapis et moquettes par injection-extraction. La méthode décolle puis aspire les saletés au cœur des fibres, pour un habitacle visiblement plus net, plus sain et plus agréable — dès 69 €.",
+    "description": "Avec le temps, les textiles d'un habitacle accumulent poussières, taches, transpiration et salissures qui ternissent l'intérieur et retiennent les odeurs. Un simple passage d'aspirateur ne suffit plus : il faut atteindre le cœur des fibres. Le pressing siège auto repose sur la technique d'injection-extraction. Une solution nettoyante est injectée sous pression dans le textile pour décoller les salissures incrustées, puis immédiatement ré-aspirée avec l'eau sale : les taches, les auréoles et les résidus sont ainsi extraits plutôt que repoussés en profondeur. Nous traitons les sièges, les appuie-têtes, les tapis, les moquettes et le coffre, en adaptant le dosage et la méthode à la nature des textiles. Le résultat est immédiat et visible : des assises ravivées, des couleurs plus nettes, un habitacle plus sain. C'est la prestation idéale avant une revente, après un accident du quotidien (boisson renversée, salissures d'enfants ou d'animaux), ou simplement pour redonner une seconde jeunesse à l'intérieur de votre véhicule. Le pressing se combine parfaitement avec notre destruction d'odeurs pour traiter à la fois la propreté visible et l'air de l'habitacle.",
+    "pourquoi": "L'habitacle est la partie de la voiture avec laquelle vous êtes en contact permanent. Des textiles propres, ce n'est pas qu'une question d'esthétique : c'est aussi un enjeu d'hygiène et de confort, surtout en présence d'enfants ou d'allergies. Un intérieur soigné valorise par ailleurs nettement votre véhicule au moment de la revente, pour un investissement modeste.",
+    "methode": [
+      { "titre": "Aspiration et prétraitement", "texte": "Nous aspirons l'habitacle puis appliquons un prétraitement sur les taches tenaces pour préparer l'extraction." },
+      { "titre": "Injection-extraction", "texte": "Une solution nettoyante est injectée dans les fibres puis immédiatement ré-aspirée avec les salissures : les taches sont extraites, pas repoussées." },
+      { "titre": "Séchage et finitions", "texte": "Le procédé limite l'humidité résiduelle. Nous contrôlons le résultat et soignons les finitions pour un habitacle prêt à l'emploi." }
+    ],
+    "benefices": [
+      "Nettoyage au cœur des fibres, pas en surface",
+      "Taches, auréoles et salissures extraites",
+      "Habitacle plus sain et plus agréable",
+      "Idéal avant une revente pour valoriser le véhicule",
+      "Se combine avec la destruction d'odeurs"
+    ],
+    "symptomes": [
+      { "titre": "Taches et auréoles sur les sièges", "texte": "Boissons renversées, nourriture, traces diverses marquent les tissus et résistent au nettoyage classique." },
+      { "titre": "Textiles ternis et grisâtres", "texte": "La poussière et la transpiration accumulées ternissent les assises et les moquettes au fil des années." },
+      { "titre": "Odeurs retenues par les tissus", "texte": "Les fibres encrassées piègent les odeurs ; un nettoyage en profondeur est nécessaire pour les éliminer." },
+      { "titre": "Salissures d'enfants ou d'animaux", "texte": "Miettes, poils et traces s'incrustent dans les sièges et les tapis et demandent une extraction en profondeur." },
+      { "titre": "Préparation à la revente", "texte": "Un intérieur sale décote le véhicule ; un pressing ravive l'habitacle et rassure l'acheteur." }
+    ],
+    "etapes": [
+      { "titre": "État des lieux", "texte": "Nous évaluons la nature des textiles et des taches pour adapter la méthode et le dosage." },
+      { "titre": "Aspiration complète", "texte": "Sièges, tapis, moquettes et coffre sont soigneusement aspirés avant traitement." },
+      { "titre": "Prétraitement des taches", "texte": "Les taches tenaces reçoivent un prétraitement ciblé pour faciliter l'extraction." },
+      { "titre": "Injection-extraction", "texte": "Le textile est nettoyé au cœur des fibres, les salissures étant ré-aspirées avec l'eau sale." },
+      { "titre": "Contrôle et séchage", "texte": "Nous contrôlons le résultat et limitons l'humidité résiduelle pour une remise en service rapide." }
+    ],
+    "casUsage": [
+      "Avant la revente d'un véhicule",
+      "Après une tache ou un accident du quotidien",
+      "Habitacle de famille (enfants, animaux)",
+      "Véhicules d'occasion à rafraîchir",
+      "Entretien complet en complément d'une destruction d'odeurs"
+    ],
+    "faqLocale": [
+      { "q": "Combien coûte un pressing de sièges auto ?", "r": "Le pressing démarre à 69 € pour les sièges avant. Un pack « Hygiène Intégrale » à 139 € comprend l'extraction des sièges, des tapis et des moquettes. L'extension aux appuie-têtes est disponible en option. Un devis précis vous est remis selon l'état de l'habitacle." },
+      { "q": "Combien de temps faut-il pour que les sièges sèchent ?", "r": "L'injection-extraction limite fortement l'humidité résiduelle : les textiles sont généralement secs en quelques heures. Nous vous conseillons de laisser le véhicule aéré après l'intervention pour accélérer le séchage." },
+      { "q": "Toutes les taches partent-elles ?", "r": "La grande majorité des taches courantes (boissons, nourriture, salissures) s'éliminent très bien. Certaines taches anciennes ou de nature particulière peuvent laisser une trace résiduelle ; nous vous le disons honnêtement après l'état des lieux." },
+      { "q": "Le pressing convient-il au cuir ?", "r": "L'injection-extraction concerne les textiles. Pour les sièges en cuir, un entretien spécifique (nettoyage et nourrissage adaptés) est recommandé : indiquez-nous la nature de vos sièges et nous adaptons la prestation." },
+      { "q": "Peut-on combiner pressing et destruction d'odeurs ?", "r": "C'est même recommandé : le pressing traite la propreté visible des textiles tandis que la destruction d'odeurs assainit l'air et les zones inaccessibles. Ensemble, ils offrent un habitacle réellement comme neuf." },
+      { "q": "Faut-il un rendez-vous ?", "r": "Oui, nous travaillons sur rendez-vous afin de consacrer le temps nécessaire à votre véhicule. Contactez-nous par téléphone ou WhatsApp pour convenir d'un créneau adapté." }
+    ]
+  },
+  {
+    "slug": "optique-de-phare",
+    "nom": "Rénovation d'optique de phare",
+    "titreCourt": "Optique de phare",
+    "local": false,
+    "couleurCarte": "bleu",
+    "icone": "headlight",
+    "prixIndicatif": "Dès 79 € / paire",
+    "accroche": "Des phares jaunis ou opaques ? On leur redonne transparence et éclat — sécurité et esthétique retrouvées.",
+    "intro": "Avec le temps, les optiques de phares en polycarbonate jaunissent et s'opacifient sous l'effet des UV. Résultat : un éclairage affaibli, un véhicule vieilli et un risque de refus au contrôle technique. La rénovation d'optique Ultimauto redonne transparence et éclat à vos phares par ponçage, polissage et protection anti-UV — dès 79 € la paire.",
+    "description": "Les blocs optiques modernes sont en polycarbonate, un plastique léger et résistant mais sensible aux ultraviolets. Au fil des années, la couche de protection d'origine se dégrade : les phares jaunissent, se ternissent et deviennent opaques. Ce n'est pas qu'une question d'esthétique. Un phare opacifié diffuse mal la lumière : l'éclairage de nuit est réduit, la sécurité diminue, et une opacité importante peut entraîner un refus au contrôle technique. Remplacer un bloc optique coûte cher — souvent plusieurs centaines d'euros la pièce, sans compter la main-d'œuvre. La rénovation d'optique est une alternative économique et efficace. Nous procédons par étapes : protection des carrosseries environnantes, ponçage progressif pour retirer la couche jaunie et oxydée, puis polissage pour retrouver la transparence du plastique. Enfin, nous appliquons une protection anti-UV qui prolonge le résultat dans le temps, contrairement à un simple polissage qui rejaunit rapidement. En une intervention, vos phares retrouvent leur clarté, votre éclairage gagne en efficacité et votre véhicule paraît nettement plus soigné. C'est un soin idéal avant une revente, avant un contrôle technique, ou tout simplement pour rouler en sécurité.",
+    "pourquoi": "Des phares clairs, c'est d'abord une question de sécurité : ils conditionnent votre visibilité de nuit et la distance à laquelle vous voyez et êtes vu. C'est aussi un enjeu réglementaire — une opacité trop importante est un motif de contre-visite — et esthétique, car des optiques jaunies vieillissent immédiatement un véhicule. La rénovation coûte une fraction du prix d'un remplacement et se réalise rapidement.",
+    "methode": [
+      { "titre": "Protection et préparation", "texte": "Nous protégeons les carrosseries et joints autour des phares, puis nous nettoyons et dégraissons les optiques." },
+      { "titre": "Ponçage progressif", "texte": "Un ponçage par abrasifs de grain décroissant retire la couche jaunie et oxydée du polycarbonate sans le déformer." },
+      { "titre": "Polissage et protection anti-UV", "texte": "Le polissage redonne la transparence, puis une protection anti-UV est appliquée pour faire durer le résultat et éviter un rejaunissement rapide." }
+    ],
+    "benefices": [
+      "Éclairage plus efficace et conduite de nuit plus sûre",
+      "Évite un refus au contrôle technique pour opacité",
+      "Bien moins cher qu'un remplacement de bloc optique",
+      "Protection anti-UV : résultat durable",
+      "Véhicule visiblement rajeuni et valorisé"
+    ],
+    "symptomes": [
+      { "titre": "Phares jaunis ou laiteux", "texte": "Le polycarbonate vire au jaune et devient laiteux sous l'effet des UV, donnant un aspect vieilli au véhicule." },
+      { "titre": "Éclairage affaibli la nuit", "texte": "Une optique opaque diffuse mal la lumière : vous voyez moins loin et votre sécurité de nuit diminue." },
+      { "titre": "Risque de refus au contrôle technique", "texte": "Une opacité importante des feux est un motif de contre-visite ; mieux vaut anticiper." },
+      { "titre": "Micro-rayures en surface", "texte": "Les projections et le lavage finissent par rayer la surface, accentuant la perte de transparence." },
+      { "titre": "Véhicule qui paraît vieilli", "texte": "Des phares ternes vieillissent l'avant du véhicule et le décotent à la revente." }
+    ],
+    "etapes": [
+      { "titre": "Diagnostic des optiques", "texte": "Nous évaluons l'état du polycarbonate et le niveau d'opacité pour confirmer la faisabilité de la rénovation." },
+      { "titre": "Protection des contours", "texte": "Carrosserie et joints sont protégés pour intervenir sans risque sur les phares." },
+      { "titre": "Ponçage progressif", "texte": "Nous retirons la couche jaunie par ponçage à grains décroissants." },
+      { "titre": "Polissage", "texte": "Le polissage rétablit la transparence et l'éclat d'origine du plastique." },
+      { "titre": "Protection anti-UV", "texte": "Une protection est appliquée pour prolonger le résultat et limiter le rejaunissement." }
+    ],
+    "casUsage": [
+      "Phares jaunis ou opaques par les UV",
+      "Avant un contrôle technique (éviter la contre-visite)",
+      "Conduite de nuit régulière",
+      "Préparation à la revente du véhicule",
+      "Alternative au remplacement coûteux d'un bloc optique"
+    ],
+    "faqLocale": [
+      { "q": "Combien coûte une rénovation d'optique de phare ?", "r": "La rénovation démarre à 79 € la paire. Un pack « Sécurité Totale » à 149 € comprend la rénovation des phares et une protection longue durée. La rénovation des antibrouillards est disponible en option. Un devis vous est confirmé selon l'état des optiques." },
+      { "q": "Le résultat est-il durable ?", "r": "Oui, grâce à la protection anti-UV que nous appliquons après le polissage. Un simple polissage sans protection rejaunit rapidement ; notre protocole vise au contraire un résultat qui tient dans le temps. La durée dépend ensuite de l'exposition du véhicule." },
+      { "q": "Des phares jaunis peuvent-ils faire refuser le contrôle technique ?", "r": "Une opacité importante des feux peut effectivement entraîner une contre-visite, car elle réduit l'efficacité de l'éclairage. Rénover ses optiques avant le passage permet d'éviter ce désagrément et de rouler en sécurité." },
+      { "q": "Combien de temps dure l'intervention ?", "r": "La rénovation d'une paire de phares se réalise généralement en une intervention, sans immobilisation longue. Nous vous communiquons une estimation précise au moment du rendez-vous, selon l'état des optiques." },
+      { "q": "Peut-on rénover plutôt que remplacer ?", "r": "Dans la grande majorité des cas, oui. Tant que le polycarbonate n'est pas fissuré ou trop dégradé, la rénovation redonne transparence et éclat pour une fraction du prix d'un bloc optique neuf. Nous vérifions l'état avant d'intervenir." },
+      { "q": "Faut-il prendre rendez-vous ?", "r": "Oui, la prestation se réalise sur rendez-vous. Contactez-nous par téléphone ou WhatsApp, en joignant si possible une photo de vos phares, pour un premier avis et un créneau adapté." }
+    ]
+  }
+]

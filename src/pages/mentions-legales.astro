@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+import { breadcrumb } from '../lib/jsonld.js';
+const url = new URL('/mentions-legales', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Mentions légales', url }])];
+---
+<Layout title="Mentions légales | Ultimauto" description="Mentions légales du site Ultimauto — éditeur, hébergeur et conditions d'utilisation." jsonLd={jsonLd}>
+  <section class="bg-cloud">
+    <div class="mx-auto max-w-3xl px-6 py-12 md:py-16">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-ink-500"><a href="/" class="hover:text-brand">Accueil</a> <span class="px-1.5">/</span> <span class="text-ink">Mentions légales</span></nav>
+      <h1 class="mt-4 text-4xl font-extrabold md:text-5xl">Mentions légales</h1>
+    </div>
+  </section>
+  <section class="section bg-white">
+    <div class="rte mx-auto max-w-3xl px-6">
+      <h2>Éditeur du site</h2>
+      <p>Le site <strong>{site.url}</strong> est édité par <strong>{site.legalName}</strong>.</p>
+      <ul>
+        <li>Forme juridique : <em>[À compléter]</em></li>
+        <li>Adresse : {site.address.city} ({site.address.postalCode}), {site.address.region}, France</li>
+        <li>Téléphone : {site.phoneDisplay}</li>
+        <li>E-mail : {site.email}</li>
+        <li>SIRET : <em>[À compléter]</em> — RCS / RM : <em>[À compléter]</em></li>
+        <li>N° TVA intracommunautaire : <em>[À compléter]</em></li>
+        <li>Directeur de la publication : <em>[À compléter]</em></li>
+      </ul>
+
+      <h2>Hébergement</h2>
+      <p>Le site est hébergé par <em>[Nom de l'hébergeur — ex. Netlify, Vercel ou OVH]</em>, <em>[adresse de l'hébergeur]</em>.</p>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>L'ensemble des contenus présents sur ce site (textes, logo, photographies, illustrations, mise en page) est la propriété d'Ultimauto ou de leurs auteurs respectifs, sauf mention contraire. Toute reproduction ou représentation, totale ou partielle, sans autorisation écrite préalable, est interdite.</p>
+
+      <h2>Données personnelles</h2>
+      <p>Les informations transmises via les formulaires du site sont traitées conformément à notre <a href="/politique-de-confidentialite">politique de confidentialité</a>. Vous disposez de droits d'accès, de rectification et de suppression de vos données.</p>
+
+      <h2>Responsabilité</h2>
+      <p>Ultimauto s'efforce d'assurer l'exactitude des informations diffusées sur ce site, notamment les tarifs et descriptions de prestations, qui sont donnés à titre indicatif et peuvent évoluer. Un devis personnalisé fait foi. Ultimauto ne saurait être tenue responsable des éventuelles erreurs ou de l'indisponibilité temporaire du site.</p>
+
+      <h2>Liens externes</h2>
+      <p>Le site peut contenir des liens vers des sites tiers. Ultimauto n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+
+      <p class="text-sm text-ink-500">Dernière mise à jour : 2026.</p>
+    </div>
+  </section>
+</Layout>

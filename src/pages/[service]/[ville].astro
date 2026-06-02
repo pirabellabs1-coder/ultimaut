@@ -1,0 +1,303 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import services from '../../data/services.json';
+import villes from '../../data/villes.json';
+import site from '../../data/site.json';
+import tarifs from '../../data/tarifs.json';
+import { ICONS, WA_PATH, SERVICE_PHOTO } from '../../lib/ui.js';
+import EcoValues from '../../components/EcoValues.astro';
+import MobileBand from '../../components/MobileBand.astro';
+import { villeSlug } from '../../lib/slug.js';
+import { combosServiceVille, aUnePage } from '../../lib/pages.js';
+import { communesVoisines } from '../../lib/geo.js';
+import { buildContext, pageVariation } from '../../lib/variations.js';
+import { service as serviceLd, faqPage, breadcrumb } from '../../lib/jsonld.js';
+
+export function getStaticPaths() {
+  return combosServiceVille().map(({ service, ville }) => ({
+    params: { service: service.slug, ville: villeSlug(ville) },
+    props: { service, ville },
+  }));
+}
+
+const { service, ville } = Astro.props;
+const slug = villeSlug(ville);
+const url = new URL(`/${service.slug}/${slug}`, site.url).href;
+const waText = `Bonjour Ultimauto, je souhaite un devis pour : ${service.nom} à ${ville.nom}.`;
+const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(waText)}`;
+
+const ctx = buildContext({ service, ville, villes });
+const v = pageVariation(ctx);
+const cat = tarifs.categories.find((c) => c.service === service.slug);
+
+const voisinesService = communesVoisines(ville, villes, 8)
+  .filter((vv) => aUnePage(vv, service.slug))
+  .slice(0, 5);
+const autresServices = services.filter((s) => s.local && s.slug !== service.slug && aUnePage(ville, s.slug));
+const faqComplete = [...v.faqLocaleVille, ...service.faqLocale];
+
+const jsonLd = [
+  serviceLd({ site, service, url, areaServedName: ville.nom }),
+  faqPage(faqComplete),
+  breadcrumb([
+    { name: 'Accueil', url: site.url },
+    { name: service.nom, url: new URL(`/${service.slug}`, site.url).href },
+    { name: ville.nom, url },
+  ]),
+];
+---
+<Layout title={`${service.titreCourt} à ${ville.nom} (${ville.dept})`} description={v.metaDescription} jsonLd={jsonLd} ogImage={SERVICE_PHOTO[service.slug]}>
+  <!-- Hero (photo réelle + overlay bleu) -->
+  <section class="relative overflow-hidden bg-cover bg-center" style={`background-image: linear-gradient(180deg, rgba(25,106,213,0.80) 0%, rgba(21,101,192,0.92) 100%), url('${SERVICE_PHOTO[service.slug]}');`}>
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
+        <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
+        <a href={`/${service.slug}`} class="hover:text-white">{service.nom}</a> <span class="px-1.5">/</span>
+        <span class="text-white">{ville.nom}</span>
+      </nav>
+      <span class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-sm font-semibold text-white">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[service.slug].map((d) => <path d={d} />)}</svg>
+        {service.titreCourt}
+      </span>
+      <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">{service.nom} à {ville.nom} <span class="text-white/70">({ville.dept})</span></h1>
+      <p class="mt-5 max-w-3xl text-lg text-white/90">{v.intro}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-5 py-2.5 font-semibold text-white transition-colors hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+        <span class="rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white">{service.prixIndicatif}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description + fiche locale -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1.55fr_1fr] lg:items-start">
+      <div class="rte max-w-2xl">
+        <h2 class="text-2xl font-bold md:text-3xl">{service.nom} : en quoi ça consiste ?</h2>
+        <p>{service.description}</p>
+        <p>{service.pourquoi}</p>
+      </div>
+      <aside class="space-y-5 lg:sticky lg:top-28">
+        <div class="rounded-3xl border border-line bg-cloud p-6">
+          <p class="font-display text-lg font-bold">{service.titreCourt} à {ville.nom}</p>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Commune</dt><dd class="text-right font-semibold">{ville.nom} ({ville.dept})</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Secteur</dt><dd class="text-right font-semibold">{ville.zone}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Depuis Cholet</dt><dd class="text-right font-semibold">{ctx.surPlace ? 'Atelier sur place' : `~${ctx.km} km · ${ctx.temps}`}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">À partir de</dt><dd class="text-right font-semibold">{service.prixIndicatif}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Devis</dt><dd class="text-right font-semibold text-accent-700">Gratuit</dd></div>
+          </dl>
+          <a href="/prise-de-rendez-vous" class="btn-primary mt-5 w-full">Demander un devis</a>
+          <a href={`tel:${site.phone}`} class="btn-ghost mt-2 w-full">{site.phoneDisplay}</a>
+        </div>
+        {voisinesService.length > 0 && (
+          <div class="rounded-3xl border border-line p-6">
+            <p class="text-sm font-bold text-ink">{service.titreCourt} à proximité</p>
+            <ul class="mt-3 space-y-2 text-sm">
+              {voisinesService.map((vv) => (
+                <li>
+                  <a href={`/${service.slug}/${villeSlug(vv)}`} class="inline-flex items-center gap-1.5 font-semibold text-brand hover:underline">
+                    {service.titreCourt} à {vv.nom}
+                    <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6" /></svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+
+  <!-- Pourquoi nous à {ville} (#196AD5) -->
+  <section class="section bg-deep text-white">
+    <div class="mx-auto grid max-w-[1180px] gap-8 px-6 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+      <div>
+        <span class="eyebrow text-accent">Pourquoi nous</span>
+        <h2 class="mt-2 text-2xl font-bold text-white md:text-3xl">Ultimauto à {ville.nom} : un choix de confiance</h2>
+      </div>
+      <p class="text-lg leading-relaxed text-white/90">{v.pourquoiLocal}</p>
+    </div>
+  </section>
+
+  <!-- Méthode -->
+  {service.methode && (
+    <section class="section bg-white">
+      <div class="mx-auto max-w-[1180px] px-6">
+        <h2 class="text-2xl font-bold md:text-3xl">Notre méthode pour le {service.titreCourt.toLowerCase()}</h2>
+        <div class="mt-6 grid gap-5 md:grid-cols-3">
+          {service.methode.map((m, i) => (
+            <div class="rounded-2xl border border-line bg-cloud p-6">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-50 font-display text-lg font-extrabold text-brand">{i + 1}</span>
+              <h3 class="mt-4 text-lg font-bold">{m.titre}</h3>
+              <p class="mt-2 text-sm text-ink-700">{m.texte}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Symptômes + bénéfices -->
+  <section class="section bg-cloud">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Quand envisager un {service.titreCourt.toLowerCase()} à {ville.nom} ?</h2>
+        <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+          {service.symptomes.map((s) => (
+            <li class="rounded-2xl border border-line bg-white p-5">
+              <h3 class="font-bold text-ink">{s.titre}</h3>
+              <p class="mt-1.5 text-sm text-ink-700">{s.texte}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Les bénéfices</h2>
+        <ul class="mt-6 space-y-3">
+          {service.benefices.map((b) => (
+            <li class="flex items-start gap-3 rounded-xl border border-line bg-white p-4">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              <span class="text-ink-700">{b}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Étapes + cas/légal -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2 lg:items-start">
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Comment ça se passe</h2>
+        <p class="mt-2 text-ink-700">{v.deroulementIntro}</p>
+        <ol class="mt-6 space-y-5">
+          {service.etapes.map((e, i) => (
+            <li class="flex gap-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand font-display text-sm font-bold text-white">{i + 1}</span>
+              <div><h3 class="font-bold text-ink">{e.titre}</h3><p class="mt-1 text-sm text-ink-700">{e.texte}</p></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div class="space-y-6">
+        <div class="rounded-3xl border border-line bg-cloud p-6">
+          <h3 class="text-lg font-bold">Dans quels cas intervenir ?</h3>
+          <ul class="mt-3 space-y-2">
+            {service.casUsage.map((cas) => (
+              <li class="flex items-start gap-2.5 text-ink-700">
+                <svg viewBox="0 0 24 24" class="mt-1 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                <span>{cas}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        {service.legalNote && (
+          <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+            <p class="font-bold">⚠️ Information importante</p>
+            <p class="mt-1.5">{service.legalNote}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Zone / contexte local -->
+  <section class="section bg-cloud">
+    <div class="mx-auto grid max-w-[1180px] gap-10 px-6 lg:grid-cols-2 lg:items-center">
+      <div>
+        <span class="eyebrow">Zone d'intervention</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">{service.titreCourt} à {ville.nom} et dans les environs</h2>
+        <p class="mt-4 text-ink-700">{v.zoneContext}</p>
+      </div>
+      <div class="rounded-3xl border border-line bg-white p-6">
+        <p class="text-sm font-bold text-ink">Communes voisines desservies</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {ctx.voisines.map((nom) => <span class="rounded-full bg-cloud px-3 py-1.5 text-sm font-medium text-ink-700">{nom}</span>)}
+        </div>
+        <p class="mt-4 text-sm text-ink-500">{ctx.mobilePhrase}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service mobile localisé (photo) -->
+  <MobileBand ville={ville.nom} />
+
+  <!-- Tarifs -->
+  {cat && (
+    <section class="section bg-white">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="text-2xl font-bold md:text-3xl">Tarifs {service.titreCourt.toLowerCase()} à {ville.nom}</h2>
+        <p class="mt-2 text-ink-700">Tarifs TTC à l'atelier de Cholet. En intervention mobile à {ville.nom}, des frais de déplacement peuvent s'appliquer.</p>
+        <div class="mt-6 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+          {cat.formules.map((f) => (
+            <div class="flex items-start justify-between gap-4 p-5">
+              <div>
+                <p class="font-semibold text-ink">{f.nom}</p>
+                {f.desc && <p class="mt-1 text-sm text-ink-700">{f.desc}</p>}
+                {f.cadeau && <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-accent-50 px-2.5 py-1 text-xs font-semibold text-accent-700">🎁 {f.cadeau}</span>}
+              </div>
+              <span class="shrink-0 whitespace-nowrap font-display text-lg font-extrabold text-brand">{f.prix}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Valeurs éco -->
+  <EcoValues />
+
+  <!-- Autres services dans cette ville -->
+  {autresServices.length > 0 && (
+    <section class="section bg-cloud">
+      <div class="mx-auto max-w-[1180px] px-6">
+        <span class="eyebrow">À {ville.nom} également</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">Nos autres prestations à {ville.nom}</h2>
+        <div class="mt-7 grid gap-4 sm:grid-cols-3">
+          {autresServices.map((s) => (
+            <a href={`/${s.slug}/${slug}`} class="group flex items-center gap-4 rounded-2xl border border-line bg-white p-5 transition-colors hover:border-brand-200">
+              <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg></span>
+              <span><span class="block font-semibold">{s.titreCourt}</span><span class="block text-sm text-ink-500">à {ville.nom}</span></span>
+            </a>
+          ))}
+        </div>
+        <a href={`/${service.slug}`} class="btn-ghost mt-6">← Tout savoir sur {service.titreCourt.toLowerCase()}</a>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ locale -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-3xl px-6">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="mt-2 text-2xl font-bold md:text-3xl">{service.titreCourt} à {ville.nom} : vos questions</h2>
+      <div class="mt-8 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+        {faqComplete.map((f) => (
+          <details class="group px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-ink [&::-webkit-details-marker]:hidden">
+              {f.q}
+              <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" /></svg>
+            </summary>
+            <p class="pb-5 text-ink-700">{f.r}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing + CTA -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-3xl px-6 text-center"><p class="text-lg text-ink-700">{v.closing}</p></div>
+  </section>
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">{service.nom} à {ville.nom} : votre devis gratuit</h2>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

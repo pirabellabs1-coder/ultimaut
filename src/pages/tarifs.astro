@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import tarifs from '../data/tarifs.json';
+import site from '../data/site.json';
+import { WA_PATH } from '../lib/ui.js';
+import { breadcrumb } from '../lib/jsonld.js';
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const url = new URL('/tarifs', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Tarifs', url }])];
+
+const intro = [
+  "Chez Ultimauto, la transparence commence par les prix. Tous nos tarifs sont annoncés à l'avance, sans surprise : vous savez exactement ce que vous payez et ce qui est inclus.",
+  "Les prix ci-dessous s'entendent TTC pour une prestation réalisée à notre atelier de Cholet. Pour une intervention à domicile ou sur votre lieu de travail (service mobile), des frais de déplacement peuvent s'appliquer selon la distance — nous vous les indiquons toujours dans le devis, qui reste gratuit et sans engagement.",
+];
+---
+<Layout
+  title="Tarifs Ultimauto Cholet — décalaminage, FAP, reprog"
+  description="Tarifs Ultimauto Cholet : décalaminage dès 80 €, nettoyage FAP dès 250 €, reprogrammation 350 €, AdBlue dès 350 €. Tarifs TTC, devis gratuit."
+  jsonLd={jsonLd}
+>
+  <!-- En-tête (photo) -->
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/hero-1.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
+        <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Tarifs</span>
+      </nav>
+      <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Nos tarifs</h1>
+      <div class="mt-5 max-w-3xl space-y-3 text-white/90">
+        {intro.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-5 py-2.5 font-semibold text-white transition-colors hover:bg-white/10">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+          Devis WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grille tarifaire -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-6 px-6 md:grid-cols-2">
+      {tarifs.categories.map((cat) => (
+        <div class="flex flex-col rounded-3xl border border-line bg-white p-7 shadow-[var(--shadow-soft)]">
+          <div class="flex items-center justify-between gap-3 border-b border-line pb-4">
+            <h2 class="text-xl font-bold">{cat.titre}</h2>
+            {cat.service && <a href={`/${cat.service}`} class="shrink-0 text-sm font-semibold text-brand hover:underline">Détails →</a>}
+          </div>
+          <ul class="mt-4 flex-1 space-y-4">
+            {cat.formules.map((f) => (
+              <li class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="font-semibold text-ink">{f.nom}</p>
+                  {f.desc && <p class="mt-0.5 text-sm text-ink-700">{f.desc}</p>}
+                  {f.cadeau && (
+                    <span class="mt-1.5 inline-flex items-center gap-1.5 rounded-full bg-accent-50 px-2.5 py-1 text-xs font-semibold text-accent-700">🎁 {f.cadeau}</span>
+                  )}
+                </div>
+                <span class="shrink-0 whitespace-nowrap font-display text-lg font-extrabold text-brand">{f.prix}</span>
+              </li>
+            ))}
+          </ul>
+          {cat.note && <p class="mt-4 border-t border-line pt-3 text-xs text-ink-500">{cat.note}</p>}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Infos pratiques -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <h2 class="text-2xl font-bold md:text-3xl">Bon à savoir</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="font-bold">Devis gratuit</h3>
+          <p class="mt-2 text-sm text-ink-700">Chaque intervention démarre par un diagnostic et un devis clair. Vous décidez ensuite, sans engagement ni pression.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="font-bold">Service mobile</h3>
+          <p class="mt-2 text-sm text-ink-700">Nous pouvons intervenir à domicile ou sur votre lieu de travail. Des frais de déplacement, indiqués au devis, s'ajoutent selon la distance depuis Cholet.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="font-bold">Demande personnalisée</h3>
+          <p class="mt-2 text-sm text-ink-700">Une combinaison spécifique (packs, plusieurs prestations) ? Contactez-nous directement pour un tarif sur mesure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Une question sur un tarif ?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Appelez-nous ou écrivez sur WhatsApp : on vous répond rapidement et on établit votre devis gratuit.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={`tel:${site.phone}`} class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">{site.phoneDisplay}</a>
+        <a href="/prise-de-rendez-vous" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </section>
+</Layout>

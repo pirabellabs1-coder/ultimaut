@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+import MapBlock from '../components/MapBlock.astro';
+import { WA_PATH } from '../lib/ui.js';
+import { breadcrumb } from '../lib/jsonld.js';
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const url = new URL('/prise-de-rendez-vous', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Prise de rendez-vous', url }])];
+
+const etapes = [
+  { t: 'Choisissez un créneau', d: 'Sélectionnez le jour et l\'heure qui vous arrangent directement dans le calendrier en ligne.' },
+  { t: 'On confirme', d: 'On vous recontacte pour valider la prestation adaptée à votre véhicule et le tarif (devis gratuit).' },
+  { t: 'Intervention', d: 'À l\'atelier de Cholet ou chez vous via le service mobile, selon votre choix.' },
+];
+---
+<Layout
+  title="Prendre rendez-vous — Ultimauto Cholet | Devis gratuit"
+  description="Réservez en ligne votre décalaminage, nettoyage FAP, reprogrammation ou AdBlue chez Ultimauto à Cholet. Calendrier en ligne, devis gratuit, service mobile."
+  jsonLd={jsonLd}
+  ogImage="/img/photo-2.jpg"
+>
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/photo-2.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Prise de rendez-vous</span></nav>
+      <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Prendre rendez-vous</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Réservez votre créneau en quelques clics dans le calendrier ci-dessous. Besoin d'un conseil avant ? WhatsApp est le plus rapide (photos et vidéos bienvenues).</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-white"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Écrire sur WhatsApp</a>
+        <a href={`tel:${site.phone}`} class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">{site.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendrier Calendly -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[900px] px-6">
+      <div class="text-center">
+        <span class="eyebrow">Réservation en ligne</span>
+        <h2 class="mt-2 text-2xl font-extrabold md:text-3xl">Choisissez votre créneau</h2>
+        <p class="mt-3 text-ink-700">Sélectionnez la date et l'heure qui vous conviennent. Vous recevrez une confirmation immédiate.</p>
+      </div>
+      <div class="mt-8 overflow-hidden rounded-3xl border border-line bg-white shadow-[var(--shadow-soft)]">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/ultimauto" style="min-width:320px;height:700px;"></div>
+      </div>
+      <p class="mt-3 text-center text-sm text-ink-500">Le calendrier ne s'affiche pas ? <a href="https://calendly.com/ultimauto" target="_blank" rel="noopener" class="font-semibold text-brand underline">Ouvrez-le dans un nouvel onglet</a>.</p>
+    </div>
+  </section>
+
+  <!-- Étapes -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Comment ça se passe</span>
+        <h2 class="mt-2 text-2xl font-extrabold md:text-3xl">Simple et rapide</h2>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-3">
+        {etapes.map((e, i) => (
+          <div class="rounded-2xl border border-line bg-white p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-brand font-display text-lg font-extrabold text-white">{i + 1}</span>
+            <h3 class="mt-4 font-bold">{e.t}</h3>
+            <p class="mt-2 text-sm text-ink-700">{e.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Carte -->
+  <MapBlock bg="bg-white" />
+
+  <script is:inline type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</Layout>

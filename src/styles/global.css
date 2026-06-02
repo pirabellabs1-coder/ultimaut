@@ -1,0 +1,183 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/*  Tokens de marque Ultimauto                                         */
+/*  Bleu #1565C0 (principal) · Vert lime #8BC53F (accent)              */
+/*  WhatsApp #25D366 · Texte foncé #1f2a37 · Fonds clairs #f6f9fc      */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-brand-50: #e9f1fb;
+  --color-brand-100: #cfe0f5;
+  --color-brand-200: #a4c5ec;
+  --color-brand-300: #6a9fde;
+  --color-brand: #1565c0;
+  --color-brand-600: #1259ab;
+  --color-brand-700: #0f4c91;
+  --color-brand-800: #0c3c73;
+
+  /* Bleu de fond des sections "sombres" — ne JAMAIS utiliser #1f2a37 en fond. */
+  --color-deep: #196ad5;
+  --color-deep-600: #135bbf;
+
+  --color-accent-50: #f1f8e4;
+  --color-accent-100: #e2f1c8;
+  --color-accent-200: #c9e49a;
+  --color-accent: #8bc53f;
+  --color-accent-600: #74ad2c;
+  --color-accent-700: #5c8a23;
+
+  --color-ink: #1f2a37;
+  --color-ink-700: #374454;
+  --color-ink-500: #5b6775;
+
+  --color-cloud: #f6f9fc;
+  --color-line: #e3e9f1;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-600: #1faa52;
+
+  --font-display: 'Montserrat Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Raleway Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --shadow-soft: 0 10px 30px -12px rgba(14, 27, 42, 0.18);
+  --shadow-card: 0 18px 50px -22px rgba(14, 27, 42, 0.30);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Bases                                                              */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: #ffffff;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  /* État "scrollé" du header (toggle JS dans Base.astro) */
+  [data-header].scrolled {
+    box-shadow: 0 8px 28px -16px rgba(14, 27, 42, 0.35);
+  }
+
+  /* Lien d'évitement accessible */
+  .skip-link {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 100;
+    transform: translateY(-150%);
+    transition: transform 0.2s ease;
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Composants utilitaires                                             */
+/* ------------------------------------------------------------------ */
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-accent,
+  .btn-whatsapp,
+  .btn-outline,
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-all duration-200;
+  }
+  .btn-primary {
+    @apply bg-brand text-white shadow-soft hover:bg-brand-700 hover:-translate-y-0.5;
+  }
+  .btn-accent {
+    @apply bg-accent text-ink hover:bg-accent-600 hover:-translate-y-0.5;
+  }
+  .btn-whatsapp {
+    @apply bg-whatsapp text-white hover:bg-whatsapp-600 hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply border-2 border-brand text-brand bg-transparent hover:bg-brand hover:text-white;
+  }
+  .btn-ghost {
+    @apply border border-line bg-white text-ink hover:border-brand hover:text-brand;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-brand-50 px-3 py-1 text-sm font-semibold text-brand-700;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply inline-block text-sm font-bold uppercase tracking-widest text-accent-700;
+  }
+
+  /* Reveal au scroll (IntersectionObserver) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Contenu rédactionnel (blog, pages légales) */
+  .rte > * + * { margin-top: 1.1rem; }
+  .rte h2 { @apply mt-10 text-2xl md:text-3xl; }
+  .rte h3 { @apply mt-8 text-xl md:text-2xl; }
+  .rte p, .rte li { @apply text-ink-700 leading-relaxed; }
+  .rte ul { @apply list-disc space-y-2 pl-6; }
+  .rte ol { @apply list-decimal space-y-2 pl-6; }
+  .rte a { @apply font-semibold text-brand underline underline-offset-2; }
+  .rte strong { @apply text-ink; }
+  .rte blockquote { @apply border-l-4 border-accent bg-cloud px-5 py-3 italic; }
+}

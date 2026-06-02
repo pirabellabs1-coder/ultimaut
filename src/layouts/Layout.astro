@@ -1,0 +1,255 @@
+---
+import '@fontsource-variable/montserrat/wght.css';
+import '@fontsource-variable/raleway/wght.css';
+import '../styles/global.css';
+import site from '../data/site.json';
+import services from '../data/services.json';
+import { WA_PATH, ICONS, TAGLINE, socialLinks } from '../lib/ui.js';
+import { localBusiness, organization, website } from '../lib/jsonld.js';
+
+const {
+  title,
+  description = site.baseline,
+  jsonLd = [],
+  ogImage = '/img/hero-1.jpg',
+} = Astro.props;
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const principaux = services.filter((s) => s.local);
+const autres = services.filter((s) => !s.local);
+const socials = socialLinks(site);
+
+const navLinks = [
+  { label: 'Prise de RDV', href: '/prise-de-rendez-vous' },
+  { label: 'Tarifs', href: '/tarifs' },
+  { label: 'Simulateur', href: '/simulateur-gain-de-puissance' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href) => (href === '/' ? path === '/' : path === href || path.startsWith(href + '/'));
+
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImageAbs = new URL(ogImage, site.url).href;
+const allJsonLd = [organization(site), website(site), localBusiness(site), ...jsonLd];
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/img/logo-ultimauto.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Ultimauto" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageAbs} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbs} />
+    {allJsonLd.map((obj) => (
+      <script type="application/ld+json" set:html={JSON.stringify(obj)} />
+    ))}
+  </head>
+
+  <body class="bg-white text-ink">
+    <a href="#contenu" class="skip-link rounded-full bg-brand px-4 py-2 font-semibold text-white">Aller au contenu</a>
+
+    <header data-header class="sticky top-0 z-50">
+      <!-- Barre utilitaire (#196AD5) -->
+      <div class="hidden bg-deep text-white/85 lg:block">
+        <div class="mx-auto flex h-10 max-w-[1320px] items-center justify-center gap-5 px-6 text-[13px]">
+          <span class="text-white/70">Besoin d'aide rapide ?</span>
+          <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 font-semibold text-white transition-colors hover:text-accent">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+            WhatsApp
+          </a>
+          <a href={`tel:${site.phone}`} class="inline-flex items-center gap-1.5 font-semibold text-white transition-colors hover:text-accent">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg>
+            {site.phoneDisplay}
+          </a>
+          <span class="h-4 w-px bg-white/25" aria-hidden="true"></span>
+          <div class="flex items-center gap-3">
+            {socials.map((s) => (
+              <a href={s.href} target="_blank" rel="noopener" aria-label={s.name} class="opacity-90 transition-opacity hover:opacity-100">
+                <img src={s.img} alt="" width="22" height="22" class="h-[22px] w-[22px]" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Barre principale -->
+      <div data-mainbar class="border-b border-line bg-white/95 transition-shadow">
+        <div class="mx-auto flex h-[78px] max-w-[1320px] items-center justify-between gap-6 px-6">
+          <a href="/" aria-label="Ultimauto, accueil" class="shrink-0">
+            <img src="/img/logo-ultimauto.png" alt="Ultimauto — Multiservices Automobile" width="190" height="70" class="h-[58px] w-auto" />
+          </a>
+
+          <nav aria-label="Navigation principale" class="hidden items-center gap-1 lg:flex">
+            <a href="/" class={`nav-link ${isActive('/') ? 'nav-active' : ''}`}>Accueil</a>
+
+            <div class="group relative">
+              <button type="button" class="nav-link inline-flex items-center gap-1" aria-haspopup="true">
+                Nos services
+                <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="pointer-events-none absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:opacity-100">
+                <div class="overflow-hidden rounded-2xl border border-line bg-white shadow-[var(--shadow-card)]">
+                  <div class="grid grid-cols-2 gap-1 p-3">
+                    {principaux.map((s) => (
+                      <a href={`/${s.slug}`} class="flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-cloud">
+                        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-brand-50 text-brand">
+                          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg>
+                        </span>
+                        <span class="leading-tight">
+                          <span class="block text-sm font-bold text-ink">{s.titreCourt}</span>
+                          <span class="mt-0.5 block text-xs text-ink-500">{TAGLINE[s.slug]}</span>
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                  <div class="border-t border-line bg-cloud/60 px-3 py-3">
+                    <p class="px-3 pb-1.5 text-[11px] font-bold uppercase tracking-wider text-ink-500">Autres prestations</p>
+                    <div class="grid grid-cols-3 gap-1">
+                      {autres.map((s) => (
+                        <a href={`/${s.slug}`} class="flex items-center gap-2 rounded-lg px-3 py-2 transition-colors hover:bg-white">
+                          <svg viewBox="0 0 24 24" class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg>
+                          <span class="text-xs font-semibold text-ink-700">{s.titreCourt}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                  <a href="/zones-d-intervention" class="flex items-center justify-between bg-deep px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-deep-600">
+                    Voir nos zones d'intervention (44 · 49 · 56 · 79 · 85)
+                    <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {navLinks.map((l) => (
+              <a href={l.href} class={`nav-link ${isActive(l.href) ? 'nav-active' : ''}`}>{l.label}</a>
+            ))}
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a href="/prise-de-rendez-vous" class="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:-translate-y-0.5 sm:inline-flex">Prendre RDV</a>
+            <button type="button" data-menu-btn aria-expanded="false" aria-controls="m-menu" class="grid h-11 w-11 place-items-center rounded-xl border border-line lg:hidden">
+              <span class="sr-only">Menu</span>
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="m-menu" data-menu hidden class="border-t border-line bg-white lg:hidden">
+          <div class="mx-auto max-w-[1320px] space-y-1 px-6 py-4">
+            <a href="/" class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">Accueil</a>
+            <p class="px-3 pt-2 text-[11px] font-bold uppercase tracking-wider text-ink-500">Nos services</p>
+            {principaux.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">{s.titreCourt}</a>)}
+            {autres.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-2 text-sm hover:bg-cloud">{s.titreCourt}</a>)}
+            <a href="/zones-d-intervention" class="block rounded-lg px-3 py-2 text-sm hover:bg-cloud">Zones d'intervention</a>
+            <hr class="my-2 border-line" />
+            {navLinks.map((l) => <a href={l.href} class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">{l.label}</a>)}
+            <a href="/prise-de-rendez-vous" class="mt-2 block rounded-full bg-brand px-5 py-3 text-center font-bold text-white">Prendre RDV</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <slot />
+    </main>
+
+    <!-- ===================== FOOTER (#196AD5) ===================== -->
+    <footer class="bg-deep text-white/85">
+      <div class="mx-auto grid max-w-[1180px] gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <img src="/img/logo-ultimauto.png" alt="Ultimauto" width="170" height="62" class="h-[52px] w-auto rounded-md bg-white p-1.5" />
+          <p class="mt-4 text-sm leading-relaxed">{site.baseline}</p>
+          <div class="mt-5 flex items-center gap-3">
+            {socials.map((s) => (
+              <a href={s.href} target="_blank" rel="noopener" aria-label={s.name} class="opacity-90 transition-opacity hover:opacity-100">
+                <img src={s.img} alt="" width="26" height="26" class="h-[26px] w-[26px]" />
+              </a>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p class="font-display font-bold text-white">Nos services</p>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            {principaux.map((s) => <li><a href={`/${s.slug}`} class="transition-colors hover:text-accent">{s.titreCourt}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <p class="font-display font-bold text-white">Autres prestations</p>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            {autres.map((s) => <li><a href={`/${s.slug}`} class="transition-colors hover:text-accent">{s.titreCourt}</a></li>)}
+            <li><a href="/tarifs" class="transition-colors hover:text-accent">Tarifs</a></li>
+            <li><a href="/zones-d-intervention" class="transition-colors hover:text-accent">Zones d'intervention</a></li>
+            <li><a href="/blog" class="transition-colors hover:text-accent">Blog</a></li>
+            <li><a href="/faq" class="transition-colors hover:text-accent">FAQ</a></li>
+            <li><a href="/avis" class="transition-colors hover:text-accent">Avis clients</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display font-bold text-white">Contact</p>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href={`tel:${site.phone}`} class="font-semibold text-white hover:text-accent">{site.phoneDisplay}</a></li>
+            <li><a href={`mailto:${site.email}`} class="transition-colors hover:text-accent">{site.email}</a></li>
+            <li>{site.address.city} ({site.address.postalCode})</li>
+            <li class="pt-1 text-white/70">{site.openingHoursDisplay[0].label} : {site.openingHoursDisplay[0].hours}</li>
+            <li class="text-white/70">{site.openingHoursDisplay[1].label} : {site.openingHoursDisplay[1].hours}</li>
+          </ul>
+          <a href="/prise-de-rendez-vous" class="btn-primary mt-5 w-full">Prendre rendez-vous</a>
+        </div>
+      </div>
+      <div class="border-t border-white/15">
+        <div class="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-white/75 sm:flex-row">
+          <p>© 2026 {site.legalName}. Tous droits réservés.</p>
+          <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a href="/mentions-legales" class="hover:text-accent">Mentions légales</a>
+            <a href="/politique-de-confidentialite" class="hover:text-accent">Politique de confidentialité</a>
+            <a href="/cgv" class="hover:text-accent">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href={waLink} target="_blank" rel="noopener" aria-label="Contacter Ultimauto sur WhatsApp" class="fixed bottom-6 right-6 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-white shadow-xl ring-4 ring-whatsapp/20 transition-transform hover:scale-105">
+      <svg viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+    </a>
+
+    <style>
+      .nav-link { position: relative; padding: 0.5rem 0.85rem; font-weight: 600; color: var(--color-ink); border-radius: 9999px; transition: color 0.18s ease; }
+      .nav-link::after { content: ''; position: absolute; left: 0.85rem; right: 0.85rem; bottom: 0.15rem; height: 2px; border-radius: 2px; background: var(--color-accent); transform: scaleX(0); transform-origin: left; transition: transform 0.22s ease; }
+      .nav-link:hover { color: var(--color-brand); }
+      .nav-link:hover::after { transform: scaleX(1); }
+      .nav-active { color: var(--color-brand); }
+      .nav-active::after { transform: scaleX(1); }
+    </style>
+
+    <script>
+      const bar = document.querySelector('[data-mainbar]');
+      const onScroll = () => bar?.classList.toggle('shadow-[0_10px_30px_-16px_rgba(15,42,80,0.35)]', window.scrollY > 8);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      const btn = document.querySelector('[data-menu-btn]');
+      const menu = document.querySelector('[data-menu]');
+      btn?.addEventListener('click', () => {
+        const hidden = menu?.hasAttribute('hidden');
+        if (hidden) menu?.removeAttribute('hidden'); else menu?.setAttribute('hidden', '');
+        btn.setAttribute('aria-expanded', String(!!hidden));
+      });
+    </script>
+  </body>
+</html>

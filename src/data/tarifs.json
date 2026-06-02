@@ -1,0 +1,83 @@
+{
+  "note": "Tarifs TTC pour les prestations réalisées à l'atelier de Cholet. Pour une intervention à domicile ou sur votre lieu de travail, des frais de déplacement sont demandés — contactez-nous.",
+  "categories": [
+    {
+      "titre": "Décalaminage hydrogène",
+      "service": "decalaminage-hydrogene",
+      "formules": [
+        { "nom": "Formule éco", "desc": "Décalaminage hydrogène + diagnostic — idéal en entretien régulier", "prix": "80 €" },
+        { "nom": "Formule curative", "desc": "Décalaminage hydrogène + additif Bardahl 5 en 1 — pour un moteur encrassé", "prix": "130 €" },
+        { "nom": "Formule curative premium", "desc": "Décalaminage + additif Bardahl + additif huile Stop Fumée — idéale pour les véhicules polluants ou refusés au contrôle technique", "prix": "160 €" }
+      ]
+    },
+    {
+      "titre": "Nettoyage du filtre à particules (FAP)",
+      "service": "nettoyage-fap",
+      "formules": [
+        { "nom": "Formule préventive", "desc": "Nettoyage + rinçage du FAP, diagnostic électronique", "prix": "250 €", "cadeau": "Décalaminage hydrogène offert" },
+        { "nom": "Formule curative", "desc": "Double nettoyage + double rinçage du FAP, diagnostic électronique — pour un FAP très encrassé ou en mode dégradé", "prix": "350 €", "cadeau": "Décalaminage hydrogène offert" }
+      ]
+    },
+    {
+      "titre": "Reprogrammation & gestion moteur",
+      "service": "reprogrammation-moteur",
+      "formules": [
+        { "nom": "Reprogrammation moteur Stage 1", "prix": "350 €" },
+        { "nom": "Conversion E85 / Éthanol", "prix": "450 €" },
+        { "nom": "Gestion problème AdBlue", "prix": "350 €" },
+        { "nom": "Gestion problème EGR", "prix": "180 €" },
+        { "nom": "Gestion problème FAP", "prix": "180 €" },
+        { "nom": "Pack Gestion EGR + FAP", "prix": "300 €" },
+        { "nom": "Pack AdBlue + Stage 1", "prix": "500 €" },
+        { "nom": "Pack AdBlue + EGR + FAP", "prix": "550 €" }
+      ],
+      "note": "Pour toute demande personnalisée ou combinaison spécifique, contactez-nous directement."
+    },
+    {
+      "titre": "Suppression AdBlue",
+      "service": "suppression-adblue",
+      "formules": [
+        { "nom": "Gestion problème AdBlue", "desc": "Reparamétrage du système SCR après diagnostic", "prix": "350 €" },
+        { "nom": "Pack AdBlue + Stage 1", "desc": "Gestion AdBlue + reprogrammation Stage 1", "prix": "500 €" },
+        { "nom": "Pack AdBlue + EGR + FAP", "desc": "Gestion complète des systèmes de dépollution", "prix": "550 €" }
+      ]
+    },
+    {
+      "titre": "Destruction d'odeurs",
+      "service": "destruction-dodeurs",
+      "formules": [
+        { "nom": "Voiture", "desc": "Traitement ozone + vapeur sèche aux huiles essentielles", "prix": "dès 79 €" },
+        { "nom": "Utilitaire", "desc": "Habitacle + coffre", "prix": "99 €" },
+        { "nom": "Pack Hygiène Complète", "desc": "Destruction d'odeurs + décalaminage hydrogène", "prix": "149 €" },
+        { "nom": "Analyse d'air (option)", "prix": "+15 €" }
+      ]
+    },
+    {
+      "titre": "Pressing siège auto",
+      "service": "pressing-siege-auto",
+      "formules": [
+        { "nom": "Sièges avant", "desc": "Shampooing injection-extraction", "prix": "dès 69 €" },
+        { "nom": "Pack Hygiène Intégrale", "desc": "Extraction des sièges, tapis et moquettes", "prix": "139 €" },
+        { "nom": "Extension appuie-têtes (option)", "prix": "+20 €" }
+      ]
+    },
+    {
+      "titre": "Optique de phare",
+      "service": "optique-de-phare",
+      "formules": [
+        { "nom": "Rénovation (la paire)", "desc": "Ponçage, polissage et protection anti-UV", "prix": "dès 79 €" },
+        { "nom": "Pack Sécurité Totale", "desc": "Rénovation des phares + protection longue durée", "prix": "149 €" },
+        { "nom": "Antibrouillards (option)", "prix": "+20 €" }
+      ]
+    },
+    {
+      "titre": "Autres prestations",
+      "formules": [
+        { "nom": "Diagnostic automobile", "prix": "40 €" },
+        { "nom": "Additif Bardahl 5 en 1 (500 ml)", "prix": "45 €" },
+        { "nom": "Recharge climatisation R134A", "prix": "70 €" },
+        { "nom": "Recharge climatisation R1234yf (YF1234)", "prix": "130 €" }
+      ]
+    }
+  ]
+}

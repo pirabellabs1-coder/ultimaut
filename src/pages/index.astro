@@ -1,0 +1,675 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+import services from '../data/services.json';
+import tarifs from '../data/tarifs.json';
+import avisData from '../data/avis.json';
+import { WA_PATH, ICONS } from '../lib/ui.js';
+import { villeSlug } from '../lib/slug.js';
+import { villesPourService } from '../lib/pages.js';
+import { faqPage } from '../lib/jsonld.js';
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const principaux = services.filter((s) => s.local);
+const autres = services.filter((s) => !s.local);
+const bySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
+const deca = bySlug['decalaminage-hydrogene'];
+const fap = bySlug['nettoyage-fap'];
+const reprog = bySlug['reprogrammation-moteur'];
+const adblue = bySlug['suppression-adblue'];
+
+const reassurance = [
+  'Sans démontage moteur',
+  'Devis gratuit & sans engagement',
+  'Service mobile à domicile ou au travail',
+  'Revendeur agréé Bardahl',
+];
+
+const chiffres = [
+  { n: '30–60 min', l: "Durée d'un décalaminage" },
+  { n: 'Dès 80 €', l: 'Décalaminage hydrogène' },
+  { n: '5', l: 'départements (44·49·56·79·85)' },
+  { n: '110+', l: 'communes desservies' },
+];
+
+const process = [
+  { t: 'Prise de contact', d: 'Appelez-nous, écrivez sur WhatsApp (une photo ou une vidéo aide beaucoup) ou remplissez le formulaire. On cerne votre besoin et on vous propose un créneau.' },
+  { t: 'Diagnostic', d: "On lit les codes défaut et on vérifie l'état réel de votre moteur. Pas d'intervention inutile : on vous explique précisément ce dont votre véhicule a besoin." },
+  { t: 'Intervention', d: 'Décalaminage, nettoyage FAP, reprogrammation… réalisés avec un matériel professionnel, sans démontage quand c’est possible, dans le respect de votre mécanique.' },
+  { t: 'Restitution & conseils', d: 'On contrôle le résultat, on vous remet le véhicule et on vous donne des conseils d’entretien adaptés à votre usage.' },
+];
+
+const pourquoi = [
+  { t: 'Le diagnostic avant tout', d: 'On ne devine pas, on diagnostique. Chaque prestation commence par une vérification pour cibler la vraie cause du problème, pas seulement le symptôme.' },
+  { t: 'Transparence totale', d: 'Devis gratuit et détaillé, explications claires, aucune mauvaise surprise. Vous décidez en connaissance de cause, sans pression.' },
+  { t: 'Réparer plutôt que remplacer', d: 'Un FAP peut souvent être nettoyé au lieu d’être remplacé, pour bien moins cher. On privilégie la solution la plus durable et la plus économique.' },
+  { t: 'Atelier + service mobile', d: 'Venez à notre atelier de Cholet, ou faites-nous venir à vous — à domicile ou sur votre lieu de travail, partout dans le Grand Ouest.' },
+];
+
+const signes = [
+  { t: 'Perte de puissance', d: 'Le moteur répond moins bien, surtout à bas régime : la calamine ou un FAP encrassé étouffent la mécanique.' },
+  { t: 'Surconsommation', d: 'Votre consommation grimpe sans avoir changé de conduite ? Un moteur encrassé brûle mal le carburant.' },
+  { t: 'Fumées à l’échappement', d: 'Des fumées noires ou grises trahissent une combustion incomplète et un encrassement avancé.' },
+  { t: 'Voyant moteur ou FAP', d: 'Un voyant allumé signale souvent un souci d’admission, d’EGR ou un filtre à particules saturé.' },
+  { t: 'Ralenti instable, à-coups', d: 'Soupapes et vanne EGR encrassées provoquent un ralenti irrégulier et des broutements en conduite.' },
+  { t: 'Passage en mode dégradé', d: 'Puissance bridée par l’électronique : un signal à ne pas ignorer, souvent lié au filtre à particules.' },
+];
+
+const ideesRecues = [
+  { faux: 'Un FAP bouché, il faut forcément le remplacer.', vrai: 'Tant que la céramique n’est pas fondue ni fissurée, un nettoyage en profondeur restitue ses performances — pour bien moins cher qu’un FAP neuf.' },
+  { faux: 'Le décalaminage abîme le moteur.', vrai: 'Non : on injecte seulement de l’hydrogène dans l’admission, sans démontage ni produit chimique versé dans le moteur. C’est une opération douce et maîtrisée.' },
+  { faux: 'Une reprogrammation casse le moteur.', vrai: 'Pas si elle est bien faite. Une cartographie Stage 1 sérieuse, réalisée sur un moteur sain, reste dans les marges de fiabilité de la mécanique.' },
+  { faux: 'Rouler sur autoroute nettoie le moteur.', vrai: 'Cela aide la régénération du FAP, mais ne décolle pas la calamine déjà incrustée sur les soupapes, l’EGR et le turbo.' },
+];
+
+const typesVehicules = [
+  'Citadines & berlines (diesel et essence)',
+  'Utilitaires & véhicules de société',
+  'SUV, breaks & monospaces familiaux',
+  'Flottes et professionnels',
+];
+
+const faq = [
+  { q: 'Qu’est-ce que le décalaminage à l’hydrogène, concrètement ?', r: 'Avec une station professionnelle, on injecte de l’hydrogène dans l’admission pendant que le moteur tourne. Ce gaz améliore la combustion et aide à décoller la calamine (les dépôts de carbone) accumulée sur les soupapes, les injecteurs, la vanne EGR et le turbo. Les résidus sont ensuite évacués par l’échappement, sans démontage et sans produit chimique versé dans le moteur.' },
+  { q: 'Tous les combien faut-il faire un décalaminage ?', r: 'Pour un usage urbain ou de petits trajets, un décalaminage tous les 15 000 à 30 000 km est un bon rythme préventif. Sur un moteur déjà encrassé, il agit comme une cure ponctuelle. On vous conseille selon votre kilométrage et votre façon de rouler.' },
+  { q: 'Vaut-il mieux nettoyer ou remplacer un FAP ?', r: 'Tant que la céramique du filtre n’est ni fondue ni fissurée, le nettoyage est presque toujours possible — et coûte bien moins cher qu’un FAP neuf. On vérifie l’état du filtre avant toute intervention et on vous dit honnêtement ce qui est récupérable.' },
+  { q: 'La suppression AdBlue est-elle autorisée sur route ?', r: 'Non. Modifier un système anti-pollution sur un véhicule qui circule sur la voie publique n’est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit fermé, compétition, export, véhicule non homologué). On vous informe clairement de ce cadre avant toute décision.' },
+  { q: 'Combien de temps prend une intervention ?', r: 'Un décalaminage dure 30 à 60 minutes selon la cylindrée. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. On organise le rendez-vous pour limiter votre immobilisation.' },
+  { q: 'Intervenez-vous à domicile ?', r: 'Oui. En plus de notre atelier de Cholet, notre service mobile se déplace chez vous ou sur votre lieu de travail dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan (des frais de déplacement peuvent s’appliquer selon la distance).' },
+];
+
+const tarifApercu = tarifs.categories.filter((c) =>
+  ['decalaminage-hydrogene', 'nettoyage-fap', 'reprogrammation-moteur'].includes(c.service)
+);
+
+const avisHome = avisData.items.slice(0, 6);
+
+const zonesParService = principaux.map((s) => ({
+  service: s,
+  villes: villesPourService(s.slug).slice(0, 10),
+}));
+
+const jsonLd = [faqPage(faq)];
+const title = 'Ultimauto — Décalaminage hydrogène & nettoyage FAP à Cholet';
+const description = "Spécialiste du décalaminage hydrogène et du nettoyage FAP à Cholet. Reprogrammation, AdBlue, service mobile dans le Grand Ouest. Devis gratuit.";
+---
+
+<Layout title={title} description={description} jsonLd={jsonLd}>
+  <!-- ============================== HERO ============================== -->
+  <section
+    class="relative overflow-hidden bg-cover bg-center"
+    style="background-image: linear-gradient(180deg, rgba(25,106,213,0.72) 0%, rgba(25,106,213,0.80) 55%, rgba(25,106,213,0.88) 100%), url('/img/hero-1.jpg');"
+  >
+    <div class="mx-auto flex min-h-[600px] max-w-[1320px] flex-col items-center justify-center px-6 py-20 text-center">
+      <div class="max-w-[820px]">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.18em] text-white">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+          Centre multiservices automobile · Cholet
+        </span>
+        <h1 class="mt-6 font-display text-[28px] font-extrabold leading-[1.12] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] sm:text-[34px] lg:text-[42px]">
+          Spécialiste du décalaminage moteur <span class="text-accent">à l'hydrogène</span> &amp; nettoyage FAP
+        </h1>
+        <p class="mx-auto mt-6 max-w-[600px] text-[17px] leading-relaxed text-white/90 md:text-[18px]">
+          Ultimauto redonne souffle, fiabilité et propreté à votre moteur — sans démontage.
+          Décalaminage, nettoyage FAP, reprogrammation et gestion AdBlue, à l'atelier de Cholet
+          ou en service mobile dans tout le Grand Ouest.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/prise-de-rendez-vous" class="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-display text-base font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">
+            Prendre rendez-vous
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 bg-white/10 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/20">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+            Devis WhatsApp
+          </a>
+        </div>
+        <ul class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-semibold text-white/90">
+          {['Sans démontage moteur', 'Devis gratuit & sans engagement', 'Revendeur agréé Bardahl'].map((t) => (
+            <li class="inline-flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              {t}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RÉASSURANCE ===================== -->
+  <div class="border-b border-line bg-white">
+    <div class="mx-auto grid max-w-[1180px] grid-cols-2 gap-x-6 gap-y-4 px-6 py-6 lg:grid-cols-4">
+      {reassurance.map((t) => (
+        <div class="flex items-center gap-3">
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent-50 text-accent-700">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+          </span>
+          <span class="text-sm font-semibold leading-tight text-ink">{t}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- ===================== À PROPOS ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] items-center gap-12 px-6 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow">Bienvenue chez Ultimauto</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Le spécialiste de l'entretien moteur dans le Grand Ouest</h2>
+        <div class="rte mt-6">
+          <p>Basé à <strong>Cholet</strong>, dans le Maine-et-Loire, Ultimauto est un centre multiservices automobile spécialisé dans le <strong>décalaminage moteur à l'hydrogène</strong> et le <strong>nettoyage du filtre à particules (FAP)</strong>, sans démontage. Notre métier : redonner du souffle, de la fiabilité et de la propreté à votre moteur, tout en maîtrisant votre budget.</p>
+          <p>Au fil des kilomètres, surtout en ville et sur les petits trajets, un moteur s'encrasse : la calamine s'accumule, le FAP se colmate, les performances baissent et la consommation grimpe. Plutôt que de remplacer des pièces coûteuses, nous traitons la cause avec des méthodes propres et éprouvées. Et parce que chaque véhicule est différent, tout commence par un <strong>diagnostic honnête</strong> : on vous explique simplement ce qui se passe, et on ne propose que ce qui est réellement utile.</p>
+          <p>Décalaminage, nettoyage FAP, reprogrammation moteur, gestion AdBlue, mais aussi destruction d'odeurs, pressing des sièges et rénovation d'optiques de phares : nous intervenons à l'atelier de Cholet comme en <strong>service mobile</strong>, chez vous ou sur votre lieu de travail, dans cinq départements (44, 49, 56, 79 et 85).</p>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="/img/photo-2.jpg" alt="Intervention de décalaminage hydrogène Ultimauto en service mobile" width="980" height="735" class="w-full rounded-3xl object-cover shadow-[var(--shadow-card)]" loading="lazy" />
+        <div class="absolute -bottom-5 -left-5 hidden rounded-2xl bg-deep px-5 py-4 text-white shadow-lg sm:block">
+          <p class="font-display text-2xl font-extrabold leading-none">Cholet</p>
+          <p class="mt-1 text-xs text-white/85">Atelier + service mobile · 5 départements</p>
+        </div>
+        <div class="absolute -right-4 -top-4 hidden rounded-full bg-accent px-4 py-2 font-display text-sm font-extrabold text-ink shadow-lg sm:block">Revendeur agréé Bardahl</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VALEURS (éco) ===================== -->
+  <section class="section bg-brand-50">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Notre engagement</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Écologique, économique, écocitoyen</h2>
+        <p class="mt-4 text-ink-700">C'est la signature d'Ultimauto — et ce n'est pas qu'un slogan. Entretenir un moteur plutôt que remplacer des pièces, c'est bon pour la planète, pour votre portefeuille et pour la collectivité.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-line bg-white p-7 text-center">
+          <img src="/img/icons/ecologie.png" alt="" width="56" height="56" class="mx-auto h-14 w-14 object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-bold">Écologique</h3>
+          <p class="mt-2 text-sm text-ink-700">Un moteur décalaminé brûle mieux son carburant et rejette nettement moins de particules. Jusqu'à <strong>−70 % de pollution</strong> annoncés : rouler plus propre, sans changer de voiture.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-7 text-center">
+          <img src="/img/icons/economie.png" alt="" width="56" height="56" class="mx-auto h-14 w-14 object-contain" loading="lazy" />
+          <h3 class="mt-4 text-lg font-bold">Économique</h3>
+          <p class="mt-2 text-sm text-ink-700">Le décalaminage peut réduire la consommation jusqu'à <strong>−15 %</strong> et préserve les pièces sensibles (turbo, vanne EGR, FAP, injecteurs). On entretient au lieu de remplacer : la facture reste légère.</p>
+        </div>
+        <div class="rounded-2xl border border-line bg-white p-7 text-center">
+          <span class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-50 text-accent-700">
+            <svg viewBox="0 0 24 24" class="h-8 w-8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3" /><path d="M3.5 20a5.5 5.5 0 0 1 11 0" /><path d="M16 5.2a3 3 0 0 1 0 5.6" /><path d="M18.5 20a5.5 5.5 0 0 0-3-4.9" /></svg>
+          </span>
+          <h3 class="mt-4 text-lg font-bold">Écocitoyen</h3>
+          <p class="mt-2 text-sm text-ink-700">Prolonger la vie de votre véhicule, c'est moins de pièces jetées et moins de déchets. Une démarche responsable, à l'échelle de votre commune comme de la planète.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Nos prestations</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Tout pour la santé de votre véhicule</h2>
+        <p class="mt-4 text-ink-700">Des solutions concrètes pour le moteur comme pour l'habitacle, avec un matériel professionnel et un vrai souci du détail.</p>
+      </div>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {principaux.map((s) => (
+          <a href={`/${s.slug}`} class="group flex flex-col rounded-2xl border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-[var(--shadow-card)]">
+            <span class="grid h-12 w-12 place-items-center rounded-xl bg-brand-50 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg>
+            </span>
+            <h3 class="mt-4 text-lg font-bold">{s.titreCourt}</h3>
+            <p class="mt-2 flex-1 text-sm text-ink-700">{s.accroche}</p>
+            <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-brand">
+              {s.prixIndicatif}
+              <svg viewBox="0 0 24 24" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+      <div class="mt-5 grid gap-5 sm:grid-cols-3">
+        {autres.map((s) => (
+          <a href={`/${s.slug}`} class="group flex items-center gap-4 rounded-2xl border border-line bg-white p-5 transition-colors hover:border-brand-200">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-cloud text-brand">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg>
+            </span>
+            <span>
+              <span class="block font-bold leading-tight">{s.titreCourt}</span>
+              <span class="mt-0.5 block text-sm text-ink-500">{s.prixIndicatif}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DÉCALAMINAGE EXPLIQUÉ ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+      <div>
+        <span class="eyebrow">Notre spécialité</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Le décalaminage à l'hydrogène, expliqué simplement</h2>
+        <div class="rte mt-5">
+          <p>{deca.description}</p>
+          <p>{deca.pourquoi}</p>
+        </div>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+          {deca.benefices.map((b) => (
+            <li class="flex items-start gap-2.5 text-sm text-ink-700">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              {b}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <aside class="lg:sticky lg:top-28">
+        <div class="relative overflow-hidden rounded-3xl shadow-[var(--shadow-card)]">
+          <img src="/img/photo-1.jpg" alt="Décalaminage hydrogène d'un moteur diesel par Ultimauto" class="aspect-[4/3] w-full object-cover" loading="lazy" />
+          <div class="absolute bottom-4 left-4 rounded-xl bg-white/95 px-4 py-2.5 shadow-lg">
+            <span class="block text-[11px] font-semibold uppercase tracking-wide text-ink-500">Formule éco dès</span>
+            <span class="font-display text-2xl font-extrabold text-brand">80 €</span>
+          </div>
+        </div>
+        <ul class="mt-5 space-y-3 rounded-2xl border border-line bg-cloud p-5 text-sm">
+          <li class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Durée</span><span class="font-semibold">30 à 60 min</span></li>
+          <li class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Démontage</span><span class="font-semibold">Aucun</span></li>
+          <li class="flex justify-between border-b border-line pb-2"><span class="text-ink-500">Produit chimique</span><span class="font-semibold">Aucun dans le moteur</span></li>
+          <li class="flex justify-between"><span class="text-ink-500">Idéal</span><span class="font-semibold">tous les 15–30 000 km</span></li>
+        </ul>
+        <a href="/decalaminage-hydrogene" class="btn-primary mt-4 w-full">Tout savoir sur le décalaminage</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ===================== FAP EXPLIQUÉ (#196AD5) ===================== -->
+  <section class="section bg-deep text-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1fr_1.4fr] lg:items-start">
+      <div class="rounded-3xl border border-white/15 bg-white/[0.08] p-7">
+        <p class="font-display text-sm font-bold uppercase tracking-wider text-accent">Nettoyer ≠ remplacer</p>
+        <p class="mt-3 text-white/90">Remplacer un FAP coûte souvent plusieurs centaines à plusieurs milliers d'euros. Tant que la céramique n'est ni fondue ni fissurée, le nettoyage restitue ses performances pour une fraction du prix.</p>
+        <div class="mt-6 space-y-3">
+          <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
+            <span class="text-sm text-white/80">Formule préventive</span><span class="font-display text-lg font-extrabold text-accent">250 €</span>
+          </div>
+          <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
+            <span class="text-sm text-white/80">Formule curative</span><span class="font-display text-lg font-extrabold text-accent">350 €</span>
+          </div>
+          <p class="text-center text-xs text-white/80">🎁 Décalaminage hydrogène offert avec chaque formule</p>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow text-accent">Filtre à particules</span>
+        <h2 class="mt-3 text-3xl font-extrabold text-white md:text-4xl">FAP colmaté, voyant allumé, mode dégradé ?</h2>
+        <div class="rte mt-5 [&_p]:text-white/90 [&_strong]:text-white">
+          <p>{fap.description}</p>
+        </div>
+        <a href="/nettoyage-fap" class="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink transition-transform hover:-translate-y-0.5">
+          Découvrir le nettoyage FAP
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REPROG + ADBLUE ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Performance & dépollution</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Reprogrammation moteur & gestion AdBlue</h2>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        <div class="rounded-3xl border border-line bg-white p-7">
+          <h3 class="text-xl font-bold">Reprogrammation Stage 1</h3>
+          <p class="mt-3 text-ink-700">{reprog.intro}</p>
+          <ul class="mt-5 space-y-2">
+            {reprog.benefices.slice(0, 4).map((b) => (
+              <li class="flex items-start gap-2.5 text-sm text-ink-700">
+                <svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                {b}
+              </li>
+            ))}
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="/reprogrammation-moteur" class="btn-primary">Stage 1 — 350 €</a>
+            <a href="/simulateur-gain-de-puissance" class="btn-ghost">Simulateur de gain</a>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-line bg-white p-7">
+          <h3 class="text-xl font-bold">Gestion AdBlue (SCR)</h3>
+          <p class="mt-3 text-ink-700">{adblue.intro}</p>
+          <div class="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+            <strong>Cadre légal :</strong> prestation réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué). Nous vous conseillons en toute transparence.
+          </div>
+          <a href="/suppression-adblue" class="btn-primary mt-6">En savoir plus — dès 350 €</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE MOBILE (photo) ===================== -->
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(100deg, rgba(21,101,192,0.93) 0%, rgba(25,106,213,0.82) 55%, rgba(25,106,213,0.55) 100%), url('/img/atelier.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-16 text-white md:py-20">
+      <div class="max-w-xl">
+        <span class="eyebrow text-accent">À domicile ou au travail</span>
+        <h2 class="mt-3 text-3xl font-extrabold text-white md:text-4xl">On se déplace chez vous</h2>
+        <p class="mt-4 text-white/90">Pas le temps de passer à l'atelier ? Notre service mobile vient à vous, à domicile ou sur votre lieu de travail, partout dans le Grand Ouest. Vous récupérez un moteur plus propre et plus sobre, sans la moindre contrainte d'organisation.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−15 %</p><p class="text-xs text-white/85">de consommation*</p></div>
+          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−70 %</p><p class="text-xs text-white/85">de pollution*</p></div>
+          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">0</p><p class="text-xs text-white/85">démontage moteur</p></div>
+        </div>
+        <p class="mt-3 text-xs text-white/60">*Réductions annoncées, constatées selon l'état d'encrassement du véhicule.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Réserver une intervention</a>
+          <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+            Devis WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIE (vraies photos) ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">En images</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Ultimauto en intervention</h2>
+        <p class="mt-4 text-ink-700">Voitures, utilitaires, camping-cars… nos stations de décalaminage à l'hydrogène interviennent sur tous les véhicules, à l'atelier de Cholet comme directement sur place.</p>
+      </div>
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <figure class="group relative overflow-hidden rounded-2xl shadow-sm lg:col-span-2">
+          <img src="/img/photo-3.jpg" alt="Décalaminage hydrogène de plusieurs véhicules sur site par Ultimauto" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Plusieurs véhicules traités sur site, en simultané</figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="/img/hero-2.jpg" alt="Décalaminage de berlines et citadines, capots ouverts" class="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Berlines & citadines</figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="/img/hero-3.jpg" alt="Décalaminage hydrogène sur camping-cars" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Camping-cars & utilitaires</figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="/img/photo-1.jpg" alt="Sonde d'injection d'hydrogène branchée sur le moteur" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Injection d'hydrogène sur le moteur</figcaption>
+        </figure>
+        <figure class="group relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="/img/photo-2.jpg" alt="Service mobile Ultimauto : intervention à domicile" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Service mobile : on vient à vous</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNES D'ALERTE (nouveau) ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">À surveiller</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Les signes qui doivent vous alerter</h2>
+        <p class="mt-4 text-ink-700">Votre véhicule vous parle. Ces symptômes traduisent souvent un encrassement qu'on sait traiter — avant qu'il ne coûte cher.</p>
+      </div>
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {signes.map((s) => (
+          <div class="rounded-2xl border border-line bg-cloud p-6">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-white text-brand shadow-sm">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h16.9a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+            </span>
+            <h3 class="mt-4 font-bold">{s.t}</h3>
+            <p class="mt-2 text-sm text-ink-700">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Comment ça se passe</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Simple, clair, en 4 étapes</h2>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {process.map((p, i) => (
+          <div class="rounded-2xl border border-line bg-white p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-brand font-display text-lg font-extrabold text-white">{i + 1}</span>
+            <h3 class="mt-4 font-bold">{p.t}</h3>
+            <p class="mt-2 text-sm text-ink-700">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POURQUOI NOUS ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Pourquoi nous choisir</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Un garage qui joue franc-jeu</h2>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {pourquoi.map((p) => (
+          <div class="rounded-2xl border border-line bg-cloud p-6">
+            <span class="grid h-11 w-11 place-items-center rounded-xl bg-accent-50 text-accent-700">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4" /><circle cx="12" cy="12" r="9" /></svg>
+            </span>
+            <h3 class="mt-4 font-bold">{p.t}</h3>
+            <p class="mt-2 text-sm text-ink-700">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== IDÉES REÇUES (nouveau) ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">On rétablit la vérité</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Idées reçues sur l'entretien moteur</h2>
+      </div>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2">
+        {ideesRecues.map((it) => (
+          <div class="rounded-2xl border border-line bg-white p-6">
+            <p class="flex items-start gap-2 font-semibold text-ink">
+              <span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </span>
+              « {it.faux} »
+            </p>
+            <p class="mt-3 flex items-start gap-2 text-sm text-ink-700">
+              <span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>
+              </span>
+              <span>{it.vrai}</span>
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHIFFRES (#1565C0) ===================== -->
+  <section class="bg-brand py-14 text-white">
+    <div class="mx-auto grid max-w-[1180px] grid-cols-2 gap-8 px-6 text-center lg:grid-cols-4">
+      {chiffres.map((c) => (
+        <div>
+          <p class="font-display text-3xl font-extrabold md:text-4xl">{c.n}</p>
+          <p class="mt-1 text-sm text-white/85">{c.l}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ===================== TYPES DE VÉHICULES (nouveau) ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] items-center gap-10 px-6 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow">Pour qui ?</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Tous types de véhicules, particuliers comme pros</h2>
+        <p class="mt-4 text-ink-700">Diesel ou essence, citadine ou utilitaire : nos prestations s'adaptent à votre véhicule et à votre usage. Nous accompagnons aussi bien les particuliers que les artisans, commerçants et gestionnaires de flotte.</p>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+          {typesVehicules.map((t) => (
+            <li class="flex items-start gap-2.5 text-ink-700">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              {t}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-line bg-cloud p-8 text-center">
+        <span class="inline-flex items-center gap-2 rounded-full bg-accent-100 px-4 py-1.5 text-sm font-bold text-accent-700">Revendeur agréé Bardahl</span>
+        <p class="mt-5 text-ink-700">Nous utilisons et proposons les additifs <strong>Bardahl</strong>, une référence reconnue de l'entretien automobile, pour prolonger les bénéfices de nos prestations et protéger durablement votre moteur.</p>
+        <a href="/prise-de-rendez-vous" class="btn-primary mt-6">Demander conseil</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TARIFS APERÇU ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Tarifs</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Des prix clairs, annoncés à l'avance</h2>
+        <p class="mt-4 text-ink-700">Tarifs TTC pour une prestation à l'atelier de Cholet. En service mobile, des frais de déplacement peuvent s'appliquer.</p>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {tarifApercu.map((cat) => (
+          <div class="flex flex-col rounded-3xl border border-line bg-white p-6">
+            <h3 class="text-lg font-bold">{cat.titre}</h3>
+            <ul class="mt-4 flex-1 space-y-3">
+              {cat.formules.slice(0, 3).map((f) => (
+                <li class="flex items-start justify-between gap-3 border-b border-line pb-3 last:border-0">
+                  <span class="text-sm text-ink-700">{f.nom}</span>
+                  <span class="shrink-0 font-display font-extrabold text-brand">{f.prix}</span>
+                </li>
+              ))}
+            </ul>
+            <a href={`/${cat.service}`} class="btn-ghost mt-5">Détails</a>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 text-center"><a href="/tarifs" class="btn-primary">Voir toute la grille tarifaire</a></div>
+    </div>
+  </section>
+
+  <!-- ===================== ZONES PAR SERVICE (cliquable) ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Zones d'intervention</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Votre prestation, près de chez vous</h2>
+        <p class="mt-4 text-ink-700">Choisissez une prestation et votre ville : nous intervenons à Cholet et dans tout le Grand Ouest, à l'atelier ou en service mobile.</p>
+      </div>
+      <div class="mt-10 space-y-5">
+        {zonesParService.map((row) => (
+          <div class="rounded-2xl border border-line bg-cloud p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <a href={`/${row.service.slug}`} class="inline-flex items-center gap-2.5 font-display text-lg font-bold text-ink hover:text-brand">
+                <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 text-brand">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[row.service.slug].map((d) => <path d={d} />)}</svg>
+                </span>
+                {row.service.titreCourt}
+              </a>
+              <a href={`/${row.service.slug}`} class="text-sm font-semibold text-brand hover:underline">Voir la prestation →</a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {row.villes.map((v) => (
+                <a href={`/${row.service.slug}/${villeSlug(v)}`} class="rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-ink-700 transition-colors hover:border-brand hover:text-brand">
+                  {v.nom}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8 grid gap-3 sm:grid-cols-3">
+        {autres.map((s) => (
+          <a href={`/${s.slug}`} class="flex items-center justify-center gap-2 rounded-xl border border-line bg-cloud px-4 py-3 text-sm font-semibold transition-colors hover:border-brand hover:text-brand">
+            {s.titreCourt}
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 text-center"><a href="/zones-d-intervention" class="btn-primary">Voir toutes les communes desservies</a></div>
+    </div>
+  </section>
+
+  <!-- ===================== AVIS CLIENTS (réels Google) ===================== -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <span class="eyebrow">Avis clients</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Ils nous font confiance</h2>
+        <div class="mt-5 inline-flex items-center gap-3 rounded-full border border-line bg-white px-5 py-2.5 shadow-sm">
+          <span class="flex text-accent" aria-hidden="true">
+            {[0, 1, 2, 3, 4].map(() => <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.8 5.9 20.8 7.1 14l-5-4.8 6.9-.9z" /></svg>)}
+          </span>
+          <span class="font-display text-xl font-extrabold text-ink">{avisData.rating}/5</span>
+          <span class="text-sm text-ink-500">· {avisData.count} avis Google</span>
+        </div>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {avisHome.map((a) => (
+          <figure class="flex flex-col rounded-3xl border border-line bg-white p-7">
+            <div class="flex items-center justify-between">
+              <div class="flex gap-0.5 text-accent" aria-hidden="true">
+                {[0, 1, 2, 3, 4].map(() => <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.8 5.9 20.8 7.1 14l-5-4.8 6.9-.9z" /></svg>)}
+              </div>
+              <span class="text-xs font-bold text-ink-500">Avis Google</span>
+            </div>
+            <blockquote class="mt-4 flex-1 text-ink-700">« {a.texte} »</blockquote>
+            <figcaption class="mt-5 flex items-center justify-between gap-2 border-t border-line pt-4">
+              <span class="font-bold">{a.auteur}</span>
+              {a.meta && <span class="text-xs text-ink-500">{a.meta}</span>}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={avisData.url} target="_blank" rel="noopener" class="btn-primary">Voir les {avisData.count} avis sur Google</a>
+        <a href="/avis" class="btn-ghost">Tous les avis clients</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-3xl px-6">
+      <div class="text-center">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Vos questions, nos réponses</h2>
+      </div>
+      <div class="mt-8 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+        {faq.map((f) => (
+          <details class="group px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-ink [&::-webkit-details-marker]:hidden">
+              {f.q}
+              <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+            </summary>
+            <p class="pb-5 text-ink-700">{f.r}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL (#196AD5 → #1565C0) ===================== -->
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white md:py-20">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Prêt à redonner du souffle à votre véhicule ?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Devis gratuit et sans engagement. Réponse rapide par téléphone ou WhatsApp — une photo ou une vidéo de votre souci suffit souvent pour vous orienter.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d={WA_PATH} /></svg>
+          Devis WhatsApp
+        </a>
+        <a href={`tel:${site.phone}`} class="inline-flex items-center gap-2 rounded-full px-5 py-3 font-bold text-white hover:text-accent">{site.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

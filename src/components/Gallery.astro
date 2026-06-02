@@ -1,0 +1,21 @@
+---
+import { GALLERY } from '../lib/ui.js';
+const { title = 'Ultimauto en intervention', intro = "Voitures, utilitaires, camping-cars… nos stations de décalaminage à l'hydrogène interviennent sur tous les véhicules, à l'atelier de Cholet comme directement sur place." } = Astro.props;
+---
+<section class="section bg-cloud">
+  <div class="mx-auto max-w-[1180px] px-6">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="eyebrow">En images</span>
+      <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">{title}</h2>
+      <p class="mt-4 text-ink-700">{intro}</p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {GALLERY.map((g, i) => (
+        <figure class={`group relative overflow-hidden rounded-2xl shadow-sm ${g.wide ? 'lg:col-span-2' : ''}`}>
+          <img src={g.src} alt={g.alt} class={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${i < 2 ? 'h-72' : 'h-56'}`} loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">{g.cap}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,179 @@
+{
+  "_note": "Données indicatives, éditables. Les gains réels dépendent de l'état du véhicule et sont confirmés au banc. puissance en ch, couple en Nm.",
+  "marques": [
+    {
+      "nom": "Volkswagen",
+      "modeles": [
+        {
+          "nom": "Golf 7 / Golf 8",
+          "motorisations": [
+            { "nom": "1.6 TDI 115", "carburant": "Diesel", "chOrigine": 115, "nmOrigine": 250, "chStage1": 140, "nmStage1": 310 },
+            { "nom": "2.0 TDI 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 340, "chStage1": 190, "nmStage1": 410 },
+            { "nom": "1.5 TSI 150", "carburant": "Essence", "chOrigine": 150, "nmOrigine": 250, "chStage1": 180, "nmStage1": 300 },
+            { "nom": "2.0 TSI GTI 245", "carburant": "Essence", "chOrigine": 245, "nmOrigine": 370, "chStage1": 290, "nmStage1": 420 }
+          ]
+        },
+        {
+          "nom": "Passat / Tiguan",
+          "motorisations": [
+            { "nom": "2.0 TDI 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 340, "chStage1": 190, "nmStage1": 410 },
+            { "nom": "2.0 TDI 190", "carburant": "Diesel", "chOrigine": 190, "nmOrigine": 400, "chStage1": 225, "nmStage1": 460 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Audi",
+      "modeles": [
+        {
+          "nom": "A3",
+          "motorisations": [
+            { "nom": "2.0 TDI 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 340, "chStage1": 190, "nmStage1": 410 },
+            { "nom": "1.4 TFSI 150", "carburant": "Essence", "chOrigine": 150, "nmOrigine": 250, "chStage1": 180, "nmStage1": 300 }
+          ]
+        },
+        {
+          "nom": "A4 / A5",
+          "motorisations": [
+            { "nom": "2.0 TDI 190", "carburant": "Diesel", "chOrigine": 190, "nmOrigine": 400, "chStage1": 225, "nmStage1": 460 },
+            { "nom": "2.0 TFSI 252", "carburant": "Essence", "chOrigine": 252, "nmOrigine": 370, "chStage1": 300, "nmStage1": 430 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "BMW",
+      "modeles": [
+        {
+          "nom": "Série 1 / Série 3",
+          "motorisations": [
+            { "nom": "318d 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 320, "chStage1": 190, "nmStage1": 400 },
+            { "nom": "320d 190", "carburant": "Diesel", "chOrigine": 190, "nmOrigine": 400, "chStage1": 230, "nmStage1": 470 },
+            { "nom": "320i 184", "carburant": "Essence", "chOrigine": 184, "nmOrigine": 290, "chStage1": 220, "nmStage1": 350 }
+          ]
+        },
+        {
+          "nom": "Série 5 / X3",
+          "motorisations": [
+            { "nom": "520d 190", "carburant": "Diesel", "chOrigine": 190, "nmOrigine": 400, "chStage1": 230, "nmStage1": 470 },
+            { "nom": "530d 265", "carburant": "Diesel", "chOrigine": 265, "nmOrigine": 620, "chStage1": 310, "nmStage1": 700 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Mercedes-Benz",
+      "modeles": [
+        {
+          "nom": "Classe A / Classe C",
+          "motorisations": [
+            { "nom": "200d 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 320, "chStage1": 185, "nmStage1": 390 },
+            { "nom": "220d 194", "carburant": "Diesel", "chOrigine": 194, "nmOrigine": 400, "chStage1": 230, "nmStage1": 460 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Renault",
+      "modeles": [
+        {
+          "nom": "Clio / Captur",
+          "motorisations": [
+            { "nom": "1.5 dCi 90", "carburant": "Diesel", "chOrigine": 90, "nmOrigine": 200, "chStage1": 115, "nmStage1": 260 },
+            { "nom": "1.5 dCi 115", "carburant": "Diesel", "chOrigine": 115, "nmOrigine": 260, "chStage1": 140, "nmStage1": 310 },
+            { "nom": "1.3 TCe 140", "carburant": "Essence", "chOrigine": 140, "nmOrigine": 240, "chStage1": 170, "nmStage1": 290 }
+          ]
+        },
+        {
+          "nom": "Mégane / Kadjar",
+          "motorisations": [
+            { "nom": "1.5 dCi 115", "carburant": "Diesel", "chOrigine": 115, "nmOrigine": 260, "chStage1": 140, "nmStage1": 310 },
+            { "nom": "1.6 dCi 130", "carburant": "Diesel", "chOrigine": 130, "nmOrigine": 320, "chStage1": 160, "nmStage1": 380 },
+            { "nom": "1.3 TCe 160", "carburant": "Essence", "chOrigine": 160, "nmOrigine": 270, "chStage1": 190, "nmStage1": 310 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Peugeot",
+      "modeles": [
+        {
+          "nom": "208 / 2008",
+          "motorisations": [
+            { "nom": "1.5 BlueHDi 100", "carburant": "Diesel", "chOrigine": 100, "nmOrigine": 250, "chStage1": 125, "nmStage1": 300 },
+            { "nom": "1.2 PureTech 130", "carburant": "Essence", "chOrigine": 130, "nmOrigine": 230, "chStage1": 160, "nmStage1": 270 }
+          ]
+        },
+        {
+          "nom": "308 / 3008",
+          "motorisations": [
+            { "nom": "1.5 BlueHDi 130", "carburant": "Diesel", "chOrigine": 130, "nmOrigine": 300, "chStage1": 160, "nmStage1": 350 },
+            { "nom": "2.0 BlueHDi 180", "carburant": "Diesel", "chOrigine": 177, "nmOrigine": 400, "chStage1": 210, "nmStage1": 450 },
+            { "nom": "1.2 PureTech 130", "carburant": "Essence", "chOrigine": 130, "nmOrigine": 230, "chStage1": 160, "nmStage1": 270 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Citroën / DS",
+      "modeles": [
+        {
+          "nom": "C3 / C4",
+          "motorisations": [
+            { "nom": "1.5 BlueHDi 100", "carburant": "Diesel", "chOrigine": 100, "nmOrigine": 250, "chStage1": 125, "nmStage1": 300 },
+            { "nom": "1.2 PureTech 130", "carburant": "Essence", "chOrigine": 130, "nmOrigine": 230, "chStage1": 160, "nmStage1": 270 }
+          ]
+        },
+        {
+          "nom": "C5 Aircross / DS7",
+          "motorisations": [
+            { "nom": "2.0 BlueHDi 180", "carburant": "Diesel", "chOrigine": 177, "nmOrigine": 400, "chStage1": 210, "nmStage1": 450 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Ford",
+      "modeles": [
+        {
+          "nom": "Fiesta / Focus",
+          "motorisations": [
+            { "nom": "1.0 EcoBoost 125", "carburant": "Essence", "chOrigine": 125, "nmOrigine": 170, "chStage1": 150, "nmStage1": 210 },
+            { "nom": "1.5 TDCi 120", "carburant": "Diesel", "chOrigine": 120, "nmOrigine": 300, "chStage1": 150, "nmStage1": 350 }
+          ]
+        },
+        {
+          "nom": "Kuga / Transit",
+          "motorisations": [
+            { "nom": "2.0 TDCi 150", "carburant": "Diesel", "chOrigine": 150, "nmOrigine": 370, "chStage1": 185, "nmStage1": 420 },
+            { "nom": "2.0 EcoBlue 170", "carburant": "Diesel", "chOrigine": 170, "nmOrigine": 405, "chStage1": 205, "nmStage1": 460 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Dacia",
+      "modeles": [
+        {
+          "nom": "Duster / Sandero",
+          "motorisations": [
+            { "nom": "1.5 dCi 115", "carburant": "Diesel", "chOrigine": 115, "nmOrigine": 260, "chStage1": 140, "nmStage1": 310 },
+            { "nom": "1.3 TCe 130", "carburant": "Essence", "chOrigine": 130, "nmOrigine": 240, "chStage1": 160, "nmStage1": 285 }
+          ]
+        }
+      ]
+    },
+    {
+      "nom": "Nissan / Opel",
+      "modeles": [
+        {
+          "nom": "Qashqai / Astra",
+          "motorisations": [
+            { "nom": "1.5 dCi 115", "carburant": "Diesel", "chOrigine": 115, "nmOrigine": 260, "chStage1": 140, "nmStage1": 310 },
+            { "nom": "1.3 TCe 140", "carburant": "Essence", "chOrigine": 140, "nmOrigine": 240, "chStage1": 170, "nmStage1": 290 }
+          ]
+        }
+      ]
+    }
+  ]
+}

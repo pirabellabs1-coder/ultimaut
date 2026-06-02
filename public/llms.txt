@@ -1,0 +1,38 @@
+# Ultimauto — Multiservices Automobile
+
+> Centre automobile spécialisé dans le décalaminage moteur à l'hydrogène, le nettoyage du filtre à particules (FAP), la reprogrammation moteur et la gestion AdBlue. Basé à Cholet (Maine-et-Loire, 49), avec un service mobile dans tout le Grand Ouest. Diagnostic et devis gratuits, sans démontage, revendeur agréé Bardahl.
+
+## Coordonnées
+- Adresse : 1 Imp. de la Haie, 49300 Cholet, France
+- Téléphone : 06 52 19 36 05
+- WhatsApp : https://wa.me/33652193605
+- Zone d'intervention : Maine-et-Loire (49), Loire-Atlantique (44), Morbihan (56), Deux-Sèvres (79), Vendée (85)
+- Horaires : Lun–Ven 08h30–18h30, Sam 09h00–12h00
+
+## Services et tarifs (TTC, atelier de Cholet)
+- Décalaminage hydrogène : élimine la calamine (soupapes, EGR, turbo, injecteurs) sans démontage. Dès 80 €. Durée 30 à 60 min.
+- Nettoyage FAP : nettoyage chimique en profondeur d'un filtre à particules colmaté, alternative économique au remplacement. Dès 250 € (décalaminage hydrogène offert).
+- Reprogrammation moteur (Stage 1) : gain de puissance et de couple, cartographie sur mesure, cartographie d'origine conservée. 350 €.
+- Suppression / gestion AdBlue : neutralisation des pannes du système SCR. Dès 350 €. Strictement réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué).
+- Destruction d'odeurs : traitement ozone + vapeur sèche. Dès 79 €.
+- Pressing siège auto : injection-extraction. Dès 69 €.
+- Rénovation d'optique de phare : ponçage, polissage, protection UV. Dès 79 € / paire.
+
+## Pages clés
+- Accueil : https://ultimauto.fr/
+- Tarifs : https://ultimauto.fr/tarifs
+- Décalaminage hydrogène : https://ultimauto.fr/decalaminage-hydrogene
+- Nettoyage FAP : https://ultimauto.fr/nettoyage-fap
+- Reprogrammation moteur : https://ultimauto.fr/reprogrammation-moteur
+- Suppression AdBlue : https://ultimauto.fr/suppression-adblue
+- Simulateur de gain de puissance : https://ultimauto.fr/simulateur-gain-de-puissance
+- Zones d'intervention : https://ultimauto.fr/zones-d-intervention
+- Blog : https://ultimauto.fr/blog
+- FAQ : https://ultimauto.fr/faq
+- Contact : https://ultimauto.fr/contact
+- Prise de rendez-vous : https://ultimauto.fr/prise-de-rendez-vous
+
+## Notes
+- Devis gratuit et sans engagement. Intervention à l'atelier de Cholet ou en service mobile (frais de déplacement selon la distance).
+- Pages locales disponibles par service et par commune, ex. https://ultimauto.fr/decalaminage-hydrogene/nantes
+- Sitemap : https://ultimauto.fr/sitemap-index.xml

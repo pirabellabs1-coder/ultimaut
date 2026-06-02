@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+import { WA_PATH } from '../lib/ui.js';
+import { breadcrumb } from '../lib/jsonld.js';
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const url = new URL('/simulateur-gain-de-puissance', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Simulateur de gain de puissance', url }])];
+---
+<Layout
+  title="Simulateur de gain de puissance (Stage 1) | Ultimauto"
+  description="Estimez gratuitement le gain de puissance et de couple après une reprogrammation Stage 1 selon votre véhicule. Estimation indicative — Ultimauto Cholet."
+  jsonLd={jsonLd}
+  ogImage="/img/photo-3.jpg"
+>
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/photo-3.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Simulateur de gain de puissance</span></nav>
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Simulateur de gain de puissance</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Sélectionnez votre marque, votre modèle et votre motorisation pour estimer le gain de puissance et de couple après une reprogrammation <strong>Stage 1</strong>.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1000px] px-6">
+      <div class="mb-6 flex flex-wrap items-center gap-3">
+        <span class="chip">Stage 1</span>
+        <span class="rounded-full bg-cloud px-3 py-1 text-sm font-semibold text-ink-700">Reprogrammation dès 350 €</span>
+      </div>
+
+      <div id="sim-localnote" hidden class="mb-5 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+        <p class="font-bold">ℹ️ Aperçu local</p>
+        <p class="mt-1">Le simulateur est fourni par tuning-shop.com et <strong>verrouillé sur le domaine ultimauto.fr</strong>. Il s'affiche donc uniquement sur le site en ligne : en local, le cadre ci-dessous reste vide — c'est normal et attendu.</p>
+      </div>
+
+      <!-- Simulateur officiel (tuning-shop) -->
+      <div class="overflow-hidden rounded-3xl border border-line bg-white shadow-[var(--shadow-soft)]">
+        <iframe
+          id="tuning-sim"
+          src="https://tuning-shop.com/iframe/iframe.php?user=7255"
+          title="Simulateur de gain de puissance Ultimauto"
+          width="100%"
+          height="1200"
+          scrolling="no"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          style="border:0; width:100%; min-height:1100px; display:block; background:#fff;"
+        ></iframe>
+      </div>
+      <p class="mt-3 text-center text-sm text-ink-500">Le simulateur ne s'affiche pas ? <a href="https://tuning-shop.com/iframe/iframe.php?user=7255" target="_blank" rel="noopener" class="font-semibold text-brand underline">Ouvrez-le dans un nouvel onglet</a>.</p>
+
+      <p class="mt-4 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">⚠️ Les valeurs affichées sont des <strong>estimations indicatives</strong>. Les gains réels dépendent de l'état mécanique de votre véhicule et sont confirmés lors de l'intervention.</p>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/prise-de-rendez-vous" class="btn-primary">Demander un devis Stage 1</a>
+        <a href={waLink} target="_blank" rel="noopener" class="btn-whatsapp"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-2xl font-bold md:text-3xl">Comment lire votre estimation ?</h2>
+      <p class="mt-3 text-ink-700">La reprogrammation Stage 1 optimise la cartographie d'origine de votre moteur pour libérer le potentiel laissé par le constructeur : davantage de couple disponible plus tôt, des reprises plus franches et, à allure stabilisée, une consommation souvent maîtrisée. Chez Ultimauto, nous travaillons sur une base mécanique saine, nous sauvegardons systématiquement la cartographie d'origine (retour arrière possible) et nous validons le résultat par un essai.</p>
+      <a href="/reprogrammation-moteur" class="btn-ghost mt-5">Tout savoir sur la reprogrammation</a>
+    </div>
+  </section>
+
+  <script>
+    // Aperçu local : le widget tuning-shop est verrouillé sur ultimauto.fr (renvoie 404 ailleurs).
+    if (!/(^|\.)ultimauto\.fr$/.test(location.hostname)) {
+      const n = document.getElementById('sim-localnote');
+      if (n) n.hidden = false;
+    }
+    // Redimensionnement auto de l'iframe si tuning-shop envoie sa hauteur via postMessage.
+    window.addEventListener('message', (e) => {
+      const f = document.getElementById('tuning-sim');
+      if (!f) return;
+      let h = null;
+      if (typeof e.data === 'number') h = e.data;
+      else if (e.data && typeof e.data === 'object' && (e.data.height || e.data.iframeHeight)) h = e.data.height || e.data.iframeHeight;
+      else if (typeof e.data === 'string' && /^\d+$/.test(e.data)) h = parseInt(e.data, 10);
+      if (h && h > 300) f.style.height = h + 'px';
+    });
+  </script>
+</Layout>

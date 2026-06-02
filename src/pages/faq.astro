@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import services from '../data/services.json';
+import site from '../data/site.json';
+import { faqPage, breadcrumb } from '../lib/jsonld.js';
+
+const bySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
+const generales = [
+  { q: "Pourquoi un moteur s'encrasse-t-il ?", r: "La combustion dépose de la calamine (résidus de carbone) sur les soupapes, les injecteurs, la vanne EGR et le turbo. Le phénomène est accentué par les trajets courts, la conduite en ville et un entretien espacé : le moteur n'atteint pas toujours la température idéale pour s'auto-nettoyer." },
+  { q: "Quelle est la différence entre décalaminage et nettoyage FAP ?", r: "Le décalaminage entretient l'ensemble du circuit (soupapes, EGR, turbo, injecteurs) par injection d'hydrogène, sans démontage. Le nettoyage FAP cible spécifiquement un filtre à particules colmaté, qui est déposé puis nettoyé chimiquement. Les deux sont complémentaires : on vous oriente après diagnostic." },
+  { q: "Le diagnostic est-il payant ?", r: "Nous établissons toujours un devis gratuit. Un diagnostic électronique approfondi (lecture des défauts, contrôle) est facturé 40 € s'il est réalisé seul, mais il est intégré aux prestations comme le nettoyage FAP." },
+  { q: "Intervenez-vous sur tous les véhicules ?", r: "Oui : citadines, berlines, SUV, utilitaires et même camping-cars, en diesel comme en essence. Nous accompagnons les particuliers comme les professionnels et les flottes." },
+  { q: "Faut-il prendre rendez-vous ?", r: "Oui, nous travaillons sur rendez-vous pour consacrer le temps nécessaire à chaque véhicule. Contactez-nous par téléphone, WhatsApp ou via le formulaire en ligne." },
+];
+const pratiques = [
+  { q: "Où se déroule l'intervention ?", r: "À notre atelier de Cholet, ou directement chez vous / sur votre lieu de travail grâce à notre service mobile, dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan. Des frais de déplacement peuvent s'appliquer selon la distance." },
+  { q: "Combien de temps faut-il prévoir ?", r: "Un décalaminage dure 30 à 60 minutes. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. Nous vous communiquons un créneau précis à la prise de rendez-vous." },
+  { q: "Comment régler la prestation ?", r: "Le paiement se fait à la fin de l'intervention. Pour toute demande de combinaison spécifique ou de pack, demandez-nous un devis personnalisé et gratuit." },
+  { q: "Proposez-vous une garantie de satisfaction ?", r: "Nous nous engageons sur la qualité et la transparence : diagnostic préalable, explication claire et conseils honnêtes. Si une prestation n'est pas pertinente pour votre véhicule, nous vous le disons." },
+];
+
+const groups = [
+  { titre: 'Questions générales', items: generales },
+  { titre: 'Décalaminage hydrogène', items: bySlug['decalaminage-hydrogene'].faqLocale },
+  { titre: 'Nettoyage du filtre à particules', items: bySlug['nettoyage-fap'].faqLocale },
+  { titre: 'Reprogrammation moteur', items: bySlug['reprogrammation-moteur'].faqLocale },
+  { titre: 'Suppression / gestion AdBlue', items: bySlug['suppression-adblue'].faqLocale },
+  { titre: 'Infos pratiques', items: pratiques },
+];
+const allFaq = groups.flatMap((g) => g.items);
+const url = new URL('/faq', site.url).href;
+const jsonLd = [faqPage(allFaq), breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'FAQ', url }])];
+---
+<Layout
+  title="FAQ — Décalaminage, FAP, reprogrammation, AdBlue | Ultimauto"
+  description="Toutes vos questions sur le décalaminage hydrogène, le nettoyage FAP, la reprogrammation moteur et l'AdBlue. Réponses claires d'Ultimauto, spécialiste à Cholet."
+  jsonLd={jsonLd}
+>
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/photo-1.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">FAQ</span></nav>
+      <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Questions fréquentes</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">On vous explique tout, simplement. Et si vous ne trouvez pas votre réponse, appelez-nous ou écrivez sur WhatsApp — on adore parler mécanique.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="mx-auto max-w-3xl space-y-12 px-6">
+      {groups.map((g) => (
+        <div>
+          <h2 class="text-2xl font-bold md:text-3xl">{g.titre}</h2>
+          <div class="mt-6 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+            {g.items.map((f) => (
+              <details class="group px-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-ink [&::-webkit-details-marker]:hidden">
+                  {f.q}
+                  <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" /></svg>
+                </summary>
+                <p class="pb-5 text-ink-700">{f.r}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Pas trouvé votre réponse ?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Notre équipe vous répond avec plaisir et vous établit un devis gratuit.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={`tel:${site.phone}`} class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">{site.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</Layout>

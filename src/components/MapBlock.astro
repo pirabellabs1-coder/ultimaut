@@ -1,0 +1,49 @@
+---
+import site from '../data/site.json';
+const lat = site.geo.latitude;
+const lon = site.geo.longitude;
+const addr = `${site.address.street}, ${site.address.postalCode} ${site.address.city}`;
+const wazeEmbed = `https://embed.waze.com/iframe?zoom=16&lat=${lat}&lon=${lon}&pin=1`;
+const wazeNav = `https://www.waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+const gmaps = `https://www.google.com/maps?q=${lat},${lon}`;
+const { bg = 'bg-cloud' } = Astro.props;
+---
+<section class={`section ${bg}`}>
+  <div class="mx-auto max-w-[1180px] px-6">
+    <div class="overflow-hidden rounded-3xl border border-line bg-white shadow-[var(--shadow-card)]">
+      <div class="grid lg:grid-cols-[1fr_1.3fr]">
+        <!-- Infos -->
+        <div class="p-8 md:p-10">
+          <span class="eyebrow">Nous trouver</span>
+          <h2 class="mt-2 text-2xl font-extrabold md:text-3xl">L'atelier Ultimauto à Cholet</h2>
+          <p class="mt-4 flex items-start gap-3 text-ink-700">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <span><span class="block font-bold text-ink">{addr}</span><span class="text-sm">Nettoyage FAP • Décalaminage hydrogène • Reprogrammation moteur</span></span>
+          </p>
+          <ul class="mt-5 space-y-2 text-sm">
+            {site.openingHoursDisplay.map((h) => (
+              <li class="flex justify-between border-b border-line pb-2 last:border-0"><span class="text-ink-500">{h.label}</span><span class="font-semibold">{h.hours}</span></li>
+            ))}
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href={wazeNav} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-display font-extrabold text-ink shadow-sm transition-transform hover:-translate-y-0.5">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2a9 9 0 0 0-9 9c0 1.6.9 3.4 2 4.6.8.9 1 1.6 1 2.4v.5a2.5 2.5 0 0 0 5 0 6 6 0 0 0 2 0 2.5 2.5 0 0 0 5 0c0-2 1-2.5 1.8-3.6A9 9 0 0 0 12 2zm-3 8.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm6 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+              Venir avec Waze
+            </a>
+            <a href={gmaps} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 font-display font-extrabold text-white shadow-sm transition-transform hover:-translate-y-0.5 hover:bg-brand-700">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Google Maps
+            </a>
+          </div>
+          <a href={`tel:${site.phone}`} class="mt-4 inline-block font-bold text-brand hover:text-brand-700">📞 {site.phoneDisplay}</a>
+        </div>
+        <!-- Carte Waze -->
+        <div class="min-h-[340px] bg-cloud lg:min-h-full">
+          <iframe src={wazeEmbed} title={`Carte — ${addr}`} class="h-full min-h-[340px] w-full" style="border:0; display:block;" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

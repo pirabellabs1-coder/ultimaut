@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import site from '../data/site.json';
+import { breadcrumb } from '../lib/jsonld.js';
+const url = new URL('/cgv', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'CGV', url }])];
+---
+<Layout title="Conditions Générales de Vente | Ultimauto" description="Conditions générales de vente des prestations Ultimauto : devis, prix, paiement, rendez-vous, garanties et dispositions particulières." jsonLd={jsonLd}>
+  <section class="bg-cloud">
+    <div class="mx-auto max-w-3xl px-6 py-12 md:py-16">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-ink-500"><a href="/" class="hover:text-brand">Accueil</a> <span class="px-1.5">/</span> <span class="text-ink">CGV</span></nav>
+      <h1 class="mt-4 text-4xl font-extrabold md:text-5xl">Conditions Générales de Vente</h1>
+    </div>
+  </section>
+  <section class="section bg-white">
+    <div class="rte mx-auto max-w-3xl px-6">
+      <p>Les présentes conditions générales de vente (CGV) régissent les prestations réalisées par <strong>{site.legalName}</strong> ({site.address.city}). Toute commande de prestation implique l'acceptation pleine et entière des présentes CGV.</p>
+
+      <h2>1. Prestations</h2>
+      <p>Ultimauto propose des prestations d'entretien et de préparation automobile : décalaminage hydrogène, nettoyage du filtre à particules (FAP), reprogrammation moteur, gestion AdBlue/EGR/FAP, destruction d'odeurs, pressing de sièges et rénovation d'optiques de phares, à l'atelier de Cholet ou en intervention mobile.</p>
+
+      <h2>2. Devis et commande</h2>
+      <p>Chaque prestation fait l'objet d'un devis gratuit. La commande est confirmée par l'accord du client (oral, écrit ou par prise de rendez-vous). Le client s'engage à fournir des informations exactes sur son véhicule.</p>
+
+      <h2>3. Prix et paiement</h2>
+      <p>Les prix sont indiqués en euros TTC. Les tarifs publiés sur le site sont valables pour une intervention à l'atelier de Cholet ; des <strong>frais de déplacement</strong> peuvent s'ajouter pour le service mobile, précisés au devis. Le paiement s'effectue à l'issue de la prestation, selon les moyens acceptés par Ultimauto.</p>
+
+      <h2>4. Rendez-vous et annulation</h2>
+      <p>Les prestations sont réalisées sur rendez-vous. En cas d'empêchement, le client est invité à prévenir dans les meilleurs délais afin de reprogrammer l'intervention.</p>
+
+      <h2>5. Obligations du client</h2>
+      <p>Le client garantit être le propriétaire du véhicule ou être dûment autorisé à faire réaliser la prestation. Le véhicule doit être présenté dans un état permettant l'intervention en sécurité. Ultimauto réalise un diagnostic préalable et informe le client si une prestation s'avère inadaptée.</p>
+
+      <h2>6. Garanties et responsabilité</h2>
+      <p>Ultimauto s'engage à réaliser ses prestations dans les règles de l'art, avec un matériel professionnel. Les résultats (gains de puissance, réductions de consommation ou d'émissions, élimination d'odeurs, etc.) sont donnés à titre indicatif et dépendent de l'état initial du véhicule. La responsabilité d'Ultimauto ne saurait être engagée pour des défaillances préexistantes non décelables lors du diagnostic.</p>
+
+      <h2>7. Dispositions particulières — dépollution</h2>
+      <p>Les prestations modifiant un dispositif anti-pollution d'origine (gestion/suppression AdBlue, EGR, FAP, désactivation du start &amp; stop) sont proposées <strong>exclusivement pour un usage non soumis à homologation route</strong> : circuit fermé, compétition, export ou véhicule non destiné à la voie publique. Le client demeure seul responsable du respect de la réglementation applicable à son véhicule et à son usage. Ultimauto informe le client de ce cadre avant toute intervention.</p>
+
+      <h2>8. Droit de rétractation</h2>
+      <p>Conformément au Code de la consommation, lorsque le client est un consommateur et que la prestation est conclue à distance ou hors établissement, un délai de rétractation peut s'appliquer. Le client peut toutefois demander l'exécution immédiate de la prestation, renonçant alors à ce délai une fois la prestation pleinement exécutée.</p>
+
+      <h2>9. Litiges</h2>
+      <p>Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée en priorité. À défaut, le client consommateur peut recourir gratuitement à un médiateur de la consommation. Les tribunaux français sont seuls compétents.</p>
+
+      <p class="text-sm text-ink-500">Dernière mise à jour : 2026. <em>[Coordonnées juridiques complètes à compléter dans les mentions légales.]</em></p>
+    </div>
+  </section>
+</Layout>

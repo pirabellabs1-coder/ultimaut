@@ -1,0 +1,47 @@
+{
+  "name": "Ultimauto",
+  "legalName": "Ultimauto – Multiservices Automobile",
+  "tagline": "Multiservices Automobile",
+  "baseline": "Spécialiste du décalaminage moteur à l'hydrogène et du nettoyage FAP sans démontage. Basé à Cholet, service mobile en Pays de la Loire et Morbihan.",
+  "url": "https://ultimauto.fr",
+  "email": "contact@ultimauto.fr",
+  "phone": "+33652193605",
+  "phoneDisplay": "06 52 19 36 05",
+  "whatsapp": "33652193605",
+  "address": {
+    "street": "1 Imp. de la Haie",
+    "postalCode": "49300",
+    "city": "Cholet",
+    "region": "Maine-et-Loire",
+    "country": "FR"
+  },
+  "geo": { "latitude": 47.05158331775881, "longitude": -0.8882538441671843 },
+  "serviceMobile": true,
+  "bardahl": true,
+  "openingHours": [
+    { "days": ["Mo", "Tu", "We", "Th", "Fr"], "opens": "08:30", "closes": "18:30" },
+    { "days": ["Sa"], "opens": "09:00", "closes": "12:00" }
+  ],
+  "openingHoursDisplay": [
+    { "label": "Lundi – Vendredi", "hours": "08h30 – 18h30" },
+    { "label": "Samedi", "hours": "09h00 – 12h00" },
+    { "label": "Dimanche", "hours": "Fermé" }
+  ],
+  "priceRange": "€€",
+  "areaServedDepts": ["44", "49", "56", "79", "85"],
+  "social": {
+    "facebook": "",
+    "linkedin": "",
+    "instagram": "",
+    "snapchat": ""
+  },
+  "googleBusinessProfile": "https://share.google/PfAcGnHPYRLCtGQPu",
+  "googleRating": "4.9",
+  "googleReviewCount": 449,
+  "guarantees": [
+    "Devis gratuit et sans engagement",
+    "Service mobile : à domicile ou au travail",
+    "Sans démontage moteur",
+    "Revendeur agréé Bardahl"
+  ]
+}
