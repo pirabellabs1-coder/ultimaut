@@ -50,6 +50,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem; /* décalage pour le header sticky sur les ancres */
   }
 
   body {
@@ -59,6 +60,12 @@
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: clip; /* anti-débordement horizontal (sans casser position:sticky) */
+  }
+
+  /* Verrou du scroll quand le menu mobile est ouvert */
+  body.menu-open {
+    overflow: hidden;
   }
 
   h1, h2, h3, h4, h5 {

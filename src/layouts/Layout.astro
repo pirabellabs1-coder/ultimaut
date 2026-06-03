@@ -89,10 +89,10 @@ const allJsonLd = [organization(site), website(site), localBusiness(site), ...js
       </div>
 
       <!-- Barre principale -->
-      <div data-mainbar class="border-b border-line bg-white/95 transition-shadow">
-        <div class="mx-auto flex h-[78px] max-w-[1320px] items-center justify-between gap-6 px-6">
+      <div data-mainbar class="relative border-b border-line bg-white/95 transition-shadow">
+        <div class="mx-auto flex h-16 max-w-[1320px] items-center justify-between gap-4 px-4 sm:px-6 lg:h-[78px] lg:gap-6">
           <a href="/" aria-label="Ultimauto, accueil" class="shrink-0">
-            <img src="/img/logo-ultimauto.png" alt="Ultimauto — Multiservices Automobile" width="190" height="70" class="h-[58px] w-auto" />
+            <img src="/img/logo-ultimauto.png" alt="Ultimauto — Multiservices Automobile" width="190" height="70" class="h-11 w-auto lg:h-[58px]" />
           </a>
 
           <nav aria-label="Navigation principale" class="hidden items-center gap-1 lg:flex">
@@ -144,25 +144,31 @@ const allJsonLd = [organization(site), website(site), localBusiness(site), ...js
 
           <div class="flex items-center gap-2">
             <a href="/prise-de-rendez-vous" class="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-brand-700 hover:-translate-y-0.5 sm:inline-flex">Prendre RDV</a>
-            <button type="button" data-menu-btn aria-expanded="false" aria-controls="m-menu" class="grid h-11 w-11 place-items-center rounded-xl border border-line lg:hidden">
-              <span class="sr-only">Menu</span>
-              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button type="button" data-menu-btn aria-expanded="false" aria-controls="m-menu" aria-label="Ouvrir le menu" class="grid h-11 w-11 place-items-center rounded-xl border border-line text-ink lg:hidden">
+              <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+              <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
             </button>
           </div>
         </div>
 
-        <div id="m-menu" data-menu hidden class="border-t border-line bg-white lg:hidden">
-          <div class="mx-auto max-w-[1320px] space-y-1 px-6 py-4">
-            <a href="/" class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">Accueil</a>
-            <p class="px-3 pt-2 text-[11px] font-bold uppercase tracking-wider text-ink-500">Nos services</p>
-            {principaux.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">{s.titreCourt}</a>)}
-            {autres.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-2 text-sm hover:bg-cloud">{s.titreCourt}</a>)}
-            <a href="/zones-d-intervention" class="block rounded-lg px-3 py-2 text-sm hover:bg-cloud">Zones d'intervention</a>
+        <!-- Overlay (ferme au clic) -->
+        <div data-menu-overlay hidden class="fixed inset-x-0 bottom-0 top-16 z-40 bg-ink/40 lg:hidden"></div>
+
+        <!-- Menu mobile -->
+        <nav id="m-menu" data-menu hidden aria-label="Menu principal mobile" class="absolute inset-x-0 top-full z-50 max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-line bg-white shadow-[0_20px_45px_-20px_rgba(15,42,80,0.4)] lg:hidden">
+          <div class="mx-auto max-w-[1320px] space-y-1 px-4 py-4 sm:px-6">
+            <a href="/" class="block rounded-lg px-3 py-3 text-base font-semibold hover:bg-cloud">Accueil</a>
+            <p class="px-3 pt-3 text-[11px] font-bold uppercase tracking-wider text-ink-500">Nos services</p>
+            {principaux.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-3 text-base font-semibold hover:bg-cloud">{s.titreCourt}</a>)}
+            <p class="px-3 pt-3 text-[11px] font-bold uppercase tracking-wider text-ink-500">Autres prestations</p>
+            {autres.map((s) => <a href={`/${s.slug}`} class="block rounded-lg px-3 py-2.5 text-base hover:bg-cloud">{s.titreCourt}</a>)}
+            <a href="/zones-d-intervention" class="block rounded-lg px-3 py-2.5 text-base hover:bg-cloud">Zones d'intervention</a>
             <hr class="my-2 border-line" />
-            {navLinks.map((l) => <a href={l.href} class="block rounded-lg px-3 py-2.5 font-semibold hover:bg-cloud">{l.label}</a>)}
-            <a href="/prise-de-rendez-vous" class="mt-2 block rounded-full bg-brand px-5 py-3 text-center font-bold text-white">Prendre RDV</a>
+            {navLinks.map((l) => <a href={l.href} class="block rounded-lg px-3 py-3 text-base font-semibold hover:bg-cloud">{l.label}</a>)}
+            <a href="/prise-de-rendez-vous" class="mt-2 block rounded-full bg-brand px-5 py-3.5 text-center text-base font-bold text-white">Prendre RDV</a>
+            <a href={`tel:${site.phone}`} class="mt-1 block rounded-full border border-line px-5 py-3 text-center font-bold text-brand">{site.phoneDisplay}</a>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -243,13 +249,27 @@ const allJsonLd = [organization(site), website(site), localBusiness(site), ...js
       const onScroll = () => bar?.classList.toggle('shadow-[0_10px_30px_-16px_rgba(15,42,80,0.35)]', window.scrollY > 8);
       onScroll();
       window.addEventListener('scroll', onScroll, { passive: true });
+
       const btn = document.querySelector('[data-menu-btn]');
       const menu = document.querySelector('[data-menu]');
-      btn?.addEventListener('click', () => {
-        const hidden = menu?.hasAttribute('hidden');
-        if (hidden) menu?.removeAttribute('hidden'); else menu?.setAttribute('hidden', '');
-        btn.setAttribute('aria-expanded', String(!!hidden));
-      });
+      const overlay = document.querySelector('[data-menu-overlay]');
+      const iconOpen = btn?.querySelector('[data-icon-open]');
+      const iconClose = btn?.querySelector('[data-icon-close]');
+      const setMenu = (open) => {
+        if (!menu) return;
+        menu.toggleAttribute('hidden', !open);
+        overlay?.toggleAttribute('hidden', !open);
+        iconOpen?.classList.toggle('hidden', open);
+        iconClose?.classList.toggle('hidden', !open);
+        btn?.setAttribute('aria-expanded', String(open));
+        btn?.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+        document.body.classList.toggle('menu-open', open);
+      };
+      btn?.addEventListener('click', () => setMenu(menu?.hasAttribute('hidden')));
+      overlay?.addEventListener('click', () => setMenu(false));
+      menu?.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+      window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); }, { passive: true });
     </script>
   </body>
 </html>
