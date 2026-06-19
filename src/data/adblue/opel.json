@@ -1,0 +1,49 @@
+{
+  "slug": "opel",
+  "nom": "Opel",
+  "metaTitle": "Problème AdBlue Opel : panne SCR diesel | Ultimauto",
+  "metaDescription": "Problème AdBlue Opel à Cholet : panne SCR, démarrage impossible, voyant sur Corsa, Astra, Grandland et Vivaro (base PSA). Diagnostic et devis gratuit.",
+  "moteurs": "Depuis le rachat d'Opel par le groupe PSA puis Stellantis, les diesels récents reposent sur les blocs 1.5 et 2.0 BlueHDi d'origine PSA, équipés du système SCR à l'AdBlue (norme Euro 6). Les modèles antérieurs pouvaient utiliser des moteurs 1.6 CDTi. Le système d'injection d'urée réduit les oxydes d'azote (NOx) à l'échappement.",
+  "modeles": [
+    "Opel Corsa 1.5 Diesel",
+    "Opel Astra 1.5 Diesel",
+    "Opel Grandland 1.5 / 2.0 Diesel",
+    "Opel Crossland 1.5 Diesel",
+    "Opel Mokka 1.5 Diesel",
+    "Opel Vivaro 1.5 / 2.0 BlueHDi",
+    "Opel Combo 1.5 Diesel",
+    "Opel Insignia 1.6 / 2.0 Diesel"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B",
+    "P207F"
+  ],
+  "symptomes": [
+    "Message « démarrage impossible » avec décompte kilométrique",
+    "Voyant moteur ou anti-pollution allumé",
+    "Perte de puissance et passage en mode dégradé",
+    "Message d'alerte AdBlue persistant malgré un réservoir plein",
+    "Consommation d'AdBlue anormalement élevée",
+    "Pannes fréquentes sur l'utilitaire Vivaro et le Combo en usage pro",
+    "Voyant qui se rallume peu après une réparation incomplète"
+  ],
+  "pourquoi": "Les Opel récentes partageant la base technique Stellantis/PSA, elles héritent des fragilités connues du système SCR BlueHDi : injecteur d'AdBlue qui se bouche, sonde NOx capricieuse et cristallisation de l'urée dans le circuit. Sur les utilitaires Vivaro et Combo utilisés intensivement par les professionnels, l'usage urbain et les trajets courts accentuent l'encrassement. Une qualité d'AdBlue médiocre ou un calculateur SCR mal mis à jour peuvent aussi déclencher des défauts à répétition et un compte à rebours bloquant.",
+  "solutions": "À Cholet, Ultimauto réalise d'abord un diagnostic électronique complet pour localiser la panne sur le système SCR : sonde NOx, injecteur d'AdBlue, pompe ou calculateur. Nous procédons ensuite au remplacement du composant défaillant, au nettoyage du circuit si nécessaire, puis au reparamétrage SCR et à l'effacement des codes défaut, avec essai de validation. Devis gratuit et sans engagement, à l'atelier ou en service mobile. La neutralisation du système est strictement réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué route).",
+  "faq": [
+    {
+      "q": "Les diesels Opel récents utilisent-ils la même technologie que Peugeot et Citroën ?",
+      "r": "Oui. Depuis l'intégration d'Opel au groupe PSA puis Stellantis, les moteurs 1.5 et 2.0 Diesel sont les blocs BlueHDi d'origine PSA, avec le même système SCR à l'AdBlue. Les pannes et les solutions sont donc très proches de celles des Peugeot et Citroën équivalentes, ce qui nous permet d'intervenir avec un diagnostic ciblé."
+    },
+    {
+      "q": "Mon Opel Vivaro est bloqué par l'AdBlue, combien de temps pour le réparer ?",
+      "r": "Après un diagnostic du système SCR, l'intervention se réalise le plus souvent dans la journée selon le composant en cause et sa disponibilité. Sachant qu'un utilitaire immobilisé coûte cher à un professionnel, nous organisons le rendez-vous pour limiter l'arrêt et vous tenons informé à chaque étape."
+    },
+    {
+      "q": "Le voyant AdBlue s'est rallumé après une réparation ailleurs, pouvez-vous m'aider ?",
+      "r": "Oui. Un voyant qui revient signale souvent une cause non traitée à la racine (sonde NOx fatiguée, injecteur partiellement bouché, cristallisation résiduelle). Nous reprenons le diagnostic complet pour identifier le vrai défaut et vous proposons une solution durable, avec un devis gratuit et transparent."
+    }
+  ]
+}

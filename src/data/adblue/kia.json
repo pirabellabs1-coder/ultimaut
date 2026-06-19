@@ -1,0 +1,44 @@
+{
+  "slug": "kia",
+  "nom": "Kia",
+  "metaTitle": "Problème AdBlue Kia : symptômes et solutions",
+  "metaDescription": "Panne AdBlue sur Kia (1.6 et 2.2 CRDi) : voyant, démarrage bloqué, codes SCR. Symptômes, causes et solutions. Ultimauto Cholet + service mobile, devis gratuit.",
+  "moteurs": "1.6 CRDi et 2.2 CRDi équipés du système SCR",
+  "modeles": [
+    "Sportage",
+    "Sorento",
+    "Ceed",
+    "XCeed",
+    "Stonic",
+    "Carnival"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F"
+  ],
+  "symptomes": [
+    "voyant AdBlue + message « démarrage impossible dans X km »",
+    "mode dégradé / perte de puissance",
+    "surconsommation d'AdBlue",
+    "ralenti instable",
+    "voyant moteur (MIL)"
+  ],
+  "pourquoi": "Les diesels CRDi de Kia (partagés avec Hyundai) utilisent un système SCR à AdBlue pour respecter les normes antipollution. Les pannes proviennent surtout du capteur de NOx, de l'injecteur ou de la pompe d'AdBlue, et de la cristallisation de l'urée, en particulier sur les véhicules faisant beaucoup de petits trajets. Un AdBlue de qualité médiocre accélère l'encrassement.",
+  "solutions": "On réalise d'abord un diagnostic électronique pour cibler la vraie cause (capteur NOx, injecteur ou pompe SCR, qualité de l'AdBlue) au lieu d'effacer le défaut. Puis : appoint d'un AdBlue conforme ISO 22241, nettoyage ou remplacement de la pièce défectueuse, et remise en service. Ultimauto intervient à Cholet (49) ou en service mobile, diagnostic et devis gratuits. Toute neutralisation logicielle du SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué).",
+  "faq": [
+    {
+      "q": "Mon Kia Sportage refuse de démarrer à cause de l'AdBlue, est-ce réparable ?",
+      "r": "Oui. Une fois le compte à rebours arrivé à zéro, le démarrage est bloqué, mais après diagnostic et réparation de la cause (capteur, injecteur ou appoint), puis effacement du défaut, le véhicule redémarre normalement."
+    },
+    {
+      "q": "Les moteurs CRDi Kia et Hyundai ont-ils les mêmes soucis d'AdBlue ?",
+      "r": "Oui : Kia et Hyundai appartiennent au même groupe et partagent les moteurs CRDi et le système SCR. Les symptômes et les pièces en cause sont donc identiques."
+    },
+    {
+      "q": "Quel AdBlue mettre dans mon Kia ?",
+      "r": "Uniquement un AdBlue conforme à la norme ISO 22241 (la grande majorité du commerce). Un produit non conforme ou contaminé est l'une des causes fréquentes de cristallisation et de pannes du capteur."
+    }
+  ]
+}

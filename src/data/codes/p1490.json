@@ -1,0 +1,73 @@
+{
+  "code": "P1490",
+  "slug": "p1490",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Défaut système de dépollution AdBlue / SCR (code constructeur)",
+  "metaTitle": "Code défaut P1490 : causes et solution",
+  "metaDescription": "Code défaut P1490 : anomalie du système AdBlue/SCR (code constructeur). Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet (49), devis gratuit.",
+  "definitionCourte": "Le code P1490 est un code constructeur signalant un défaut dans le système de dépollution SCR fonctionnant à l'AdBlue.",
+  "signification": "Le code P1490 fait partie des codes constructeur (P14xx) et, sur les véhicules concernés, il se rapporte au système de dépollution SCR alimenté en AdBlue. Il indique que le calculateur a détecté un défaut dans la chaîne de réduction des oxydes d'azote (NOx), sans désigner systématiquement un organe unique. Le système SCR pulvérise une solution d'urée (AdBlue) dans la ligne d'échappement pour transformer les NOx en azote et en vapeur d'eau ; il s'appuie sur un réservoir, une pompe, un module de dosage, un injecteur, plusieurs capteurs et un catalyseur. Le P1490 peut donc traduire un problème de dosage, de régulation, de capteur ou de calculateur selon le modèle. Sa nature propriétaire impose une valise adaptée au constructeur pour une interprétation fiable. Il s'affiche fréquemment avec d'autres codes du système AdBlue qui précisent la zone concernée.",
+  "causes": [
+    {
+      "titre": "Anomalie de dosage ou de régulation AdBlue",
+      "detail": "Une régulation incorrecte de la quantité de réducteur injectée empêche la bonne neutralisation des NOx et déclenche le défaut."
+    },
+    {
+      "titre": "Pompe ou module d'injection AdBlue défaillant",
+      "detail": "Une pompe faible ou un module de dosage en panne ne délivre pas la pression et le débit attendus par le calculateur."
+    },
+    {
+      "titre": "Injecteur AdBlue encrassé ou bouché",
+      "detail": "L'urée peut cristalliser et obstruer l'injecteur, ce qui dégrade la pulvérisation et fausse la dépollution."
+    },
+    {
+      "titre": "Capteur de qualité, de niveau ou de pression erroné",
+      "detail": "Un capteur AdBlue défaillant renvoie des valeurs hors plage, interprétées comme un défaut du système SCR."
+    },
+    {
+      "titre": "AdBlue non conforme ou réservoir contaminé",
+      "detail": "Un fluide dilué, périmé ou gelé en hiver perturbe le dosage et réduit l'efficacité de la réaction chimique."
+    },
+    {
+      "titre": "Catalyseur SCR vieilli ou inefficace",
+      "detail": "Un catalyseur en fin de vie réduit moins bien les NOx, ce que le calculateur signale comme un défaut de dépollution."
+    },
+    {
+      "titre": "Faisceau, connectique ou calculateur SCR en défaut",
+      "detail": "Une liaison électrique défectueuse ou un calculateur capricieux peut générer ce code sans panne mécanique évidente."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant antipollution allumé",
+    "Message d'erreur du système AdBlue au tableau de bord",
+    "Mode dégradé avec limitation de la puissance",
+    "Décompte des démarrages restants avant immobilisation",
+    "Refus de démarrage une fois le compteur épuisé",
+    "Consommation d'AdBlue anormale ou irrégulière",
+    "Défaut intermittent réapparaissant après effacement"
+  ],
+  "diagnostic": "Le diagnostic du P1490 repose sur une lecture avec une valise compatible avec le constructeur, indispensable pour interpréter ce code propriétaire et les défauts associés. On analyse en données réelles la pression et le débit du circuit AdBlue, le pilotage de l'injecteur, ainsi que les valeurs des capteurs de qualité, de niveau et de pression. Un test des actionneurs permet de vérifier individuellement la pompe et l'injecteur, et un contrôle de la qualité du fluide et de l'état du réservoir écarte une contamination. La connectique et les masses sont également inspectées. L'objectif est d'isoler la cause réelle du défaut avant de remplacer la moindre pièce, pour éviter une dépense inutile.",
+  "reparation": "Selon l'origine, la réparation peut aller d'une vidange du réservoir avec remplissage en AdBlue conforme ou d'un nettoyage de l'injecteur, au remplacement d'un capteur (150 à 350 €), de l'injecteur ou du module de dosage (250 à 600 €), de la pompe AdBlue, voire du catalyseur SCR (poste pouvant dépasser 1 000 €). Ces fourchettes sont indicatives et varient selon le véhicule et l'accessibilité des pièces. Toute neutralisation du système AdBlue/SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export). Ultimauto, à Cholet (49) ou en service mobile, lit ces codes constructeur, cible la panne et vous remet un devis gratuit avant toute intervention.",
+  "gravite": "Élevée",
+  "graviteTexte": "Comme la plupart des défauts AdBlue, le P1490 déclenche fréquemment un compte à rebours pouvant aboutir au blocage du véhicule. Il faut le prendre en charge rapidement.",
+  "rouler": "Le véhicule reste généralement conduisible dans un premier temps, mais le mode dégradé puis le refus de démarrage peuvent survenir une fois le compteur écoulé. Se contenter d'effacer le code ne sert à rien si la cause demeure : il reviendra. Faites établir un diagnostic sans tarder, surtout avant un long trajet.",
+  "faq": [
+    {
+      "q": "Le P1490 est-il un défaut grave ?",
+      "r": "Il doit être pris au sérieux : comme les autres défauts AdBlue, il peut enclencher un compte à rebours du nombre de démarrages restants et, à terme, bloquer le véhicule. Tant que la cause n'est pas identifiée et corrigée, le risque d'immobilisation demeure."
+    },
+    {
+      "q": "Quelle pièce provoque le code P1490 ?",
+      "r": "Ce code constructeur ne désigne pas une pièce unique : il signale un défaut global du système SCR. La pompe, l'injecteur, un capteur, le réservoir, le catalyseur ou le calculateur peuvent être en cause. Seul un diagnostic en données réelles, avec une valise adaptée, permet de cibler le composant fautif."
+    },
+    {
+      "q": "Puis-je continuer à rouler avec un P1490 ?",
+      "r": "À court terme, c'est généralement possible, mais le passage en mode dégradé puis le refus de démarrage peuvent survenir une fois le compteur écoulé. Mieux vaut planifier rapidement un diagnostic plutôt que de risquer une immobilisation imprévue."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P1490 ?",
+      "r": "Cela dépend de la pièce concernée : d'une vidange du réservoir ou d'un capteur autour de 150 €, jusqu'à plus de 1 000 € si le catalyseur SCR doit être remplacé. Chez Ultimauto, le diagnostic cible précisément le besoin et le devis est gratuit."
+    }
+  ]
+}

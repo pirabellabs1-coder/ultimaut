@@ -1,0 +1,73 @@
+{
+  "code": "P2BAE",
+  "slug": "p2bae",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Dépassement des émissions de NOx (système SCR)",
+  "metaTitle": "Code défaut P2BAE : causes et solution",
+  "metaDescription": "Code défaut P2BAE : dépassement des émissions de NOx lié au système SCR/AdBlue. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet (49).",
+  "definitionCourte": "Le code P2BAE indique que le moteur a dépassé le seuil légal d'émissions d'oxydes d'azote (NOx) malgré l'action du système SCR.",
+  "signification": "Le code P2BAE est un défaut générique qui signale au calculateur moteur que les émissions d'oxydes d'azote (NOx) dépassent le seuil autorisé par la réglementation antipollution. Sur un diesel récent, ces NOx sont normalement transformés en azote et en eau dans le catalyseur SCR, grâce à l'injection d'AdBlue (solution d'urée) dans la ligne d'échappement. Le calculateur compare en permanence les valeurs mesurées par les sondes NOx amont et aval pour estimer le rendement réel de la dépollution. Lorsque ce rendement chute durablement, ou que le modèle d'émissions calculé dépasse la limite, le P2BAE est mémorisé. C'est un code « de résultat » : il constate un dépassement sans toujours désigner la pièce précise en cause. Il accompagne fréquemment d'autres défauts plus ciblés (sonde NOx, injecteur ou dosage AdBlue).",
+  "causes": [
+    {
+      "titre": "Catalyseur SCR vieilli ou inefficace",
+      "detail": "Avec le kilométrage ou un empoisonnement chimique, la céramique du catalyseur SCR perd sa capacité à réduire les NOx, ce qui fait chuter le rendement mesuré."
+    },
+    {
+      "titre": "Sonde NOx amont ou aval défectueuse",
+      "detail": "Une sonde NOx faussée ou en panne renvoie des valeurs erronées : le calculateur croit alors que la dépollution est insuffisante et déclenche le dépassement."
+    },
+    {
+      "titre": "Dosage d'AdBlue incorrect",
+      "detail": "Un injecteur encrassé, une pompe faible ou un module de dosage défaillant fournit trop peu de réducteur, et les NOx ne sont plus assez neutralisés."
+    },
+    {
+      "titre": "AdBlue de mauvaise qualité ou réservoir contaminé",
+      "detail": "Un fluide dilué, périmé ou non conforme à la norme réduit fortement l'efficacité de la réaction chimique dans le catalyseur."
+    },
+    {
+      "titre": "Fuite ou défaut d'étanchéité d'échappement",
+      "detail": "Une fuite avant ou au niveau du SCR fausse les mesures des sondes et perturbe la conversion des NOx."
+    },
+    {
+      "titre": "Vanne EGR encrassée ou bloquée",
+      "detail": "Une recirculation des gaz défaillante augmente la production de NOx en amont, au point de saturer la capacité du SCR à les traiter."
+    },
+    {
+      "titre": "Paramétrage ou mise à jour calculateur",
+      "detail": "Un défaut de stratégie, un logiciel non à jour ou une gestion moteur dégradée peuvent provoquer un calcul d'émissions hors tolérance."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) et/ou voyant antipollution allumé",
+    "Message d'alerte antipollution ou AdBlue au tableau de bord",
+    "Passage en mode dégradé avec perte sensible de puissance",
+    "Compteur de démarrages restants avant immobilisation du véhicule",
+    "Hausse de la consommation d'AdBlue",
+    "Surconsommation de carburant dans certains cas",
+    "Comportement moteur normal au début, le code revenant après effacement"
+  ],
+  "diagnostic": "Le diagnostic du P2BAE commence par la lecture complète des défauts mémorisés avec une valise adaptée, car ce code apparaît rarement seul. On analyse en données réelles les valeurs des sondes NOx amont et aval pour vérifier la cohérence du rendement SCR, ainsi que le débit et la pression du circuit AdBlue. Un test d'injection, un contrôle de la qualité du fluide et une inspection de la ligne d'échappement permettent d'écarter une fuite ou une cristallisation. L'objectif est de distinguer un vrai défaut de dépollution d'une simple sonde faussée avant tout remplacement, pour éviter de changer une pièce inutilement.",
+  "reparation": "La réparation dépend de l'élément réellement en cause : remplacement d'une sonde NOx (souvent 150 à 400 € pièce et main-d'œuvre), d'un injecteur ou module de dosage AdBlue (250 à 600 €), nettoyage ou remplacement de la vanne EGR, voire d'un catalyseur SCR (poste le plus onéreux, parfois plus de 1 000 €). Une vidange du réservoir et un remplissage en AdBlue conforme corrigent les cas de fluide contaminé. Ces fourchettes sont indicatives et dépendent du véhicule. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export). Ultimauto, à Cholet (49) ou en service mobile, réalise le diagnostic et vous remet un devis gratuit avant toute intervention.",
+  "gravite": "Élevée",
+  "graviteTexte": "Au-delà d'un dépassement réglementaire, ce défaut déclenche souvent un compte à rebours menant à l'immobilisation du véhicule. Il faut le traiter sans tarder.",
+  "rouler": "Vous pouvez généralement continuer à rouler à court terme, mais le véhicule risque le mode dégradé puis le blocage au démarrage une fois le compteur écoulé. N'effacez pas simplement le code : tant que la cause n'est pas corrigée, il reviendra. Faites établir un diagnostic rapidement.",
+  "faq": [
+    {
+      "q": "Le code P2BAE peut-il bloquer ma voiture ?",
+      "r": "Oui. Sur la plupart des diesels récents, un défaut de dépollution comme le P2BAE active un compte à rebours du nombre de démarrages restants. Une fois ce compteur épuisé, le véhicule refuse de redémarrer. Il vaut donc mieux intervenir avant d'arriver à ce stade."
+    },
+    {
+      "q": "Est-ce uniquement un problème de sonde NOx ?",
+      "r": "Pas forcément. Une sonde NOx faussée est une cause fréquente, mais le P2BAE peut aussi venir d'un dosage AdBlue insuffisant, d'un catalyseur SCR usé, d'une EGR encrassée ou d'une fuite d'échappement. Seul un diagnostic en données réelles permet de trancher."
+    },
+    {
+      "q": "Effacer le code suffit-il à régler le problème ?",
+      "r": "Non. L'effacement fait disparaître le voyant temporairement, mais le calculateur continue de surveiller les émissions : si la cause persiste, le P2BAE réapparaît rapidement. Il faut identifier et corriger l'origine du dépassement."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P2BAE ?",
+      "r": "Cela dépend de la pièce en cause : d'environ 150 € pour une sonde NOx à plus de 1 000 € si le catalyseur SCR doit être remplacé. Chez Ultimauto, le diagnostic permet de cibler précisément le besoin, et le devis est gratuit."
+    }
+  ]
+}

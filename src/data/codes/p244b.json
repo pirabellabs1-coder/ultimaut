@@ -1,0 +1,69 @@
+{
+  "code": "P244B",
+  "slug": "p244b",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Pression différentielle du FAP trop élevée (Banc 1)",
+  "metaTitle": "Code défaut P244B : causes, symptômes et solution",
+  "metaDescription": "Code défaut P244B : pression différentielle du filtre à particules (FAP) trop élevée, banc 1. Causes, symptômes, diagnostic et nettoyage FAP à Cholet.",
+  "definitionCourte": "Le P244B signale une pression différentielle du FAP anormalement haute : les gaz passent difficilement.",
+  "signification": "Le code P244B signale que la pression différentielle du filtre à particules (FAP) du banc 1 est trop élevée, au-dessus de la valeur attendue. Le calculateur mesure en permanence l'écart de pression entre l'amont et l'aval du filtre pour estimer son colmatage. Quand cet écart devient trop important, cela signifie que les gaz d'échappement traversent le filtre difficilement : c'est typiquement le signe d'un FAP fortement colmaté par la suie ou les cendres, qui oppose une résistance excessive au passage des gaz. Plus rarement, une mesure faussée par un capteur défaillant ou des durites bouchées peut aussi déclencher ce code. Le P244B est donc, dans la grande majorité des cas, un indicateur fiable de filtre bouché nécessitant un nettoyage.",
+  "causes": [
+    {
+      "titre": "FAP colmaté par la suie ou les cendres",
+      "detail": "Un filtre saturé oppose une forte résistance au passage des gaz, ce qui fait grimper la pression différentielle."
+    },
+    {
+      "titre": "Régénérations incomplètes",
+      "detail": "Des trajets courts ou un usage urbain empêchent la régénération d'éliminer la suie, qui s'accumule et bouche le filtre."
+    },
+    {
+      "titre": "Capteur de pression différentielle défaillant",
+      "detail": "Un capteur HS peut surévaluer la pression et déclencher le code alors que le filtre n'est pas si bouché."
+    },
+    {
+      "titre": "Durites de prise de pression obstruées ou pincées",
+      "detail": "Des tuyaux bouchés ou écrasés peuvent fausser la mesure vers le haut."
+    },
+    {
+      "titre": "Ligne d'échappement bouchée en aval",
+      "detail": "Un silencieux ou un catalyseur partiellement obstrué augmente la contre-pression mesurée."
+    },
+    {
+      "titre": "FAP en fin de vie jamais nettoyé",
+      "detail": "Un filtre très ancien et saturé de cendres atteint une pression différentielle élevée en permanence."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) et voyant FAP allumés",
+    "Mode dégradé avec bridage de la puissance",
+    "Perte de puissance et reprises molles",
+    "Régénérations forcées fréquentes",
+    "Surconsommation de carburant",
+    "Étouffement du moteur à l'accélération dans les cas avancés",
+    "Ventilateur tournant longtemps après l'arrêt"
+  ],
+  "diagnostic": "Le diagnostic démarre par une lecture à la valise OBD pour confirmer le P244B et relever la pression différentielle en données réelles. On vérifie si cette pression élevée est cohérente avec un FAP colmaté ou si un capteur la surestime : pour cela, on contrôle le capteur, ses durites et le taux de suie ou de cendres estimé. Si le colmatage est confirmé, on évalue si une régénération forcée peut suffire ou si un nettoyage en profondeur est nécessaire. Chez Ultimauto, ce diagnostic électronique évite de nettoyer ou remplacer un filtre alors qu'un simple capteur est en cause.",
+  "reparation": "Si la pression élevée est réelle et le filtre colmaté, un nettoyage FAP en profondeur restaure le débit et fait disparaître le code, de l'ordre de 250 à 350 € selon le véhicule, soit jusqu'à cinq fois moins qu'un FAP neuf. Lorsque la suie est récente, une régénération forcée peut parfois suffire. Si le défaut vient d'un capteur ou de durites, leur réparation est plus économique. Ultimauto réalise diagnostic, régénération et nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit et sans nettoyage facturé si le filtre est irrécupérable.",
+  "gravite": "Élevée",
+  "graviteTexte": "Une pression différentielle très élevée traduit un FAP fortement bouché qui peut étouffer le moteur, forcer le turbo et installer un mode dégradé persistant. Il vaut mieux intervenir rapidement pour éviter des dégâts mécaniques.",
+  "rouler": "Rouler avec un P244B est déconseillé si le filtre est réellement bouché : le moteur s'étouffe, sollicite le turbo et le colmatage s'aggrave. Rouler sur route à régime soutenu peut parfois aider une régénération si le taux n'est pas critique, mais en cas de mode dégradé, mieux vaut ne pas insister et faire diagnostiquer le véhicule.",
+  "faq": [
+    {
+      "q": "Le P244B veut-il dire que mon FAP est bouché ?",
+      "r": "Dans la grande majorité des cas, oui : une pression différentielle trop élevée traduit un filtre colmaté. Plus rarement, un capteur ou des durites en défaut peuvent fausser la mesure, ce que le diagnostic permet de vérifier."
+    },
+    {
+      "q": "Une régénération forcée peut-elle régler le P244B ?",
+      "r": "Parfois, si le colmatage est récent et dû à la suie. Si la régénération échoue ou si la pression remonte aussitôt, c'est qu'un nettoyage en profondeur est nécessaire, notamment lorsque les cendres sont en cause."
+    },
+    {
+      "q": "Quelle différence entre le P244B et le P244A ?",
+      "r": "Le P244B correspond à une pression différentielle trop haute (filtre bouché), alors que le P244A correspond à une pression trop basse (filtre percé, durite débranchée ou fuite). Les causes et solutions sont donc opposées."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P244B ?",
+      "r": "À titre indicatif, un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un filtre neuf. Une régénération forcée ou la réparation d'un capteur est moins coûteuse. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

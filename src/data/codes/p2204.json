@@ -1,0 +1,69 @@
+{
+  "code": "P2204",
+  "slug": "p2204",
+  "categorie": "Capteur NOx",
+  "service": "suppression-adblue",
+  "titre": "Capteur NOx — circuit intermittent (Banc 1)",
+  "metaTitle": "Code défaut P2204 : causes et solution",
+  "metaDescription": "Code défaut P2204 : le circuit du capteur NOx (banc 1) présente un défaut intermittent. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet.",
+  "definitionCourte": "Le code P2204 signale un défaut intermittent sur le circuit du capteur d'oxydes d'azote (NOx) du banc 1.",
+  "signification": "Le capteur NOx mesure les oxydes d'azote dans l'échappement pour permettre au calculateur de doser l'AdBlue du système SCR. Le code P2204 correspond à un défaut intermittent du circuit : le signal disparaît ou devient incohérent par intermittence, puis revient à la normale. Le calculateur surveille en continu l'alimentation, la masse et le signal de la sonde ; lorsqu'il détecte des coupures fugitives ou des variations brutales et répétées, il mémorise ce défaut intermittent. Ce type de panne est souvent le plus délicat à localiser, car il n'est pas permanent : il se manifeste typiquement aux vibrations, à la chaleur ou lors du passage sur des routes dégradées. Il évoque presque toujours un problème de connectique ou de faisceau plutôt qu'un capteur franchement HS.",
+  "causes": [
+    {
+      "titre": "Connecteur instable",
+      "detail": "Un connecteur mal verrouillé, légèrement corrodé ou dont les contacts ont du jeu crée des micro-coupures intermittentes, surtout sous l'effet des vibrations."
+    },
+    {
+      "titre": "Faisceau partiellement endommagé",
+      "detail": "Un câble en partie sectionné, dénudé ou frotté peut établir et perdre le contact de façon aléatoire selon les mouvements et la température."
+    },
+    {
+      "titre": "Faux contact à la masse ou sur l'alimentation",
+      "detail": "Une masse oxydée ou une alimentation au contact incertain provoque des interruptions passagères du circuit du capteur NOx."
+    },
+    {
+      "titre": "Capteur NOx en début de défaillance",
+      "detail": "Une sonde en fin de vie peut d'abord donner des signes intermittents avant de tomber définitivement en panne, avec un signal qui décroche par moments."
+    },
+    {
+      "titre": "Vibrations et chaleur",
+      "detail": "La proximité de l'échappement soumet le capteur et son câblage à de fortes contraintes thermiques et mécaniques qui favorisent les défauts fugitifs."
+    },
+    {
+      "titre": "Connectique humide ou encrassée",
+      "detail": "De l'humidité, des projections ou de la saleté dans le connecteur dégradent le contact de manière irrégulière et déclenchent le code par intermittence."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) qui s'allume puis s'éteint par moments",
+    "Voyant anti-pollution ou alerte SCR/AdBlue intermittente",
+    "Passages en mode dégradé occasionnels",
+    "Surconsommation ou dosage d'AdBlue irrégulier",
+    "À-coups ou pertes de puissance ponctuelles",
+    "Message « démarrage impossible dans X km » apparaissant par intermittence",
+    "Défaut qui réapparaît après effacement, surtout sur routes dégradées"
+  ],
+  "diagnostic": "Le diagnostic d'un défaut intermittent demande de la méthode : on lit les codes et l'historique, puis on observe la valeur du capteur NOx en temps réel tout en sollicitant le faisceau et le connecteur (test de remuage des câbles, moteur chaud). On contrôle la qualité des contacts, de la masse et de l'alimentation, et l'on recherche les points de frottement le long du faisceau. Ce travail patient permet de reproduire le défaut pour le localiser précisément. Chez Ultimauto, ce diagnostic électronique est réalisé systématiquement et gratuitement avant tout devis.",
+  "reparation": "On traite la cause selon le constat : remise en état ou remplacement du connecteur, réparation de la portion de faisceau fragilisée, nettoyage et protection de la connectique, ou remplacement du capteur NOx s'il est en fin de vie. Le système est ensuite réinitialisé, les codes effacés et un essai routier confirme la disparition du défaut intermittent. À titre indicatif, une réparation de connectique reste économique, tandis qu'un capteur NOx se situe souvent entre 200 et 500 € selon le modèle. Ultimauto intervient à Cholet (49) ou en service mobile dans le Grand Ouest, diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le défaut étant intermittent, le véhicule fonctionne souvent normalement entre deux occurrences, mais les passages en mode dégradé peuvent se multiplier et finir par bloquer le démarrage si rien n'est fait.",
+  "rouler": "Vous pouvez généralement continuer à rouler à court terme, mais le défaut risque de réapparaître et de brider la puissance sans prévenir. Faites contrôler la connectique rapidement, car un faux contact a tendance à s'aggraver avec le temps.",
+  "faq": [
+    {
+      "q": "Pourquoi le code P2204 va et vient ?",
+      "r": "Parce qu'il s'agit d'un défaut intermittent : un faux contact dans le connecteur ou le faisceau établit et perd le signal selon les vibrations, la chaleur ou l'état de la route, d'où un défaut qui apparaît puis disparaît."
+    },
+    {
+      "q": "Le P2204 vient-il forcément du capteur ?",
+      "r": "Non, c'est même rarement le cas. Un défaut intermittent oriente d'abord vers la connectique et le faisceau ; le capteur n'est remplacé que s'il est confirmé en début de défaillance."
+    },
+    {
+      "q": "Pourquoi le code revient après effacement ?",
+      "r": "Parce que la cause du faux contact est toujours présente. Tant que le connecteur ou le câble en cause n'est pas réparé, le code finit par revenir, souvent après un trajet sur route dégradée."
+    },
+    {
+      "q": "Combien coûte la réparation ?",
+      "r": "Une remise en état de connectique ou de faisceau est économique ; le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le véhicule. Le devis Ultimauto est gratuit."
+    }
+  ]
+}

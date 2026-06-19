@@ -1,0 +1,49 @@
+{
+  "slug": "audi",
+  "nom": "Audi",
+  "metaTitle": "Problème AdBlue Audi : panne SCR diesel | Ultimauto",
+  "metaDescription": "Panne AdBlue Audi à Cholet (49) : voyant SCR, mode dégradé, démarrage bloqué, codes P20E8 ou P204F. Diagnostic et réparation Ultimauto. Devis gratuit.",
+  "moteurs": "Moteurs diesel 2.0 TDI EA288 / EA288 evo et 3.0 V6 TDI, équipés du système SCR à injection d'AdBlue, souvent associés à une double dépollution NOx exigeante.",
+  "modeles": [
+    "A3 TDI",
+    "A4 / A4 Avant TDI",
+    "A5 TDI",
+    "A6 TDI",
+    "Q3 TDI",
+    "Q5 TDI",
+    "Q7 V6 TDI",
+    "A6 / A7 50 TDI V6"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B",
+    "P207F"
+  ],
+  "symptomes": [
+    "Voyant moteur ou message AdBlue/SCR au combiné d'instruments",
+    "Alerte « Défaut système antipollution : pas de redémarrage »",
+    "Compte à rebours de démarrages restants affiché à l'écran",
+    "Passage en mode dégradé et bridage de la puissance",
+    "Consommation d'AdBlue plus élevée que d'habitude",
+    "Démarrage refusé une fois le décompte épuisé",
+    "Pression SCR insuffisante signalée par le calculateur"
+  ],
+  "pourquoi": "Sur les Audi TDI, en particulier les 3.0 V6 TDI, la panne AdBlue tient fréquemment à un capteur NOx hors tolérance, à un injecteur ou une pompe SCR encrassés, ou à une qualité d'AdBlue insuffisante. Les V6 disposent d'un système de dépollution plus sophistiqué et donc plus sensible. Héritées de la généralisation du SCR après le dieselgate, ces motorisations sont étroitement surveillées par le calculateur, qui impose un compte à rebours de démarrages dès la moindre anomalie.",
+  "solutions": "Ultimauto commence par un diagnostic électronique complet pour cibler le composant en cause sur votre Audi (capteur NOx amont/aval, injecteur, pompe ou pression SCR). Nous procédons ensuite au remplacement de la pièce défectueuse et au reparamétrage du système SCR afin d'effacer durablement le défaut. Intervention à l'atelier de Cholet ou en mobile sur le secteur, devis gratuit. La neutralisation du système reste strictement réservée à un usage hors voie publique.",
+  "faq": [
+    {
+      "q": "Mon Audi V6 TDI passe en mode dégradé, est-ce lié à l'AdBlue ?",
+      "r": "Très probablement. Sur les 3.0 V6 TDI, un défaut du système SCR (capteur NOx, injecteur ou pression d'AdBlue) déclenche le mode dégradé pour protéger la dépollution. Un diagnostic électronique permet de confirmer l'origine exacte et d'éviter une immobilisation totale du véhicule."
+    },
+    {
+      "q": "Le code P204F est-il grave sur mon Audi ?",
+      "r": "Le P204F signale une anomalie de pression dans le système de réactif AdBlue, souvent liée à la pompe ou à l'injecteur SCR. Ce n'est pas une panne moteur, mais elle entraîne un compte à rebours de démarrages. Il faut donc traiter la cause, et pas seulement effacer le code, pour éviter que le défaut ne revienne."
+    },
+    {
+      "q": "Puis-je continuer à rouler avec le voyant AdBlue allumé sur mon Audi ?",
+      "r": "Temporairement oui, mais le calculateur enclenche un décompte de démarrages restants. Une fois à zéro, le véhicule ne redémarrera plus. Nous recommandons un diagnostic rapide ; nous établissons ensuite un devis gratuit avant toute réparation."
+    }
+  ]
+}

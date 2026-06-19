@@ -1,0 +1,73 @@
+{
+  "code": "P0400",
+  "slug": "p0400",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Défaut général du circuit de recirculation des gaz (EGR)",
+  "metaTitle": "Code défaut P0400 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0400 signale une anomalie générale du système EGR : causes, symptômes et solution par décalaminage hydrogène chez Ultimauto à Cholet (49).",
+  "definitionCourte": "Le P0400 indique un dysfonctionnement global du système de recirculation des gaz d'échappement (EGR).",
+  "signification": "Le code P0400 est un code OBD-II générique qui signale un problème de fonctionnement du système de recirculation des gaz d'échappement (EGR), sans préciser s'il s'agit d'un débit trop faible ou trop élevé. La vanne EGR a pour rôle de réintroduire une partie des gaz d'échappement dans l'admission afin d'abaisser la température de combustion et de réduire les émissions d'oxydes d'azote (NOx). Pour piloter ce circuit, le calculateur moteur commande l'ouverture de la vanne puis compare le débit ou la dépression réellement mesurés à la valeur qu'il attend selon le régime et la charge. Lorsque l'écart entre la valeur cible et la valeur mesurée dépasse durablement un seuil, ou qu'une incohérence est détectée sur la commande ou le retour de la vanne, le calculateur enregistre le défaut P0400 et allume le voyant moteur. Sur les moteurs diesel, ce code est le plus souvent la conséquence d'un encrassement progressif de la vanne et du circuit par la calamine.",
+  "causes": [
+    {
+      "titre": "Vanne EGR encrassée par la calamine",
+      "detail": "Les dépôts de suie et d'huile recouvrent le clapet et l'empêchent de s'ouvrir ou de se fermer correctement, ce qui fausse le débit de gaz recirculés."
+    },
+    {
+      "titre": "Vanne EGR grippée",
+      "detail": "Le clapet reste bloqué en position ouverte ou fermée à cause de la calamine et ne répond plus correctement aux ordres du calculateur."
+    },
+    {
+      "titre": "Refroidisseur EGR colmaté",
+      "detail": "L'échangeur qui refroidit les gaz recirculés se bouche progressivement et restreint le passage, perturbant le débit attendu."
+    },
+    {
+      "titre": "Capteur de position ou de pression EGR défectueux",
+      "detail": "Un capteur qui renvoie une information erronée empêche le calculateur de comparer correctement la valeur cible et la valeur réelle."
+    },
+    {
+      "titre": "Faisceau ou connecteur en défaut",
+      "detail": "Un câblage abîmé, un connecteur corrodé ou un faux contact perturbe la commande ou la lecture de la vanne EGR."
+    },
+    {
+      "titre": "Fuite sur le circuit EGR ou d'admission",
+      "detail": "Une fuite de dépression ou une durite percée fausse la mesure et déclenche un défaut de fonctionnement global."
+    },
+    {
+      "titre": "Conduits d'admission obstrués",
+      "detail": "Les passages encrassés par la calamine modifient le débit réel de gaz et faussent le contrôle du système."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable ou irrégulier",
+    "À-coups et hésitations à l'accélération",
+    "Perte de puissance, parfois passage en mode dégradé",
+    "Fumée à l'échappement et hausse des émissions",
+    "Surconsommation de carburant",
+    "Cliquetis ou cognement moteur sous charge"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise pour confirmer le code P0400 et relever les données figées au moment du défaut. On pilote ensuite la vanne EGR en commande active pour vérifier qu'elle s'ouvre et se ferme franchement, et on contrôle la cohérence du débit ou de la pression mesurés par rapport à la consigne. Une inspection du circuit permet d'évaluer le niveau d'encrassement de la vanne, du refroidisseur et des conduits d'admission. Chez Ultimauto, ce contrôle électronique est systématique avant toute intervention, afin d'identifier si le défaut vient de la calamine ou d'une pièce réellement hors service.",
+  "reparation": "Comme le P0400 est presque toujours lié à l'encrassement, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage, ce qui rétablit le libre passage des gaz et un débit conforme. Si la vanne reste grippée, si un capteur ou le faisceau est réellement défaillant, le remplacement de la pièce concernée est conseillé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, tandis que le remplacement d'une vanne est nettement plus coûteux. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste généralement conduisible, mais le moteur fonctionne mal et pollue davantage. Le défaut doit être traité pour éviter un encrassement plus profond.",
+  "rouler": "Vous pouvez rouler quelques jours avec un P0400, mais sans tarder. Tant que la cause persiste, l'encrassement s'aggrave et la perte de puissance peut s'accentuer, avec un risque de mode dégradé. Mieux vaut faire diagnostiquer le véhicule rapidement.",
+  "faq": [
+    {
+      "q": "Le code P0400 est-il grave ?",
+      "r": "Il est de gravité modérée : la voiture roule encore, mais le moteur pollue davantage et s'encrasse. Il vaut mieux le traiter rapidement pour éviter une aggravation."
+    },
+    {
+      "q": "Le décalaminage hydrogène peut-il faire disparaître le P0400 ?",
+      "r": "Oui, lorsque le défaut vient de la calamine, ce qui est le cas le plus fréquent. Le décalaminage nettoie la vanne EGR et le circuit sans démontage et rétablit un débit normal. Si une pièce est hors service, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation d'un code P0400 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Un remplacement de vanne est plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je continuer à rouler avec le code P0400 ?",
+      "r": "Sur de courtes distances oui, mais pas durablement. L'encrassement s'aggrave et la puissance peut chuter. Un diagnostic rapide est recommandé."
+    }
+  ]
+}

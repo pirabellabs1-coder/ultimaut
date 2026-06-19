@@ -1,0 +1,46 @@
+{
+  "slug": "mini",
+  "nom": "Mini",
+  "metaTitle": "Problème AdBlue Mini : panne SCR, code défaut | Ultimauto",
+  "metaDescription": "Problème AdBlue Mini : voyant SCR, démarrage bloqué, capteur NOx ou injecteur sur les diesels d'origine BMW. Diagnostic à Cholet (49) ou mobile.",
+  "moteurs": "Moteurs diesel d'origine BMW (groupe B37/B47) équipés du système SCR à AdBlue.",
+  "modeles": [
+    "Mini Cooper D (F55/F56)",
+    "Mini Cooper SD",
+    "Mini Clubman D (F54)",
+    "Mini Countryman D (F60)",
+    "Mini Countryman SD",
+    "Mini One D"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B"
+  ],
+  "symptomes": [
+    "Message d'avertissement « Démarrage impossible dans X km » à l'écran",
+    "Voyant antipollution ou témoin moteur allumé au tableau de bord",
+    "Impossibilité de redémarrer une fois le contact coupé",
+    "Mode dégradé avec perte sensible de puissance",
+    "Demande d'appoint AdBlue alors que le réservoir est plein",
+    "Consommation d'AdBlue plus rapide que la normale",
+    "Traces blanches cristallisées autour de l'injecteur SCR"
+  ],
+  "pourquoi": "La Mini partage la base technique diesel de BMW : on retrouve donc les mêmes faiblesses sur le système SCR. Le capteur NOx est un point de panne fréquent, qui dérive et fausse la régulation antipollution. L'injecteur et la pompe d'AdBlue peuvent se cristalliser et se boucher, tandis que le chauffage du réservoir d'AdBlue, sensible au gel, peut défaillir en hiver. Une qualité d'AdBlue médiocre ou un défaut du calculateur SCR sont aussi en cause.",
+  "solutions": "Nous réalisons un diagnostic électronique complet pour lire les codes défaut et déterminer la pièce réellement responsable avant toute intervention. Selon le résultat, nous remplaçons le capteur NOx ou l'injecteur SCR, nettoyons le circuit AdBlue et reparamétrons le système. Ultimauto intervient à Cholet (49) ou en service mobile à domicile, avec devis gratuit. La neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique.",
+  "faq": [
+    {
+      "q": "La panne AdBlue d'une Mini est-elle identique à celle d'une BMW ?",
+      "r": "En grande partie, oui : les diesels Mini utilisent des moteurs et un système SCR d'origine BMW, donc les pannes (capteur NOx, injecteur, pompe, chauffage de réservoir) et les codes défaut sont très proches. Le diagnostic et les méthodes de réparation sont les mêmes, ce qui nous permet d'intervenir efficacement sur les deux marques."
+    },
+    {
+      "q": "Ma Mini diesel refuse de démarrer à cause de l'AdBlue, que faire ?",
+      "r": "Si le compte à rebours « Démarrage impossible » est arrivé à zéro, le système SCR bloque le redémarrage. Un appoint d'AdBlue ne suffit généralement pas si un capteur ou un injecteur est en défaut. Il faut un diagnostic pour identifier la cause, réparer la pièce concernée puis réinitialiser le système ; nous pouvons intervenir à Cholet ou en mobile."
+    },
+    {
+      "q": "Le voyant antipollution de ma Mini est allumé, est-ce forcément l'AdBlue ?",
+      "r": "Pas toujours : le voyant antipollution peut signaler un défaut SCR/AdBlue, mais aussi un problème de FAP, d'EGR ou de sonde. Seule la lecture des codes défaut permet de trancher. Nous effectuons cette lecture lors du diagnostic afin de vous proposer la réparation adaptée, avec un devis gratuit et sans engagement."
+    }
+  ]
+}

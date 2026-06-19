@@ -1,0 +1,69 @@
+{
+  "code": "P0472",
+  "slug": "p0472",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de pression d'échappement : signal trop bas",
+  "metaTitle": "Code défaut P0472 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P0472 : signal du capteur de pression d'échappement (FAP) trop bas. Causes, symptômes, diagnostic et solution chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P0472 signale un signal de pression d'échappement anormalement bas, souvent d'origine électrique.",
+  "signification": "Le code P0472 signale que le signal du capteur de pression d'échappement est trop bas, c'est-à-dire que la tension ou la pression mesurée passe sous le seuil minimal admis par le calculateur. Ce capteur mesure la pression des gaz d'échappement, généralement la pression différentielle du filtre à particules (FAP). Une valeur anormalement basse, en dehors de la plage plausible, traduit le plus souvent une cause électrique : court-circuit du signal à la masse, fil coupé, connecteur déboîté, ou bien une durite de prise de pression débranchée qui ne transmet plus la pression au capteur. Contrairement au P0471 où le signal est seulement incohérent, le P0472 indique une valeur franchement hors limite basse, ce qui oriente le diagnostic vers le câblage et le branchement avant le capteur lui-même.",
+  "causes": [
+    {
+      "titre": "Capteur en court-circuit à la masse",
+      "detail": "Un capteur défaillant ou en court-circuit interne à la masse envoie une tension trop basse au calculateur."
+    },
+    {
+      "titre": "Durite de prise de pression débranchée ou percée",
+      "detail": "Si la durite ne transmet plus la pression, le capteur voit une valeur quasi nulle, sous le seuil minimal."
+    },
+    {
+      "titre": "Fil du signal coupé ou court-circuité à la masse",
+      "detail": "Une coupure ou un court-circuit dans le faisceau fait chuter la tension du signal en dessous du seuil."
+    },
+    {
+      "titre": "Connecteur déboîté ou corrodé",
+      "detail": "Un connecteur mal enclenché, corrodé ou plein d'humidité interrompt le signal et le fait passer trop bas."
+    },
+    {
+      "titre": "Alimentation du capteur absente",
+      "detail": "Sans tension d'alimentation (souvent 5 V) côté calculateur, le capteur ne peut plus renvoyer une valeur valide."
+    },
+    {
+      "titre": "Capteur endommagé par la chaleur ou les vibrations",
+      "detail": "L'environnement sévère de l'échappement peut détériorer le capteur et provoquer un signal trop bas."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP éventuellement allumé",
+    "Régénérations du FAP désactivées",
+    "Perte de puissance ou mode dégradé selon le véhicule",
+    "Surconsommation de carburant",
+    "Lecture de pression FAP figée à une valeur basse au diagnostic",
+    "Ralenti parfois instable"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise OBD pour confirmer le P0472 et observer la valeur du capteur, généralement figée très bas. Comme un signal trop bas est souvent d'origine électrique, on contrôle en priorité le faisceau, le connecteur et l'alimentation du capteur, à la recherche d'un fil coupé, d'un court-circuit à la masse ou d'un connecteur corrodé. On vérifie aussi que la durite de prise de pression est bien raccordée et non percée. Chez Ultimauto, ce diagnostic électronique cible la cause électrique avant tout remplacement de capteur.",
+  "reparation": "La réparation dépend de l'origine du défaut. Souvent, reconnecter ou remplacer une durite, réparer un connecteur ou un fil suffit, pour un coût limité. Si le capteur est réellement en court-circuit, son remplacement reste abordable. Comme le P0472 est rarement lié au FAP lui-même, un nettoyage n'est généralement pas nécessaire, sauf colmatage constaté en parallèle (de l'ordre de 250 à 350 € selon le véhicule). Ultimauto réalise le diagnostic électrique, la réparation du circuit et le remplacement éventuel du capteur à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Avec un signal trop bas, les régénérations sont désactivées, ce qui peut conduire à un colmatage progressif du FAP. Le véhicule reste roulant mais le défaut doit être corrigé pour protéger le filtre.",
+  "rouler": "On peut rouler avec un P0472, mais les régénérations étant désactivées, le FAP se charge sans pouvoir se nettoyer. Mieux vaut faire réparer rapidement la cause, le plus souvent électrique, pour éviter qu'un simple défaut de capteur ne finisse par colmater le filtre.",
+  "faq": [
+    {
+      "q": "Le P0472 est-il toujours un problème électrique ?",
+      "r": "Le plus souvent oui : court-circuit à la masse, fil coupé ou connecteur défaillant. Une durite débranchée peut aussi être en cause. Le diagnostic vérifie le câblage et le branchement avant de conclure à un capteur HS."
+    },
+    {
+      "q": "Quelle différence entre le P0472 et le P0473 ?",
+      "r": "Le P0472 correspond à un signal trop bas et le P0473 à un signal trop haut. Le P0472 oriente vers un court-circuit à la masse ou une durite débranchée, tandis que le P0473 peut aussi venir d'un FAP très colmaté."
+    },
+    {
+      "q": "Faut-il remplacer le capteur en cas de P0472 ?",
+      "r": "Pas systématiquement. Si la cause est un connecteur, un fil ou une durite, la réparation du circuit suffit. Le capteur n'est remplacé que s'il est réellement en court-circuit, ce que confirme le diagnostic."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P0472 ?",
+      "r": "Cela dépend de la cause : réparer un connecteur ou une durite est peu coûteux, et remplacer le capteur reste abordable. Un nettoyage FAP, rarement nécessaire ici, se situe de l'ordre de 250 à 350 € selon le véhicule. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

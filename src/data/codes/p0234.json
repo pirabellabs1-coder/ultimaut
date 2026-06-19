@@ -1,0 +1,69 @@
+{
+  "code": "P0234",
+  "slug": "p0234",
+  "categorie": "Suralimentation / turbo",
+  "service": "decalaminage-hydrogene",
+  "titre": "Sur-suralimentation du turbo (overboost)",
+  "metaTitle": "Code défaut P0234 : causes et solution",
+  "metaDescription": "Code défaut P0234 : sur-suralimentation du turbo (overboost), pression trop élevée. Causes, symptômes, diagnostic et solution à Cholet (49).",
+  "definitionCourte": "La pression de suralimentation fournie par le turbo dépasse la valeur maximale autorisée par le calculateur (overboost).",
+  "signification": "Le code P0234 signale une sur-suralimentation : la pression d'air fournie par le turbo dépasse la valeur maximale tolérée par le calculateur (overboost). Pour protéger le moteur d'une pression excessive, l'électronique coupe ou limite immédiatement la suralimentation et mémorise le défaut. À l'inverse de l'underboost, le turbo « pousse » ici trop fort, le plus souvent parce que la géométrie variable reste fermée ou que la wastegate ne s'ouvre plus pour évacuer le surplus de pression. La calamine joue souvent un rôle : en grippant la géométrie variable en position fermée, elle provoque des pics de pression. Le résultat se ressent par à-coups : une poussée brutale suivie d'une coupure de puissance. Le P0234 n'est pas anodin, car une surpression répétée sollicite fortement le turbo et le moteur ; il faut donc en identifier rapidement la cause.",
+  "causes": [
+    {
+      "titre": "Géométrie variable grippée fermée",
+      "detail": "Encrassée par la calamine, la géométrie variable reste en position fermée et génère une pression excessive : cause fréquente de l'overboost."
+    },
+    {
+      "titre": "Wastegate ou soupape de décharge bloquée",
+      "detail": "Si la soupape de décharge ne s'ouvre plus pour évacuer le surplus d'air, la pression de suralimentation grimpe au-delà de la limite autorisée."
+    },
+    {
+      "titre": "Actuateur de turbo bloqué ou mal réglé",
+      "detail": "Un actuateur (à dépression ou électrique) grippé ou déréglé ne régule plus correctement la pression et laisse le turbo monter trop haut."
+    },
+    {
+      "titre": "Durite de commande percée ou pincée",
+      "detail": "Une durite de pilotage de l'actuateur fendue, pincée ou débranchée empêche la régulation de la pression de suralimentation."
+    },
+    {
+      "titre": "Capteur de pression de suralimentation erroné",
+      "detail": "Un capteur de pression (MAP) défaillant peut fausser la lecture et faire diverger la régulation, déclenchant un overboost."
+    },
+    {
+      "titre": "Défaut de régulation par le calculateur",
+      "detail": "Plus rarement, une stratégie de régulation perturbée ou un défaut de pilotage côté calculateur peut conduire à une surpression."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Passage en mode dégradé avec bridage de la puissance",
+    "À-coups ou coupure de puissance lors des fortes accélérations",
+    "Sensation de surpuissance brève suivie d'une coupure nette",
+    "Sifflement anormal du turbo dans certains cas",
+    "Régénération du FAP perturbée par une combustion irrégulière",
+    "Conduite saccadée en charge ou en montée"
+  ],
+  "diagnostic": "Le diagnostic commence par la lecture du code et des données figées, puis par la comparaison entre la pression de suralimentation demandée et la pression réelle relevée en direct, afin de confirmer le dépassement. On contrôle ensuite la commande et la course de la géométrie variable, le bon fonctionnement de la wastegate et de l'actuateur, l'état des durites de pilotage et la cohérence du capteur de pression. Chez Ultimauto à Cholet, ce diagnostic permet de distinguer une géométrie variable grippée d'un actuateur ou d'un capteur défaillant avant toute réparation.",
+  "reparation": "La réparation dépend de la cause : débridage ou réglage de l'actuateur, remplacement d'une durite de pilotage, réfection de la wastegate, ou intervention sur le turbo. À titre indicatif, une durite coûte généralement peu, un capteur de pression de l'ordre de 50 à 150 € posé, tandis qu'un turbo représente une dépense nettement plus élevée. Lorsque la géométrie variable est grippée par la calamine, un décalaminage hydrogène peut l'aider à retrouver de la mobilité et à rétablir une régulation correcte. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Élevée",
+  "graviteTexte": "Le P0234 traduit une surpression du turbo, contrainte mécanique forte pour le turbo et le moteur. Laissé sans traitement, il peut accélérer l'usure, voire endommager le turbo.",
+  "rouler": "Évitez les fortes accélérations et limitez les trajets tant que la cause n'est pas identifiée : une surpression répétée sollicite fortement le turbo. Si le véhicule passe en mode dégradé, ménagez-le. Faites diagnostiquer le défaut rapidement plutôt que d'effacer le code, qui reviendra tant que la régulation de pression n'est pas rétablie.",
+  "faq": [
+    {
+      "q": "Quelle différence entre P0234 et P0299 ?",
+      "r": "Le P0234 (overboost) signale une pression de turbo trop élevée, tandis que le P0299 (underboost) signale une pression trop faible. Les deux concernent la suralimentation, mais le problème de régulation est opposé."
+    },
+    {
+      "q": "Le code P0234 est-il dangereux pour le moteur ?",
+      "r": "Oui, à terme. Une surpression répétée sollicite fortement le turbo et le moteur. Mieux vaut éviter de forcer et faire diagnostiquer le défaut rapidement pour éviter une casse plus coûteuse."
+    },
+    {
+      "q": "Un décalaminage peut-il aider sur un P0234 ?",
+      "r": "Quand la géométrie variable est grippée fermée par la calamine, un décalaminage hydrogène peut lui redonner de la mobilité et améliorer la régulation. Si la wastegate ou l'actuateur sont HS, une réparation mécanique reste nécessaire."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0234 ?",
+      "r": "Le moins possible, et sans solliciter le turbo. Évitez les fortes accélérations et faites contrôler le véhicule rapidement. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

@@ -34,7 +34,7 @@ const chiffres = [
 
 const process = [
   { t: 'Prise de contact', d: 'Appelez-nous, écrivez sur WhatsApp (une photo ou une vidéo aide beaucoup) ou remplissez le formulaire. On cerne votre besoin et on vous propose un créneau.' },
-  { t: 'Diagnostic', d: "On lit les codes défaut et on vérifie l'état réel de votre moteur. Pas d'intervention inutile : on vous explique précisément ce dont votre véhicule a besoin." },
+  { t: 'Diagnostic', d: "On lit les codes défaut et on vérifie l'état réel de votre moteur. Pas d'intervention inutile : on vous explique précisément ce dont votre véhicule a besoin." },
   { t: 'Intervention', d: 'Décalaminage, nettoyage FAP, reprogrammation… réalisés avec un matériel professionnel, sans démontage quand c’est possible, dans le respect de votre mécanique.' },
   { t: 'Restitution & conseils', d: 'On contrôle le résultat, on vous remet le véhicule et on vous donne des conseils d’entretien adaptés à votre usage.' },
 ];
@@ -47,17 +47,17 @@ const pourquoi = [
 ];
 
 const signes = [
-  { t: 'Perte de puissance', d: 'Le moteur répond moins bien, surtout à bas régime : la calamine ou un FAP encrassé étouffent la mécanique.' },
-  { t: 'Surconsommation', d: 'Votre consommation grimpe sans avoir changé de conduite ? Un moteur encrassé brûle mal le carburant.' },
+  { t: 'Perte de puissance', d: 'Le moteur répond moins bien, surtout à bas régime : la calamine ou un FAP encrassé étouffent la mécanique.' },
+  { t: 'Surconsommation', d: 'Votre consommation grimpe sans avoir changé de conduite ? Un moteur encrassé brûle mal le carburant.' },
   { t: 'Fumées à l’échappement', d: 'Des fumées noires ou grises trahissent une combustion incomplète et un encrassement avancé.' },
   { t: 'Voyant moteur ou FAP', d: 'Un voyant allumé signale souvent un souci d’admission, d’EGR ou un filtre à particules saturé.' },
   { t: 'Ralenti instable, à-coups', d: 'Soupapes et vanne EGR encrassées provoquent un ralenti irrégulier et des broutements en conduite.' },
-  { t: 'Passage en mode dégradé', d: 'Puissance bridée par l’électronique : un signal à ne pas ignorer, souvent lié au filtre à particules.' },
+  { t: 'Passage en mode dégradé', d: 'Puissance bridée par l’électronique : un signal à ne pas ignorer, souvent lié au filtre à particules.' },
 ];
 
 const ideesRecues = [
   { faux: 'Un FAP bouché, il faut forcément le remplacer.', vrai: 'Tant que la céramique n’est pas fondue ni fissurée, un nettoyage en profondeur restitue ses performances — pour bien moins cher qu’un FAP neuf.' },
-  { faux: 'Le décalaminage abîme le moteur.', vrai: 'Non : on injecte seulement de l’hydrogène dans l’admission, sans démontage ni produit chimique versé dans le moteur. C’est une opération douce et maîtrisée.' },
+  { faux: 'Le décalaminage abîme le moteur.', vrai: 'Non : on injecte seulement de l’hydrogène dans l’admission, sans démontage ni produit chimique versé dans le moteur. C’est une opération douce et maîtrisée.' },
   { faux: 'Une reprogrammation casse le moteur.', vrai: 'Pas si elle est bien faite. Une cartographie Stage 1 sérieuse, réalisée sur un moteur sain, reste dans les marges de fiabilité de la mécanique.' },
   { faux: 'Rouler sur autoroute nettoie le moteur.', vrai: 'Cela aide la régénération du FAP, mais ne décolle pas la calamine déjà incrustée sur les soupapes, l’EGR et le turbo.' },
 ];
@@ -70,12 +70,12 @@ const typesVehicules = [
 ];
 
 const faq = [
-  { q: 'Qu’est-ce que le décalaminage à l’hydrogène, concrètement ?', r: 'Avec une station professionnelle, on injecte de l’hydrogène dans l’admission pendant que le moteur tourne. Ce gaz améliore la combustion et aide à décoller la calamine (les dépôts de carbone) accumulée sur les soupapes, les injecteurs, la vanne EGR et le turbo. Les résidus sont ensuite évacués par l’échappement, sans démontage et sans produit chimique versé dans le moteur.' },
-  { q: 'Tous les combien faut-il faire un décalaminage ?', r: 'Pour un usage urbain ou de petits trajets, un décalaminage tous les 15 000 à 30 000 km est un bon rythme préventif. Sur un moteur déjà encrassé, il agit comme une cure ponctuelle. On vous conseille selon votre kilométrage et votre façon de rouler.' },
-  { q: 'Vaut-il mieux nettoyer ou remplacer un FAP ?', r: 'Tant que la céramique du filtre n’est ni fondue ni fissurée, le nettoyage est presque toujours possible — et coûte bien moins cher qu’un FAP neuf. On vérifie l’état du filtre avant toute intervention et on vous dit honnêtement ce qui est récupérable.' },
-  { q: 'La suppression AdBlue est-elle autorisée sur route ?', r: 'Non. Modifier un système anti-pollution sur un véhicule qui circule sur la voie publique n’est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit fermé, compétition, export, véhicule non homologué). On vous informe clairement de ce cadre avant toute décision.' },
-  { q: 'Combien de temps prend une intervention ?', r: 'Un décalaminage dure 30 à 60 minutes selon la cylindrée. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. On organise le rendez-vous pour limiter votre immobilisation.' },
-  { q: 'Intervenez-vous à domicile ?', r: 'Oui. En plus de notre atelier de Cholet, notre service mobile se déplace chez vous ou sur votre lieu de travail dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan (des frais de déplacement peuvent s’appliquer selon la distance).' },
+  { q: 'Qu’est-ce que le décalaminage à l’hydrogène, concrètement ?', r: 'Avec une station professionnelle, on injecte de l’hydrogène dans l’admission pendant que le moteur tourne. Ce gaz améliore la combustion et aide à décoller la calamine (les dépôts de carbone) accumulée sur les soupapes, les injecteurs, la vanne EGR et le turbo. Les résidus sont ensuite évacués par l’échappement, sans démontage et sans produit chimique versé dans le moteur.' },
+  { q: 'Tous les combien faut-il faire un décalaminage ?', r: 'Pour un usage urbain ou de petits trajets, un décalaminage tous les 15 000 à 30 000 km est un bon rythme préventif. Sur un moteur déjà encrassé, il agit comme une cure ponctuelle. On vous conseille selon votre kilométrage et votre façon de rouler.' },
+  { q: 'Vaut-il mieux nettoyer ou remplacer un FAP ?', r: 'Tant que la céramique du filtre n’est ni fondue ni fissurée, le nettoyage est presque toujours possible — et coûte bien moins cher qu’un FAP neuf. On vérifie l’état du filtre avant toute intervention et on vous dit honnêtement ce qui est récupérable.' },
+  { q: 'La suppression AdBlue est-elle autorisée sur route ?', r: 'Non. Modifier un système anti-pollution sur un véhicule qui circule sur la voie publique n’est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit fermé, compétition, export, véhicule non homologué). On vous informe clairement de ce cadre avant toute décision.' },
+  { q: 'Combien de temps prend une intervention ?', r: 'Un décalaminage dure 30 à 60 minutes selon la cylindrée. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. On organise le rendez-vous pour limiter votre immobilisation.' },
+  { q: 'Intervenez-vous à domicile ?', r: 'Oui. En plus de notre atelier de Cholet, notre service mobile se déplace chez vous ou sur votre lieu de travail dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan (des frais de déplacement peuvent s’appliquer selon la distance).' },
 ];
 
 const tarifApercu = tarifs.categories.filter((c) =>
@@ -94,11 +94,11 @@ const title = 'Ultimauto — Décalaminage hydrogène & nettoyage FAP à Cholet'
 const description = "Spécialiste du décalaminage hydrogène et du nettoyage FAP à Cholet. Reprogrammation, AdBlue, service mobile dans le Grand Ouest. Devis gratuit.";
 ---
 
-<Layout title={title} description={description} jsonLd={jsonLd}>
+<Layout title={title} description={description} jsonLd={jsonLd} preloadImage="/img/hero-1.jpg">
   <!-- ============================== HERO ============================== -->
   <section
     class="relative overflow-hidden bg-cover bg-center"
-    style="background-image: linear-gradient(180deg, rgba(25,106,213,0.72) 0%, rgba(25,106,213,0.80) 55%, rgba(25,106,213,0.88) 100%), url('/img/hero-1.jpg');"
+    style="background-image: linear-gradient(180deg, rgba(19,89,171,0.86) 0%, rgba(17,82,158,0.90) 55%, rgba(15,72,140,0.94) 100%), url('/img/hero-1.jpg');"
   >
     <div class="mx-auto flex min-h-[600px] max-w-[1320px] flex-col items-center justify-center px-4 py-16 text-center sm:px-6 sm:py-20">
       <div class="max-w-[820px]">
@@ -109,7 +109,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
         <h1 class="mt-6 font-display text-[clamp(1.7rem,6vw,2.6rem)] font-extrabold leading-[1.12] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)]">
           Spécialiste du décalaminage moteur <span class="text-accent">à l'hydrogène</span> &amp; nettoyage FAP
         </h1>
-        <p class="mx-auto mt-6 max-w-[600px] text-[17px] leading-relaxed text-white/90 md:text-[18px]">
+        <p class="mx-auto mt-6 max-w-[600px] text-[17px] leading-relaxed text-white md:text-[18px]">
           Ultimauto redonne souffle, fiabilité et propreté à votre moteur — sans démontage.
           Décalaminage, nettoyage FAP, reprogrammation et gestion AdBlue, à l'atelier de Cholet
           ou en service mobile dans tout le Grand Ouest.
@@ -124,7 +124,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
             Devis WhatsApp
           </a>
         </div>
-        <ul class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-semibold text-white/90">
+        <ul class="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-semibold text-white">
           {['Sans démontage moteur', 'Devis gratuit & sans engagement', 'Revendeur agréé Bardahl'].map((t) => (
             <li class="inline-flex items-center gap-2">
               <svg viewBox="0 0 24 24" class="h-5 w-5 text-accent" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -157,16 +157,16 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
         <span class="eyebrow">Bienvenue chez Ultimauto</span>
         <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Le spécialiste de l'entretien moteur dans le Grand Ouest</h2>
         <div class="rte mt-6">
-          <p>Basé à <strong>Cholet</strong>, dans le Maine-et-Loire, Ultimauto est un centre multiservices automobile spécialisé dans le <strong>décalaminage moteur à l'hydrogène</strong> et le <strong>nettoyage du filtre à particules (FAP)</strong>, sans démontage. Notre métier : redonner du souffle, de la fiabilité et de la propreté à votre moteur, tout en maîtrisant votre budget.</p>
-          <p>Au fil des kilomètres, surtout en ville et sur les petits trajets, un moteur s'encrasse : la calamine s'accumule, le FAP se colmate, les performances baissent et la consommation grimpe. Plutôt que de remplacer des pièces coûteuses, nous traitons la cause avec des méthodes propres et éprouvées. Et parce que chaque véhicule est différent, tout commence par un <strong>diagnostic honnête</strong> : on vous explique simplement ce qui se passe, et on ne propose que ce qui est réellement utile.</p>
-          <p>Décalaminage, nettoyage FAP, reprogrammation moteur, gestion AdBlue, mais aussi destruction d'odeurs, pressing des sièges et rénovation d'optiques de phares : nous intervenons à l'atelier de Cholet comme en <strong>service mobile</strong>, chez vous ou sur votre lieu de travail, dans cinq départements (44, 49, 56, 79 et 85).</p>
+          <p>Basé à <strong>Cholet</strong>, dans le Maine-et-Loire, Ultimauto est un centre multiservices automobile spécialisé dans le <strong>décalaminage moteur à l'hydrogène</strong> et le <strong>nettoyage du filtre à particules (FAP)</strong>, sans démontage. Notre métier&#160;: redonner du souffle, de la fiabilité et de la propreté à votre moteur, tout en maîtrisant votre budget.</p>
+          <p>Au fil des kilomètres, surtout en ville et sur les petits trajets, un moteur s'encrasse&#160;: la calamine s'accumule, le FAP se colmate, les performances baissent et la consommation grimpe. Plutôt que de remplacer des pièces coûteuses, nous traitons la cause avec des méthodes propres et éprouvées. Et parce que chaque véhicule est différent, tout commence par un <strong>diagnostic honnête</strong>&#160;: on vous explique simplement ce qui se passe, et on ne propose que ce qui est réellement utile.</p>
+          <p>Décalaminage, nettoyage FAP, reprogrammation moteur, gestion AdBlue, mais aussi destruction d'odeurs, pressing des sièges et rénovation d'optiques de phares&#160;: nous intervenons à l'atelier de Cholet comme en <strong>service mobile</strong>, chez vous ou sur votre lieu de travail, dans cinq départements (44, 49, 56, 79 et 85).</p>
         </div>
       </div>
       <div class="relative">
         <img src="/img/photo-2.jpg" alt="Intervention de décalaminage hydrogène Ultimauto en service mobile" width="980" height="735" class="w-full rounded-3xl object-cover shadow-[var(--shadow-card)]" loading="lazy" />
         <div class="absolute -bottom-5 -left-5 hidden rounded-2xl bg-deep px-5 py-4 text-white shadow-lg sm:block">
           <p class="font-display text-2xl font-extrabold leading-none">Cholet</p>
-          <p class="mt-1 text-xs text-white/85">Atelier + service mobile · 5 départements</p>
+          <p class="mt-1 text-xs text-white">Atelier + service mobile · 5 départements</p>
         </div>
         <div class="absolute -right-4 -top-4 hidden rounded-full bg-accent px-4 py-2 font-display text-sm font-extrabold text-ink shadow-lg sm:block">Revendeur agréé Bardahl</div>
       </div>
@@ -185,12 +185,12 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
         <div class="rounded-2xl border border-line bg-white p-7 text-center">
           <img src="/img/icons/ecologie.png" alt="" width="56" height="56" class="mx-auto h-14 w-14 object-contain" loading="lazy" />
           <h3 class="mt-4 text-lg font-bold">Écologique</h3>
-          <p class="mt-2 text-sm text-ink-700">Un moteur décalaminé brûle mieux son carburant et rejette nettement moins de particules. Jusqu'à <strong>−70 % de pollution</strong> annoncés : rouler plus propre, sans changer de voiture.</p>
+          <p class="mt-2 text-sm text-ink-700">Un moteur décalaminé brûle mieux son carburant et rejette nettement moins de particules. Jusqu'à <strong>−70 % de pollution</strong> annoncés&#160;: rouler plus propre, sans changer de voiture.</p>
         </div>
         <div class="rounded-2xl border border-line bg-white p-7 text-center">
           <img src="/img/icons/economie.png" alt="" width="56" height="56" class="mx-auto h-14 w-14 object-contain" loading="lazy" />
           <h3 class="mt-4 text-lg font-bold">Économique</h3>
-          <p class="mt-2 text-sm text-ink-700">Le décalaminage peut réduire la consommation jusqu'à <strong>−15 %</strong> et préserve les pièces sensibles (turbo, vanne EGR, FAP, injecteurs). On entretient au lieu de remplacer : la facture reste légère.</p>
+          <p class="mt-2 text-sm text-ink-700">Le décalaminage peut réduire la consommation jusqu'à <strong>−15 %</strong> et préserve les pièces sensibles (turbo, vanne EGR, FAP, injecteurs). On entretient au lieu de remplacer&#160;: la facture reste légère.</p>
         </div>
         <div class="rounded-2xl border border-line bg-white p-7 text-center">
           <span class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent-50 text-accent-700">
@@ -226,6 +226,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
           </a>
         ))}
       </div>
+      {autres.length > 0 && (
       <div class="mt-5 grid gap-5 sm:grid-cols-3">
         {autres.map((s) => (
           <a href={`/${s.slug}`} class="group flex items-center gap-4 rounded-2xl border border-line bg-white p-5 transition-colors hover:border-brand-200">
@@ -239,6 +240,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
           </a>
         ))}
       </div>
+      )}
     </div>
   </section>
 
@@ -283,23 +285,23 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
   <!-- ===================== FAP EXPLIQUÉ (#196AD5) ===================== -->
   <section class="section bg-deep text-white">
     <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-      <div class="rounded-3xl border border-white/15 bg-white/[0.08] p-7">
-        <p class="font-display text-sm font-bold uppercase tracking-wider text-accent">Nettoyer ≠ remplacer</p>
-        <p class="mt-3 text-white/90">Remplacer un FAP coûte souvent plusieurs centaines à plusieurs milliers d'euros. Tant que la céramique n'est ni fondue ni fissurée, le nettoyage restitue ses performances pour une fraction du prix.</p>
+      <div class="rounded-3xl border border-white/20 bg-black/10 p-7">
+        <p class="font-display text-sm font-bold uppercase tracking-wider text-white">Nettoyer ≠ remplacer</p>
+        <p class="mt-3 text-white">Remplacer un FAP coûte souvent plusieurs centaines à plusieurs milliers d'euros. Tant que la céramique n'est ni fondue ni fissurée, le nettoyage restitue ses performances pour une fraction du prix.</p>
         <div class="mt-6 space-y-3">
-          <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-            <span class="text-sm text-white/80">Formule préventive</span><span class="font-display text-lg font-extrabold text-accent">250 €</span>
+          <div class="flex items-center justify-between rounded-xl bg-black/20 px-4 py-3">
+            <span class="text-sm text-white">Formule préventive</span><span class="font-display text-lg font-extrabold text-white">250 €</span>
           </div>
-          <div class="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3">
-            <span class="text-sm text-white/80">Formule curative</span><span class="font-display text-lg font-extrabold text-accent">350 €</span>
+          <div class="flex items-center justify-between rounded-xl bg-black/20 px-4 py-3">
+            <span class="text-sm text-white">Formule curative</span><span class="font-display text-lg font-extrabold text-white">350 €</span>
           </div>
-          <p class="text-center text-xs text-white/80">🎁 Décalaminage hydrogène offert avec chaque formule</p>
+          <p class="text-center text-xs text-white">🎁 Décalaminage hydrogène offert avec chaque formule</p>
         </div>
       </div>
       <div>
-        <span class="eyebrow text-accent">Filtre à particules</span>
-        <h2 class="mt-3 text-3xl font-extrabold text-white md:text-4xl">FAP colmaté, voyant allumé, mode dégradé ?</h2>
-        <div class="rte mt-5 [&_p]:text-white/90 [&_strong]:text-white">
+        <span class="eyebrow text-white">Filtre à particules</span>
+        <h2 class="mt-3 text-3xl font-extrabold text-white md:text-4xl">FAP colmaté, voyant allumé, mode dégradé&#8239;?</h2>
+        <div class="rte mt-5 [&_p]:text-white [&_strong]:text-white">
           <p>{fap.description}</p>
         </div>
         <a href="/nettoyage-fap" class="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink transition-transform hover:-translate-y-0.5">
@@ -338,7 +340,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
           <h3 class="text-xl font-bold">Gestion AdBlue (SCR)</h3>
           <p class="mt-3 text-ink-700">{adblue.intro}</p>
           <div class="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-            <strong>Cadre légal :</strong> prestation réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué). Nous vous conseillons en toute transparence.
+            <strong>Cadre légal&#160;:</strong> prestation réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué). Nous vous conseillons en toute transparence.
           </div>
           <a href="/suppression-adblue" class="btn-primary mt-6">En savoir plus — dès 350 €</a>
         </div>
@@ -347,18 +349,18 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
   </section>
 
   <!-- ===================== SERVICE MOBILE (photo) ===================== -->
-  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(100deg, rgba(21,101,192,0.93) 0%, rgba(25,106,213,0.82) 55%, rgba(25,106,213,0.55) 100%), url('/img/atelier.jpg');">
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(100deg, rgba(19,89,171,0.94) 0%, rgba(18,82,158,0.90) 55%, rgba(16,74,142,0.86) 100%), url('/img/atelier.jpg');">
     <div class="mx-auto max-w-[1180px] px-6 py-16 text-white md:py-20">
       <div class="max-w-xl">
-        <span class="eyebrow text-accent">À domicile ou au travail</span>
+        <span class="eyebrow text-white">À domicile ou au travail</span>
         <h2 class="mt-3 text-3xl font-extrabold text-white md:text-4xl">On se déplace chez vous</h2>
-        <p class="mt-4 text-white/90">Pas le temps de passer à l'atelier ? Notre service mobile vient à vous, à domicile ou sur votre lieu de travail, partout dans le Grand Ouest. Vous récupérez un moteur plus propre et plus sobre, sans la moindre contrainte d'organisation.</p>
+        <p class="mt-4 text-white">Pas le temps de passer à l'atelier&#8239;? Notre service mobile vient à vous, à domicile ou sur votre lieu de travail, partout dans le Grand Ouest. Vous récupérez un moteur plus propre et plus sobre, sans la moindre contrainte d'organisation.</p>
         <div class="mt-7 flex flex-wrap gap-3">
-          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−15 %</p><p class="text-xs text-white/85">de consommation*</p></div>
-          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−70 %</p><p class="text-xs text-white/85">de pollution*</p></div>
-          <div class="rounded-xl bg-white/15 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">0</p><p class="text-xs text-white/85">démontage moteur</p></div>
+          <div class="rounded-xl bg-brand-800/55 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−15 %</p><p class="text-xs text-white">de consommation*</p></div>
+          <div class="rounded-xl bg-brand-800/55 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">−70 %</p><p class="text-xs text-white">de pollution*</p></div>
+          <div class="rounded-xl bg-brand-800/55 px-5 py-3"><p class="font-display text-2xl font-extrabold text-accent">0</p><p class="text-xs text-white">démontage moteur</p></div>
         </div>
-        <p class="mt-3 text-xs text-white/60">*Réductions annoncées, constatées selon l'état d'encrassement du véhicule.</p>
+        <p class="mt-3 text-xs text-white">*Réductions annoncées, constatées selon l'état d'encrassement du véhicule.</p>
         <div class="mt-7 flex flex-wrap gap-3">
           <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Réserver une intervention</a>
           <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">
@@ -396,8 +398,8 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
           <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Injection d'hydrogène sur le moteur</figcaption>
         </figure>
         <figure class="group relative overflow-hidden rounded-2xl shadow-sm">
-          <img src="/img/photo-2.jpg" alt="Service mobile Ultimauto : intervention à domicile" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Service mobile : on vient à vous</figcaption>
+          <img src="/img/photo-2.jpg" alt="Service mobile Ultimauto : intervention à domicile" class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-800/90 to-transparent p-4 text-sm font-semibold text-white">Service mobile&#160;: on vient à vous</figcaption>
         </figure>
       </div>
     </div>
@@ -421,6 +423,32 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
             <p class="mt-2 text-sm text-ink-700">{s.d}</p>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CODES DÉFAUT (OBD) ===================== -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-deep to-brand p-8 text-white md:p-12">
+        <div class="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <div>
+            <span class="eyebrow text-white">Diagnostic</span>
+            <h2 class="mt-3 text-2xl font-extrabold text-white md:text-3xl">Un voyant moteur&#8239;? Trouvez votre code défaut</h2>
+            <p class="mt-4 max-w-xl text-white/90">FAP, EGR, AdBlue, NOx, turbo… Identifiez la signification de votre code, ses causes et la solution — puis prenez rendez-vous en un clic.</p>
+            <div class="mt-6 flex flex-wrap gap-2">
+              {['P2002', 'P0401', 'P20EE', 'P2200', 'P244A', 'P0299'].map((c) => (
+                <a href={`/code-defaut/${c.toLowerCase()}`} class="rounded-lg bg-white/15 px-3 py-1.5 font-mono text-sm font-bold text-white ring-1 ring-white/25 transition-colors hover:bg-white hover:text-brand">{c}</a>
+              ))}
+            </div>
+          </div>
+          <div class="lg:text-right">
+            <a href="/code-defaut" class="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">
+              Voir tous les codes défaut
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -479,7 +507,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
               <span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
                 <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6 6 18M6 6l12 12"/></svg>
               </span>
-              « {it.faux} »
+              «&#160;{it.faux}&#160;»
             </p>
             <p class="mt-3 flex items-start gap-2 text-sm text-ink-700">
               <span class="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-100 text-accent-700">
@@ -499,7 +527,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
       {chiffres.map((c) => (
         <div>
           <p class="font-display text-3xl font-extrabold md:text-4xl">{c.n}</p>
-          <p class="mt-1 text-sm text-white/85">{c.l}</p>
+          <p class="mt-1 text-sm text-white">{c.l}</p>
         </div>
       ))}
     </div>
@@ -509,9 +537,9 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
   <section class="section bg-white">
     <div class="mx-auto grid max-w-[1180px] items-center gap-10 px-6 lg:grid-cols-2">
       <div>
-        <span class="eyebrow">Pour qui ?</span>
+        <span class="eyebrow">Pour qui&#8239;?</span>
         <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Tous types de véhicules, particuliers comme pros</h2>
-        <p class="mt-4 text-ink-700">Diesel ou essence, citadine ou utilitaire : nos prestations s'adaptent à votre véhicule et à votre usage. Nous accompagnons aussi bien les particuliers que les artisans, commerçants et gestionnaires de flotte.</p>
+        <p class="mt-4 text-ink-700">Diesel ou essence, citadine ou utilitaire&#160;: nos prestations s'adaptent à votre véhicule et à votre usage. Nous accompagnons aussi bien les particuliers que les artisans, commerçants et gestionnaires de flotte.</p>
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
           {typesVehicules.map((t) => (
             <li class="flex items-start gap-2.5 text-ink-700">
@@ -563,7 +591,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
       <div class="mx-auto max-w-2xl text-center">
         <span class="eyebrow">Zones d'intervention</span>
         <h2 class="mt-3 text-3xl font-extrabold md:text-4xl">Votre prestation, près de chez vous</h2>
-        <p class="mt-4 text-ink-700">Choisissez une prestation et votre ville : nous intervenons à Cholet et dans tout le Grand Ouest, à l'atelier ou en service mobile.</p>
+        <p class="mt-4 text-ink-700">Choisissez une prestation et votre ville&#160;: nous intervenons à Cholet et dans tout le Grand Ouest, à l'atelier ou en service mobile.</p>
       </div>
       <div class="mt-10 space-y-5">
         {zonesParService.map((row) => (
@@ -621,7 +649,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
               </div>
               <span class="text-xs font-bold text-ink-500">Avis Google</span>
             </div>
-            <blockquote class="mt-4 flex-1 text-ink-700">« {a.texte} »</blockquote>
+            <blockquote class="mt-4 flex-1 text-ink-700">«&#160;{a.texte}&#160;»</blockquote>
             <figcaption class="mt-5 flex items-center justify-between gap-2 border-t border-line pt-4">
               <span class="font-bold">{a.auteur}</span>
               {a.meta && <span class="text-xs text-ink-500">{a.meta}</span>}
@@ -660,8 +688,8 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
   <!-- ===================== CTA FINAL (#196AD5 → #1565C0) ===================== -->
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white md:py-20">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Prêt à redonner du souffle à votre véhicule ?</h2>
-      <p class="mx-auto mt-4 max-w-xl text-white/90">Devis gratuit et sans engagement. Réponse rapide par téléphone ou WhatsApp — une photo ou une vidéo de votre souci suffit souvent pour vous orienter.</p>
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Prêt à redonner du souffle à votre véhicule&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white">Devis gratuit et sans engagement. Réponse rapide par téléphone ou WhatsApp — une photo ou une vidéo de votre souci suffit souvent pour vous orienter.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
         <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">

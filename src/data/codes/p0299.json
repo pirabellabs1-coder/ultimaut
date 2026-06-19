@@ -1,0 +1,69 @@
+{
+  "code": "P0299",
+  "slug": "p0299",
+  "categorie": "Suralimentation / turbo",
+  "service": "decalaminage-hydrogene",
+  "titre": "Sous-suralimentation du turbo (underboost)",
+  "metaTitle": "Code défaut P0299 : causes et solution",
+  "metaDescription": "Code défaut P0299 : sous-suralimentation du turbo (underboost), pression trop faible. Causes, symptômes, diagnostic et solution à Cholet (49).",
+  "definitionCourte": "La pression de suralimentation fournie par le turbo est inférieure à la valeur attendue par le calculateur (underboost).",
+  "signification": "Le code P0299 signale une sous-suralimentation : la pression d'air comprimé fournie par le turbo est inférieure à la consigne du calculateur (underboost). En comparant en permanence la pression de suralimentation mesurée à celle qu'il demande, le calculateur détecte que le turbo ne « pousse » pas assez. C'est l'un des défauts les plus fréquents sur les diesels turbocompressés, en particulier ceux à dominante urbaine ou à fort kilométrage. La cause est très souvent mécanique : une géométrie variable grippée par la calamine, une fuite d'air sur le circuit d'admission ou un FAP très colmaté qui étouffe le moteur. Le calculateur, ne parvenant plus à atteindre la pression cible, bride alors la puissance pour protéger le moteur et limiter la surconsommation. Le P0299 traduit donc un manque de souffle réel, qu'il faut diagnostiquer méthodiquement.",
+  "causes": [
+    {
+      "titre": "Géométrie variable grippée par la calamine",
+      "detail": "Sur les turbos à géométrie variable, les ailettes encrassées par la calamine se bloquent et ne génèrent plus assez de pression : cause très fréquente du P0299."
+    },
+    {
+      "titre": "Fuite d'air sur le circuit d'admission",
+      "detail": "Une durite fendue, un manchon desserré ou un intercooler percé laisse échapper l'air comprimé, et la pression mesurée chute sous la consigne."
+    },
+    {
+      "titre": "Actuateur de turbo défaillant",
+      "detail": "L'actuateur (à dépression ou électrique) qui pilote la géométrie variable ou la wastegate peut être grippé ou en panne, empêchant une bonne régulation."
+    },
+    {
+      "titre": "Capteur de pression de suralimentation encrassé",
+      "detail": "Un capteur de pression (MAP) encrassé ou défaillant renvoie une mesure erronée, que le calculateur interprète comme un manque de pression."
+    },
+    {
+      "titre": "Vanne EGR bloquée ouverte",
+      "detail": "Une EGR encrassée restant ouverte dilue l'air d'admission et perturbe la suralimentation, faisant chuter la pression utile."
+    },
+    {
+      "titre": "Filtre à particules très colmaté",
+      "detail": "Un FAP saturé augmente la contre-pression à l'échappement et bride le turbo, qui ne parvient plus à atteindre la pression demandée."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Passage en mode dégradé avec bridage marqué de la puissance",
+    "Perte de puissance nette, surtout en montée ou en charge",
+    "Reprises molles et turbo qui ne « pousse » plus",
+    "Sifflement d'air en cas de fuite sur l'admission",
+    "Fumées noires à l'accélération dans certains cas",
+    "Régénération du FAP perturbée par une combustion dégradée"
+  ],
+  "diagnostic": "Le diagnostic commence par la lecture du code et des données figées à la valise, puis par la comparaison entre la pression de suralimentation demandée et la pression réelle relevée en direct. On recherche ensuite une fuite d'air sur le circuit d'admission (durites, manchons, intercooler), on contrôle la commande et la mobilité de la géométrie variable, l'actuateur et le capteur de pression. On vérifie aussi l'état du FAP et de l'EGR. Chez Ultimauto à Cholet, ce diagnostic méthodique permet de cibler la vraie cause du manque de souffle avant toute intervention.",
+  "reparation": "La réparation dépend de la cause : remplacement d'une durite, réfection d'un actuateur, nettoyage de l'EGR ou du FAP, ou intervention sur le turbo. À titre indicatif, une durite ou un manchon coûte généralement peu, un capteur de pression de l'ordre de 50 à 150 € posé, tandis qu'un turbo représente une dépense bien plus élevée. Quand la calamine grippe la géométrie variable, un décalaminage hydrogène peut redonner de la mobilité aux ailettes et améliorer la suralimentation, parfois avant d'envisager un remplacement. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Élevée",
+  "graviteTexte": "Le P0299 met souvent le véhicule en mode dégradé et traduit un dysfonctionnement réel du turbo ou de l'admission. Continuer à forcer dans cet état peut aggraver l'usure du turbo et du moteur.",
+  "rouler": "Évitez de rouler longtemps et de solliciter le moteur tant que la cause n'est pas identifiée, surtout si le véhicule est bridé. En cas de fuite ou de turbo en souffrance, insister sur l'accélérateur peut aggraver les dégâts. Faites diagnostiquer le défaut rapidement plutôt que d'effacer le code, qui reviendra tant que la pression reste insuffisante.",
+  "faq": [
+    {
+      "q": "Le code P0299 est-il grave ?",
+      "r": "Il est à prendre au sérieux. Il traduit un vrai manque de pression du turbo et met souvent le moteur en mode dégradé. Forcer dans cet état peut aggraver l'usure du turbo : mieux vaut diagnostiquer rapidement."
+    },
+    {
+      "q": "Le P0299 vient-il toujours du turbo ?",
+      "r": "Non. Très souvent, la cause est une fuite d'air sur l'admission, une géométrie variable grippée par la calamine, une EGR encrassée ou un FAP colmaté. Le diagnostic permet d'éviter de changer le turbo à tort."
+    },
+    {
+      "q": "Un décalaminage peut-il résoudre le P0299 ?",
+      "r": "Parfois, oui. Quand la géométrie variable est grippée par la calamine, un décalaminage hydrogène peut lui redonner de la mobilité et améliorer la suralimentation. Si le turbo est mécaniquement HS, il faut le réparer ou le remplacer."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0299 ?",
+      "r": "Le moins possible, surtout en mode dégradé. Insister sur l'accélérateur peut aggraver les dégâts. Faites contrôler le véhicule rapidement. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

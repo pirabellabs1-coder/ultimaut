@@ -1,0 +1,48 @@
+{
+  "slug": "seat",
+  "nom": "Seat",
+  "metaTitle": "Problème AdBlue Seat : panne SCR diesel | Ultimauto",
+  "metaDescription": "Panne AdBlue Seat à Cholet (49) : voyant moteur, démarrage bloqué, codes P20E8 ou P229F sur Leon et Ateca. Diagnostic et réparation Ultimauto, devis gratuit.",
+  "moteurs": "Moteurs diesel 2.0 TDI EA288 et 1.6 TDI EA288, partagés avec le groupe VAG, équipés du système SCR à injection d'AdBlue pour le traitement des NOx.",
+  "modeles": [
+    "Leon TDI",
+    "Leon ST TDI",
+    "Ateca TDI",
+    "Tarraco TDI",
+    "Arona TDI",
+    "Ibiza TDI",
+    "Alhambra TDI"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Voyant moteur ou témoin AdBlue allumé au tableau de bord",
+    "Message « Démarrage impossible dans XXX km » lié aux émissions",
+    "Compte à rebours du nombre de démarrages restants",
+    "Perte de puissance et passage en mode dégradé",
+    "Consommation d'AdBlue anormalement élevée",
+    "Refus de démarrage une fois le décompte terminé",
+    "Voyant qui réapparaît malgré un appoint récent"
+  ],
+  "pourquoi": "Les Seat diesel reposent sur les mêmes blocs TDI EA288 que le reste du groupe VAG, avec un système SCR identique. La panne AdBlue vient le plus souvent d'un capteur NOx défaillant, d'un injecteur ou d'une pompe SCR encrassés, ou d'un AdBlue de qualité insuffisante ayant cristallisé. Comme sur Volkswagen et Audi, la généralisation du SCR après le dieselgate rend ces moteurs très surveillés : le calculateur impose un compte à rebours de démarrages dès qu'il détecte une anomalie.",
+  "solutions": "Ultimauto effectue d'abord un diagnostic électronique pour localiser précisément la panne sur votre Seat (capteur NOx, injecteur, pompe ou réservoir AdBlue). Nous remplaçons ensuite le composant défectueux, nettoyons le circuit si nécessaire et procédons au reparamétrage du système SCR pour effacer le défaut de façon durable. Intervention à l'atelier de Cholet ou en mobile sur le secteur, devis gratuit. La neutralisation du système est strictement réservée à un usage hors voie publique.",
+  "faq": [
+    {
+      "q": "Mon Seat Leon affiche un message AdBlue, est-ce le même problème que sur une Volkswagen ?",
+      "r": "Oui, dans la grande majorité des cas. Le Leon partage le moteur TDI EA288 et le système SCR du groupe VAG. Les causes sont identiques (capteur NOx, injecteur, pompe ou qualité d'AdBlue) et se traitent de la même manière, après un diagnostic électronique."
+    },
+    {
+      "q": "Mon Seat Ateca ne démarre plus à cause de l'AdBlue, que faire ?",
+      "r": "Si le compte à rebours de démarrages est arrivé à zéro, le véhicule reste bloqué tant que le défaut n'est pas traité. Nous réalisons le diagnostic, réparons l'organe en cause et reparamétrons le système SCR pour permettre le redémarrage. Contactez-nous pour une prise en charge rapide à Cholet ou en mobile."
+    },
+    {
+      "q": "Faut-il forcément remplacer une pièce pour résoudre une panne AdBlue sur un Seat ?",
+      "r": "Pas systématiquement : parfois un nettoyage du circuit ou un appoint d'AdBlue de qualité suffit. Mais lorsqu'un capteur NOx ou un injecteur est défaillant, son remplacement est nécessaire. Le diagnostic permet de trancher, et nous fournissons un devis gratuit avant toute intervention."
+    }
+  ]
+}

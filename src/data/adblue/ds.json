@@ -1,0 +1,48 @@
+{
+  "slug": "ds",
+  "nom": "DS Automobiles",
+  "metaTitle": "Problème AdBlue DS : symptômes et solutions",
+  "metaDescription": "Panne AdBlue DS BlueHDi : message démarrage impossible, voyant persistant, mode dégradé. Causes, codes défaut SCR, diagnostic et réparation à Cholet (49).",
+  "moteurs": "1.5 et 2.0 BlueHDi",
+  "modeles": [
+    "DS 3 Crossback",
+    "DS 4",
+    "DS 7 Crossback",
+    "DS 5"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Message « Démarrage impossible dans X km » sur l'écran de bord",
+    "Voyant AdBlue ou anti-pollution allumé en permanence",
+    "Voyant toujours allumé après un appoint d'AdBlue",
+    "Mode dégradé et bridage de la puissance moteur",
+    "Surconsommation d'AdBlue entre deux pleins",
+    "Compteur de démarrages restants affiché au tableau de bord"
+  ],
+  "pourquoi": "DS Automobiles appartient au groupe Stellantis et reprend les moteurs BlueHDi ainsi que le système SCR à l'AdBlue partagés avec Peugeot et Citroën, dont DS dérive directement. Les pannes sont donc identiques dans leur nature, malgré le positionnement premium de la marque : le capteur de niveau d'AdBlue reste le composant le plus souvent en cause, transmettant une fausse mesure qui fait croire le réservoir vide. La cristallisation de l'urée à l'injecteur, une sonde NOx défaillante ou une pompe SCR fatiguée s'ajoutent aux causes courantes. La finition haut de gamme ne change rien à la mécanique du SCR : ces véhicules sont exposés aux mêmes défauts que le reste de la gamme.",
+  "solutions": "Tout commence par un diagnostic électronique qui lit les codes défaut du système SCR et cible le composant réellement responsable, pour ne remplacer que le nécessaire. Selon le constat : appoint d'un AdBlue de qualité, nettoyage ou remplacement de l'injecteur ou du capteur de niveau, contrôle de la sonde NOx et de la pompe, puis reparamétrage du système. Ultimauto vous reçoit à Cholet (49) ou se déplace en service mobile, avec diagnostic et devis gratuits, en privilégiant la réparation conforme qui garde votre DS en règle. Toute neutralisation du système SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué) et reste interdite sur route.",
+  "faq": [
+    {
+      "q": "Ma DS partage-t-elle les mêmes pannes AdBlue que les Peugeot et Citroën ?",
+      "r": "Oui. DS Automobiles utilise les mêmes moteurs BlueHDi et le même système SCR que Peugeot et Citroën au sein de Stellantis. Les pannes, dont le capteur de niveau, sont de même nature."
+    },
+    {
+      "q": "Pourquoi le message « démarrage impossible » apparaît-il sur ma DS alors que le réservoir d'AdBlue est plein ?",
+      "r": "Le plus souvent à cause du capteur de niveau qui fausse la mesure et croit le réservoir vide. Un diagnostic confirme la cause avant tout remplacement, pour éviter une dépense inutile."
+    },
+    {
+      "q": "Une panne AdBlue peut-elle abîmer le moteur de ma DS ?",
+      "r": "Non. Le système SCR agit en aval, sur la ligne d'échappement, pas sur la mécanique interne. Le risque réel est l'immobilisation en fin de compte à rebours, pas la casse moteur."
+    },
+    {
+      "q": "Peut-on supprimer l'AdBlue sur une DS BlueHDi ?",
+      "r": "Pas pour un usage routier : c'est interdit en France et sanctionné au contrôle technique. Ces prestations sont réservées à un usage hors voie publique. Sur route, la solution reste la réparation conforme."
+    }
+  ]
+}

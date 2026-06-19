@@ -4,10 +4,10 @@ import villes from '../data/villes.json';
 export const servicesLocaux = services.filter((s) => s.local);
 
 /**
- * Une commune a-t-elle une page pour ce service ?
- * - Choletais : tous les services (territoire prioritaire).
- * - population ≥ 1000 : tous les services.
- * - petites communes (<1000) hors Choletais : décalaminage + FAP uniquement (anti-dilution §8).
+ * Une commune a-t-elle une page pour ce service ?
+ * - Choletais : tous les services (territoire prioritaire).
+ * - population ≥ 1000 : tous les services.
+ * - petites communes (<1000) hors Choletais : décalaminage + FAP uniquement (anti-dilution §8).
  */
 export function aUnePage(ville, serviceSlug) {
   if (ville.zone === 'Agglomération du Choletais') return true;

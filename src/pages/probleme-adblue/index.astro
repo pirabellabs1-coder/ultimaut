@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import site from '../../data/site.json';
+import { WA_PATH } from '../../lib/ui.js';
+import { breadcrumb } from '../../lib/jsonld.js';
+
+const mods = import.meta.glob('../../data/adblue/*.json', { eager: true });
+const marques = Object.values(mods)
+  .map((m) => m.default)
+  .sort((a, b) => a.nom.localeCompare(b.nom));
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const url = new URL('/probleme-adblue', site.url).href;
+const jsonLd = [
+  breadcrumb([
+    { name: 'Accueil', url: site.url },
+    { name: 'Suppression AdBlue', url: new URL('/suppression-adblue', site.url).href },
+    { name: 'Problème AdBlue par marque', url },
+  ]),
+];
+---
+<Layout
+  title="Problème AdBlue par marque : symptômes et solutions"
+  description="Panne AdBlue selon votre marque (Peugeot, Citroën, Renault, Mercedes, BMW, VW, Audi…) : symptômes, codes défaut et solutions. Ultimauto à Cholet + service mobile."
+  jsonLd={jsonLd}
+  ogImage="/img/hero-1.jpg"
+>
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.84) 0%, rgba(21,101,192,0.94) 100%), url('/img/hero-1.jpg');">
+    <div class="mx-auto max-w-[1180px] px-5 py-14 text-white sm:px-6 md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
+        <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
+        <a href="/suppression-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
+        <span class="text-white">Par marque</span>
+      </nav>
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Problème AdBlue par marque</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Les pannes du système AdBlue (SCR) sont souvent spécifiques à chaque constructeur. Choisissez votre marque pour découvrir les symptômes, les codes défaut fréquents et nos solutions.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-6">
+      <h2 class="text-2xl font-bold md:text-3xl">Choisissez votre marque</h2>
+      <p class="mt-2 max-w-2xl text-ink-700">{marques.length} marques couvertes — et nous intervenons sur toutes les autres. Diagnostic et devis gratuits à Cholet ou en service mobile dans le 44, 49, 56, 79 et 85.</p>
+      <div class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {marques.map((m) => (
+          <a href={`/probleme-adblue/${m.slug}`} class="group flex items-center justify-between gap-3 rounded-2xl border border-line bg-cloud p-5 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-white hover:shadow-[var(--shadow-card)]">
+            <span>
+              <span class="block font-bold text-ink group-hover:text-brand">{m.nom}</span>
+              <span class="mt-0.5 block text-sm text-ink-500">{m.moteurs}</span>
+            </span>
+            <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        ))}
+      </div>
+      <div class="mt-8 rounded-2xl border border-line bg-brand-50 p-6 text-center">
+        <p class="font-semibold text-ink">Votre marque n'est pas listée&#8239;?</p>
+        <p class="mt-1 text-sm text-ink-700">Nous gérons les pannes AdBlue de tous les constructeurs. <a href="/suppression-adblue" class="font-semibold text-brand hover:underline">Découvrir notre prestation AdBlue</a> ou contactez-nous directement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Voyant AdBlue ou démarrage bloqué&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Diagnostic et devis gratuits, à l'atelier de Cholet ou en service mobile. On vous remet en route rapidement.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

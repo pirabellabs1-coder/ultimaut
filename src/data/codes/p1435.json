@@ -1,0 +1,73 @@
+{
+  "code": "P1435",
+  "slug": "p1435",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Défaut circuit / composant AdBlue (code constructeur)",
+  "metaTitle": "Code défaut P1435 : causes et solution",
+  "metaDescription": "Code défaut P1435 : anomalie du circuit AdBlue/SCR (code constructeur). Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet (49), devis gratuit.",
+  "definitionCourte": "Le code P1435 est un code constructeur signalant une anomalie d'un composant ou du circuit du système de dépollution SCR à l'AdBlue.",
+  "signification": "Le code P1435 appartient à la plage des codes constructeur (P14xx) et, sur les véhicules concernés, il est rattaché au système de dépollution SCR fonctionnant à l'AdBlue. Il signale que le calculateur a détecté une anomalie sur un composant ou un circuit participant à la réduction des oxydes d'azote (NOx), sans que la référence générique en précise toujours le détail. Le système SCR injecte de l'AdBlue (urée) dans la ligne d'échappement pour transformer les NOx en azote et en vapeur d'eau ; il met en jeu un réservoir, une pompe, un module de dosage, un injecteur, des capteurs et un catalyseur, le tout relié par un faisceau électrique. Le P1435 peut donc concerner une valeur électrique hors plage, un retour incohérent d'un actionneur ou un défaut de circuit. Comme il s'agit d'un code propriétaire, son interprétation exacte dépend du constructeur et impose une valise adaptée. Il est fréquent qu'il soit accompagné d'autres codes AdBlue plus précis.",
+  "causes": [
+    {
+      "titre": "Capteur AdBlue en défaut",
+      "detail": "Un capteur de niveau, de qualité, de pression ou de température hors plage transmet une valeur incohérente qui déclenche un défaut de circuit."
+    },
+    {
+      "titre": "Faisceau ou connectique endommagé",
+      "detail": "Un fil coupé, une cosse corrodée ou une masse défaillante interrompt le signal entre le calculateur et un composant AdBlue."
+    },
+    {
+      "titre": "Pompe ou module de dosage défaillant",
+      "detail": "Une pompe AdBlue qui ne répond pas correctement à la commande génère un retour électrique anormal interprété comme une anomalie de circuit."
+    },
+    {
+      "titre": "Injecteur AdBlue obstrué ou en court-circuit",
+      "detail": "Un injecteur bouché par la cristallisation, ou présentant un défaut électrique, perturbe le pilotage et déclenche le code."
+    },
+    {
+      "titre": "Réservoir AdBlue contaminé ou gelé",
+      "detail": "Un fluide non conforme ou gelé en hiver fausse les capteurs et empêche le bon fonctionnement du circuit de dosage."
+    },
+    {
+      "titre": "Alimentation ou masse défaillante",
+      "detail": "Une tension d'alimentation instable ou une masse défectueuse provoque des valeurs électriques hors tolérance sur le système SCR."
+    },
+    {
+      "titre": "Calculateur de dépollution capricieux",
+      "detail": "Un défaut interne du calculateur SCR ou un logiciel à mettre à jour peut générer ce code sans panne mécanique évidente."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant antipollution allumé",
+    "Message d'erreur du système AdBlue au tableau de bord",
+    "Mode dégradé avec limitation de la puissance",
+    "Compteur de démarrages restants avant immobilisation",
+    "Niveau ou autonomie d'AdBlue affichés de façon incohérente",
+    "Refus de redémarrage une fois le compte à rebours épuisé",
+    "Défaut intermittent réapparaissant après effacement"
+  ],
+  "diagnostic": "Le diagnostic du P1435 commence par une lecture avec une valise adaptée au constructeur, car ce code propriétaire n'est pas toujours interprété par un lecteur OBD générique. Comme il oriente souvent vers un défaut de circuit, on vérifie en priorité la connectique, le faisceau, l'alimentation et les masses des composants AdBlue, ainsi que les valeurs électriques des capteurs en données réelles. Un test des actionneurs permet de solliciter la pompe et l'injecteur pour observer leur réponse, tandis qu'un contrôle de la qualité du fluide et de l'état du réservoir écarte une contamination. L'objectif est de localiser précisément le composant ou la liaison en cause avant tout remplacement.",
+  "reparation": "Lorsqu'il s'agit d'un défaut de circuit, la réparation peut se limiter à la remise en état d'une connectique ou d'un faisceau, opération souvent peu coûteuse. Si un composant est en cause, comptez le remplacement d'un capteur (150 à 350 €), de l'injecteur ou du module de dosage (250 à 600 €), voire de la pompe AdBlue. Une vidange du réservoir et un remplissage en AdBlue conforme corrigent les cas de fluide contaminé. Ces montants sont indicatifs et varient selon le véhicule. Toute neutralisation du système AdBlue/SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export). Ultimauto, à Cholet (49) ou en service mobile, lit ces codes constructeur, cible la panne et remet un devis gratuit avant toute intervention.",
+  "gravite": "Modérée",
+  "graviteTexte": "La gravité dépend du composant touché : un simple défaut de connectique reste limité, mais un vrai défaut AdBlue peut enclencher un compte à rebours menant au blocage du véhicule.",
+  "rouler": "Vous pouvez le plus souvent continuer à rouler à court terme, mais surveillez l'apparition d'un mode dégradé ou d'un compte à rebours. N'effacez pas le code sans corriger la cause, sinon il reviendra. Un diagnostic rapide permet de savoir s'il s'agit d'un défaut électrique mineur ou d'une panne plus sérieuse du système SCR.",
+  "faq": [
+    {
+      "q": "Le P1435 est-il un code AdBlue ?",
+      "r": "Sur les véhicules concernés, oui : c'est un code constructeur rattaché au système de dépollution SCR fonctionnant à l'AdBlue. Comme il s'agit d'une référence propriétaire, son interprétation exacte dépend de la marque et demande une valise adaptée pour être lue correctement."
+    },
+    {
+      "q": "Ce code vient-il forcément d'une pièce en panne ?",
+      "r": "Pas nécessairement. Le P1435 oriente souvent vers un défaut de circuit : une connectique corrodée, un faisceau abîmé ou une masse défaillante peuvent suffire à le déclencher. C'est pourquoi le contrôle du câblage fait partie des premières vérifications, avant de remplacer un composant."
+    },
+    {
+      "q": "Mon véhicule risque-t-il de se bloquer ?",
+      "r": "C'est possible si le défaut concerne réellement la dépollution AdBlue, car ces systèmes activent généralement un compte à rebours du nombre de démarrages restants. Un diagnostic permet de savoir si le risque de blocage est réel ou s'il s'agit d'un défaut électrique plus bénin."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P1435 ?",
+      "r": "Cela varie beaucoup : une réparation de connectique peut être peu coûteuse, tandis que le remplacement d'un capteur, d'un injecteur ou d'une pompe AdBlue va de 150 à 600 € environ. Chez Ultimauto, le diagnostic cible le besoin réel et le devis est gratuit."
+    }
+  ]
+}

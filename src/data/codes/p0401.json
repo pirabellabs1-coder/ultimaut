@@ -1,0 +1,69 @@
+{
+  "code": "P0401",
+  "slug": "p0401",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Débit EGR insuffisant détecté",
+  "metaTitle": "Code défaut P0401 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0401 indique un débit EGR insuffisant. Causes, symptômes et solution par décalaminage hydrogène chez Ultimauto à Cholet (49). Devis gratuit.",
+  "definitionCourte": "Le P0401 signale que la quantité de gaz recirculés par la vanne EGR est trop faible.",
+  "signification": "Le code P0401 est un code OBD-II générique qui signale un débit de recirculation des gaz d'échappement (EGR) insuffisant. La vanne EGR réintroduit une partie des gaz d'échappement dans l'admission pour abaisser la température de combustion et limiter la formation d'oxydes d'azote (NOx). Lorsqu'il commande l'ouverture de la vanne, le calculateur moteur attend une certaine quantité de gaz réintroduite et la compare au débit réellement mesuré, via un capteur de débit, de pression différentielle ou la position du clapet. Si la valeur mesurée reste durablement en dessous de la consigne, le calculateur en déduit que les gaz ne passent pas en quantité suffisante et enregistre le défaut P0401. Sur les moteurs diesel, ce manque de débit traduit presque toujours une vanne ou un circuit EGR partiellement obstrué par la calamine, qui ne laisse plus passer assez de gaz.",
+  "causes": [
+    {
+      "titre": "Vanne EGR encrassée par la calamine",
+      "detail": "Les dépôts empêchent le clapet de s'ouvrir complètement, ce qui réduit la quantité de gaz recirculés sous la valeur attendue."
+    },
+    {
+      "titre": "Conduits EGR ou passages d'admission bouchés",
+      "detail": "La calamine accumulée dans les conduits restreint le passage et limite le débit de gaz même quand la vanne s'ouvre."
+    },
+    {
+      "titre": "Refroidisseur EGR colmaté",
+      "detail": "L'échangeur encrassé crée une restriction qui réduit le débit de gaz vers l'admission."
+    },
+    {
+      "titre": "Vanne EGR grippée en position fermée",
+      "detail": "Bloquée par les dépôts, la vanne ne s'ouvre pas assez et le débit reste insuffisant."
+    },
+    {
+      "titre": "Capteur de pression différentielle (DPFE) défectueux",
+      "detail": "Un capteur ou ses tuyaux obstrués renvoient une mesure de débit trop basse et déclenchent le code à tort."
+    },
+    {
+      "titre": "Fuite de dépression sur une vanne pneumatique",
+      "detail": "Sur les vannes à commande par dépression, une fuite empêche l'ouverture complète et limite le débit."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Tendance au cliquetis ou cognement moteur sous charge",
+    "Légère perte de puissance",
+    "Ralenti pouvant rester normal ou peu affecté",
+    "Hausse des émissions d'oxydes d'azote (NOx)",
+    "Surconsommation de carburant possible",
+    "Hésitations en montée en régime"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise pour confirmer le P0401 et consulter les données figées. On pilote ensuite la vanne EGR en commande active afin de vérifier qu'elle s'ouvre réellement, et on contrôle le débit ou la pression mesurés pour s'assurer qu'ils atteignent la consigne. Une inspection permet d'évaluer la libre circulation dans les conduits EGR et le niveau d'encrassement de la vanne et du refroidisseur. Chez Ultimauto, ce contrôle est réalisé avant toute intervention pour distinguer un simple encrassement d'un capteur ou d'une vanne hors service.",
+  "reparation": "Un débit insuffisant étant presque toujours dû à l'encrassement, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage et rétablit le passage des gaz. Si la vanne reste grippée ou si le capteur de débit est réellement défaillant, le remplacement de la pièce est conseillé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement d'une vanne étant nettement plus cher. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le moteur reste utilisable mais perd un peu de puissance et émet plus de NOx. Le défaut doit être traité pour éviter que l'encrassement ne s'aggrave.",
+  "rouler": "Rouler avec un P0401 est possible sur de courtes distances, mais il ne faut pas laisser traîner. Le manque de recirculation augmente la température de combustion et les dépôts continuent de s'accumuler. Un diagnostic rapide évite une aggravation.",
+  "faq": [
+    {
+      "q": "Que signifie un débit EGR insuffisant ?",
+      "r": "Cela veut dire que la vanne EGR ne laisse pas passer assez de gaz d'échappement vers l'admission par rapport à ce que le calculateur attend. C'est le plus souvent dû à la calamine qui bouche la vanne ou les conduits."
+    },
+    {
+      "q": "Le décalaminage hydrogène corrige-t-il le code P0401 ?",
+      "r": "Oui dans la grande majorité des cas, car le P0401 vient surtout de l'encrassement. Le décalaminage nettoie la vanne et le circuit sans démontage et rétablit un débit normal. Si une pièce est HS, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0401 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Un remplacement de vanne est plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0401 ?",
+      "r": "Oui sur de courtes distances, mais pas durablement. La perte de puissance et l'encrassement risquent de s'aggraver. Mieux vaut faire diagnostiquer rapidement."
+    }
+  ]
+}

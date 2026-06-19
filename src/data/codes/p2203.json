@@ -1,0 +1,69 @@
+{
+  "code": "P2203",
+  "slug": "p2203",
+  "categorie": "Capteur NOx",
+  "service": "suppression-adblue",
+  "titre": "Capteur NOx — signal du circuit trop haut (Banc 1)",
+  "metaTitle": "Code défaut P2203 : causes et solution",
+  "metaDescription": "Code défaut P2203 : le signal du capteur NOx (banc 1) est trop haut. Causes, symptômes, diagnostic et réparation du circuit par Ultimauto à Cholet.",
+  "definitionCourte": "Le code P2203 indique un signal trop haut sur le circuit du capteur d'oxydes d'azote (NOx) du banc 1.",
+  "signification": "Le capteur NOx informe le calculateur de la quantité d'oxydes d'azote dans les gaz d'échappement pour piloter l'injection d'AdBlue du système SCR. Le code P2203 est enregistré lorsque la tension ou la valeur mesurée sur le circuit du capteur dépasse durablement le seuil maximal admis. Cette valeur anormalement élevée ne correspond à aucune situation de combustion réaliste : le calculateur en déduit un défaut. Un signal trop haut évoque le plus souvent une coupure du circuit qui laisse l'entrée « flotter » à une tension élevée, un court-circuit vers une tension positive, ou un capteur défaillant qui sature. Faute de mesure fiable, le calculateur ne peut plus réguler correctement la dépollution et place le moteur en mode de sécurité.",
+  "causes": [
+    {
+      "titre": "Capteur NOx hors service",
+      "detail": "Une sonde dont l'électronique est défaillante peut saturer et renvoyer une valeur en permanence trop élevée, hors de la plage de mesure attendue."
+    },
+    {
+      "titre": "Circuit ouvert (coupure)",
+      "detail": "Une coupure sur la ligne du capteur laisse l'entrée du calculateur sans référence : la tension lue monte alors anormalement haut."
+    },
+    {
+      "titre": "Court-circuit à une tension positive",
+      "detail": "Un fil du circuit en contact avec une ligne d'alimentation, à cause d'une isolation abîmée, tire le signal vers une valeur trop élevée."
+    },
+    {
+      "titre": "Connecteur corrodé ou débranché",
+      "detail": "Une connectique oxydée, desserrée ou déconnectée interrompt le contact et provoque une lecture de tension haute par le calculateur."
+    },
+    {
+      "titre": "Masse de mauvaise qualité",
+      "detail": "Une masse du capteur coupée ou oxydée fausse la référence de mesure et peut faire monter la tension lue au-delà du seuil admis."
+    },
+    {
+      "titre": "Calculateur SCR en défaut",
+      "detail": "Plus rarement, une entrée défectueuse du calculateur de dépollution ou un défaut de référence peut générer une valeur systématiquement haute."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Voyant anti-pollution ou alerte SCR/AdBlue",
+    "Passage en mode dégradé avec puissance limitée",
+    "Dosage d'AdBlue perturbé et surconsommation possible",
+    "Message « démarrage impossible dans X km » dans certains cas",
+    "Manque de reprise ou à-coups selon les conditions",
+    "Comptes à rebours ou alertes répétées du système SCR"
+  ],
+  "diagnostic": "On lit les codes mémorisés et on observe la valeur du capteur NOx en temps réel pour confirmer qu'elle dépasse le seuil haut. On vérifie ensuite la continuité du faisceau pour écarter une coupure, on recherche un court-circuit vers une tension positive et on contrôle l'état du connecteur et de la masse du capteur. Ces mesures croisées permettent de déterminer si le signal trop haut provient du capteur lui-même, d'un circuit ouvert ou d'un défaut de câblage. Chez Ultimauto, ce diagnostic électronique est réalisé systématiquement et gratuitement avant tout devis.",
+  "reparation": "Selon le constat, on rétablit la continuité en réparant le faisceau coupé, on supprime le court-circuit, on remet en état le connecteur ou la masse, ou l'on remplace le capteur NOx par une pièce adaptée. Le système est ensuite réinitialisé, les codes effacés et un essai vérifie le retour d'un signal cohérent. À titre indicatif, un capteur NOx coûte souvent entre 200 et 500 € selon le modèle ; une réparation de faisceau revient moins cher. Ultimauto intervient à Cholet (49) ou en service mobile dans le Grand Ouest, diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste le plus souvent roulant mais en mode dégradé. Une coupure ou un court-circuit non traité peut aggraver la situation et entraîner un blocage du démarrage par le système SCR.",
+  "rouler": "Rejoindre l'atelier reste généralement possible, mais la puissance peut être bridée et un compte à rebours peut apparaître. En cas de coupure de circuit suspectée, évitez les longs trajets et faites diagnostiquer le véhicule rapidement.",
+  "faq": [
+    {
+      "q": "Que signifie un signal trop haut (P2203) ?",
+      "r": "Cela indique que la tension lue sur le circuit du capteur NOx dépasse le seuil maximal attendu, ce qui évoque souvent une coupure de circuit, un court-circuit vers une tension positive ou un capteur défaillant."
+    },
+    {
+      "q": "Quelle différence avec le P2202 ?",
+      "r": "Le P2203 correspond à un signal trop haut, le P2202 à un signal trop bas. Cette différence de sens oriente directement la recherche du défaut sur le câblage et l'alimentation."
+    },
+    {
+      "q": "Le code peut-il venir d'un simple connecteur débranché ?",
+      "r": "Oui. Un connecteur déconnecté ou très corrodé interrompt le circuit et provoque une lecture de tension haute. C'est l'un des premiers points vérifiés au diagnostic."
+    },
+    {
+      "q": "Combien coûte la réparation ?",
+      "r": "Une réparation de câblage ou de connectique est économique ; le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le véhicule. Le devis Ultimauto est gratuit."
+    }
+  ]
+}

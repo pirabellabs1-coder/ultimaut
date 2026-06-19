@@ -1,0 +1,69 @@
+{
+  "code": "P2031",
+  "slug": "p2031",
+  "categorie": "Température d'échappement",
+  "service": "nettoyage-fap",
+  "titre": "Circuit du capteur de température des gaz d'échappement (banc 1, capteur 2)",
+  "metaTitle": "Code défaut P2031 : causes et solution",
+  "metaDescription": "Code défaut P2031 : anomalie du circuit du capteur de température des gaz d'échappement (EGT) banc 1 capteur 2. Causes, diagnostic et réparation à Cholet (49).",
+  "definitionCourte": "Anomalie générale sur le circuit électrique du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 2, souvent placé près du FAP.",
+  "signification": "Le code P2031 indique une anomalie sur le circuit du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 2. Sur un diesel, ce capteur est généralement positionné en aval, juste avant ou après le filtre à particules, pour en surveiller la température. Le calculateur s'appuie sur cette mesure pour déclencher les régénérations du FAP et vérifier qu'elles atteignent bien la température nécessaire à la combustion des suies. Le P2031 est un défaut « générique » de circuit : il apparaît quand le signal devient incohérent, sort de sa plage ou disparaît, sans préciser s'il est trop haut ou trop bas. Comme ce capteur encadre directement le FAP, son défaut perturbe la stratégie de régénération et peut accélérer le colmatage du filtre. Le calculateur, privé d'une donnée fiable, passe alors en mode de sécurité.",
+  "causes": [
+    {
+      "titre": "Capteur EGT (capteur 2) défectueux",
+      "detail": "La sonde située près du FAP est très sollicitée par la chaleur des régénérations ; elle dérive ou tombe en panne, cause la plus fréquente du P2031."
+    },
+    {
+      "titre": "Faisceau électrique endommagé",
+      "detail": "Le câblage sous le véhicule, exposé à la chaleur et aux projections, peut être coupé, frotté ou rongé, interrompant le signal."
+    },
+    {
+      "titre": "Connecteur encrassé ou oxydé",
+      "detail": "Un connecteur mal verrouillé, corrodé ou sale crée une résistance parasite et fausse la valeur lue par le calculateur."
+    },
+    {
+      "titre": "Court-circuit ou circuit ouvert",
+      "detail": "Un fil à la masse, au 12 V ou sectionné place le signal hors plage et déclenche le code de circuit du capteur 2."
+    },
+    {
+      "titre": "Capteur recouvert de calamine",
+      "detail": "Une couche de suie épaisse sur la pointe du capteur ralentit sa réponse et fausse la température, fréquent près du FAP."
+    },
+    {
+      "titre": "Défaut d'alimentation ou de masse",
+      "detail": "Une masse défaillante ou une alimentation instable côté calculateur rend le signal incohérent, plus rarement le calculateur lui-même."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Régénération du filtre à particules perturbée ou bloquée",
+    "FAP qui se colmate par manque d'information de température fiable",
+    "Passage éventuel en mode dégradé",
+    "Perte de puissance ou à-coups dans certains cas",
+    "Surconsommation due à des régénérations mal gérées",
+    "Parfois aucun symptôme sensible, hormis le voyant"
+  ],
+  "diagnostic": "On localise d'abord le capteur concerné (banc 1, capteur 2, généralement près du FAP), puis on lit le code et les conditions d'apparition à la valise. On observe la valeur réelle du capteur, qui doit suivre logiquement la température de l'échappement, et on la compare au capteur amont. On contrôle ensuite la résistance de la sonde, la continuité du faisceau et l'état du connecteur. Chez Ultimauto à Cholet, ce contrôle permet de distinguer un capteur HS, un câblage abîmé ou un simple encrassement avant tout remplacement.",
+  "reparation": "Selon l'origine, on nettoie ou refait un connecteur, on répare le faisceau ou on remplace le capteur EGT du capteur 2. À titre indicatif, le capteur seul se situe souvent entre 40 et 130 €, posé entre 90 et 250 € selon l'accessibilité sous le véhicule ; une réparation de câblage reste plus modérée. Si la calamine est en cause, un décalaminage ou un nettoyage FAP peut compléter l'intervention. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P2031 n'immobilise pas toujours le véhicule, mais comme le capteur encadre le FAP, il perturbe directement les régénérations. Non traité, il favorise un colmatage du filtre à particules, plus coûteux à corriger.",
+  "rouler": "Vous pouvez généralement rouler à court terme, surtout si la puissance reste disponible. Évitez d'enchaîner les trajets courts, car le FAP risque de se charger sans pouvoir se régénérer. Faites diagnostiquer le défaut rapidement et n'effacez pas simplement le code : il reviendra tant que la cause n'est pas corrigée.",
+  "faq": [
+    {
+      "q": "Quelle différence entre P0544 et P2031 ?",
+      "r": "Les deux concernent un capteur EGT, mais le P0544 vise le capteur 1 (souvent en amont, vers le turbo) et le P2031 le capteur 2 (souvent près du FAP). La logique de diagnostic est proche, seule la sonde concernée change."
+    },
+    {
+      "q": "Le P2031 peut-il colmater mon FAP ?",
+      "r": "Oui, indirectement. Comme ce capteur encadre le filtre à particules, son défaut perturbe les régénérations et peut accélérer le colmatage du FAP. Mieux vaut le traiter rapidement."
+    },
+    {
+      "q": "Faut-il forcément remplacer le capteur ?",
+      "r": "Pas toujours. Le P2031 vient parfois d'un connecteur oxydé, d'un faisceau abîmé ou d'un encrassement. Un diagnostic vérifie ces points avant de changer la pièce."
+    },
+    {
+      "q": "Combien coûte la réparation du P2031 ?",
+      "r": "Selon la cause et l'accessibilité, un capteur posé se situe souvent entre 90 et 250 €, une réparation de câblage est plus modérée. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

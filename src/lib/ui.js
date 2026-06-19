@@ -41,15 +41,16 @@ export const GALLERY = [
   { src: '/img/hero-2.jpg', alt: 'Décalaminage de berlines et citadines, capots ouverts', cap: 'Berlines & citadines' },
   { src: '/img/hero-3.jpg', alt: 'Décalaminage hydrogène sur camping-cars', cap: 'Camping-cars & utilitaires' },
   { src: '/img/photo-1.jpg', alt: "Sonde d'injection d'hydrogène sur le moteur", cap: "Injection d'hydrogène sur le moteur" },
-  { src: '/img/photo-2.jpg', alt: 'Service mobile Ultimauto à domicile', cap: 'Service mobile : on vient à vous' },
+  { src: '/img/photo-2.jpg', alt: 'Service mobile Ultimauto à domicile', cap: 'Service mobile : on vient à vous' },
 ];
 
 
 export function socialLinks(site) {
+  // Ne renvoie que les réseaux réellement renseignés (évite les liens morts href="#").
   return [
-    { name: 'Facebook', img: '/img/social-facebook.png', href: site.social?.facebook || '#' },
-    { name: 'LinkedIn', img: '/img/social-linkedin.png', href: site.social?.linkedin || '#' },
-    { name: 'Instagram', img: '/img/social-instagram.png', href: site.social?.instagram || '#' },
-    { name: 'Snapchat', img: '/img/social-snapchat.png', href: site.social?.snapchat || '#' },
-  ];
+    { name: 'Facebook', img: '/img/social-facebook.png', href: site.social?.facebook },
+    { name: 'LinkedIn', img: '/img/social-linkedin.png', href: site.social?.linkedin },
+    { name: 'Instagram', img: '/img/social-instagram.png', href: site.social?.instagram },
+    { name: 'Snapchat', img: '/img/social-snapchat.png', href: site.social?.snapchat },
+  ].filter((s) => s.href && s.href.trim() !== '');
 }

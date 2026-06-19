@@ -8,25 +8,75 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.date.valueOf()
 const fmtDate = (d) => d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 const url = new URL('/blog', site.url).href;
 const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Blog', url }])];
+
+// Catégories (filtres) dérivées du champ "service"
+const CATS = {
+  'decalaminage-hydrogene': 'Décalaminage',
+  'nettoyage-fap': 'Nettoyage FAP',
+  'reprogrammation-moteur': 'Reprogrammation',
+  'suppression-adblue': 'AdBlue / EGR',
+  'destruction-dodeurs': 'Odeurs / Ozone',
+  'pressing-siege-auto': 'Pressing sièges',
+  'optique-de-phare': 'Phares',
+};
+const counts = {};
+for (const p of posts) { const s = p.data.service; counts[s] = (counts[s] || 0) + 1; }
+const filters = Object.keys(CATS).filter((s) => counts[s]).map((s) => ({ slug: s, label: CATS[s], count: counts[s] }));
+const PER_PAGE = 10;
 ---
 <Layout
   title="Blog Ultimauto — entretien moteur, FAP, reprog"
-  description="Conseils et explications d'Ultimauto : décalaminage hydrogène, nettoyage FAP, reprogrammation, AdBlue. Comprendre l'entretien de votre moteur, simplement."
+  description="Conseils et explications d'Ultimauto : décalaminage hydrogène, nettoyage FAP, reprogrammation, AdBlue. Comprendre l'entretien de votre moteur, simplement."
   jsonLd={jsonLd}
 >
   <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/hero-2.jpg');">
     <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
       <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Blog</span></nav>
       <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Le blog Ultimauto</h1>
-      <p class="mt-4 max-w-2xl text-lg text-white/90">Conseils, explications et idées reçues sur l'entretien moteur : on vulgarise la mécanique pour vous aider à faire les bons choix.</p>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Conseils, explications et idées reçues sur l'entretien moteur&#160;: on vulgarise la mécanique pour vous aider à faire les bons choix.</p>
     </div>
   </section>
 
   <section class="section bg-white">
     <div class="mx-auto max-w-[1180px] px-6">
-      <div class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post) => (
-          <article class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-white transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+
+      <!-- Filtres + recherche -->
+      <div data-top class="mb-8 flex scroll-mt-28 flex-col gap-5">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div data-filterbar class="hidden flex-wrap gap-2 lg:flex">
+            <button type="button" data-filter="all" aria-pressed="true" class="blog-pill is-active">Tous <span class="opacity-70">({posts.length})</span></button>
+            {filters.map((f) => (
+              <button type="button" data-filter={f.slug} aria-pressed="false" class="blog-pill">{f.label} <span class="opacity-70">({f.count})</span></button>
+            ))}
+          </div>
+          <div class="relative w-full sm:max-w-xs lg:hidden">
+            <label class="sr-only" for="blog-cat">Filtrer par catégorie</label>
+            <select id="blog-cat" data-filter-select class="blog-select">
+              <option value="all">Toutes les catégories ({posts.length})</option>
+              {filters.map((f) => <option value={f.slug}>{f.label} ({f.count})</option>)}
+            </select>
+            <svg viewBox="0 0 24 24" class="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-500" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+          <label class="relative block sm:w-64">
+            <span class="sr-only">Rechercher un article</span>
+            <svg viewBox="0 0 24 24" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-400" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+            <input data-search type="search" autocomplete="off" placeholder="Rechercher un article…" class="w-full rounded-full border border-line bg-white py-2.5 pl-10 pr-4 text-sm text-ink-800 outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          </label>
+        </div>
+        <p data-count class="text-sm font-medium text-ink-500" aria-live="polite"></p>
+      </div>
+
+      <!-- Grille d'articles -->
+      <div data-grid class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post, i) => (
+          <article
+            data-card
+            data-service={post.data.service}
+            data-title={post.data.title.toLowerCase()}
+            data-tags={(post.data.tags || []).join(' ').toLowerCase()}
+            {...(i >= PER_PAGE ? { hidden: true } : {})}
+            class="group flex flex-col overflow-hidden rounded-3xl border border-line bg-white transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
+          >
             <a href={`/blog/${post.id}`} class="block overflow-hidden">
               <img src={post.data.image || '/img/hero-1.jpg'} alt={post.data.title} class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
             </a>
@@ -42,6 +92,157 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Blog', 
           </article>
         ))}
       </div>
+
+      <!-- État vide -->
+      <div data-empty hidden class="rounded-3xl border border-dashed border-line bg-cloud px-6 py-16 text-center">
+        <p class="text-lg font-bold text-ink">Aucun article ne correspond à votre recherche.</p>
+        <p class="mt-2 text-sm text-ink-600">Essayez un autre mot-clé ou une autre catégorie.</p>
+        <button type="button" data-reset class="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white transition hover:bg-deep-600">Réinitialiser les filtres</button>
+      </div>
+
+      <!-- Pagination -->
+      <nav data-pagination aria-label="Pagination des articles" hidden class="mt-12 flex flex-wrap items-center justify-center gap-1.5"></nav>
+
     </div>
   </section>
 </Layout>
+
+<style is:global>
+  .blog-pill{display:inline-flex;align-items:center;gap:.35rem;border-radius:9999px;border:1px solid var(--color-line,#e5e7eb);background:#fff;color:var(--color-ink,#1f2a37);padding:.5rem 1rem;font-size:.875rem;font-weight:700;line-height:1;transition:color .15s,background-color .15s,border-color .15s;cursor:pointer}
+  .blog-pill:hover{border-color:var(--color-brand,#1565c0);color:var(--color-brand,#1565c0)}
+  .blog-pill.is-active{background:var(--color-brand,#1565c0);border-color:var(--color-brand,#1565c0);color:#fff}
+  .blog-pill.is-active .opacity-70{opacity:.85}
+  .blog-select{appearance:none;-webkit-appearance:none;width:100%;border-radius:9999px;border:1px solid var(--color-line,#e5e7eb);background:#fff;color:var(--color-ink,#1f2a37);padding:.7rem 2.6rem .7rem 1.1rem;font-size:.9rem;font-weight:700;line-height:1.2;cursor:pointer}
+  .blog-select:focus{outline:none;border-color:var(--color-brand,#1565c0);box-shadow:0 0 0 2px rgba(21,101,192,.2)}
+  .blog-page-btn{display:inline-flex;align-items:center;justify-content:center;min-width:2.5rem;height:2.5rem;padding:0 .85rem;border-radius:.75rem;border:1px solid var(--color-line,#e5e7eb);background:#fff;color:var(--color-ink,#1f2a37);font-size:.875rem;font-weight:700;cursor:pointer;transition:color .15s,background-color .15s,border-color .15s}
+  .blog-page-btn:hover:not([disabled]):not(.is-active){border-color:var(--color-brand,#1565c0);color:var(--color-brand,#1565c0)}
+  .blog-page-btn.is-active{background:var(--color-brand,#1565c0);border-color:var(--color-brand,#1565c0);color:#fff;cursor:default}
+  .blog-page-btn[disabled]{opacity:.4;cursor:not-allowed}
+</style>
+
+<script>
+  const PER_PAGE = 10;
+  const grid = document.querySelector('[data-grid]');
+  const cards = Array.from(document.querySelectorAll('[data-card]'));
+  const filterBar = document.querySelector('[data-filterbar]');
+  const searchInput = document.querySelector('[data-search]');
+  const pagination = document.querySelector('[data-pagination]');
+  const countEl = document.querySelector('[data-count]');
+  const emptyEl = document.querySelector('[data-empty]');
+  const topEl = document.querySelector('[data-top]');
+  const filterSelect = document.querySelector('[data-filter-select]');
+
+  let activeFilter = 'all';
+  let query = '';
+  let currentPage = 1;
+
+  const syncFilters = () => {
+    filterBar.querySelectorAll('[data-filter]').forEach((b) => {
+      const on = b.dataset.filter === activeFilter;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (filterSelect) filterSelect.value = activeFilter;
+  };
+
+  const matches = (card) => {
+    const okCat = activeFilter === 'all' || card.dataset.service === activeFilter;
+    const q = query.trim().toLowerCase();
+    const okQ = !q || (card.dataset.title || '').includes(q) || (card.dataset.tags || '').includes(q);
+    return okCat && okQ;
+  };
+
+  const render = () => {
+    const filtered = cards.filter(matches);
+    const total = filtered.length;
+    const lastPage = Math.max(1, Math.ceil(total / PER_PAGE));
+    if (currentPage > lastPage) currentPage = lastPage;
+    const start = (currentPage - 1) * PER_PAGE;
+    const end = start + PER_PAGE;
+
+    cards.forEach((c) => { c.hidden = true; });
+    filtered.forEach((c, i) => { c.hidden = !(i >= start && i < end); });
+
+    if (total === 0) {
+      countEl.textContent = '';
+      emptyEl.hidden = false;
+      grid.hidden = true;
+    } else {
+      emptyEl.hidden = true;
+      grid.hidden = false;
+      const from = start + 1;
+      const to = Math.min(end, total);
+      countEl.textContent = total <= PER_PAGE
+        ? `${total} article${total > 1 ? 's' : ''}`
+        : `${total} articles — affichage ${from}–${to}`;
+    }
+    renderPagination(lastPage);
+  };
+
+  const scrollUp = () => { if (topEl) topEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); };
+
+  const makeNav = (label, disabled, onClick) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'blog-page-btn';
+    b.innerHTML = label;
+    b.disabled = disabled;
+    if (!disabled) b.addEventListener('click', onClick);
+    return b;
+  };
+
+  const renderPagination = (lastPage) => {
+    pagination.innerHTML = '';
+    if (lastPage <= 1) { pagination.hidden = true; return; }
+    pagination.hidden = false;
+
+    pagination.appendChild(makeNav('&lsaquo; Précédent', currentPage === 1, () => { currentPage--; render(); scrollUp(); }));
+
+    for (let p = 1; p <= lastPage; p++) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'blog-page-btn' + (p === currentPage ? ' is-active' : '');
+      b.textContent = String(p);
+      b.setAttribute('aria-label', 'Page ' + p);
+      if (p === currentPage) b.setAttribute('aria-current', 'page');
+      else b.addEventListener('click', () => { currentPage = p; render(); scrollUp(); });
+      pagination.appendChild(b);
+    }
+
+    pagination.appendChild(makeNav('Suivant &rsaquo;', currentPage === lastPage, () => { currentPage++; render(); scrollUp(); }));
+  };
+
+  filterBar.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+    activeFilter = btn.dataset.filter;
+    currentPage = 1;
+    syncFilters();
+    render();
+  });
+
+  if (filterSelect) {
+    filterSelect.addEventListener('change', () => {
+      activeFilter = filterSelect.value;
+      currentPage = 1;
+      syncFilters();
+      render();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', () => { query = searchInput.value; currentPage = 1; render(); });
+  }
+
+  const resetBtn = document.querySelector('[data-reset]');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      activeFilter = 'all'; query = ''; currentPage = 1;
+      if (searchInput) searchInput.value = '';
+      syncFilters();
+      render();
+    });
+  }
+
+  render();
+</script>

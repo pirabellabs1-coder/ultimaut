@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import services from '../../data/services.json';
+import site from '../../data/site.json';
+import { ICONS, WA_PATH, SERVICE_PHOTO } from '../../lib/ui.js';
+import { breadcrumb, faqPage } from '../../lib/jsonld.js';
+
+export function getStaticPaths() {
+  const mods = import.meta.glob('../../data/codes/*.json', { eager: true });
+  const codes = Object.values(mods).map((m) => m.default).sort((a, b) => a.code.localeCompare(b.code));
+  return codes.map((cd) => ({ params: { code: cd.slug }, props: { cd, codes } }));
+}
+
+const { cd, codes } = Astro.props;
+const svc = services.find((s) => s.slug === cd.service) || services[0];
+const photo = SERVICE_PHOTO[cd.service] || SERVICE_PHOTO['nettoyage-fap'];
+const icon = ICONS[cd.service] || ICONS['nettoyage-fap'];
+const relatedCodes = codes.filter((c) => c.categorie === cd.categorie && c.slug !== cd.slug).slice(0, 10);
+const waText = `Bonjour Ultimauto, j'ai le code défaut ${cd.code} sur mon véhicule.`;
+const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(waText)}`;
+const url = new URL(`/code-defaut/${cd.slug}`, site.url).href;
+
+// Compatibilité ancien/nouveau schéma de fiche code
+const heroIntro = cd.definitionCourte || cd.signification;
+const reparationTexte = cd.reparation || cd.solutions || '';
+const faq = Array.isArray(cd.faq) ? cd.faq : [];
+const graviteClasses = {
+  'Faible': 'bg-emerald-50 text-emerald-700 ring-emerald-200',
+  'Modérée': 'bg-amber-50 text-amber-700 ring-amber-200',
+  'Élevée': 'bg-red-50 text-red-700 ring-red-200',
+};
+const graviteClass = graviteClasses[cd.gravite] || 'bg-cloud text-ink-700 ring-line';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: `Code défaut ${cd.code} : ${cd.titre}`,
+    description: cd.metaDescription,
+    inLanguage: 'fr-FR',
+    author: { '@type': 'Organization', name: site.name, url: site.url },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: site.url + '/img/logo-ultimauto.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  },
+  breadcrumb([
+    { name: 'Accueil', url: site.url },
+    { name: 'Codes défaut', url: new URL('/code-defaut', site.url).href },
+    { name: cd.code, url },
+  ]),
+  ...(faq.length ? [faqPage(faq)] : []),
+];
+---
+<Layout title={cd.metaTitle} description={cd.metaDescription} jsonLd={jsonLd} ogImage={photo} preloadImage={photo}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-cover bg-center" style={`background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('${photo}');`}>
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
+        <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
+        <a href="/code-defaut" class="hover:text-white">Codes défaut</a> <span class="px-1.5">/</span>
+        <span class="text-white">{cd.code}</span>
+      </nav>
+      <span class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-sm font-semibold text-white">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{icon.map((d) => <path d={d} />)}</svg>
+        {cd.categorie}
+      </span>
+      <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Code défaut {cd.code}</h1>
+      <p class="mt-2 max-w-3xl text-xl font-semibold text-white/90">{cd.titre}</p>
+      <p class="mt-4 max-w-3xl text-lg text-white/85">{heroIntro}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Diagnostic & devis gratuits</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-5 py-2.5 font-semibold text-white transition-colors hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signification + fiche latérale -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1.55fr_1fr] lg:items-start">
+      <div class="rte max-w-2xl">
+        <h2 class="text-2xl font-bold md:text-3xl">Que signifie le code {cd.code}&#8239;?</h2>
+        <p>{cd.signification}</p>
+        {cd.diagnostic && (<>
+          <h2>Diagnostic du code {cd.code}</h2>
+          <p>{cd.diagnostic}</p>
+        </>)}
+        <h2>Que faire en cas de code {cd.code}&#8239;?</h2>
+        <p>{reparationTexte}</p>
+        {cd.rouler && (<>
+          <h2>Peut-on rouler avec le code {cd.code}&#8239;?</h2>
+          <p>{cd.rouler}</p>
+        </>)}
+        <p>Important&#160;: <strong>ne vous contentez pas d'effacer le code</strong>. S'il revient, c'est que la cause est toujours là. Un diagnostic électronique permet d'identifier la pièce réellement en défaut avant toute intervention.</p>
+      </div>
+      <aside class="space-y-5 lg:sticky lg:top-28">
+        <div class="rounded-3xl border border-line bg-cloud p-6">
+          <p class="font-display text-lg font-bold">Code {cd.code}</p>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Catégorie</dt><dd class="text-right font-semibold">{cd.categorie}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Système</dt><dd class="text-right font-semibold">{svc.titreCourt}</dd></div>
+            {cd.gravite && (<div class="flex items-center justify-between gap-3"><dt class="text-ink-500">Gravité</dt><dd class="text-right"><span class={`inline-flex rounded-full px-2.5 py-0.5 text-xs font-bold ring-1 ${graviteClass}`}>{cd.gravite}</span></dd></div>)}
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Prise en charge</dt><dd class="text-right font-semibold">Cholet + mobile</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Devis</dt><dd class="text-right font-semibold text-accent-700">Gratuit</dd></div>
+          </dl>
+          <a href="/prise-de-rendez-vous" class="btn-primary mt-5 w-full">Demander un devis</a>
+          <a href={waLink} target="_blank" rel="noopener" class="btn-whatsapp mt-2 w-full"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+          <a href={`tel:${site.phone}`} class="mt-2 block rounded-full border border-line bg-white px-4 py-2.5 text-center font-bold text-brand">{site.phoneDisplay}</a>
+        </div>
+        {relatedCodes.length > 0 && (
+          <div class="rounded-3xl border border-line p-6">
+            <p class="text-sm font-bold text-ink">Codes {cd.categorie} liés</p>
+            <div class="mt-3 flex flex-wrap gap-1.5">
+              {relatedCodes.map((c) => (
+                <a href={`/code-defaut/${c.slug}`} class="rounded-md bg-cloud px-2.5 py-1 font-mono text-xs font-bold text-brand-700 transition-colors hover:bg-brand hover:text-white">{c.code}</a>
+              ))}
+            </div>
+            <a href="/code-defaut" class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand hover:underline">Tous les codes <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6" /></svg></a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+
+  <!-- Causes + symptômes -->
+  <section class="section bg-cloud">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Causes possibles</h2>
+        <ul class="mt-6 space-y-3">
+          {cd.causes.map((c) => (
+            <li class="flex items-start gap-3 rounded-2xl border border-line bg-white p-4">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 8v4M12 16h.01" /></svg>
+              {typeof c === 'string'
+               ? <span class="text-ink-700">{c}</span>
+               : <span class="text-ink-700"><strong class="font-semibold text-ink">{c.titre}</strong>{c.detail ? <> — {c.detail}</> : null}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Symptômes</h2>
+        <ul class="mt-6 space-y-3">
+          {cd.symptomes.map((s) => (
+            <li class="flex items-start gap-3 rounded-2xl border border-line bg-white p-4">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" /></svg>
+              <span class="text-ink-700">{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intervention Ultimauto (service lié) -->
+  <section class="section bg-deep text-white">
+    <div class="mx-auto grid max-w-[1180px] gap-8 px-6 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+      <div>
+        <span class="eyebrow text-white">La solution Ultimauto</span>
+        <h2 class="mt-2 text-2xl font-bold text-white md:text-3xl">{svc.titreCourt}&#160;: on traite la cause du {cd.code}</h2>
+        <p class="mt-4 text-lg leading-relaxed text-white/90">{svc.accroche}</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={`/${svc.slug}`} class="rounded-full bg-white px-5 py-2.5 font-bold text-brand transition-transform hover:-translate-y-0.5">Découvrir&#160;: {svc.titreCourt}</a>
+          <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-5 py-2.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        </div>
+      </div>
+      <div class="rounded-3xl bg-white/10 p-6 ring-1 ring-white/20">
+        <p class="font-display text-lg font-bold text-white">Pourquoi Ultimauto</p>
+        <ul class="mt-4 space-y-2.5 text-sm text-white/90">
+          <li class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Diagnostic électronique avant toute intervention</li>
+          <li class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Atelier à Cholet (49) ou service mobile (44·49·56·79·85)</li>
+          <li class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" class="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>Devis gratuit, conseil honnête, revendeur agréé Bardahl</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autres codes de la catégorie -->
+  {relatedCodes.length > 0 && (
+    <section class="section bg-white">
+      <div class="mx-auto max-w-[1180px] px-6">
+        <span class="eyebrow">Catégorie {cd.categorie}</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">Autres codes liés</h2>
+        <div class="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {relatedCodes.map((c) => (
+            <a href={`/code-defaut/${c.slug}`} class="group flex items-center gap-3 rounded-2xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-card)]">
+              <span class="rounded-lg bg-brand-50 px-2.5 py-1.5 font-mono text-sm font-bold text-brand-700">{c.code}</span>
+              <span class="text-sm font-semibold text-ink-700 group-hover:text-brand">{c.titre}</span>
+            </a>
+          ))}
+        </div>
+        <a href="/code-defaut" class="btn-ghost mt-6">Voir tous les codes défaut →</a>
+      </div>
+    </section>
+  )}
+
+  <!-- FAQ -->
+  {faq.length > 0 && (
+    <section class="section bg-cloud">
+      <div class="mx-auto max-w-[820px] px-6">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">Code {cd.code}&#160;: vos questions</h2>
+        <div class="mt-7 space-y-3">
+          {faq.map((item) => (
+            <details class="group rounded-2xl border border-line bg-white p-5 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-bold text-ink">
+                {item.q}
+                <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg>
+              </summary>
+              <p class="mt-3 leading-relaxed text-ink-700">{item.r}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Le code {cd.code} sur votre tableau de bord&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Ne roulez pas en mode dégradé. Diagnostic et devis gratuits — on identifie la cause et on vous remet en route, à Cholet ou en service mobile.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,69 @@
+{
+  "code": "P0544",
+  "slug": "p0544",
+  "categorie": "Température d'échappement",
+  "service": "nettoyage-fap",
+  "titre": "Circuit du capteur de température des gaz d'échappement (banc 1, capteur 1)",
+  "metaTitle": "Code défaut P0544 : causes et solution",
+  "metaDescription": "Code défaut P0544 : anomalie du circuit du capteur de température des gaz d'échappement (EGT). Causes, symptômes, diagnostic et réparation à Cholet (49).",
+  "definitionCourte": "Anomalie générale sur le circuit électrique du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 1.",
+  "signification": "Le code P0544 indique que le calculateur moteur a détecté une anomalie sur le circuit du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 1. Ce capteur, le plus souvent placé en amont du turbo ou du catalyseur, mesure en permanence la chaleur des gaz dans la ligne d'échappement. Cette information est essentielle : elle permet de protéger le turbo et le filtre à particules de la surchauffe et de piloter correctement les régénérations du FAP. Le P0544 est un défaut « générique » de circuit : il se déclenche quand le signal sort de sa plage logique, devient incohérent ou disparaît, sans préciser s'il est trop haut ou trop bas. Sur la plupart des diesels modernes, ce capteur est un élément clé de la chaîne de dépollution. Quand son signal est jugé non fiable, le calculateur ne sait plus à quelle température travaille l'échappement et adopte une stratégie de sécurité.",
+  "causes": [
+    {
+      "titre": "Capteur EGT défectueux",
+      "detail": "La sonde de température d'échappement vieillit mal : exposée à des centaines de degrés, elle dérive ou tombe en panne. C'est la cause la plus fréquente du P0544."
+    },
+    {
+      "titre": "Faisceau électrique endommagé",
+      "detail": "Le câblage qui longe la ligne d'échappement peut être coupé, frotté, fondu ou rongé par la chaleur, ce qui interrompt ou perturbe le signal du capteur."
+    },
+    {
+      "titre": "Connecteur encrassé ou oxydé",
+      "detail": "Un connecteur mal enclenché, corrodé ou plein de poussière crée une résistance parasite et fausse la mesure transmise au calculateur."
+    },
+    {
+      "titre": "Court-circuit ou circuit ouvert",
+      "detail": "Un fil en contact avec la masse ou le 12 V, ou au contraire coupé, place le signal hors de sa plage attendue et déclenche le code de circuit."
+    },
+    {
+      "titre": "Capteur encrassé par la calamine",
+      "detail": "Une épaisse couche de suie sur la pointe du capteur ralentit sa réponse et fausse la température lue, surtout sur un moteur très encrassé."
+    },
+    {
+      "titre": "Défaut d'alimentation ou de masse",
+      "detail": "Une référence de masse défaillante ou une alimentation instable côté calculateur peut rendre le signal incohérent, plus rarement le calculateur lui-même."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Passage possible en mode dégradé avec bridage de la puissance",
+    "Régénération du filtre à particules perturbée ou inhibée",
+    "FAP qui se charge anormalement faute d'information de température fiable",
+    "Légère perte de puissance ou à-coups dans certains cas",
+    "Surconsommation liée à des régénérations mal gérées",
+    "Parfois aucun symptôme ressenti, hormis le voyant allumé"
+  ],
+  "diagnostic": "Le diagnostic commence par la lecture du code avec une valise professionnelle, en relevant les codes associés et les conditions d'apparition (gel des données). On lit ensuite la valeur réelle du capteur EGT moteur froid : elle doit être proche de la température ambiante, puis monter progressivement à la chauffe. On contrôle la résistance du capteur et la continuité du faisceau, on inspecte le connecteur et on recherche un fil frotté le long de l'échappement. Chez Ultimauto, à Cholet (49), nous distinguons ainsi un capteur HS d'un simple problème de câblage avant d'engager la moindre dépense.",
+  "reparation": "Selon l'origine, la réparation va du nettoyage ou de la réfection d'un connecteur à la réparation du faisceau, jusqu'au remplacement du capteur EGT. À titre indicatif, le capteur seul se situe souvent entre 40 et 120 €, posé entre 90 et 220 € selon l'accessibilité ; une réparation de faisceau reste généralement modérée. Si la calamine est en cause, un décalaminage peut accompagner le remplacement. Ultimauto intervient à l'atelier de Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P0544 n'immobilise pas forcément le véhicule, mais il perturbe la régénération du FAP. Laissé en l'état, il peut entraîner un colmatage du filtre à particules, plus coûteux à traiter.",
+  "rouler": "Vous pouvez généralement rouler à court terme, en évitant les fortes sollicitations si le véhicule passe en mode dégradé. Privilégiez un trajet sur route pour favoriser une régénération, mais faites diagnostiquer le défaut rapidement pour éviter d'encrasser le FAP. N'effacez pas simplement le code : s'il revient, la cause est toujours présente.",
+  "faq": [
+    {
+      "q": "Le code P0544 est-il grave ?",
+      "r": "Il est de gravité modérée. Le risque principal n'est pas immédiat mais lié au FAP : un capteur EGT en défaut perturbe les régénérations et peut, à terme, colmater le filtre à particules. Mieux vaut le traiter rapidement."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0544 ?",
+      "r": "Oui, le plus souvent sur de courtes périodes. Si le véhicule bride sa puissance, ménagez le moteur et faites diagnostiquer le défaut sans tarder pour éviter un encrassement du FAP."
+    },
+    {
+      "q": "Faut-il forcément changer le capteur EGT ?",
+      "r": "Pas systématiquement. Le P0544 vient parfois d'un connecteur oxydé ou d'un faisceau abîmé. Un diagnostic permet de vérifier le câblage avant de remplacer la pièce inutilement."
+    },
+    {
+      "q": "Combien coûte la réparation du P0544 ?",
+      "r": "Cela dépend de la cause. Un capteur EGT posé se situe souvent entre 90 et 220 €, une réparation de faisceau est généralement plus modérée. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

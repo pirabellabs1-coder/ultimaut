@@ -1,0 +1,69 @@
+{
+  "code": "P0545",
+  "slug": "p0545",
+  "categorie": "Température d'échappement",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de température des gaz d'échappement — signal bas (banc 1, capteur 1)",
+  "metaTitle": "Code défaut P0545 : causes et solution",
+  "metaDescription": "Code défaut P0545 : signal trop bas du capteur de température des gaz d'échappement (EGT). Causes, symptômes, diagnostic et réparation à Cholet (49).",
+  "definitionCourte": "Le signal du capteur de température des gaz d'échappement (EGT) banc 1, capteur 1, est jugé trop bas par le calculateur.",
+  "signification": "Le code P0545 signale que le calculateur moteur reçoit une tension trop basse en provenance du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 1. Concrètement, le capteur indique une température anormalement faible, incohérente avec le fonctionnement réel du moteur. Or cette sonde sert à surveiller la chaleur de l'échappement pour protéger le turbo et le FAP, et pour déclencher les régénérations du filtre à particules au bon moment. Une tension basse correspond généralement à un court-circuit à la masse, à un capteur défaillant ou à un fil sectionné. Quand le calculateur lit une température irréaliste (par exemple un échappement « froid » alors que le moteur est chaud), il ne peut plus piloter correctement la dépollution et active une stratégie de sécurité. Le P0545 est donc un défaut précis qui oriente le diagnostic vers un problème électrique côté signal bas.",
+  "causes": [
+    {
+      "titre": "Court-circuit à la masse",
+      "detail": "Un fil du capteur en contact avec la masse fait chuter la tension du signal : c'est l'origine typique d'un défaut « signal bas » comme le P0545."
+    },
+    {
+      "titre": "Capteur EGT défectueux",
+      "detail": "Une sonde de température en fin de vie peut renvoyer une valeur basse erronée en permanence, même moteur chaud."
+    },
+    {
+      "titre": "Faisceau coupé ou frotté",
+      "detail": "Un câble sectionné ou usé par la chaleur et les vibrations le long de l'échappement provoque une tension de signal incohérente."
+    },
+    {
+      "titre": "Connecteur oxydé ou mal branché",
+      "detail": "Un mauvais contact au niveau du connecteur peut faire tomber la tension lue par le calculateur et déclencher le code."
+    },
+    {
+      "titre": "Infiltration d'eau ou d'humidité",
+      "detail": "De l'humidité dans le connecteur ou le faisceau crée un chemin de fuite vers la masse et fausse le signal vers le bas."
+    },
+    {
+      "titre": "Capteur fortement encrassé",
+      "detail": "Une épaisse calamine sur la pointe du capteur ralentit fortement sa réponse, le maintenant à une valeur basse plus longtemps que prévu."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Valeur de température d'échappement anormalement basse à la valise",
+    "Régénérations du FAP inhibées ou mal déclenchées",
+    "Passage possible en mode dégradé",
+    "Encrassement progressif du filtre à particules",
+    "Surconsommation liée aux régénérations perturbées",
+    "Légère perte de puissance dans certains cas"
+  ],
+  "diagnostic": "On lit d'abord le code et les données figées avec une valise, puis on observe la valeur en direct du capteur EGT moteur chaud : si elle reste anormalement basse alors que l'échappement chauffe, le signal est bien en défaut. On mesure ensuite la résistance du capteur, on recherche un court-circuit à la masse sur le faisceau et on inspecte le connecteur (oxydation, humidité). Chez Ultimauto à Cholet, ce contrôle permet de savoir si la sonde est HS ou si le câblage met le signal à la masse, avant tout remplacement.",
+  "reparation": "La réparation consiste à corriger le court-circuit (faisceau ou connecteur) ou à remplacer le capteur EGT si la sonde est défaillante. À titre indicatif, un capteur posé se situe souvent entre 90 et 220 € selon l'accessibilité, tandis qu'une réparation de câblage reste généralement modérée. Si une couche de calamine fausse la mesure, un décalaminage peut compléter l'intervention. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P0545 ne bloque pas toujours le véhicule, mais il empêche une bonne gestion des régénérations du FAP. Non traité, il favorise un colmatage du filtre à particules, plus onéreux à corriger.",
+  "rouler": "Rouler à court terme est généralement possible, surtout si la puissance n'est pas bridée. Évitez d'accumuler les trajets courts en ville, car le FAP risque de se charger sans régénération. Faites diagnostiquer le défaut rapidement plutôt que d'effacer le code, qui reviendrait tant que la cause électrique n'est pas corrigée.",
+  "faq": [
+    {
+      "q": "Que veut dire « signal bas » pour le P0545 ?",
+      "r": "Cela signifie que la tension envoyée par le capteur EGT est trop faible, souvent à cause d'un court-circuit à la masse, d'un fil coupé ou d'un capteur défaillant. Le calculateur lit alors une température irréaliste."
+    },
+    {
+      "q": "Le code P0545 peut-il abîmer mon FAP ?",
+      "r": "Indirectement, oui. Sans information de température fiable, les régénérations sont perturbées et le filtre à particules peut se colmater à la longue. Mieux vaut traiter le défaut rapidement."
+    },
+    {
+      "q": "Est-ce toujours le capteur qui est en cause ?",
+      "r": "Non. Un défaut « signal bas » provient souvent d'un câblage à la masse ou d'un connecteur humide. Un diagnostic électrique permet de cibler la vraie cause avant de changer la pièce."
+    },
+    {
+      "q": "Combien coûte la réparation du P0545 ?",
+      "r": "Selon la cause, comptez généralement de quelques dizaines d'euros pour un câblage à 90-220 € pour un capteur EGT posé. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

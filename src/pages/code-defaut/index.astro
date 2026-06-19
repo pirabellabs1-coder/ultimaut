@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import site from '../../data/site.json';
+import { WA_PATH } from '../../lib/ui.js';
+import { breadcrumb } from '../../lib/jsonld.js';
+
+const mods = import.meta.glob('../../data/codes/*.json', { eager: true });
+const codes = Object.values(mods).map((m) => m.default);
+
+const ordre = ['FAP', 'EGR', 'AdBlue / SCR', 'Capteur NOx', "Température d'échappement", 'Suralimentation / turbo'];
+const parCat = {};
+for (const c of codes) (parCat[c.categorie] ||= []).push(c);
+for (const k of Object.keys(parCat)) parCat[k].sort((a, b) => a.code.localeCompare(b.code));
+const groupes = ordre.filter((c) => parCat[c]).map((c) => ({ cat: c, codes: parCat[c] }));
+// catégories non prévues (au cas où)
+for (const c of Object.keys(parCat)) if (!ordre.includes(c)) groupes.push({ cat: c, codes: parCat[c] });
+
+const waLink = `https://wa.me/${site.whatsapp}`;
+const url = new URL('/code-defaut', site.url).href;
+const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Codes défaut moteur', url }])];
+---
+<Layout
+  title="Codes défaut moteur diesel : FAP, EGR, AdBlue, NOx"
+  description="Trouvez la signification de votre code défaut moteur (FAP, EGR, AdBlue/SCR, NOx, turbo) : causes, symptômes et solutions. Ultimauto à Cholet + service mobile."
+  jsonLd={jsonLd}
+  ogImage="/img/photo-2.jpg"
+>
+  <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.84) 0%, rgba(21,101,192,0.94) 100%), url('/img/photo-2.jpg');">
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Codes défaut</span></nav>
+      <h1 class="mt-4 max-w-3xl text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Codes défaut moteur diesel</h1>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Voyant moteur allumé&#8239;? Trouvez votre code défaut ci-dessous&#160;: sa <strong class="text-white">signification</strong>, ses <strong class="text-white">causes</strong>, ses <strong class="text-white">symptômes</strong> et nos <strong class="text-white">solutions</strong> — FAP, EGR, AdBlue/SCR, capteur NOx, température d'échappement et turbo.</p>
+    </div>
+  </section>
+
+  <!-- Recherche rapide (ancres) -->
+  <section class="section bg-white pb-0">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <p class="text-sm font-semibold text-ink-500">{codes.length} codes documentés — accès rapide&#160;:</p>
+      <div class="mt-3 flex flex-wrap gap-2">
+        {groupes.map((g) => (
+          <a href={`#${g.cat.replace(/[^a-zA-Z]/g, '').toLowerCase()}`} class="rounded-full border border-line bg-cloud px-4 py-2 text-sm font-semibold text-ink-700 transition-colors hover:border-brand hover:text-brand">{g.cat} <span class="text-ink-400">({g.codes.length})</span></a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Codes par catégorie -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-[1180px] space-y-12 px-6">
+      {groupes.map((g) => (
+        <div id={g.cat.replace(/[^a-zA-Z]/g, '').toLowerCase()} class="scroll-mt-28">
+          <div class="flex items-baseline justify-between gap-4 border-b border-line pb-3">
+            <h2 class="text-2xl font-bold md:text-3xl">{g.cat}</h2>
+            <span class="text-sm text-ink-500">{g.codes.length} codes</span>
+          </div>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {g.codes.map((c) => (
+              <a href={`/code-defaut/${c.slug}`} class="group flex items-start gap-3 rounded-2xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-card)]">
+                <span class="shrink-0 rounded-lg bg-brand-50 px-2.5 py-1.5 font-mono text-sm font-bold text-brand-700">{c.code}</span>
+                <span class="text-sm font-medium leading-snug text-ink-700 group-hover:text-brand">{c.titre}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Votre code n'est pas dans la liste&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">On diagnostique tous les codes défaut moteur diesel. Diagnostic et devis gratuits, à Cholet ou en service mobile.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

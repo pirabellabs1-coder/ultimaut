@@ -6,17 +6,17 @@ import { faqPage, breadcrumb } from '../lib/jsonld.js';
 
 const bySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
 const generales = [
-  { q: "Pourquoi un moteur s'encrasse-t-il ?", r: "La combustion dépose de la calamine (résidus de carbone) sur les soupapes, les injecteurs, la vanne EGR et le turbo. Le phénomène est accentué par les trajets courts, la conduite en ville et un entretien espacé : le moteur n'atteint pas toujours la température idéale pour s'auto-nettoyer." },
-  { q: "Quelle est la différence entre décalaminage et nettoyage FAP ?", r: "Le décalaminage entretient l'ensemble du circuit (soupapes, EGR, turbo, injecteurs) par injection d'hydrogène, sans démontage. Le nettoyage FAP cible spécifiquement un filtre à particules colmaté, qui est déposé puis nettoyé chimiquement. Les deux sont complémentaires : on vous oriente après diagnostic." },
-  { q: "Le diagnostic est-il payant ?", r: "Nous établissons toujours un devis gratuit. Un diagnostic électronique approfondi (lecture des défauts, contrôle) est facturé 40 € s'il est réalisé seul, mais il est intégré aux prestations comme le nettoyage FAP." },
-  { q: "Intervenez-vous sur tous les véhicules ?", r: "Oui : citadines, berlines, SUV, utilitaires et même camping-cars, en diesel comme en essence. Nous accompagnons les particuliers comme les professionnels et les flottes." },
-  { q: "Faut-il prendre rendez-vous ?", r: "Oui, nous travaillons sur rendez-vous pour consacrer le temps nécessaire à chaque véhicule. Contactez-nous par téléphone, WhatsApp ou via le formulaire en ligne." },
+  { q: "Pourquoi un moteur s'encrasse-t-il ?", r: "La combustion dépose de la calamine (résidus de carbone) sur les soupapes, les injecteurs, la vanne EGR et le turbo. Le phénomène est accentué par les trajets courts, la conduite en ville et un entretien espacé : le moteur n'atteint pas toujours la température idéale pour s'auto-nettoyer." },
+  { q: "Quelle est la différence entre décalaminage et nettoyage FAP ?", r: "Le décalaminage entretient l'ensemble du circuit (soupapes, EGR, turbo, injecteurs) par injection d'hydrogène, sans démontage. Le nettoyage FAP cible spécifiquement un filtre à particules colmaté, qui est déposé puis nettoyé chimiquement. Les deux sont complémentaires : on vous oriente après diagnostic." },
+  { q: "Le diagnostic est-il payant ?", r: "Nous établissons toujours un devis gratuit. Un diagnostic électronique approfondi (lecture des défauts, contrôle) est facturé 40 € s'il est réalisé seul, mais il est intégré aux prestations comme le nettoyage FAP." },
+  { q: "Intervenez-vous sur tous les véhicules ?", r: "Oui : citadines, berlines, SUV, utilitaires et même camping-cars, en diesel comme en essence. Nous accompagnons les particuliers comme les professionnels et les flottes." },
+  { q: "Faut-il prendre rendez-vous ?", r: "Oui, nous travaillons sur rendez-vous pour consacrer le temps nécessaire à chaque véhicule. Contactez-nous par téléphone, WhatsApp ou via le formulaire en ligne." },
 ];
 const pratiques = [
-  { q: "Où se déroule l'intervention ?", r: "À notre atelier de Cholet, ou directement chez vous / sur votre lieu de travail grâce à notre service mobile, dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan. Des frais de déplacement peuvent s'appliquer selon la distance." },
-  { q: "Combien de temps faut-il prévoir ?", r: "Un décalaminage dure 30 à 60 minutes. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. Nous vous communiquons un créneau précis à la prise de rendez-vous." },
-  { q: "Comment régler la prestation ?", r: "Le paiement se fait à la fin de l'intervention. Pour toute demande de combinaison spécifique ou de pack, demandez-nous un devis personnalisé et gratuit." },
-  { q: "Proposez-vous une garantie de satisfaction ?", r: "Nous nous engageons sur la qualité et la transparence : diagnostic préalable, explication claire et conseils honnêtes. Si une prestation n'est pas pertinente pour votre véhicule, nous vous le disons." },
+  { q: "Où se déroule l'intervention ?", r: "À notre atelier de Cholet, ou directement chez vous / sur votre lieu de travail grâce à notre service mobile, dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan. Des frais de déplacement peuvent s'appliquer selon la distance." },
+  { q: "Combien de temps faut-il prévoir ?", r: "Un décalaminage dure 30 à 60 minutes. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. Nous vous communiquons un créneau précis à la prise de rendez-vous." },
+  { q: "Comment régler la prestation ?", r: "Le paiement se fait à la fin de l'intervention. Pour toute demande de combinaison spécifique ou de pack, demandez-nous un devis personnalisé et gratuit." },
+  { q: "Proposez-vous une garantie de satisfaction ?", r: "Nous nous engageons sur la qualité et la transparence : diagnostic préalable, explication claire et conseils honnêtes. Si une prestation n'est pas pertinente pour votre véhicule, nous vous le disons." },
 ];
 
 const groups = [
@@ -67,7 +67,7 @@ const jsonLd = [faqPage(allFaq), breadcrumb([{ name: 'Accueil', url: site.url },
 
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Pas trouvé votre réponse ?</h2>
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Pas trouvé votre réponse&#8239;?</h2>
       <p class="mx-auto mt-4 max-w-xl text-white/90">Notre équipe vous répond avec plaisir et vous établit un devis gratuit.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>

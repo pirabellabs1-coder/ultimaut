@@ -1,0 +1,73 @@
+{
+  "code": "P16EA",
+  "slug": "p16ea",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Défaut système de dépollution SCR / AdBlue (code constructeur)",
+  "metaTitle": "Code défaut P16EA : causes et solution",
+  "metaDescription": "Code défaut P16EA : anomalie du système AdBlue/SCR, fréquente sur PSA/Stellantis. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet (49).",
+  "definitionCourte": "Le code P16EA est un code constructeur signalant une anomalie dans le système de dépollution SCR fonctionnant à l'AdBlue.",
+  "signification": "Le code P16EA n'est pas un code OBD générique mais un code spécifique constructeur, rencontré notamment sur les véhicules du groupe PSA/Stellantis équipés d'un système SCR à l'AdBlue. Il indique que le calculateur de dépollution a relevé une incohérence dans la chaîne de réduction des oxydes d'azote (NOx), sans pointer une pièce unique. Le système SCR injecte de l'AdBlue (solution d'urée) dans l'échappement pour transformer les NOx en azote et en vapeur d'eau ; il fait intervenir un réservoir, une pompe, un module de dosage, un injecteur, plusieurs capteurs et un catalyseur. Le P16EA peut donc se déclencher si l'une de ces étapes ne donne pas le résultat attendu, ou si une mesure sort des tolérances programmées. Comme la référence est propre au constructeur, son interprétation exacte demande une valise adaptée à la marque. Il s'accompagne souvent d'autres codes du même groupe qui aident à cibler l'origine.",
+  "causes": [
+    {
+      "titre": "Pompe ou module de dosage AdBlue défaillant",
+      "detail": "Une pompe faible ou un module de dosage en panne ne fournit pas la pression ou le débit attendus, et le calculateur détecte une dépollution incohérente."
+    },
+    {
+      "titre": "Injecteur AdBlue encrassé ou obstrué",
+      "detail": "L'injecteur peut se boucher par cristallisation de l'urée, empêchant la bonne pulvérisation du réducteur dans l'échappement."
+    },
+    {
+      "titre": "Capteur de qualité, niveau ou température en défaut",
+      "detail": "Un capteur AdBlue faussé renvoie des valeurs hors plage, ce qui déclenche un code d'anomalie du système SCR."
+    },
+    {
+      "titre": "Réservoir AdBlue contaminé ou gelé",
+      "detail": "Un fluide non conforme, dilué ou gelé en hiver perturbe le dosage et fausse la réaction chimique dans le catalyseur."
+    },
+    {
+      "titre": "Catalyseur SCR vieilli ou empoisonné",
+      "detail": "Un catalyseur en fin de vie réduit moins efficacement les NOx, ce que le calculateur interprète comme un défaut de dépollution."
+    },
+    {
+      "titre": "Faisceau ou connectique défectueux",
+      "detail": "Une connexion corrodée, un faisceau endommagé ou une masse défaillante interrompent la communication avec les composants AdBlue."
+    },
+    {
+      "titre": "Calculateur de dépollution ou logiciel à mettre à jour",
+      "detail": "Un défaut interne du calculateur SCR ou un logiciel obsolète peut générer ce code sans panne mécanique réelle."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant antipollution allumé",
+    "Message d'erreur du système AdBlue au tableau de bord",
+    "Mode dégradé avec bridage de la puissance",
+    "Décompte des démarrages restants avant immobilisation",
+    "Refus de redémarrage une fois le compteur écoulé",
+    "Consommation d'AdBlue anormale ou irrégulière",
+    "Défaut intermittent réapparaissant après effacement"
+  ],
+  "diagnostic": "Le diagnostic du P16EA passe obligatoirement par une lecture avec une valise compatible avec le constructeur, car les codes propriétaires PSA/Stellantis ne sont pas toujours lisibles par un lecteur OBD basique. On analyse les paramètres en temps réel : pression et débit de la pompe AdBlue, retours de l'injecteur, valeurs des capteurs de qualité et de niveau, ainsi que le rendement estimé du catalyseur. Un test des actionneurs permet de vérifier individuellement la pompe et l'injecteur. L'inspection du réservoir, du fluide et de la connectique complète l'analyse. Le but est d'isoler précisément le maillon défaillant de la chaîne SCR avant de remplacer la moindre pièce.",
+  "reparation": "Selon l'origine identifiée, la réparation peut aller d'un simple nettoyage de l'injecteur ou d'une vidange du réservoir avec remplissage en AdBlue conforme, au remplacement d'un capteur (150 à 350 €), de l'injecteur ou du module de dosage (250 à 600 €), de la pompe AdBlue, voire du catalyseur SCR (poste pouvant dépasser 1 000 €). Ces montants sont indicatifs et varient selon le modèle. Toute neutralisation du système AdBlue/SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export). Ultimauto, à Cholet (49) ou en service mobile, dispose du matériel pour lire ces codes constructeur, cibler la panne et vous remettre un devis gratuit avant toute intervention.",
+  "gravite": "Élevée",
+  "graviteTexte": "Comme la plupart des défauts AdBlue, le P16EA déclenche fréquemment un compte à rebours pouvant aboutir au blocage du véhicule. Il ne doit pas être ignoré.",
+  "rouler": "Le véhicule reste généralement conduisible dans un premier temps, mais le mode dégradé puis le refus de démarrage peuvent survenir une fois le compteur écoulé. Évitez de vous contenter d'effacer le code : s'il s'agit d'un vrai défaut, il reviendra. Planifiez un diagnostic rapidement, surtout avant un long trajet.",
+  "faq": [
+    {
+      "q": "Le P16EA concerne-t-il surtout les Peugeot et Citroën ?",
+      "r": "C'est un code constructeur que l'on rencontre fréquemment sur les véhicules du groupe PSA/Stellantis (Peugeot, Citroën, DS, Opel) équipés d'un SCR à l'AdBlue. Sa lecture précise demande une valise adaptée à la marque, car les lecteurs OBD génériques ne l'interprètent pas toujours correctement."
+    },
+    {
+      "q": "Quelle pièce est en cause avec un P16EA ?",
+      "r": "Ce code ne désigne pas une pièce unique : il signale une anomalie globale du système SCR. La pompe, l'injecteur, un capteur, le réservoir, le catalyseur ou le calculateur peuvent être en cause. Un diagnostic en données réelles est nécessaire pour cibler le composant fautif."
+    },
+    {
+      "q": "Mon véhicule risque-t-il de ne plus démarrer ?",
+      "r": "Oui, c'est possible. Les défauts du système AdBlue activent généralement un compte à rebours du nombre de démarrages restants. Une fois épuisé, le véhicule peut refuser de redémarrer. Mieux vaut intervenir avant d'atteindre ce point."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P16EA ?",
+      "r": "Le coût dépend de la pièce concernée : d'un nettoyage ou d'un capteur autour de 150 €, jusqu'à plus de 1 000 € si le catalyseur SCR est en cause. Chez Ultimauto, le diagnostic cible précisément le besoin et le devis est gratuit."
+    }
+  ]
+}

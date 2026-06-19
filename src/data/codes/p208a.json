@@ -1,0 +1,69 @@
+{
+  "code": "P208A",
+  "slug": "p208a",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Circuit de commande du module de dosage du réducteur",
+  "metaTitle": "Code défaut P208A : causes et solution",
+  "metaDescription": "Code défaut P208A : défaut du circuit de commande du module de dosage AdBlue (SCR). Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",
+  "definitionCourte": "Le circuit électrique qui commande le module de dosage de l'AdBlue présente une anomalie détectée par le calculateur.",
+  "signification": "Le code P208A appartient à la famille des défauts du système SCR, qui réduit les oxydes d'azote (NOx) grâce à l'injection d'AdBlue. Contrairement aux codes de pression ou de qualité, le P208A vise spécifiquement le circuit de commande du module de dosage, c'est-à-dire la partie électrique qui pilote l'injection d'urée. Le calculateur de dépollution envoie un signal pour commander le doseur et attend en retour une réponse cohérente (intensité, tension, signal de pilotage). Lorsqu'il ne reçoit pas le retour attendu, ou que le circuit présente une coupure, un court-circuit ou une résistance anormale, il enregistre le P208A. Le problème est donc avant tout de nature électrique : faisceau, connecteur, alimentation ou module lui-même, plutôt qu'une obstruction hydraulique. Comme le pilotage de l'injection est interrompu ou perturbé, le dosage d'AdBlue cesse d'être fiable et la dépollution n'est plus assurée, ce qui déclenche les protections habituelles du système.",
+  "causes": [
+    {
+      "titre": "Connecteur ou faisceau du module de dosage défectueux",
+      "detail": "Un connecteur corrodé, desserré ou un faisceau abîmé sous le véhicule interrompt ou perturbe le signal de commande du doseur d'AdBlue."
+    },
+    {
+      "titre": "Câblage coupé ou en court-circuit",
+      "detail": "Un fil sectionné, frottant à la masse ou en court-circuit empêche le calculateur de piloter correctement le module et déclenche le défaut de circuit."
+    },
+    {
+      "titre": "Module ou doseur d'urée défaillant",
+      "detail": "Le module de dosage peut être électriquement défectueux (bobine coupée, électronique HS) et ne plus répondre à la commande du calculateur."
+    },
+    {
+      "titre": "Relais ou alimentation du système SCR",
+      "detail": "Un relais défaillant ou une alimentation instable prive le module de dosage de la tension nécessaire à son fonctionnement."
+    },
+    {
+      "titre": "Oxydation ou humidité dans la connectique",
+      "detail": "La connectique exposée sous le châssis souffre de l'humidité et du sel : l'oxydation crée une mauvaise liaison électrique à l'origine de défauts intermittents."
+    },
+    {
+      "titre": "Calculateur de gestion AdBlue en défaut",
+      "detail": "Plus rarement, c'est l'étage de pilotage du calculateur lui-même qui est en cause, n'envoyant plus une commande exploitable au module de dosage."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant moteur allumé au tableau de bord",
+    "Message « démarrage impossible dans X km » selon le seuil atteint",
+    "Mode dégradé et limitation de puissance",
+    "Injection d'AdBlue interrompue, système SCR inactif",
+    "Défaut réapparaissant de façon intermittente après effacement",
+    "Voyant anti-pollution et hausse des émissions de NOx",
+    "Aucun bruit de dosage au niveau de l'injecteur lors du fonctionnement"
+  ],
+  "diagnostic": "Le diagnostic privilégie le contrôle électrique : après lecture à la valise pour confirmer le P208A et ses conditions d'apparition, on vérifie la continuité du faisceau, l'état des connecteurs et la résistance de la bobine du module de dosage. On contrôle l'alimentation et la masse du circuit, ainsi que le signal de commande envoyé par le calculateur. Une attention particulière est portée à l'oxydation, fréquente sur la connectique exposée. Ultimauto réalise ce contrôle électrique et électronique à Cholet (49) ou en service mobile pour localiser l'origine exacte du défaut de commande.",
+  "reparation": "Selon l'origine, la réparation consiste à remettre en état le faisceau ou le connecteur, à traiter l'oxydation et refaire une liaison fiable, ou à remplacer le module de dosage AdBlue lorsqu'il est avéré défaillant, avant d'effacer le code et de valider par un essai. À titre indicatif, une réparation de connectique ou de faisceau reste modérée, tandis qu'un module de dosage neuf représente un poste plus important selon le modèle. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et n'est pas proposée pour un véhicule roulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "L'injection d'AdBlue étant interrompue, la dépollution s'arrête et le compte à rebours de démarrages mène à un blocage du moteur sans réparation.",
+  "rouler": "Vous pouvez encore rouler à court terme, mais l'injection d'AdBlue est interrompue : le système SCR ne dépollue plus et le calculateur déclenche le mode dégradé puis un compte à rebours « démarrage impossible dans X km ». À l'épuisement de ce décompte, le moteur ne redémarrera plus tant que le circuit de commande n'est pas réparé.",
+  "faq": [
+    {
+      "q": "Le P208A est-il un problème électrique ou mécanique ?",
+      "r": "Avant tout électrique : il concerne le circuit qui commande le doseur d'AdBlue. Faisceau, connecteur, alimentation ou module en panne sont les pistes principales, pas une obstruction du circuit d'urée."
+    },
+    {
+      "q": "Pourquoi le code revient-il après effacement ?",
+      "r": "Parce que le défaut est souvent intermittent, dû à une connectique oxydée ou un fil partiellement coupé. Tant que la liaison n'est pas réparée, le code réapparaît dès que le contact électrique se perd."
+    },
+    {
+      "q": "Faut-il remplacer tout le module de dosage ?",
+      "r": "Pas systématiquement. Bien souvent, le problème vient du connecteur ou du faisceau. Le module n'est remplacé qu'après confirmation de sa défaillance électrique au diagnostic."
+    },
+    {
+      "q": "Puis-je continuer à rouler avec le P208A ?",
+      "r": "À court terme oui, mais l'AdBlue n'est plus injecté et le compte à rebours de démarrages est lancé. Sans réparation rapide, le véhicule finira bloqué et la remise en route sera plus contraignante."
+    }
+  ]
+}

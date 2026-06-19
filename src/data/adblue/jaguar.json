@@ -1,0 +1,43 @@
+{
+  "slug": "jaguar",
+  "nom": "Jaguar",
+  "metaTitle": "Problème AdBlue Jaguar : symptômes et solutions",
+  "metaDescription": "Panne AdBlue sur Jaguar (Ingenium D) : voyant, démarrage impossible, codes SCR. Symptômes, causes et solutions. Ultimauto Cholet + mobile, devis gratuit.",
+  "moteurs": "Ingenium 2.0 D (163 à 240 ch) et 3.0 V6 diesel",
+  "modeles": [
+    "XE",
+    "XF",
+    "F-Pace",
+    "E-Pace",
+    "XJ"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "voyant AdBlue et message d'alerte au tableau de bord",
+    "« démarrage impossible dans X km »",
+    "mode dégradé / perte de puissance",
+    "surconsommation d'AdBlue",
+    "voyant moteur allumé"
+  ],
+  "pourquoi": "Jaguar partage les moteurs diesel Ingenium du groupe JLR, avec le même système SCR à AdBlue que Land Rover. Les pannes viennent le plus souvent du capteur de NOx ou de l'injecteur d'AdBlue (cristallisation de l'urée), parfois d'un AdBlue de mauvaise qualité ou d'un défaut de calculateur. Sur ces berlines et SUV premium, l'électronique de dépollution est particulièrement surveillée et déclenche vite le mode dégradé.",
+  "solutions": "Diagnostic électronique d'abord, pour distinguer un vrai défaut (capteur NOx, injecteur ou pompe SCR) d'un simple manque d'AdBlue. Ensuite : appoint d'un AdBlue conforme ISO 22241, nettoyage ou remplacement de la pièce en cause, puis remise en service et contrôle. Ultimauto intervient à Cholet (49) ou en service mobile, diagnostic et devis gratuits. Toute neutralisation logicielle du SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué).",
+  "faq": [
+    {
+      "q": "Ma Jaguar F-Pace est en mode dégradé à cause de l'AdBlue, que faire ?",
+      "r": "Le mode dégradé protège la dépollution. Il faut lire les codes défaut pour cibler la cause (capteur NOx, injecteur AdBlue) puis la corriger : une fois la panne réparée et le défaut effacé, la puissance revient normalement."
+    },
+    {
+      "q": "Les pannes AdBlue Jaguar sont-elles les mêmes que Land Rover ?",
+      "r": "En grande partie oui : les deux marques utilisent les moteurs Ingenium et le même système SCR. Les symptômes et les pièces en cause (capteur NOx, injecteur d'urée) sont donc très proches."
+    },
+    {
+      "q": "Combien de temps puis-je rouler avec le voyant AdBlue allumé ?",
+      "r": "Vous pouvez rouler tant que le compte à rebours n'est pas à zéro, mais chaque trajet le fait baisser. Au-delà, le moteur ne redémarrera plus. Il ne faut donc pas attendre pour faire diagnostiquer le véhicule."
+    }
+  ]
+}

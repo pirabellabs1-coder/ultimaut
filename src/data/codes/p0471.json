@@ -1,0 +1,69 @@
+{
+  "code": "P0471",
+  "slug": "p0471",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de pression d'échappement : plage / performance",
+  "metaTitle": "Code défaut P0471 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P0471 : signal du capteur de pression d'échappement (FAP) incohérent ou hors plage. Causes, symptômes, diagnostic et solution à Cholet.",
+  "definitionCourte": "Le P0471 signale un signal de pression d'échappement présent mais incohérent avec les conditions du moteur.",
+  "signification": "Le code P0471 indique un problème de plage ou de performance du capteur de pression d'échappement. La nuance est importante : le signal existe bien et reste dans des limites électriques acceptables, mais sa valeur ne correspond pas à ce que le calculateur attend dans les conditions de fonctionnement du moteur. Par exemple, une pression élevée alors que le moteur tourne au ralenti, ou une valeur qui ne bouge pas quand le régime change. Ce capteur servant à mesurer la pression différentielle du filtre à particules (FAP), une valeur incohérente fausse l'estimation du colmatage et perturbe le pilotage des régénérations. Le P0471 est donc souvent le signe d'un capteur qui dérive, de durites partiellement bouchées ou d'une fuite, plutôt que d'une panne franche.",
+  "causes": [
+    {
+      "titre": "Capteur de pression vieillissant ou imprécis",
+      "detail": "Avec l'âge, le capteur dérive et renvoie des valeurs plausibles mais fausses, incohérentes avec le régime moteur."
+    },
+    {
+      "titre": "Durites de prise de pression partiellement bouchées",
+      "detail": "Des tuyaux encrassés de suie amortissent ou retardent la mesure, ce qui rend le signal incohérent."
+    },
+    {
+      "titre": "Fuite d'échappement",
+      "detail": "Une fuite autour du FAP modifie la pression réellement vue par le capteur et fausse la mesure."
+    },
+    {
+      "titre": "Connecteur ou câblage en mauvais état",
+      "detail": "Une résistance parasite, de la corrosion ou un faux contact perturbent le signal sans le couper totalement."
+    },
+    {
+      "titre": "FAP anormalement colmaté ou percé",
+      "detail": "Un filtre trop bouché ou au contraire percé génère une pression incohérente avec le modèle attendu."
+    },
+    {
+      "titre": "Capteur mal monté après intervention",
+      "detail": "Un capteur ou une durite mal repositionnés lors d'une réparation antérieure faussent la mesure."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP pouvant s'allumer",
+    "Régénérations mal déclenchées ou trop fréquentes",
+    "Légère perte de puissance ou mode dégradé selon le constructeur",
+    "Surconsommation de carburant",
+    "Valeurs de pression FAP aberrantes au diagnostic",
+    "Ralenti parfois légèrement instable"
+  ],
+  "diagnostic": "Le diagnostic démarre par une lecture à la valise OBD pour confirmer le P0471 et observer la valeur du capteur en données réelles. On vérifie sa cohérence : au ralenti, la pression différentielle doit être très faible et augmenter avec le régime ; une valeur figée ou disproportionnée trahit un capteur ou une durite en défaut. Le contrôle des durites de prise de pression et un test du faisceau permettent d'isoler la cause. Chez Ultimauto, ce diagnostic électronique cible précisément l'origine du défaut avant de remplacer une pièce.",
+  "reparation": "La réparation suit la cause identifiée. Le plus souvent, déboucher ou remplacer les durites de prise de pression suffit, pour un coût modeste. Si le capteur dérive réellement, son remplacement reste abordable. Et si le FAP est en cause (colmaté), un nettoyage en profondeur de l'ordre de 250 à 350 € selon le véhicule rétablit une pression cohérente. Ultimauto réalise le diagnostic, le contrôle du capteur et, si besoin, le nettoyage du filtre à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit et conseil honnête.",
+  "gravite": "Modérée",
+  "graviteTexte": "Un signal incohérent perturbe les régénérations et peut, à terme, colmater le FAP. Le véhicule reste roulant mais le défaut mérite d'être traité pour éviter une dégradation du filtre.",
+  "rouler": "Rouler reste possible avec un P0471, mais le pilotage des régénérations est faussé, ce qui peut favoriser un colmatage du FAP. Si une perte de puissance ou un mode dégradé apparaît, il est conseillé de faire diagnostiquer le véhicule rapidement plutôt que de laisser le problème s'aggraver.",
+  "faq": [
+    {
+      "q": "Quelle différence entre le P0470 et le P0471 ?",
+      "r": "Le P0470 est un défaut général du capteur, tandis que le P0471 vise un problème de plage ou de performance : le signal existe mais reste incohérent avec les conditions du moteur. Le P0471 oriente souvent vers un capteur qui dérive ou des durites partiellement bouchées."
+    },
+    {
+      "q": "Le P0471 nécessite-t-il toujours un nouveau capteur ?",
+      "r": "Non. Très souvent, des durites de prise de pression encrassées ou une fuite sont en cause. Le diagnostic permet de vérifier la cohérence du signal avant de décider de remplacer le capteur."
+    },
+    {
+      "q": "Le P0471 peut-il fausser les régénérations ?",
+      "r": "Oui. Comme le capteur sert à estimer le colmatage du FAP, un signal incohérent déclenche des régénérations au mauvais moment, trop souvent ou pas assez, ce qui peut à terme colmater le filtre."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P0471 ?",
+      "r": "Cela dépend de la cause : déboucher une durite est peu coûteux, remplacer le capteur reste abordable, et un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

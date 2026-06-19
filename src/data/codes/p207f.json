@@ -1,0 +1,69 @@
+{
+  "code": "P207F",
+  "slug": "p207f",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Qualité du réducteur SCR insuffisante",
+  "metaTitle": "Code défaut P207F : causes et solution",
+  "metaDescription": "Code défaut P207F : la qualité du réducteur (AdBlue) est jugée insuffisante par le SCR. Causes, symptômes, diagnostic et solution. Atelier à Cholet (49).",
+  "definitionCourte": "Le calculateur estime que la qualité de l'AdBlue présent dans le réservoir est insuffisante pour réduire les NOx.",
+  "signification": "Le code P207F fait partie de la famille des défauts du système SCR, qui neutralise les oxydes d'azote (NOx) à l'aide de l'AdBlue, une solution d'urée normalisée. Le calculateur de dépollution n'analyse pas chimiquement le liquide : il déduit sa qualité du rendement de réduction observé via les sondes NOx amont et aval, ainsi que du comportement du dosage. Lorsque la réduction des NOx reste anormalement faible pour une quantité d'urée donnée, le calculateur conclut que le réducteur n'est pas conforme : trop dilué, contaminé, périmé ou remplacé par un autre liquide. Il enregistre alors le P207F et juge que la dépollution ne peut plus être assurée correctement. Comme cette estimation est indirecte, un capteur NOx en dérive ou un catalyseur fatigué peuvent parfois être interprétés à tort comme un défaut de qualité, d'où l'importance d'un diagnostic complet avant de conclure que seul l'AdBlue est en cause.",
+  "causes": [
+    {
+      "titre": "AdBlue dilué ou non conforme",
+      "detail": "Un AdBlue coupé avec de l'eau ou ne respectant pas la norme ISO 22241 contient trop peu d'urée : le rendement de réduction chute et le calculateur le juge de mauvaise qualité."
+    },
+    {
+      "titre": "Réservoir rempli avec un autre liquide",
+      "detail": "Un remplissage par erreur avec de l'eau, du gazole ou un additif inadapté fausse complètement la réaction et déclenche immédiatement un défaut de qualité."
+    },
+    {
+      "titre": "AdBlue périmé ou mal stocké",
+      "detail": "Un réducteur trop ancien, exposé à la chaleur ou contaminé lors du stockage se dégrade et perd son efficacité de réduction des NOx."
+    },
+    {
+      "titre": "Sonde NOx défaillante",
+      "detail": "Une sonde NOx en dérive fausse l'estimation du rendement : le calculateur peut conclure à un mauvais AdBlue alors que le produit est conforme."
+    },
+    {
+      "titre": "Dosage incorrect de l'injecteur ou de la pompe",
+      "detail": "Un injecteur cristallisé ou une pompe au débit insuffisant livre trop peu d'urée, ce qui imite les effets d'un réducteur de mauvaise qualité."
+    },
+    {
+      "titre": "Catalyseur SCR dégradé",
+      "detail": "Un catalyseur vieillissant réduit moins les NOx ; le calculateur peut interpréter cette baisse de rendement comme un problème de qualité du réducteur."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue allumé, parfois avec un message relatif à la qualité du produit",
+    "Avertissement « démarrage impossible dans X km » ou démarrages restants",
+    "Mode dégradé et puissance limitée",
+    "Surconsommation d'AdBlue ou comportement anormal du système SCR",
+    "Voyant anti-pollution et hausse des émissions de NOx",
+    "Risque de contre-visite ou de refus au contrôle technique",
+    "Persistance du voyant malgré un appoint récent"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise pour confirmer le P207F et relire les données des sondes NOx ainsi que le rendement de réduction estimé. On contrôle la qualité de l'AdBlue présent dans le réservoir (concentration, présence éventuelle d'un autre liquide) et on vérifie le dosage réel de l'injecteur et de la pompe. Les sondes NOx sont testées pour écarter une fausse mesure, source fréquente de faux défaut de qualité. Ultimauto réalise ce diagnostic complet à Cholet (49) ou en service mobile afin de distinguer un réducteur réellement non conforme d'un problème de capteur ou de catalyseur.",
+  "reparation": "La solution passe d'abord par la vidange du réservoir et un remplissage avec un AdBlue conforme à la norme ISO 22241 ; si le code persiste, on contrôle puis on remplace la sonde NOx, l'injecteur ou, en dernier recours, le catalyseur SCR avéré usé. À titre indicatif, une vidange et un remplissage d'AdBlue restent peu coûteux, une sonde NOx ou un injecteur se situent souvent entre 90 et 250 €, et un catalyseur SCR neuf représente un poste bien plus élevé. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et n'est pas proposée pour un véhicule roulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste roulant un temps, mais la dépollution n'est plus assurée et le compte à rebours de démarrages conduit au blocage sans intervention.",
+  "rouler": "Vous pouvez encore rouler à court terme, mais le système considère que l'AdBlue ne dépollue plus correctement : le moteur passe en mode dégradé et un compte à rebours « démarrage impossible dans X km » se déclenche. Une fois ce décompte épuisé, le moteur ne redémarrera plus tant qu'un réducteur conforme et la cause réelle n'auront pas été pris en charge.",
+  "faq": [
+    {
+      "q": "Le P207F signifie-t-il forcément que mon AdBlue est mauvais ?",
+      "r": "Pas toujours. Le calculateur déduit la qualité indirectement via les sondes NOx. Une sonde en dérive, un injecteur ou un catalyseur fatigué peuvent imiter un défaut de qualité : le diagnostic le confirme."
+    },
+    {
+      "q": "Que faire si j'ai mis de l'eau ou un mauvais produit dans le réservoir ?",
+      "r": "Il faut vidanger le réservoir et le remplir avec un AdBlue conforme ISO 22241. Rouler avec un liquide inadapté aggrave le défaut et peut endommager la pompe et l'injecteur."
+    },
+    {
+      "q": "Pourquoi le voyant reste-t-il allumé après un appoint d'AdBlue ?",
+      "r": "Si l'AdBlue ajouté est conforme mais que le code persiste, la cause est ailleurs : sonde NOx, injecteur ou catalyseur. Un diagnostic est nécessaire pour identifier et traiter le vrai problème."
+    },
+    {
+      "q": "Le P207F peut-il faire échouer le contrôle technique ?",
+      "r": "Oui, c'est un défaut antipollution. Le voyant allumé et des NOx hors seuil entraînent une contre-visite. Il faut corriger la cause avant de repasser le contrôle technique."
+    }
+  ]
+}

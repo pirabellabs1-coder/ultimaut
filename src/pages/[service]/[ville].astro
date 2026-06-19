@@ -23,7 +23,7 @@ export function getStaticPaths() {
 const { service, ville } = Astro.props;
 const slug = villeSlug(ville);
 const url = new URL(`/${service.slug}/${slug}`, site.url).href;
-const waText = `Bonjour Ultimauto, je souhaite un devis pour : ${service.nom} à ${ville.nom}.`;
+const waText = `Bonjour Ultimauto, je souhaite un devis pour : ${service.nom} à ${ville.nom}.`;
 const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(waText)}`;
 
 const ctx = buildContext({ service, ville, villes });
@@ -37,7 +37,7 @@ const autresServices = services.filter((s) => s.local && s.slug !== service.slug
 const faqComplete = [...v.faqLocaleVille, ...service.faqLocale];
 
 const jsonLd = [
-  serviceLd({ site, service, url, areaServedName: ville.nom }),
+  serviceLd({ site, service, url, areaServedName: ville.nom, cat }),
   faqPage(faqComplete),
   breadcrumb([
     { name: 'Accueil', url: site.url },
@@ -46,7 +46,7 @@ const jsonLd = [
   ]),
 ];
 ---
-<Layout title={`${service.titreCourt} à ${ville.nom} (${ville.dept})`} description={v.metaDescription} jsonLd={jsonLd} ogImage={SERVICE_PHOTO[service.slug]}>
+<Layout title={`${service.titreCourt} à ${ville.nom} (${ville.dept})`} description={v.metaDescription} jsonLd={jsonLd} ogImage={SERVICE_PHOTO[service.slug]} preloadImage={SERVICE_PHOTO[service.slug]}>
   <!-- Hero (photo réelle + overlay bleu) -->
   <section class="relative overflow-hidden bg-cover bg-center" style={`background-image: linear-gradient(180deg, rgba(25,106,213,0.80) 0%, rgba(21,101,192,0.92) 100%), url('${SERVICE_PHOTO[service.slug]}');`}>
     <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
@@ -73,7 +73,7 @@ const jsonLd = [
   <section class="section bg-white">
     <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1.55fr_1fr] lg:items-start">
       <div class="rte max-w-2xl">
-        <h2 class="text-2xl font-bold md:text-3xl">{service.nom} : en quoi ça consiste ?</h2>
+        <h2 class="text-2xl font-bold md:text-3xl">{service.nom}&#160;: en quoi ça consiste&#8239;?</h2>
         <p>{service.description}</p>
         <p>{service.pourquoi}</p>
       </div>
@@ -113,8 +113,8 @@ const jsonLd = [
   <section class="section bg-deep text-white">
     <div class="mx-auto grid max-w-[1180px] gap-8 px-6 lg:grid-cols-[1fr_1.4fr] lg:items-center">
       <div>
-        <span class="eyebrow text-accent">Pourquoi nous</span>
-        <h2 class="mt-2 text-2xl font-bold text-white md:text-3xl">Ultimauto à {ville.nom} : un choix de confiance</h2>
+        <span class="eyebrow text-white">Pourquoi nous</span>
+        <h2 class="mt-2 text-2xl font-bold text-white md:text-3xl">Ultimauto à {ville.nom}&#160;: un choix de confiance</h2>
       </div>
       <p class="text-lg leading-relaxed text-white/90">{v.pourquoiLocal}</p>
     </div>
@@ -142,7 +142,7 @@ const jsonLd = [
   <section class="section bg-cloud">
     <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2">
       <div>
-        <h2 class="text-2xl font-bold md:text-3xl">Quand envisager un {service.titreCourt.toLowerCase()} à {ville.nom} ?</h2>
+        <h2 class="text-2xl font-bold md:text-3xl">Quand envisager un {service.titreCourt.toLowerCase()} à {ville.nom}&#8239;?</h2>
         <ul class="mt-6 grid gap-4 sm:grid-cols-2">
           {service.symptomes.map((s) => (
             <li class="rounded-2xl border border-line bg-white p-5">
@@ -183,7 +183,7 @@ const jsonLd = [
       </div>
       <div class="space-y-6">
         <div class="rounded-3xl border border-line bg-cloud p-6">
-          <h3 class="text-lg font-bold">Dans quels cas intervenir ?</h3>
+          <h3 class="text-lg font-bold">Dans quels cas intervenir&#8239;?</h3>
           <ul class="mt-3 space-y-2">
             {service.casUsage.map((cas) => (
               <li class="flex items-start gap-2.5 text-ink-700">
@@ -272,7 +272,7 @@ const jsonLd = [
   <section class="section bg-white">
     <div class="mx-auto max-w-3xl px-6">
       <span class="eyebrow">FAQ</span>
-      <h2 class="mt-2 text-2xl font-bold md:text-3xl">{service.titreCourt} à {ville.nom} : vos questions</h2>
+      <h2 class="mt-2 text-2xl font-bold md:text-3xl">{service.titreCourt} à {ville.nom}&#160;: vos questions</h2>
       <div class="mt-8 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
         {faqComplete.map((f) => (
           <details class="group px-6">
@@ -293,7 +293,7 @@ const jsonLd = [
   </section>
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white md:text-4xl">{service.nom} à {ville.nom} : votre devis gratuit</h2>
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">{service.nom} à {ville.nom}&#160;: votre devis gratuit</h2>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
         <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>

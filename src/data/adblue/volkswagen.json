@@ -1,0 +1,49 @@
+{
+  "slug": "volkswagen",
+  "nom": "Volkswagen",
+  "metaTitle": "Problème AdBlue Volkswagen : panne SCR | Ultimauto",
+  "metaDescription": "Panne AdBlue Volkswagen à Cholet (49) : voyant moteur, démarrage bloqué, codes P20E8 ou P229F. Diagnostic SCR et réparation par Ultimauto. Devis gratuit.",
+  "moteurs": "Moteurs diesel 2.0 TDI EA288 et EA288 evo, 1.6 TDI EA288, équipés du système SCR à injection d'AdBlue généralisé sur la gamme depuis l'ère post-dieselgate.",
+  "modeles": [
+    "Golf 7 et Golf 8 TDI",
+    "Passat B8 TDI",
+    "Tiguan TDI",
+    "Touran TDI",
+    "Transporter T6 / T6.1 TDI",
+    "Caddy TDI",
+    "Arteon TDI",
+    "Touareg V6 TDI"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Voyant moteur ou témoin AdBlue allumé au tableau de bord",
+    "Message « Défaut émissions : démarrage impossible dans XXX km »",
+    "Décompte de démarrages restants avant blocage du véhicule",
+    "Passage en mode dégradé avec perte de puissance",
+    "Surconsommation anormale d'AdBlue",
+    "Refus de démarrage une fois le compte à rebours arrivé à zéro",
+    "Témoin qui revient malgré un appoint d'AdBlue récent"
+  ],
+  "pourquoi": "Sur les Volkswagen TDI EA288, la panne provient le plus souvent d'un capteur NOx défaillant (amont ou aval), d'un injecteur ou d'une pompe AdBlue encrassés, ou d'un AdBlue de mauvaise qualité ayant cristallisé. La généralisation du SCR après le dieselgate rend ces véhicules très sensibles : le calculateur surveille en permanence le système et déclenche un compte à rebours de démarrages dès qu'une anomalie est détectée.",
+  "solutions": "Ultimauto réalise d'abord un diagnostic électronique précis pour identifier l'organe fautif (capteur NOx, injecteur, pompe ou réservoir). Selon le cas, nous remplaçons le capteur ou l'injecteur défectueux, nettoyons le circuit et procédons au reparamétrage du système SCR pour effacer le défaut. Intervention à l'atelier de Cholet ou en mobile sur le secteur, devis gratuit. La neutralisation du système est strictement réservée à un usage hors voie publique (circuit, export).",
+  "faq": [
+    {
+      "q": "Mon Volkswagen affiche « démarrage impossible dans 800 km », est-ce urgent ?",
+      "r": "Oui. Ce décompte indique que le calculateur a détecté un défaut SCR et bloquera tout démarrage une fois arrivé à zéro. Mieux vaut poser un diagnostic rapidement, car une fois le véhicule immobilisé, le déblocage est plus contraignant. Contactez-nous dès l'apparition du message."
+    },
+    {
+      "q": "J'ai fait l'appoint d'AdBlue mais le voyant reste allumé, pourquoi ?",
+      "r": "Si le témoin persiste après un appoint, le problème ne vient pas du niveau mais d'un composant : capteur NOx, injecteur AdBlue, pompe ou qualité du liquide. Seul un diagnostic permet d'identifier la cause exacte. Un simple effacement de code sans réparation ferait revenir le défaut."
+    },
+    {
+      "q": "Combien coûte la réparation d'une panne AdBlue sur un Volkswagen TDI ?",
+      "r": "Le coût dépend de l'organe à remplacer : un capteur NOx, un injecteur et une pompe AdBlue n'ont pas le même tarif. Nous établissons un devis gratuit après diagnostic, sans engagement, pour que vous connaissiez le montant exact avant toute intervention."
+    }
+  ]
+}

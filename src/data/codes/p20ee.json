@@ -1,0 +1,73 @@
+{
+  "code": "P20EE",
+  "slug": "p20ee",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Efficacité du catalyseur SCR sous le seuil (banc 1)",
+  "metaTitle": "Code défaut P20EE : causes et solution",
+  "metaDescription": "Code défaut P20EE : le rendement du catalyseur SCR est trop faible pour réduire les NOx. Causes, symptômes et solution. Diagnostic AdBlue à Cholet (49).",
+  "definitionCourte": "Le rendement de réduction des NOx du catalyseur SCR (banc 1) est inférieur au seuil exigé par le calculateur.",
+  "signification": "Le code P20EE appartient à la famille des défauts du système SCR (Selective Catalytic Reduction), la technologie qui traite les oxydes d'azote (NOx) à l'aide de l'AdBlue. Concrètement, le calculateur de dépollution surveille en permanence l'efficacité du catalyseur SCR en comparant la quantité de NOx mesurée par la sonde placée en amont à celle relevée par la sonde en aval. Cet écart traduit la part de polluants réellement neutralisée par la réaction entre l'ammoniac issu de l'urée et les oxydes d'azote. Lorsque ce rendement reste durablement sous le seuil programmé par le constructeur, malgré une injection d'AdBlue jugée normale, le calculateur enregistre le P20EE. Le « banc 1 » désigne le côté moteur où se trouve le cylindre n°1, repère utile sur les V6 ou V8 équipés de deux lignes. Ce code est un indicateur de performance globale : il signale que le SCR ne fait plus correctement son travail, sans pointer d'emblée le composant fautif.",
+  "causes": [
+    {
+      "titre": "AdBlue de mauvaise qualité ou dilué",
+      "detail": "Un AdBlue non conforme à la norme ISO 22241, périmé ou coupé avec de l'eau fournit trop peu d'ammoniac : la réaction de réduction des NOx s'effondre et le rendement passe sous le seuil."
+    },
+    {
+      "titre": "Injecteur d'urée cristallisé ou bouché",
+      "detail": "Si l'injecteur de réducteur est partiellement obstrué par des dépôts d'urée cristallisée, le dosage réel devient insuffisant alors que le calculateur croit injecter la bonne quantité."
+    },
+    {
+      "titre": "Catalyseur SCR vieillissant ou encrassé",
+      "detail": "Avec le kilométrage, le revêtement catalytique perd de son efficacité ou s'empoisonne (soufre, dépôts). Sa capacité à transformer les NOx diminue jusqu'à descendre sous le rendement minimal."
+    },
+    {
+      "titre": "Sonde NOx amont ou aval défaillante",
+      "detail": "Une sonde NOx qui dérive fausse le calcul de rendement : le calculateur peut conclure à tort que le catalyseur est inefficace alors que le problème vient de la mesure."
+    },
+    {
+      "titre": "Pompe ou doseur SCR défaillant",
+      "detail": "Une pompe AdBlue qui ne tient pas la pression, ou un doseur au débit irrégulier, livre une quantité d'urée inférieure à celle commandée, ce qui dégrade le rendement de conversion."
+    },
+    {
+      "titre": "Fuite d'échappement entre catalyseur et sondes",
+      "detail": "Une entrée d'air parasite ou une fuite sur la ligne entre le catalyseur SCR et les sondes NOx perturbe la mesure et peut déclencher un défaut d'efficacité erroné."
+    },
+    {
+      "titre": "Calculateur de dépollution en défaut",
+      "detail": "Plus rarement, un calculateur dont la cartographie ou les entrées capteurs sont corrompues interprète mal les données et enregistre un P20EE sans cause physique évidente."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue allumé au tableau de bord, parfois accompagné du voyant moteur",
+    "Message d'avertissement de type « démarrage impossible dans X km » ou « X démarrages restants »",
+    "Passage en mode dégradé avec puissance et régime bridés",
+    "Surconsommation d'AdBlue ou appoints nettement plus fréquents",
+    "Voyant anti-pollution et hausse des émissions de NOx",
+    "Risque de contre-visite ou de refus au contrôle technique antipollution",
+    "Bridage progressif de la vitesse maximale à l'approche du seuil de blocage"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise des codes mémorisés et des données en temps réel : valeurs des sondes NOx amont et aval, rendement calculé du catalyseur, pression et débit du circuit de dosage. On vérifie la qualité de l'AdBlue présent dans le réservoir et l'absence de dilution. On teste ensuite le bon fonctionnement de l'injecteur et de la pompe SCR, puis on contrôle les sondes NOx, sources fréquentes de fausse mesure. Ultimauto réalise ce diagnostic complet à Cholet (49) ou en service mobile, afin de distinguer un catalyseur réellement usé d'un simple problème de dosage ou de capteur.",
+  "reparation": "Selon le constat, la remise en état passe d'abord par un appoint ou une vidange du réservoir avec un AdBlue conforme, puis par le nettoyage ou le remplacement de l'injecteur d'urée et, si nécessaire, de la sonde NOx en cause ; le catalyseur SCR n'est remplacé qu'en dernier recours lorsqu'il est avéré en fin de vie. À titre indicatif, comptez de l'ordre de 90 à 250 € pour un capteur ou un injecteur, et bien davantage pour un catalyseur SCR neuf. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et ne peut être proposée pour un véhicule circulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste roulant à court terme, mais le compte à rebours de démarrages impose une intervention rapide avant un blocage complet du moteur.",
+  "rouler": "Vous pouvez généralement encore rouler, mais le calculateur enclenche un compte à rebours de type « démarrage impossible dans X km » et fait passer la voiture en mode dégradé avec puissance réduite. Tant que le défaut n'est pas traité, ce décompte continue à chaque trajet et finira par empêcher tout redémarrage du moteur.",
+  "faq": [
+    {
+      "q": "Puis-je continuer à rouler avec le code P20EE ?",
+      "r": "Oui à court terme, mais le système a déjà lancé un compte à rebours de démarrages. Au-delà du seuil, le moteur ne redémarrera plus : mieux vaut diagnostiquer la cause sans attendre."
+    },
+    {
+      "q": "Un simple appoint d'AdBlue suffit-il à effacer le P20EE ?",
+      "r": "Parfois, si le défaut venait d'un AdBlue dilué ou de mauvaise qualité. Mais si la cause est un injecteur, une sonde NOx ou un catalyseur usé, l'appoint seul ne suffira pas et le code reviendra."
+    },
+    {
+      "q": "Le P20EE peut-il faire échouer mon contrôle technique ?",
+      "r": "Oui : il s'agit d'un défaut antipollution. Voyant allumé et émissions de NOx hors seuil entraînent une contre-visite. Il faut traiter la cause avant de repasser au contrôle."
+    },
+    {
+      "q": "Faut-il forcément remplacer le catalyseur SCR ?",
+      "r": "Non, dans la majorité des cas le problème vient du dosage d'AdBlue ou d'une sonde NOx. Le remplacement du catalyseur n'intervient qu'après confirmation de son usure réelle au diagnostic."
+    }
+  ]
+}

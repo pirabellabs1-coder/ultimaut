@@ -1,0 +1,45 @@
+{
+  "slug": "land-rover",
+  "nom": "Land Rover",
+  "metaTitle": "Problème AdBlue Land Rover : symptômes et solutions",
+  "metaDescription": "Panne AdBlue sur Land Rover (Ingenium D) : voyant, démarrage bloqué, codes SCR. Symptômes et solutions. Ultimauto à Cholet + service mobile, devis gratuit.",
+  "moteurs": "Ingenium 2.0 D (D150, D180, D200, D240) et anciens 3.0 TDV6",
+  "modeles": [
+    "Range Rover Evoque",
+    "Discovery Sport",
+    "Range Rover Velar",
+    "Discovery",
+    "Defender",
+    "Range Rover Sport"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F"
+  ],
+  "symptomes": [
+    "Message « Démarrage impossible dans X km »",
+    "voyant AdBlue à l'écran",
+    "passage en mode dégradé",
+    "surconsommation d'AdBlue",
+    "ralenti instable après un appoint",
+    "voyant moteur (MIL)"
+  ],
+  "pourquoi": "Les diesels Ingenium de Land Rover sont équipés d'un système SCR exigeant. Sur ces SUV lourds souvent utilisés en ville, l'injecteur d'AdBlue et le capteur de NOx sont des points de faiblesse connus : cristallisation de l'urée, encrassement et défauts de lecture déclenchent le compte à rebours « démarrage impossible ». Un AdBlue de mauvaise qualité et un calculateur SCR sensible aggravent le phénomène.",
+  "solutions": "On commence toujours par un diagnostic électronique pour identifier la vraie cause (capteur NOx, injecteur ou pompe SCR, qualité de l'AdBlue) plutôt que d'effacer bêtement le défaut. Selon le cas : appoint d'un AdBlue conforme ISO 22241, nettoyage ou remplacement de l'injecteur ou du capteur, puis remise en service. Ultimauto intervient à l'atelier de Cholet (49) ou en service mobile, diagnostic et devis gratuits. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué).",
+  "faq": [
+    {
+      "q": "Mon Range Rover Evoque affiche « démarrage impossible dans 800 km », c'est grave ?",
+      "r": "C'est l'avertissement du système SCR : tant que vous roulez, le compte à rebours continue, puis le véhicule refuse de redémarrer. Il faut diagnostiquer la cause (souvent capteur NOx ou injecteur AdBlue) avant d'arriver à zéro. Mieux vaut intervenir vite."
+    },
+    {
+      "q": "Un simple appoint d'AdBlue suffit-il sur un Land Rover ?",
+      "r": "Si le niveau était seulement bas, un appoint d'AdBlue de qualité peut suffire et éteindre le voyant après quelques kilomètres. Mais si un capteur ou un injecteur est en cause, le voyant reviendra : un diagnostic s'impose."
+    },
+    {
+      "q": "La panne d'AdBlue peut-elle abîmer le moteur de mon Land Rover ?",
+      "r": "Non : le système SCR se situe en aval du moteur, dans la ligne d'échappement. Une panne d'AdBlue ne casse pas le moteur, mais elle peut bloquer le démarrage et faire passer la voiture en mode dégradé."
+    }
+  ]
+}

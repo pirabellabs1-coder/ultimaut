@@ -1,0 +1,52 @@
+{
+  "slug": "peugeot",
+  "nom": "Peugeot",
+  "metaTitle": "Problème AdBlue Peugeot : symptômes et solutions",
+  "metaDescription": "Panne AdBlue Peugeot BlueHDi : message démarrage impossible, voyant allumé, mode dégradé. Causes, codes défaut SCR, diagnostic et réparation à Cholet (49).",
+  "moteurs": "1.5 et 2.0 BlueHDi",
+  "modeles": [
+    "208",
+    "2008",
+    "308",
+    "3008",
+    "5008",
+    "508",
+    "Partner",
+    "Expert"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P163B"
+  ],
+  "symptomes": [
+    "Message « Démarrage impossible dans X km » au tableau de bord",
+    "Voyant AdBlue (ou anti-pollution) allumé en permanence",
+    "Voyant qui reste allumé malgré un plein d'AdBlue récent",
+    "Passage en mode dégradé et perte de puissance",
+    "Surconsommation d'AdBlue anormale entre deux appoints",
+    "Compte à rebours de démarrages restants qui s'affiche"
+  ],
+  "pourquoi": "Les Peugeot diesel récentes utilisent le système SCR à l'AdBlue commun aux moteurs BlueHDi du groupe Stellantis (Peugeot, Citroën, DS), partagé avec Citroën et DS. Sur ces modèles, le point faible le plus signalé est le capteur de niveau d'AdBlue : il se dérègle dans la solution d'urée et transmet une fausse mesure au calculateur, qui croit le réservoir vide alors qu'il est plein, d'où le voyant et le message de blocage. La cristallisation de l'urée à l'injecteur, une sonde NOx défaillante ou une pompe SCR fatiguée complètent les causes fréquentes, surtout sur les véhicules à courts trajets répétés.",
+  "solutions": "On commence toujours par un diagnostic électronique qui lit les codes défaut du système SCR et cible le composant réellement en cause, pour éviter de remplacer des pièces inutilement. Selon le constat : appoint d'un AdBlue de qualité, nettoyage ou remplacement de l'injecteur ou du capteur de niveau, contrôle de la sonde NOx et de la pompe, puis réinitialisation du système. Ultimauto, à Cholet (49) ou en service mobile, réalise diagnostic et devis gratuits, et privilégie la réparation conforme qui garde le véhicule en règle. Toute neutralisation du système SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué) et reste interdite sur route.",
+  "faq": [
+    {
+      "q": "Pourquoi le voyant AdBlue reste-t-il allumé sur ma Peugeot alors que le réservoir est plein ?",
+      "r": "C'est souvent le capteur de niveau, point faible connu sur les BlueHDi : il fausse la mesure et croit le réservoir vide. Un diagnostic le confirme avant tout remplacement."
+    },
+    {
+      "q": "Puis-je continuer à rouler avec le message « démarrage impossible » sur ma Peugeot ?",
+      "r": "Seulement le temps du compte à rebours affiché. Une fois à zéro, le moteur refuse de redémarrer. Mieux vaut faire diagnostiquer la panne rapidement pour éviter l'immobilisation."
+    },
+    {
+      "q": "La panne AdBlue peut-elle endommager le moteur de ma Peugeot ?",
+      "r": "Non. Le système SCR agit sur la ligne d'échappement, pas sur la mécanique interne. Le vrai risque est l'immobilisation du véhicule en fin de compte à rebours, pas la casse moteur."
+    },
+    {
+      "q": "Peut-on supprimer l'AdBlue sur une Peugeot BlueHDi ?",
+      "r": "Pas pour un usage routier : c'est interdit en France et sanctionné au contrôle technique. Ces prestations sont réservées à un usage hors voie publique. Sur route, la solution est la réparation conforme."
+    }
+  ]
+}

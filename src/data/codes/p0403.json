@@ -1,0 +1,69 @@
+{
+  "code": "P0403",
+  "slug": "p0403",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Défaut du circuit de commande de la vanne EGR",
+  "metaTitle": "Code défaut P0403 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0403 signale un problème du circuit de commande de la vanne EGR. Causes, symptômes et solution chez Ultimauto à Cholet (49). Devis gratuit.",
+  "definitionCourte": "Le P0403 indique une anomalie électrique sur le circuit qui commande la vanne EGR.",
+  "signification": "Le code P0403 est un code OBD-II générique qui signale une anomalie sur le circuit électrique de commande de la vanne EGR. Pour piloter la recirculation des gaz d'échappement, le calculateur moteur envoie un signal électrique au moteur électrique ou à l'électrovanne qui actionne la vanne EGR. Le calculateur surveille en permanence ce circuit de commande et vérifie que le courant et la tension correspondent à ce qu'il pilote. Lorsqu'il détecte un circuit ouvert, un court-circuit ou une valeur électrique hors plage sur cette commande, il en conclut qu'il ne peut plus actionner correctement la vanne et enregistre le défaut P0403. Contrairement aux codes de débit, le P0403 pointe d'abord vers un problème électrique (actionneur, faisceau, connecteur), même si une vanne dont le clapet est grippé par la calamine peut surcharger le moteur électrique et contribuer au défaut.",
+  "causes": [
+    {
+      "titre": "Moteur électrique ou électrovanne EGR défectueux",
+      "detail": "L'actionneur qui ouvre la vanne est hors service ou présente une résistance anormale, ce qui perturbe le circuit de commande."
+    },
+    {
+      "titre": "Faisceau de commande coupé ou en court-circuit",
+      "detail": "Un fil sectionné, frotté ou en court-circuit interrompt ou perturbe le signal envoyé à la vanne EGR."
+    },
+    {
+      "titre": "Connecteur de la vanne EGR défaillant",
+      "detail": "Un connecteur corrodé, desserré ou humide provoque un faux contact sur le circuit de commande."
+    },
+    {
+      "titre": "Vanne grippée par la calamine",
+      "detail": "Un clapet bloqué par les dépôts force l'actionneur, qui tire un courant anormal et déclenche un défaut électrique."
+    },
+    {
+      "titre": "Défaut d'alimentation ou de masse",
+      "detail": "Une alimentation ou une masse défaillante du circuit empêche la vanne de recevoir une commande correcte."
+    },
+    {
+      "titre": "Étage de pilotage du calculateur en défaut",
+      "detail": "Plus rarement, c'est l'étage de sortie du calculateur qui commande la vanne qui est endommagé."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Vanne EGR qui ne s'actionne plus correctement",
+    "Ralenti instable ou à-coups",
+    "Perte de puissance, parfois mode dégradé",
+    "Surconsommation de carburant",
+    "Hausse des émissions polluantes",
+    "Comportement moteur irrégulier"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise pour confirmer le P0403 et préciser la nature du défaut électrique. On pilote ensuite la vanne EGR en commande active pour observer sa réaction, et on contrôle au multimètre l'alimentation, la masse, la continuité du faisceau et l'état du connecteur. La résistance du moteur électrique ou de l'électrovanne est vérifiée, et on s'assure que le clapet n'est pas grippé par la calamine au point de surcharger l'actionneur. Chez Ultimauto, ce contrôle est réalisé avant toute intervention pour distinguer un défaut purement électrique d'une vanne bloquée par l'encrassement.",
+  "reparation": "Le P0403 étant d'origine électrique, la réparation passe le plus souvent par la remise en état du faisceau ou du connecteur, ou par le remplacement de l'actionneur (moteur électrique ou électrovanne) lorsqu'il est hors service. Si le défaut provient d'un clapet grippé par la calamine qui surcharge l'actionneur, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit sans démontage et libère la course du clapet. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement de la vanne ou de l'actionneur étant plus cher. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "La vanne ne se pilote plus normalement, ce qui dégrade le fonctionnement moteur et les émissions. Selon les véhicules, le moteur peut passer en mode dégradé.",
+  "rouler": "Vous pouvez généralement rouler avec un P0403, mais la vanne EGR ne fonctionne plus correctement et le moteur peut perdre de la puissance. Un défaut électrique non traité peut aussi évoluer. Un diagnostic rapide est conseillé pour identifier l'origine exacte.",
+  "faq": [
+    {
+      "q": "Le code P0403 est-il un problème électrique ?",
+      "r": "Oui, le P0403 concerne le circuit de commande de la vanne EGR : actionneur, faisceau ou connecteur. Il peut toutefois être aggravé par un clapet grippé par la calamine qui surcharge l'actionneur."
+    },
+    {
+      "q": "Le décalaminage suffit-il à corriger le code P0403 ?",
+      "r": "Pas toujours. Si le défaut est purement électrique, il faut réparer le faisceau ou remplacer l'actionneur. Mais si le clapet est grippé par la calamine, le décalaminage hydrogène libère sa course et peut résoudre le problème."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0403 ?",
+      "r": "Un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Le remplacement d'une vanne ou d'un actionneur, plus une éventuelle réparation de faisceau, revient plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0403 ?",
+      "r": "Souvent oui, mais la vanne EGR ne se commande plus correctement et le moteur peut perdre de la puissance ou passer en mode dégradé. Un diagnostic rapide est recommandé."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "code": "P0402",
+  "slug": "p0402",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Débit EGR excessif détecté",
+  "metaTitle": "Code défaut P0402 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0402 indique un débit EGR excessif. Causes, symptômes et solution par décalaminage hydrogène chez Ultimauto à Cholet (49). Devis gratuit.",
+  "definitionCourte": "Le P0402 signale que la quantité de gaz recirculés par la vanne EGR est trop importante.",
+  "signification": "Le code P0402 est un code OBD-II générique qui signale un débit de recirculation des gaz d'échappement (EGR) excessif. La vanne EGR réintroduit une partie des gaz d'échappement dans l'admission pour réduire la température de combustion et les émissions d'oxydes d'azote (NOx). Le calculateur moteur commande l'ouverture de la vanne en fonction du régime et de la charge, puis compare le débit ou la dépression réellement mesurés à la valeur attendue. Lorsque la quantité de gaz recirculés dépasse durablement la consigne, le calculateur en déduit que trop de gaz entrent dans l'admission et enregistre le défaut P0402. Un débit excessif est souvent provoqué par une vanne EGR qui reste ouverte alors qu'elle devrait être fermée, généralement à cause de la calamine qui bloque le clapet en position ouverte, plus rarement par un capteur ou une commande défaillante.",
+  "causes": [
+    {
+      "titre": "Vanne EGR bloquée en position ouverte",
+      "detail": "La calamine empêche le clapet de se refermer, si bien que des gaz continuent d'entrer dans l'admission au-delà de la consigne."
+    },
+    {
+      "titre": "Vanne EGR encrassée par la calamine",
+      "detail": "Les dépôts perturbent la fermeture franche du clapet et provoquent un débit de gaz supérieur à celui attendu."
+    },
+    {
+      "titre": "Capteur de position ou de pression EGR défectueux",
+      "detail": "Un capteur qui surestime ou fausse la mesure peut faire croire au calculateur que le débit est trop élevé."
+    },
+    {
+      "titre": "Défaut de la commande de la vanne",
+      "detail": "Une commande électrique ou pneumatique qui maintient la vanne trop ouverte entraîne un débit excessif."
+    },
+    {
+      "titre": "Fuite de dépression maintenant la vanne ouverte",
+      "detail": "Sur les vannes pneumatiques, une dépression mal régulée garde la vanne ouverte et augmente le débit."
+    },
+    {
+      "titre": "Capteur de pression différentielle (DPFE) en défaut",
+      "detail": "Des tuyaux ou un capteur DPFE défaillants faussent la mesure du débit et déclenchent le code à tort."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable, à-coups voire calages",
+    "Fumée noire à l'échappement",
+    "Perte de puissance et reprises difficiles",
+    "Hésitations à l'accélération",
+    "Surconsommation de carburant",
+    "Démarrage parfois difficile"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise pour confirmer le P0402 et relever les données figées. On pilote la vanne EGR en commande active afin de vérifier qu'elle se ferme franchement et ne reste pas bloquée ouverte, puis on contrôle le débit ou la pression mesurés par rapport à la consigne. Une inspection permet d'évaluer l'encrassement de la vanne et du clapet ainsi que l'état des conduits. Chez Ultimauto, ce contrôle électronique précède toute intervention pour distinguer une vanne encrassée d'un capteur réellement défaillant.",
+  "reparation": "Quand le débit excessif vient d'une vanne maintenue ouverte par la calamine, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage pour rétablir une fermeture franche. Si la vanne reste grippée ouverte ou si un capteur est réellement hors service, son remplacement est conseillé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement étant nettement plus coûteux. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le moteur tourne mal au ralenti et peut fumer, mais reste généralement conduisible. Un excès de gaz recirculés finit toutefois par dégrader l'agrément et encrasser l'admission.",
+  "rouler": "Vous pouvez rouler avec un P0402, mais le moteur risque de caler au ralenti et de manquer de reprises. Tant que la vanne reste trop ouverte, l'admission s'encrasse et la fumée augmente. Un diagnostic rapide est recommandé.",
+  "faq": [
+    {
+      "q": "Que signifie un débit EGR excessif ?",
+      "r": "Cela signifie que trop de gaz d'échappement sont réintroduits dans l'admission par rapport à la consigne. C'est souvent dû à une vanne EGR bloquée ouverte par la calamine."
+    },
+    {
+      "q": "Le décalaminage hydrogène peut-il résoudre le code P0402 ?",
+      "r": "Oui lorsque la vanne reste ouverte à cause des dépôts. Le décalaminage la nettoie sans démontage et rétablit une fermeture correcte. Si la vanne ou un capteur est HS, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0402 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Un remplacement de vanne est plus cher. Ultimauto fournit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Est-il dangereux de rouler avec le code P0402 ?",
+      "r": "Ce n'est pas dangereux à court terme, mais le moteur peut caler et fumer, et l'encrassement s'aggrave. Mieux vaut faire diagnostiquer rapidement."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "toyota",
+  "nom": "Toyota",
+  "metaTitle": "Problème AdBlue Toyota : panne SCR | Ultimauto Cholet",
+  "metaDescription": "Problème AdBlue Toyota : voyant, démarrage bloqué, défaut SCR sur 2.0 et 2.2 D-4D et Proace. Diagnostic capteur NOx et injecteur à Cholet (49). Devis gratuit.",
+  "moteurs": "Moteurs diesel Toyota 2.0 D-4D et 2.2 D-4D, ainsi que le Proace dont la base mécanique et le circuit SCR sont issus de PSA (Stellantis), équipés d'AdBlue sur les versions Euro 6.",
+  "modeles": [
+    "Toyota Proace",
+    "Toyota Proace City",
+    "Toyota RAV4 diesel",
+    "Toyota Avensis diesel",
+    "Toyota Verso diesel",
+    "Toyota Hilux 2.4 D-4D",
+    "Toyota Land Cruiser diesel"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P20EE",
+    "P163B"
+  ],
+  "symptomes": [
+    "Voyant moteur ou message d'alerte AdBlue au combiné",
+    "Avertissement « démarrage impossible » avec décompte kilométrique",
+    "Perte de puissance et limitation de régime (mode dégradé)",
+    "Réservoir d'AdBlue vidé trop rapidement",
+    "Défaut de qualité ou de niveau AdBlue signalé à tort",
+    "Refus de redémarrage après stationnement prolongé",
+    "Ralenti irrégulier et fumée à l'échappement"
+  ],
+  "pourquoi": "Sur les diesels Toyota, deux familles coexistent : les blocs maison 2.0 et 2.2 D-4D, et le Proace qui reprend une base PSA (Stellantis) avec un circuit SCR proche du BlueHDi. Les pannes proviennent surtout du capteur de NOx, de l'injecteur ou de la pompe AdBlue, voire d'un calculateur qui verrouille le système, souvent aggravées par le froid ou un AdBlue de mauvaise qualité. Toyota mise beaucoup sur l'hybride en France, donc moins de diesels AdBlue circulent, mais le Proace et les modèles D-4D Euro 6 concernés restent bien présents.",
+  "solutions": "Chez Ultimauto à Cholet (49), nous commençons par un diagnostic électronique pour cibler l'organe défaillant : capteur NOx, injecteur, pompe ou réservoir AdBlue. Nous remplaçons la pièce puis procédons au reparamétrage SCR pour lever le blocage de démarrage et réinitialiser le compteur. Intervention à l'atelier ou en service mobile, devis gratuit. Toute neutralisation du système est strictement réservée à un usage hors voie publique (terrain privé, compétition).",
+  "faq": [
+    {
+      "q": "Le Proace utilise-t-il le même AdBlue qu'un Peugeot BlueHDi ?",
+      "r": "Oui. Le Toyota Proace partage sa base mécanique avec PSA (Stellantis), son système SCR fonctionne de façon très proche du BlueHDi. Les pannes et les codes défaut sont similaires, et nos diagnostics à Cholet couvrent ces motorisations sans difficulté."
+    },
+    {
+      "q": "Mon RAV4 diesel affiche un défaut AdBlue, dois-je m'inquiéter ?",
+      "r": "Tant que le message indique un nombre de kilomètres restants, le véhicule roule encore. Mais le compteur décompte jusqu'au blocage du démarrage. Prenez rendez-vous rapidement : nous identifions la cause (capteur NOx, injecteur, pompe) et réparons avant l'immobilisation."
+    },
+    {
+      "q": "Tous les Toyota diesel ont-ils de l'AdBlue ?",
+      "r": "Seuls les diesels Toyota Euro 6 équipés du système SCR utilisent de l'AdBlue (Proace, certains RAV4, Hilux, Land Cruiser récents). Les anciens diesels et toute la gamme essence ou hybride n'en ont pas. La trappe bleue près du bouchon de gazole confirme la présence du système."
+    }
+  ]
+}

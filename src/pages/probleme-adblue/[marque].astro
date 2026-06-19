@@ -1,0 +1,300 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import services from '../../data/services.json';
+import tarifs from '../../data/tarifs.json';
+import site from '../../data/site.json';
+import { ICONS, WA_PATH, SERVICE_PHOTO } from '../../lib/ui.js';
+import EcoValues from '../../components/EcoValues.astro';
+import { faqPage, breadcrumb } from '../../lib/jsonld.js';
+
+export function getStaticPaths() {
+  const mods = import.meta.glob('../../data/adblue/*.json', { eager: true });
+  const marques = Object.values(mods).map((m) => m.default).sort((a, b) => a.nom.localeCompare(b.nom));
+  return marques.map((mq) => ({ params: { marque: mq.slug }, props: { mq, marques } }));
+}
+
+const { mq, marques } = Astro.props;
+const autresMarques = marques.filter((m) => m.slug !== mq.slug);
+const svc = services.find((s) => s.slug === 'suppression-adblue');
+const cat = tarifs.categories.find((c) => c.service === 'suppression-adblue');
+const photo = SERVICE_PHOTO['suppression-adblue'];
+const icon = ICONS['suppression-adblue'];
+
+const waText = `Bonjour Ultimauto, j'ai un problème d'AdBlue sur ma ${mq.nom}.`;
+const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(waText)}`;
+const url = new URL(`/probleme-adblue/${mq.slug}`, site.url).href;
+const hubUrl = new URL('/suppression-adblue', site.url).href;
+const faqComplete = [...mq.faq, ...(svc?.faqLocale || [])];
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: `Gestion AdBlue ${mq.nom}`,
+    name: `Problème AdBlue ${mq.nom} — diagnostic et solutions`,
+    description: mq.metaDescription,
+    url,
+    provider: { '@type': 'AutoRepair', '@id': site.url + '#business', name: site.name, url: site.url, telephone: site.phone },
+    areaServed: (site.areaServedDepts || []).map((d) => ({ '@type': 'AdministrativeArea', name: 'Département ' + d })),
+  },
+  faqPage(faqComplete),
+  breadcrumb([
+    { name: 'Accueil', url: site.url },
+    { name: 'Suppression AdBlue', url: hubUrl },
+    { name: `Problème AdBlue ${mq.nom}`, url },
+  ]),
+];
+---
+<Layout title={mq.metaTitle} description={mq.metaDescription} jsonLd={jsonLd} ogImage={photo} preloadImage={photo}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-cover bg-center" style={`background-image: linear-gradient(180deg, rgba(25,106,213,0.80) 0%, rgba(21,101,192,0.92) 100%), url('${photo}');`}>
+    <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
+      <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
+        <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
+        <a href="/suppression-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
+        <a href="/probleme-adblue" class="hover:text-white">Par marque</a> <span class="px-1.5">/</span>
+        <span class="text-white">{mq.nom}</span>
+      </nav>
+      <span class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-sm font-semibold text-white">
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{icon.map((d) => <path d={d} />)}</svg>
+        Problème AdBlue
+      </span>
+      <h1 class="mt-4 max-w-4xl text-3xl font-extrabold leading-tight text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Problème AdBlue {mq.nom}&#160;: symptômes & solutions</h1>
+      <p class="mt-5 max-w-3xl text-lg text-white/90">Pannes du système SCR/AdBlue sur les {mq.nom} diesel ({mq.moteurs})&#160;: voyant, démarrage bloqué, mode dégradé… Diagnostic électronique, réparation et remise en service par Ultimauto, à Cholet ou en service mobile dans le Grand Ouest.</p>
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Diagnostic & devis gratuits</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-5 py-2.5 font-semibold text-white transition-colors hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+        <span class="rounded-full bg-white/15 px-3 py-1.5 text-sm font-semibold text-white">{svc?.prixIndicatif}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description + fiche latérale -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-[1.55fr_1fr] lg:items-start">
+      <div class="rte max-w-2xl">
+        <h2 class="text-2xl font-bold md:text-3xl">Pourquoi l'AdBlue pose problème sur les {mq.nom}</h2>
+        <p>{mq.pourquoi}</p>
+        <h2>Le système AdBlue (SCR), en bref</h2>
+        <p>{svc?.description}</p>
+        <p>Chez Ultimauto, on ne se contente pas d'effacer un voyant&#160;: on identifie la <strong>vraie cause</strong> de la panne pour une réparation durable, à l'atelier de Cholet ou en service mobile.</p>
+      </div>
+      <aside class="space-y-5 lg:sticky lg:top-28">
+        <div class="rounded-3xl border border-line bg-cloud p-6">
+          <p class="font-display text-lg font-bold">AdBlue {mq.nom}</p>
+          <dl class="mt-4 space-y-3 text-sm">
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Marque</dt><dd class="text-right font-semibold">{mq.nom}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Moteurs</dt><dd class="text-right font-semibold">{mq.moteurs}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Modèles concernés</dt><dd class="text-right font-semibold">{mq.modeles.length}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">À partir de</dt><dd class="text-right font-semibold">{svc?.prixIndicatif}</dd></div>
+            <div class="flex justify-between gap-3"><dt class="text-ink-500">Devis</dt><dd class="text-right font-semibold text-accent-700">Gratuit</dd></div>
+          </dl>
+          <a href="/prise-de-rendez-vous" class="btn-primary mt-5 w-full">Demander un devis</a>
+          <a href={`tel:${site.phone}`} class="btn-ghost mt-2 w-full">{site.phoneDisplay}</a>
+        </div>
+        <div class="rounded-3xl border border-line p-6">
+          <p class="text-sm font-bold text-ink">Autres marques</p>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            {autresMarques.slice(0, 10).map((m) => (
+              <a href={`/probleme-adblue/${m.slug}`} class="rounded-full bg-cloud px-2.5 py-1 text-xs font-semibold text-ink-700 transition-colors hover:bg-brand hover:text-white">{m.nom}</a>
+            ))}
+          </div>
+          <a href="/probleme-adblue" class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-brand hover:underline">Voir toutes les marques <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6" /></svg></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Modèles + codes défaut -->
+  <section class="section bg-cloud">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2 lg:items-start">
+      <div>
+        <span class="eyebrow">Véhicules concernés</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">Modèles {mq.nom} touchés par l'AdBlue</h2>
+        <p class="mt-3 text-ink-700">Les pannes d'AdBlue concernent les motorisations diesel récentes équipées du système SCR ({mq.moteurs}). Les modèles les plus fréquemment vus&#160;:</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {mq.modeles.map((m) => <span class="rounded-full bg-white px-3.5 py-2 text-sm font-semibold text-ink-700 ring-1 ring-line">{mq.nom} {m}</span>)}
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Au diagnostic</span>
+        <h2 class="mt-2 text-2xl font-bold md:text-3xl">Codes défaut fréquents</h2>
+        <p class="mt-3 text-ink-700">À la valise, ces codes liés au système SCR / capteur NOx reviennent souvent sur les {mq.nom}&#160;:</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {mq.codesDefaut.map((c) => <span class="rounded-lg bg-brand-50 px-3 py-1.5 font-mono text-sm font-bold text-brand-700 ring-1 ring-brand-100">{c}</span>)}
+        </div>
+        <p class="mt-4 text-sm text-ink-500">Ces codes orientent le diagnostic, mais seul un contrôle complet permet d'identifier la pièce réellement en cause.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Symptômes + bénéfices -->
+  <section class="section bg-white">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Symptômes sur une {mq.nom}</h2>
+        <ul class="mt-6 grid gap-3">
+          {mq.symptomes.map((s) => (
+            <li class="flex items-start gap-3 rounded-2xl border border-line bg-cloud p-4">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" /></svg>
+              <span class="text-ink-700">{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Ce que vous y gagnez</h2>
+        <ul class="mt-6 space-y-3">
+          {(svc?.benefices || []).map((b) => (
+            <li class="flex items-start gap-3 rounded-xl border border-line bg-white p-4">
+              <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              <span class="text-ink-700">{b}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-5 rounded-2xl border border-line bg-cloud p-5">
+          <p class="font-bold text-ink">Nos solutions pour votre {mq.nom}</p>
+          <p class="mt-1.5 text-sm text-ink-700">{mq.solutions}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pourquoi nous (dark) -->
+  <section class="section bg-deep text-white">
+    <div class="mx-auto grid max-w-[1180px] gap-8 px-6 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+      <div>
+        <span class="eyebrow text-white">Pourquoi Ultimauto</span>
+        <h2 class="mt-2 text-2xl font-bold text-white md:text-3xl">Spécialiste AdBlue, {mq.nom} comprise</h2>
+      </div>
+      <p class="text-lg leading-relaxed text-white/90">Diagnostic électronique systématique, intervention sur la vraie cause (capteur NOx, injecteur ou pompe SCR, qualité de l'AdBlue) plutôt qu'un simple effacement de code, et transparence sur le devis. À l'atelier de Cholet (49) ou en service mobile dans le 44, 49, 56, 79 et 85 — devis gratuit et sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- Méthode -->
+  {svc?.methode && (
+    <section class="section bg-white">
+      <div class="mx-auto max-w-[1180px] px-6">
+        <h2 class="text-2xl font-bold md:text-3xl">Notre méthode</h2>
+        <div class="mt-6 grid gap-5 md:grid-cols-3">
+          {svc.methode.map((m, i) => (
+            <div class="rounded-2xl border border-line bg-cloud p-6">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-50 font-display text-lg font-extrabold text-brand">{i + 1}</span>
+              <h3 class="mt-4 text-lg font-bold">{m.titre}</h3>
+              <p class="mt-2 text-sm text-ink-700">{m.texte}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Étapes + cas / légal -->
+  <section class="section bg-cloud">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-6 lg:grid-cols-2 lg:items-start">
+      <div>
+        <h2 class="text-2xl font-bold md:text-3xl">Comment ça se passe</h2>
+        <ol class="mt-6 space-y-5">
+          {(svc?.etapes || []).map((e, i) => (
+            <li class="flex gap-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-brand font-display text-sm font-bold text-white">{i + 1}</span>
+              <div><h3 class="font-bold text-ink">{e.titre}</h3><p class="mt-1 text-sm text-ink-700">{e.texte}</p></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div class="space-y-6">
+        {svc?.casUsage && (
+          <div class="rounded-3xl border border-line bg-white p-6">
+            <h3 class="text-lg font-bold">Dans quels cas intervenir&#8239;?</h3>
+            <ul class="mt-3 space-y-2">
+              {svc.casUsage.map((c) => (
+                <li class="flex items-start gap-2.5 text-ink-700">
+                  <svg viewBox="0 0 24 24" class="mt-1 h-4 w-4 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {svc?.legalNote && (
+          <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm text-amber-900">
+            <p class="font-bold">⚠️ Information importante</p>
+            <p class="mt-1.5">{svc.legalNote}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  {cat && (
+    <section class="section bg-white">
+      <div class="mx-auto max-w-3xl px-6">
+        <h2 class="text-2xl font-bold md:text-3xl">Tarifs gestion AdBlue</h2>
+        <p class="mt-2 text-ink-700">Tarifs TTC à l'atelier de Cholet. En service mobile, des frais de déplacement peuvent s'appliquer. Le prix exact dépend du diagnostic de votre {mq.nom}.</p>
+        <div class="mt-6 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+          {cat.formules.map((f) => (
+            <div class="flex items-start justify-between gap-4 p-5">
+              <div>
+                <p class="font-semibold text-ink">{f.nom}</p>
+                {f.desc && <p class="mt-1 text-sm text-ink-700">{f.desc}</p>}
+              </div>
+              <span class="shrink-0 whitespace-nowrap font-display text-lg font-extrabold text-brand">{f.prix}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Valeurs éco -->
+  <EcoValues />
+
+  <!-- Autres marques -->
+  <section class="section bg-cloud">
+    <div class="mx-auto max-w-[1180px] px-6">
+      <span class="eyebrow">Toutes les marques</span>
+      <h2 class="mt-2 text-2xl font-bold md:text-3xl">Problème AdBlue&#160;: choisissez votre marque</h2>
+      <div class="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {autresMarques.map((m) => (
+          <a href={`/probleme-adblue/${m.slug}`} class="group flex items-center justify-between gap-3 rounded-2xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-brand hover:shadow-[var(--shadow-card)]">
+            <span><span class="block font-bold text-ink group-hover:text-brand">{m.nom}</span><span class="block text-sm text-ink-500">{m.moteurs}</span></span>
+            <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-white">
+    <div class="mx-auto max-w-3xl px-6">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="mt-2 text-2xl font-bold md:text-3xl">AdBlue {mq.nom}&#160;: vos questions</h2>
+      <div class="mt-8 divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white">
+        {faqComplete.map((f) => (
+          <details class="group px-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-semibold text-ink [&::-webkit-details-marker]:hidden">
+              {f.q}
+              <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" /></svg>
+            </summary>
+            <p class="pb-5 text-ink-700">{f.r}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
+    <div class="mx-auto max-w-3xl px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Un voyant AdBlue sur votre {mq.nom}&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Ne restez pas en mode dégradé. Diagnostic et devis gratuits, on vous remet en route rapidement — à Cholet ou en service mobile.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
+        <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</Layout>

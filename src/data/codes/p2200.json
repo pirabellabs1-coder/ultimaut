@@ -1,0 +1,69 @@
+{
+  "code": "P2200",
+  "slug": "p2200",
+  "categorie": "Capteur NOx",
+  "service": "suppression-adblue",
+  "titre": "Capteur NOx — circuit défaillant (Banc 1)",
+  "metaTitle": "Code défaut P2200 : causes et solution",
+  "metaDescription": "Code défaut P2200 : le calculateur détecte un défaut sur le circuit du capteur NOx (banc 1). Causes, symptômes, diagnostic et réparation par Ultimauto.",
+  "definitionCourte": "Le code P2200 indique un défaut électrique général sur le circuit du capteur d'oxydes d'azote (NOx) du banc 1.",
+  "signification": "Le capteur NOx mesure la concentration d'oxydes d'azote dans les gaz d'échappement afin de piloter précisément le système SCR (injection d'AdBlue). Le code P2200 est un défaut générique de circuit : le calculateur de dépollution ne parvient plus à dialoguer correctement avec le capteur ou son module électronique. Concrètement, l'unité de commande surveille en permanence l'alimentation, la masse, la ligne de communication et le signal renvoyé par la sonde. Lorsqu'une de ces grandeurs sort des valeurs attendues ou qu'une coupure est détectée, le code P2200 est mémorisé. Comme le calculateur ne peut plus connaître le taux réel de NOx, il ne peut plus garantir la dépollution et passe le moteur en mode de sécurité. Il s'agit d'un défaut de la chaîne de mesure, qui ne préjuge pas encore de la pièce exacte en cause : capteur, faisceau ou module doivent être vérifiés.",
+  "causes": [
+    {
+      "titre": "Capteur NOx hors service",
+      "detail": "La sonde NOx vieillit et son module électronique intégré finit par tomber en panne, ne renvoyant plus de signal exploitable au calculateur. C'est la cause la plus fréquente sur véhicules à fort kilométrage."
+    },
+    {
+      "titre": "Faisceau électrique endommagé",
+      "detail": "Un câble coupé, dénudé, pincé ou rongé sur la ligne du capteur interrompt le circuit. La proximité de l'échappement et les vibrations fragilisent ce faisceau au fil des années."
+    },
+    {
+      "titre": "Connecteur défectueux",
+      "detail": "Un connecteur corrodé, encrassé, desserré ou mal verrouillé crée une résistance parasite ou une coupure intermittente sur le circuit du capteur NOx."
+    },
+    {
+      "titre": "Encrassement et suie",
+      "detail": "Un dépôt de suie ou une cristallisation d'urée sur l'élément sensible perturbe la mesure et peut entraîner un signal jugé incohérent par le calculateur."
+    },
+    {
+      "titre": "Élément chauffant en défaut",
+      "detail": "Le capteur intègre un chauffage pour atteindre sa température de service. Un défaut sur cette fonction empêche le capteur de fournir une mesure fiable et déclenche un code de circuit."
+    },
+    {
+      "titre": "Calculateur SCR ou alimentation",
+      "detail": "Plus rarement, une alimentation défaillante, une masse de mauvaise qualité ou un calculateur de dépollution en défaut est à l'origine du P2200."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Voyant anti-pollution ou alerte SCR/AdBlue affichée",
+    "Passage en mode dégradé avec bridage de la puissance",
+    "Surconsommation ou injection d'AdBlue perturbée",
+    "Message « démarrage impossible dans X km » ou compte à rebours",
+    "Ralenti instable ou à-coups dans certains cas",
+    "Impression de manque de reprise et de souplesse moteur"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise de tous les codes mémorisés et des données en temps réel du système SCR. On contrôle ensuite la présence de l'alimentation et de la masse au connecteur du capteur NOx, on vérifie la continuité du faisceau et l'état du connecteur, puis on observe la valeur de NOx renvoyée par la sonde. Ce contrôle méthodique permet de distinguer un capteur réellement HS d'un simple problème de câblage. Chez Ultimauto, on ne remplace jamais le capteur à l'aveugle : le diagnostic électronique est systématique et gratuit avant tout devis.",
+  "reparation": "Selon le constat, on répare ou refait la portion de faisceau endommagée, on remplace le connecteur, ou l'on monte un capteur NOx neuf adapté au véhicule. Après l'intervention, le système est remis en service, les défauts sont effacés et un essai contrôle la disparition du code. À titre indicatif, le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le modèle et la pièce ; une simple réparation de faisceau revient moins cher. Ultimauto intervient à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste généralement roulant mais entre en mode dégradé et peut, à terme, refuser de redémarrer si le système SCR le bloque. Il faut traiter la cause sans tarder.",
+  "rouler": "Vous pouvez en général rouler à court terme pour rejoindre l'atelier, mais la puissance peut être bridée et le compte à rebours « démarrage impossible » peut s'enclencher. Évitez les longs trajets et prenez rendez-vous rapidement pour éviter une immobilisation.",
+  "faq": [
+    {
+      "q": "Puis-je juste effacer le code P2200 ?",
+      "r": "Effacer le code sans réparer la cause ne sert à rien : il revient dès que le calculateur détecte à nouveau le défaut de circuit. Seul un diagnostic suivi d'une réparation règle durablement le problème."
+    },
+    {
+      "q": "Le code P2200 peut-il bloquer le démarrage ?",
+      "r": "Oui. Si le système SCR ne peut plus garantir la dépollution, il peut afficher un compte à rebours puis empêcher le redémarrage. Mieux vaut intervenir avant d'en arriver là."
+    },
+    {
+      "q": "Combien coûte la réparation du P2200 ?",
+      "r": "Une réparation de faisceau ou de connecteur reste économique. Le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le véhicule. Le devis Ultimauto est gratuit."
+    },
+    {
+      "q": "Faut-il forcément changer le capteur NOx ?",
+      "r": "Pas toujours. Le P2200 est un défaut de circuit qui peut venir du faisceau ou du connecteur. Le diagnostic permet de cibler la vraie pièce en cause avant tout remplacement."
+    }
+  ]
+}

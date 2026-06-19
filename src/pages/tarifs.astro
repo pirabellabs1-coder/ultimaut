@@ -10,13 +10,13 @@ const url = new URL('/tarifs', site.url).href;
 const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Tarifs', url }])];
 
 const intro = [
-  "Chez Ultimauto, la transparence commence par les prix. Tous nos tarifs sont annoncés à l'avance, sans surprise : vous savez exactement ce que vous payez et ce qui est inclus.",
+  "Chez Ultimauto, la transparence commence par les prix. Tous nos tarifs sont annoncés à l'avance, sans surprise : vous savez exactement ce que vous payez et ce qui est inclus.",
   "Les prix ci-dessous s'entendent TTC pour une prestation réalisée à notre atelier de Cholet. Pour une intervention à domicile ou sur votre lieu de travail (service mobile), des frais de déplacement peuvent s'appliquer selon la distance — nous vous les indiquons toujours dans le devis, qui reste gratuit et sans engagement.",
 ];
 ---
 <Layout
   title="Tarifs Ultimauto Cholet — décalaminage, FAP, reprog"
-  description="Tarifs Ultimauto Cholet : décalaminage dès 80 €, nettoyage FAP dès 250 €, reprogrammation 350 €, AdBlue dès 350 €. Tarifs TTC, devis gratuit."
+  description="Tarifs Ultimauto Cholet : décalaminage dès 80 €, nettoyage FAP dès 250 €, reprogrammation 350 €, AdBlue dès 350 €. Tarifs TTC, devis gratuit."
   jsonLd={jsonLd}
 >
   <!-- En-tête (photo) -->
@@ -83,7 +83,7 @@ const intro = [
         </div>
         <div class="rounded-2xl border border-line bg-white p-6">
           <h3 class="font-bold">Demande personnalisée</h3>
-          <p class="mt-2 text-sm text-ink-700">Une combinaison spécifique (packs, plusieurs prestations) ? Contactez-nous directement pour un tarif sur mesure.</p>
+          <p class="mt-2 text-sm text-ink-700">Une combinaison spécifique (packs, plusieurs prestations)&#8239;? Contactez-nous directement pour un tarif sur mesure.</p>
         </div>
       </div>
     </div>
@@ -92,8 +92,8 @@ const intro = [
   <!-- CTA -->
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Une question sur un tarif ?</h2>
-      <p class="mx-auto mt-4 max-w-xl text-white/90">Appelez-nous ou écrivez sur WhatsApp : on vous répond rapidement et on établit votre devis gratuit.</p>
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Une question sur un tarif&#8239;?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Appelez-nous ou écrivez sur WhatsApp&#160;: on vous répond rapidement et on établit votre devis gratuit.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href={`tel:${site.phone}`} class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">{site.phoneDisplay}</a>
         <a href="/prise-de-rendez-vous" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10">Prendre rendez-vous</a>

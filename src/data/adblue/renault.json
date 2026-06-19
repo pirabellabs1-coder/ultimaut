@@ -1,0 +1,49 @@
+{
+  "slug": "renault",
+  "nom": "Renault",
+  "metaTitle": "Problème AdBlue Renault : symptômes et solutions",
+  "metaDescription": "Problème AdBlue Renault : démarrage impossible, voyant SCR, mode dégradé, codes P20E8/P204F. Diagnostic et solutions à Cholet (49), devis gratuit Ultimauto.",
+  "moteurs": "Les moteurs diesel Renault à AdBlue sont principalement les 1.5 Blue dCi (115/120 ch), 1.7 Blue dCi (150 ch) et 2.0 Blue dCi (160/200 ch), équipés du système SCR avec injection d'AdBlue dans la ligne d'échappement.",
+  "modeles": [
+    "Renault Clio V Blue dCi",
+    "Renault Captur Blue dCi",
+    "Renault Mégane IV Blue dCi",
+    "Renault Scénic Blue dCi",
+    "Renault Kadjar Blue dCi",
+    "Renault Talisman Blue dCi",
+    "Renault Espace V Blue dCi",
+    "Renault Trafic / Master dCi"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Message « Risque démarrage impossible » avec compte à rebours kilométrique",
+    "Démarrage impossible une fois le compteur arrivé à zéro",
+    "Voyant AdBlue (réservoir SCR) allumé au tableau de bord",
+    "Passage en mode dégradé avec perte de puissance et bridage du régime",
+    "Message « Vidange système antipollution » ou « Contrôler injection »",
+    "Surconsommation anormale d'AdBlue entre deux appoints",
+    "Témoin moteur (MIL) allumé en parallèle des alertes AdBlue"
+  ],
+  "pourquoi": "Sur Renault, les pannes AdBlue viennent souvent de la cristallisation de l'injecteur SCR ou de la pompe AdBlue qui se colmate, surtout sur de petits trajets répétés où le système ne monte pas en température. Le capteur NOx en aval du catalyseur est aussi un point faible fréquent : encrassé ou défaillant, il déclenche un code et bloque le système. Une qualité d'AdBlue médiocre ou un remplissage avec un produit non conforme à la norme ISO 22241 accélère la cristallisation et fausse les mesures.",
+  "solutions": "On commence par un diagnostic électronique complet pour lire les codes SCR et cibler la pièce en cause (injecteur, pompe, capteur NOx, qualité du fluide). Selon le cas, on procède à un appoint d'AdBlue de qualité, au nettoyage ou au remplacement de l'injecteur ou du capteur NOx, puis à un reparamétrage et une réinitialisation du système SCR pour lever le mode dégradé. Ultimauto intervient à Cholet (49) ou en mobile sur secteur, avec devis gratuit avant toute intervention. La neutralisation logicielle du système est strictement réservée aux véhicules circulant hors voie publique.",
+  "faq": [
+    {
+      "q": "Ma Renault affiche « démarrage impossible dans X km », que faire ?",
+      "r": "Ce message signifie que le système SCR a détecté un défaut AdBlue persistant : tant que vous n'avez pas atteint zéro, la voiture roule encore. Faites poser un diagnostic rapidement, car un simple appoint ne suffit pas toujours si un capteur ou l'injecteur est en cause. Une fois le compteur à zéro, le moteur ne redémarrera plus."
+    },
+    {
+      "q": "Un appoint d'AdBlue suffit-il à éteindre le voyant sur une Renault ?",
+      "r": "Parfois oui, si le niveau était réellement bas et que le fluide est de bonne qualité. Mais si le voyant reste allumé après l'appoint, c'est qu'un code défaut est mémorisé (injecteur, pompe ou capteur NOx) : il faut alors un diagnostic et une réinitialisation, sinon le mode dégradé revient."
+    },
+    {
+      "q": "Combien coûte la réparation d'un problème AdBlue sur Renault ?",
+      "r": "Le tarif dépend de l'origine de la panne : un nettoyage d'injecteur n'a pas le même coût qu'un remplacement de capteur NOx ou de pompe AdBlue. C'est pourquoi nous posons d'abord un diagnostic, puis nous établissons un devis gratuit et détaillé avant d'engager la moindre intervention."
+    }
+  ]
+}

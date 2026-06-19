@@ -9,13 +9,6 @@ import { aUnePage } from '../lib/pages.js';
 import { breadcrumb } from '../lib/jsonld.js';
 
 const servicesLocaux = services.filter((s) => s.local);
-const labelCourt = {
-  'decalaminage-hydrogene': 'Décalaminage',
-  'nettoyage-fap': 'Nettoyage FAP',
-  'reprogrammation-moteur': 'Reprog.',
-  'suppression-adblue': 'AdBlue',
-};
-const autres = services.filter((s) => !s.local);
 
 const ordreZones = ['Agglomération du Choletais', 'Maine-et-Loire', 'Loire-Atlantique', 'Vendée', 'Deux-Sèvres', 'Morbihan'];
 const parZone = {};
@@ -23,12 +16,21 @@ for (const v of villes) (parZone[v.zone] ||= []).push(v);
 for (const z of Object.keys(parZone)) parZone[z].sort((a, b) => b.population - a.population);
 const zones = ordreZones.filter((z) => parZone[z]);
 
+// Pour chaque service : ses communes, regroupées par zone (département)
+const villesParService = servicesLocaux.map((s) => {
+  const groupes = zones
+    .map((z) => ({ zone: z, villes: parZone[z].filter((v) => aUnePage(v, s.slug)) }))
+    .filter((g) => g.villes.length);
+  const total = groupes.reduce((n, g) => n + g.villes.length, 0);
+  return { service: s, groupes, total };
+});
+
 const url = new URL('/zones-d-intervention', site.url).href;
 const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: "Zones d'intervention", url }])];
 ---
 <Layout
   title="Zones d'intervention dans le Grand Ouest | Ultimauto"
-  description="Toutes les communes desservies par Ultimauto dans le 44, 49, 56, 79 et 85. Choisissez votre prestation et votre ville. Atelier à Cholet + service mobile."
+  description="Toutes les communes desservies par Ultimauto (44, 49, 56, 79, 85), classées par prestation : décalaminage, FAP, reprogrammation, AdBlue. Atelier à Cholet + service mobile."
   jsonLd={jsonLd}
 >
   <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(25,106,213,0.82) 0%, rgba(21,101,192,0.93) 100%), url('/img/photo-3.jpg');">
@@ -40,54 +42,64 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: "Zones d
       <p class="mt-4 max-w-2xl text-lg text-white/90">
         Depuis notre atelier de Cholet, nous intervenons dans plus de 110 communes du Maine-et-Loire,
         de la Loire-Atlantique, de la Vendée, des Deux-Sèvres et du Morbihan — à l'atelier ou via notre
-        service mobile. Choisissez votre prestation et votre commune ci-dessous.
+        service mobile. <strong class="text-white">Choisissez votre prestation</strong> ci-dessous pour voir toutes les villes desservies.
       </p>
     </div>
   </section>
 
-  <!-- Par service -->
-  <section class="section bg-white">
+  <!-- Navigation rapide par prestation -->
+  <section class="section bg-white pb-0">
     <div class="mx-auto max-w-[1180px] px-6">
-      <h2 class="text-2xl font-bold md:text-3xl">Par prestation</h2>
+      <h2 class="text-2xl font-bold md:text-3xl">Choisissez votre prestation</h2>
+      <p class="mt-2 max-w-2xl text-ink-700">Cliquez sur une prestation pour accéder directement à la liste des communes où nous l'assurons.</p>
       <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {servicesLocaux.map((s) => (
-          <a href={`/${s.slug}`} class="group flex items-center gap-3 rounded-2xl border border-line bg-cloud p-5 transition-colors hover:border-brand hover:bg-white">
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[s.slug].map((d) => <path d={d} />)}</svg></span>
-            <span class="font-bold leading-tight">{s.titreCourt}</span>
+        {villesParService.map(({ service, total }) => (
+          <a href={`#${service.slug}`} class="group flex items-center gap-3 rounded-2xl border border-line bg-cloud p-5 transition-colors hover:border-brand hover:bg-white">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[service.slug].map((d) => <path d={d} />)}</svg>
+            </span>
+            <span class="leading-tight">
+              <span class="block font-bold">{service.titreCourt}</span>
+              <span class="text-sm text-ink-500">{total} communes</span>
+            </span>
           </a>
-        ))}
-      </div>
-      <div class="mt-4 grid gap-4 sm:grid-cols-3">
-        {autres.map((s) => (
-          <a href={`/${s.slug}`} class="flex items-center justify-center gap-2 rounded-xl border border-line px-4 py-3 text-sm font-semibold transition-colors hover:border-brand hover:text-brand">{s.titreCourt}</a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Par commune (cliquable) -->
+  <!-- Communes classées par prestation -->
   <section class="section bg-cloud">
-    <div class="mx-auto max-w-[1180px] space-y-12 px-6">
-      {zones.map((z) => (
-        <div>
-          <div class="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-            <h2 class="text-2xl font-bold md:text-3xl">{z}</h2>
-            <span class="text-sm text-ink-500">{parZone[z].length} communes</span>
+    <svg width="0" height="0" class="hidden" aria-hidden="true"><symbol id="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol></svg>
+    <div class="mx-auto max-w-[1180px] space-y-8 px-6">
+      {villesParService.map(({ service, groupes, total }) => (
+        <div id={service.slug} class="scroll-mt-28 rounded-3xl border border-line bg-white p-6 shadow-[var(--shadow-soft)] sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-4">
+            <div class="flex items-center gap-3">
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[service.slug].map((d) => <path d={d} />)}</svg>
+              </span>
+              <div>
+                <h2 class="text-2xl font-bold md:text-3xl">{service.titreCourt}</h2>
+                <p class="text-sm text-ink-500">{total} communes desservies</p>
+              </div>
+            </div>
+            <a href={`/${service.slug}`} class="btn-ghost shrink-0">Voir la prestation →</a>
           </div>
-          <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {parZone[z].map((v) => {
-              const dispo = servicesLocaux.filter((s) => aUnePage(v, s.slug));
-              return (
-                <div class="rounded-2xl border border-line bg-white p-5">
-                  <p class="font-semibold">{v.nom} <span class="text-sm font-normal text-ink-500">({v.dept})</span></p>
-                  <div class="mt-2.5 flex flex-wrap gap-1.5">
-                    {dispo.map((s) => (
-                      <a href={`/${s.slug}/${villeSlug(v)}`} class="rounded-md bg-brand-50 px-2 py-1 text-xs font-semibold text-brand-700 transition-colors hover:bg-brand hover:text-white">{labelCourt[s.slug]}</a>
-                    ))}
-                  </div>
+          <div class="mt-6 space-y-6">
+            {groupes.map(({ zone, villes }) => (
+              <div>
+                <h3 class="text-xs font-bold uppercase tracking-wider text-ink-500">{zone} <span class="font-normal lowercase text-ink-400">· {villes.length} villes</span></h3>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  {villes.map((v) => (
+                    <a href={`/${service.slug}/${villeSlug(v)}`} class="group inline-flex items-center gap-1.5 rounded-full bg-cloud px-3.5 py-2 text-sm font-medium text-ink-700 ring-1 ring-line transition-all hover:-translate-y-0.5 hover:bg-brand hover:text-white hover:ring-brand hover:shadow-sm">
+                      <svg class="h-3.5 w-3.5 shrink-0 text-brand/60 transition-colors group-hover:text-white" aria-hidden="true"><use href="#pin" /></svg>
+                      {v.nom}
+                    </a>
+                  ))}
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       ))}
@@ -96,7 +108,7 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: "Zones d
 
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Votre commune n'est pas dans la liste ?</h2>
+      <h2 class="text-3xl font-extrabold text-white md:text-4xl">Votre commune n'est pas dans la liste&#8239;?</h2>
       <p class="mx-auto mt-4 max-w-xl text-white/90">Nous intervenons dans tout le Grand Ouest, à l'atelier de Cholet ou en service mobile. Contactez-nous pour un devis gratuit.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>

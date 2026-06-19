@@ -1,0 +1,69 @@
+{
+  "code": "P2201",
+  "slug": "p2201",
+  "categorie": "Capteur NOx",
+  "service": "suppression-adblue",
+  "titre": "Capteur NOx — plage/performances du circuit (Banc 1)",
+  "metaTitle": "Code défaut P2201 : causes et solution",
+  "metaDescription": "Code défaut P2201 : le signal du capteur NOx (banc 1) sort de la plage ou manque de cohérence. Causes, symptômes, diagnostic et réparation par Ultimauto.",
+  "definitionCourte": "Le code P2201 signale un problème de plage ou de performance du circuit du capteur d'oxydes d'azote (NOx) du banc 1.",
+  "signification": "Le capteur NOx mesure les oxydes d'azote présents dans les gaz d'échappement pour permettre au calculateur de doser l'AdBlue injecté dans le système SCR. Le code P2201 n'indique pas une coupure franche du circuit mais un signal jugé incohérent : la valeur renvoyée par la sonde reste hors de la plage attendue ou ne réagit pas comme elle le devrait selon les conditions moteur. Le calculateur compare en permanence la mesure de NOx aux valeurs théoriques calculées à partir du régime, de la charge et du modèle de combustion. Quand l'écart est trop important ou que la réponse du capteur est trop lente, ce défaut de performance est mémorisé. Cela traduit le plus souvent un capteur vieillissant, encrassé ou dérivant, plus rarement un problème de câblage qui dégrade la qualité du signal sans le couper.",
+  "causes": [
+    {
+      "titre": "Capteur NOx vieillissant ou dérivant",
+      "detail": "Avec le kilométrage, l'élément sensible perd en précision et renvoie une valeur qui s'écarte progressivement de la réalité, jusqu'à sortir de la plage tolérée par le calculateur."
+    },
+    {
+      "titre": "Encrassement par la suie",
+      "detail": "Un dépôt de suie ou de calamine sur la sonde fausse la mesure et ralentit sa réponse, ce qui se traduit par un défaut de performance plutôt que par une coupure."
+    },
+    {
+      "titre": "Cristallisation d'urée",
+      "detail": "Des dépôts cristallisés d'AdBlue autour du capteur ou dans la ligne d'échappement perturbent la mesure des NOx et créent des incohérences de signal."
+    },
+    {
+      "titre": "Faisceau ou connecteur dégradé",
+      "detail": "Une résistance parasite due à un connecteur corrodé ou à un câble en mauvais état n'interrompt pas le circuit mais altère la qualité du signal renvoyé."
+    },
+    {
+      "titre": "Fuite d'échappement",
+      "detail": "Une fuite en amont du capteur modifie la composition des gaz analysés et fausse la mesure des NOx, que le calculateur juge alors hors plage."
+    },
+    {
+      "titre": "Système SCR ou AdBlue en cause",
+      "detail": "Un dosage d'AdBlue incorrect, un catalyseur SCR fatigué ou une qualité d'urée douteuse peut générer des taux de NOx anormaux que le calculateur interprète comme un défaut de plage."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Voyant anti-pollution ou alerte SCR/AdBlue",
+    "Passage en mode dégradé avec puissance limitée",
+    "Surconsommation d'AdBlue ou dosage erratique",
+    "Message « démarrage impossible dans X km » dans certains cas",
+    "Émissions polluantes en hausse, risque de refus au contrôle technique",
+    "Comptes à rebours ou régénérations anormales du système SCR"
+  ],
+  "diagnostic": "On lit d'abord les codes mémorisés et on observe en temps réel la valeur de NOx renvoyée par le capteur, en la comparant aux valeurs théoriques du calculateur sous différentes charges moteur. On vérifie la cohérence et le temps de réponse du signal, l'état du faisceau et du connecteur, ainsi que l'absence de fuite d'échappement en amont. Ce contrôle dynamique permet de distinguer un capteur qui dérive d'un véritable problème de dépollution en amont. Chez Ultimauto, ce diagnostic électronique est réalisé systématiquement et gratuitement avant d'établir un devis.",
+  "reparation": "Lorsque le capteur est en cause, on le remplace par une pièce adaptée au véhicule ; si le défaut vient du câblage ou d'une fuite, on répare le faisceau, le connecteur ou la ligne d'échappement. Après intervention, le système SCR est réinitialisé, les défauts effacés, et un essai routier confirme le retour de valeurs cohérentes. À titre indicatif, un capteur NOx coûte souvent entre 200 et 500 € selon le modèle ; une réparation de connectique revient bien moins cher. Ultimauto intervient à Cholet (49) ou en service mobile dans le Grand Ouest, diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le moteur reste roulant mais passe souvent en mode dégradé et pollue davantage. Non traité, le défaut peut conduire à un blocage du démarrage par le système SCR.",
+  "rouler": "Rouler quelques jours pour rejoindre l'atelier est généralement possible, mais la puissance peut être bridée et la consommation augmentée. Évitez de laisser traîner : un capteur qui dérive entraîne une surconsommation d'AdBlue et un risque d'immobilisation.",
+  "faq": [
+    {
+      "q": "Quelle différence entre P2200 et P2201 ?",
+      "r": "Le P2200 est un défaut électrique général du circuit (souvent une coupure), alors que le P2201 vise un signal présent mais hors plage ou incohérent. Le P2201 traduit plutôt un capteur qui dérive ou qui s'encrasse."
+    },
+    {
+      "q": "Un capteur NOx encrassé peut-il causer le P2201 ?",
+      "r": "Oui. La suie ou la cristallisation d'urée sur la sonde faussent la mesure et ralentissent sa réponse, ce que le calculateur interprète comme un défaut de performance."
+    },
+    {
+      "q": "Le P2201 fait-il rater le contrôle technique ?",
+      "r": "Il peut, car il s'accompagne souvent du voyant moteur et d'émissions plus élevées. Il est préférable de le traiter avant la visite technique."
+    },
+    {
+      "q": "Combien coûte la réparation ?",
+      "r": "Une réparation de connectique est économique ; le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le véhicule. Le devis Ultimauto est gratuit."
+    }
+  ]
+}

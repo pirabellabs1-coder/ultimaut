@@ -24,7 +24,7 @@
   --color-accent-200: #c9e49a;
   --color-accent: #8bc53f;
   --color-accent-600: #74ad2c;
-  --color-accent-700: #5c8a23;
+  --color-accent-700: #466a18;
 
   --color-ink: #1f2a37;
   --color-ink-700: #374454;
@@ -70,7 +70,7 @@
 
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    color: var(--color-ink);
+    color: inherit; /* hérite : ink sur fond clair, blanc sur sections text-white (contraste AA) */
     line-height: 1.1;
     letter-spacing: -0.02em;
     font-weight: 700;
@@ -145,7 +145,7 @@
     @apply bg-accent text-ink hover:bg-accent-600 hover:-translate-y-0.5;
   }
   .btn-whatsapp {
-    @apply bg-whatsapp text-white hover:bg-whatsapp-600 hover:-translate-y-0.5;
+    @apply bg-[#0a7d3c] text-white hover:bg-[#086a33] hover:-translate-y-0.5;
   }
   .btn-outline {
     @apply border-2 border-brand text-brand bg-transparent hover:bg-brand hover:text-white;
@@ -163,7 +163,8 @@
   }
 
   .eyebrow {
-    @apply inline-block text-sm font-bold uppercase tracking-widest text-accent-700;
+    @apply inline-block text-sm font-bold uppercase tracking-widest;
+    color: #4a7320; /* vert assombri : contraste AA (>=4.5:1) sur fonds clairs */
   }
 
   /* Reveal au scroll (IntersectionObserver) */
@@ -184,7 +185,17 @@
   .rte p, .rte li { @apply text-ink-700 leading-relaxed; }
   .rte ul { @apply list-disc space-y-2 pl-6; }
   .rte ol { @apply list-decimal space-y-2 pl-6; }
-  .rte a { @apply font-semibold text-brand underline underline-offset-2; }
+  .rte a { @apply font-semibold text-brand underline underline-offset-2 hover:text-brand-700; }
   .rte strong { @apply text-ink; }
-  .rte blockquote { @apply border-l-4 border-accent bg-cloud px-5 py-3 italic; }
+  .rte blockquote { @apply rounded-2xl border-l-4 border-accent bg-cloud px-5 py-4 not-italic; }
+  .rte blockquote p { @apply text-ink; }
+  .rte img { @apply my-7 w-full rounded-2xl border border-line; }
+  .rte figure { @apply my-7; }
+  .rte figcaption { @apply mt-2 text-center text-sm text-ink-500; }
+  .rte table { @apply my-7 block w-full overflow-x-auto border-collapse text-sm sm:table; }
+  .rte thead { @apply bg-cloud; }
+  .rte th { @apply border border-line px-4 py-2.5 text-left font-bold text-ink; }
+  .rte td { @apply border border-line px-4 py-2.5 align-top text-ink-700; }
+  .rte h2 { @apply scroll-mt-24; }
+  .rte h3 { @apply scroll-mt-24; }
 }

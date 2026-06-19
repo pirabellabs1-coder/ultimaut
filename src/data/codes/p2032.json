@@ -1,0 +1,69 @@
+{
+  "code": "P2032",
+  "slug": "p2032",
+  "categorie": "Température d'échappement",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de température des gaz d'échappement — signal bas (banc 1, capteur 2)",
+  "metaTitle": "Code défaut P2032 : causes et solution",
+  "metaDescription": "Code défaut P2032 : signal trop bas du capteur de température d'échappement (EGT) banc 1 capteur 2. Causes, symptômes, diagnostic et réparation à Cholet (49).",
+  "definitionCourte": "Le signal du capteur de température des gaz d'échappement (EGT) banc 1, capteur 2, souvent au niveau du FAP, est jugé trop bas par le calculateur.",
+  "signification": "Le code P2032 indique que le calculateur moteur reçoit une tension trop basse du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 2. Ce capteur, le plus souvent placé au niveau du filtre à particules, renvoie alors une température anormalement faible, incohérente avec le fonctionnement réel. Or sa mesure sert à vérifier que les régénérations du FAP atteignent bien la température nécessaire pour brûler les suies. Une tension basse traduit généralement un court-circuit à la masse, un capteur défaillant ou un fil sectionné. Privé d'une donnée plausible, le calculateur ne peut plus piloter correctement la régénération et active une stratégie de sécurité. Le P2032 oriente donc le diagnostic vers un défaut électrique côté signal bas, sur la sonde qui encadre directement le filtre à particules.",
+  "causes": [
+    {
+      "titre": "Court-circuit à la masse",
+      "detail": "Un fil du capteur 2 en contact avec la masse fait chuter la tension : c'est l'origine type d'un défaut signal bas comme le P2032."
+    },
+    {
+      "titre": "Capteur EGT (capteur 2) défectueux",
+      "detail": "Une sonde en fin de vie, très sollicitée par les régénérations, peut renvoyer en continu une valeur basse erronée."
+    },
+    {
+      "titre": "Faisceau coupé ou frotté",
+      "detail": "Le câblage sous le véhicule, exposé à la chaleur et aux projections, peut être sectionné ou usé et perturber le signal."
+    },
+    {
+      "titre": "Connecteur oxydé ou humide",
+      "detail": "Un mauvais contact ou une infiltration d'eau dans le connecteur crée un chemin de fuite vers la masse et fausse le signal vers le bas."
+    },
+    {
+      "titre": "Résistance interne hors tolérance",
+      "detail": "Un capteur dont la résistance a dérivé fournit une tension hors plage que le calculateur interprète comme un signal trop bas."
+    },
+    {
+      "titre": "Capteur fortement encrassé",
+      "detail": "Une calamine épaisse sur la pointe du capteur ralentit sa réponse et le maintient à une valeur basse plus longtemps que prévu."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Température d'échappement anormalement basse à la valise (capteur 2)",
+    "Régénérations du FAP inhibées ou mal déclenchées",
+    "Filtre à particules qui se charge plus vite que prévu",
+    "Passage possible en mode dégradé",
+    "Surconsommation liée aux régénérations perturbées",
+    "Légère perte de puissance ou d'agrément dans certains cas"
+  ],
+  "diagnostic": "On lit d'abord le code et les données figées à la valise, puis on observe la valeur en direct du capteur 2 moteur chaud : si elle reste anormalement basse alors que l'échappement chauffe, le signal est en défaut. On la compare au capteur amont, on mesure la résistance de la sonde, on recherche un court-circuit à la masse sur le faisceau et on inspecte le connecteur (oxydation, humidité). Chez Ultimauto à Cholet, ce contrôle permet de savoir si la sonde est HS ou si le câblage met le signal à la masse, avant tout remplacement.",
+  "reparation": "La réparation consiste à corriger le court-circuit (faisceau ou connecteur) ou à remplacer le capteur EGT du capteur 2 si la sonde est défaillante. À titre indicatif, un capteur posé se situe souvent entre 90 et 250 € selon l'accessibilité sous le véhicule ; une réparation de câblage reste plus modérée. Si une couche de calamine fausse la mesure, un nettoyage FAP ou un décalaminage peut compléter l'intervention. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P2032 ne bloque pas toujours le véhicule, mais comme le capteur encadre le FAP, il empêche une bonne gestion des régénérations. Non traité, il favorise un colmatage du filtre à particules.",
+  "rouler": "Rouler à court terme est généralement possible si la puissance n'est pas bridée. Évitez d'accumuler les trajets courts en ville, car le FAP risque de se charger sans régénération. Faites diagnostiquer le défaut rapidement plutôt que d'effacer le code, qui reviendrait tant que la cause électrique persiste.",
+  "faq": [
+    {
+      "q": "Que signifie « signal bas » pour le P2032 ?",
+      "r": "La tension envoyée par le capteur EGT 2 est trop faible, souvent à cause d'un court-circuit à la masse, d'un fil coupé ou d'un capteur défaillant. Le calculateur lit alors une température irréaliste près du FAP."
+    },
+    {
+      "q": "Quelle différence avec le P0545 ?",
+      "r": "Le P0545 concerne le capteur 1 (souvent vers le turbo) et le P2032 le capteur 2 (souvent au niveau du FAP). Le type de défaut, signal bas, est identique, mais la sonde et son emplacement diffèrent."
+    },
+    {
+      "q": "Le P2032 abîme-t-il le FAP ?",
+      "r": "Indirectement, oui. Sans température fiable au niveau du filtre, les régénérations sont perturbées et le FAP peut se colmater à la longue. Mieux vaut traiter le défaut rapidement."
+    },
+    {
+      "q": "Combien coûte la réparation du P2032 ?",
+      "r": "Selon la cause et l'accès, comptez de quelques dizaines d'euros pour un câblage à 90-250 € pour un capteur EGT posé. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

@@ -13,7 +13,7 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
 ---
 <Layout
   title="Contact — Ultimauto Cholet | Devis gratuit"
-  description="Contactez Ultimauto à Cholet : téléphone, WhatsApp ou formulaire. Devis gratuit — décalaminage, FAP, reprogrammation, AdBlue. Service mobile."
+  description="Contactez Ultimauto à Cholet : téléphone, WhatsApp ou formulaire. Devis gratuit — décalaminage, FAP, reprogrammation, AdBlue. Service mobile."
   jsonLd={jsonLd}
   ogImage="/img/atelier.jpg"
 >
@@ -22,7 +22,7 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
     <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
       <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Contact</span></nav>
       <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Contactez Ultimauto</h1>
-      <p class="mt-4 max-w-2xl text-lg text-white/90">Une question, un doute, un devis ? Écrivez-nous ou appelez-nous. Le plus rapide reste WhatsApp : vous pouvez même nous envoyer une photo ou une vidéo de votre problème.</p>
+      <p class="mt-4 max-w-2xl text-lg text-white/90">Une question, un doute, un devis&#8239;? Écrivez-nous ou appelez-nous. Le plus rapide reste WhatsApp&#160;: vous pouvez même nous envoyer une photo ou une vidéo de votre problème.</p>
     </div>
   </section>
 
@@ -32,20 +32,50 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
       <div class="rounded-3xl border border-line bg-cloud p-7 md:p-8">
         <h2 class="text-2xl font-bold">Envoyez-nous un message</h2>
         <p class="mt-2 text-sm text-ink-700">Réponse sous 24 h ouvrées. Les champs marqués d'un * sont obligatoires.</p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="mt-6 space-y-4">
-          <input type="hidden" name="access_key" value="VOTRE_CLE_WEB3FORMS" />
-          <input type="hidden" name="subject" value="Nouveau message — site Ultimauto" />
-          <input type="hidden" name="from_name" value="Site Ultimauto" />
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+        <form id="contact-form" class="mt-6 space-y-4" novalidate>
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="grid gap-4 sm:grid-cols-2">
-            <label class="block"><span class="text-sm font-semibold">Nom *</span><input required name="nom" type="text" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
-            <label class="block"><span class="text-sm font-semibold">Téléphone *</span><input required name="telephone" type="tel" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block"><span class="text-sm font-semibold">Nom *</span><input required name="nom" type="text" autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block"><span class="text-sm font-semibold">Téléphone *</span><input required name="telephone" type="tel" autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
           </div>
-          <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+          <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
           <label class="block"><span class="text-sm font-semibold">Message *</span><textarea required name="message" rows="5" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand"></textarea></label>
           <button type="submit" class="btn-primary w-full">Envoyer le message</button>
+          <p data-form-status role="status" aria-live="polite" class="hidden text-sm"></p>
           <p class="text-xs text-ink-500">En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour traiter votre demande (voir notre <a href="/politique-de-confidentialite" class="underline">politique de confidentialité</a>).</p>
         </form>
+        <script>
+          const form = document.getElementById('contact-form');
+          if (form) {
+            const status = form.querySelector('[data-form-status]');
+            const btn = form.querySelector('button[type="submit"]');
+            const setStatus = (msg, cls) => { status.textContent = msg; status.className = 'text-sm font-semibold ' + cls; };
+            form.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              if (!form.reportValidity()) return;
+              const data = Object.fromEntries(new FormData(form).entries());
+              btn.disabled = true;
+              setStatus('Envoi en cours…', 'text-ink-600');
+              try {
+                const res = await fetch('/api/contact', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(data),
+                });
+                if (res.ok) {
+                  form.reset();
+                  setStatus('✅ Message envoyé&#8239;! Nous vous répondons sous 24 h ouvrées.', 'text-accent-700');
+                } else {
+                  setStatus('❌ Une erreur est survenue. Réessayez ou appelez-nous au 06 52 19 36 05.', 'text-red-600');
+                }
+              } catch {
+                setStatus('❌ Connexion impossible. Réessayez ou appelez-nous au 06 52 19 36 05.', 'text-red-600');
+              } finally {
+                btn.disabled = false;
+              }
+            });
+          }
+        </script>
       </div>
 
       <!-- Coordonnées -->

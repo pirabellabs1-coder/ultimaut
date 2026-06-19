@@ -43,34 +43,6 @@
       ]
     },
     {
-      "titre": "Destruction d'odeurs",
-      "service": "destruction-dodeurs",
-      "formules": [
-        { "nom": "Voiture", "desc": "Traitement ozone + vapeur sèche aux huiles essentielles", "prix": "dès 79 €" },
-        { "nom": "Utilitaire", "desc": "Habitacle + coffre", "prix": "99 €" },
-        { "nom": "Pack Hygiène Complète", "desc": "Destruction d'odeurs + décalaminage hydrogène", "prix": "149 €" },
-        { "nom": "Analyse d'air (option)", "prix": "+15 €" }
-      ]
-    },
-    {
-      "titre": "Pressing siège auto",
-      "service": "pressing-siege-auto",
-      "formules": [
-        { "nom": "Sièges avant", "desc": "Shampooing injection-extraction", "prix": "dès 69 €" },
-        { "nom": "Pack Hygiène Intégrale", "desc": "Extraction des sièges, tapis et moquettes", "prix": "139 €" },
-        { "nom": "Extension appuie-têtes (option)", "prix": "+20 €" }
-      ]
-    },
-    {
-      "titre": "Optique de phare",
-      "service": "optique-de-phare",
-      "formules": [
-        { "nom": "Rénovation (la paire)", "desc": "Ponçage, polissage et protection anti-UV", "prix": "dès 79 €" },
-        { "nom": "Pack Sécurité Totale", "desc": "Rénovation des phares + protection longue durée", "prix": "149 €" },
-        { "nom": "Antibrouillards (option)", "prix": "+20 €" }
-      ]
-    },
-    {
       "titre": "Autres prestations",
       "formules": [
         { "nom": "Diagnostic automobile", "prix": "40 €" },

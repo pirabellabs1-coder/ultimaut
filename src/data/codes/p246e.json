@@ -1,0 +1,69 @@
+{
+  "code": "P246E",
+  "slug": "p246e",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Restriction du FAP : cendres au-delà de la limite (Banc 2)",
+  "metaTitle": "Code défaut P246E : causes, symptômes et solution",
+  "metaDescription": "Code défaut P246E : restriction du filtre à particules (FAP) banc 2 par les cendres au-delà du seuil. Causes, symptômes, diagnostic et nettoyage FAP à Cholet.",
+  "definitionCourte": "Le P246E signale que la charge en cendres du FAP du banc 2 dépasse la limite haute autorisée.",
+  "signification": "Le code P246E indique que la restriction du filtre à particules (FAP) du banc 2 dépasse la limite admise, en raison d'une accumulation de cendres. Le principe est identique au P246C, mais il concerne la seconde ligne d'échappement : sur un moteur en V, le « banc 2 » est la rangée de cylindres opposée à celle du cylindre numéro 1. Les cendres, résidus minéraux de l'huile et des additifs, ne brûlent pas pendant la régénération et s'accumulent durablement dans le filtre. Le calculateur surveille cette charge via la pression différentielle ; quand elle franchit le seuil haut, il juge le FAP du banc 2 trop bouché pour assurer une circulation correcte des gaz, même après régénération, et enregistre le défaut.",
+  "causes": [
+    {
+      "titre": "Cendres accumulées après un fort kilométrage",
+      "detail": "L'accumulation de cendres dans le FAP du banc 2 est une usure naturelle qui finit par atteindre la limite haute."
+    },
+    {
+      "titre": "Huile moteur inadaptée ou consommée",
+      "detail": "Une huile non Low SAPS ou une consommation d'huile élevée génère plus de cendres et accélère le colmatage."
+    },
+    {
+      "titre": "Régénérations sans effet sur les cendres",
+      "detail": "Les régénérations brûlent la suie mais laissent les cendres en place, qui continuent de s'accumuler."
+    },
+    {
+      "titre": "Capteur de pression différentielle du banc 2 défaillant",
+      "detail": "Un capteur HS ou des durites obstruées côté banc 2 peuvent surestimer la restriction et déclencher le code à tort."
+    },
+    {
+      "titre": "FAP banc 2 en fin de vie jamais nettoyé",
+      "detail": "Un filtre jamais entretenu atteint logiquement sa limite de charge en cendres."
+    },
+    {
+      "titre": "Résidus d'additif de régénération",
+      "detail": "Sur les systèmes à cérine, l'additif laisse des dépôts qui s'ajoutent aux cendres dans le substrat."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur et/ou voyant FAP allumés",
+    "Passage en mode dégradé limitant la puissance",
+    "Reprises molles et perte de performance",
+    "Régénérations rapprochées sans effet durable",
+    "Surconsommation de carburant",
+    "Ralenti irrégulier dans les cas avancés",
+    "Démarrage difficile si le filtre est très bouché"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise OBD pour confirmer le P246E et consulter le taux de cendres estimé sur le banc 2. On mesure la pression différentielle réelle de cette ligne, y compris après régénération, pour confirmer que la restriction provient des cendres et non d'un capteur faussé. Le contrôle du capteur de pression du banc 2 et de ses durites permet d'écarter une fausse mesure. Chez Ultimauto, ce diagnostic électronique distingue un filtre réellement saturé d'un problème de capteur et oriente vers la bonne solution.",
+  "reparation": "Les cendres ne brûlant pas, ni additif ni régénération forcée ne résolvent le P246E : la solution adaptée est un nettoyage FAP en profondeur, qui désincruste le substrat du banc 2 et restaure le débit. Comptez de l'ordre de 250 à 350 € selon le véhicule, soit bien moins qu'un FAP neuf souvent facturé plusieurs centaines à plusieurs milliers d'euros. Si le capteur est en cause, son remplacement reste plus économique. Ultimauto réalise ce nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Comme le P246C, un FAP de banc 2 saturé de cendres ne se débloque pas seul et finit par brider la puissance, voire empêcher le démarrage. Il vaut mieux intervenir avant le blocage complet.",
+  "rouler": "Rouler reste possible à court terme, mais la situation n'évoluera pas favorablement puisque les cendres ne brûlent pas. La puissance se dégrade et le mode dégradé peut s'installer durablement. Un nettoyage planifié vaut mieux qu'une immobilisation subie.",
+  "faq": [
+    {
+      "q": "Quelle différence entre le P246E et le P246C ?",
+      "r": "Les deux codes décrivent un FAP bouché par les cendres : le P246C concerne le banc 1 et le P246E le banc 2. Ils apparaissent surtout sur les moteurs en V à deux filtres. La solution, un nettoyage en profondeur, est la même."
+    },
+    {
+      "q": "Une régénération peut-elle régler le P246E ?",
+      "r": "Non. Les cendres ne brûlent pas, aucune régénération ne les élimine. Seul un nettoyage en profondeur permet de désincruster le filtre du banc 2 et de restaurer le débit."
+    },
+    {
+      "q": "Mon véhicule n'a qu'une ligne d'échappement, pourquoi ce code ?",
+      "r": "La cartographie de certains calculateurs fait référence au banc 2 même sur une seule ligne. Le diagnostic relie le code au filtre réellement concerné sur votre motorisation précise."
+    },
+    {
+      "q": "Combien coûte le nettoyage après un P246E ?",
+      "r": "À titre indicatif, comptez de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un FAP neuf. Ultimauto remet un devis gratuit après diagnostic et ne facture pas le nettoyage si le filtre est irrécupérable."
+    }
+  ]
+}

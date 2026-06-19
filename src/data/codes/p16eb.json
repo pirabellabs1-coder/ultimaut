@@ -1,0 +1,73 @@
+{
+  "code": "P16EB",
+  "slug": "p16eb",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Anomalie de dosage / dépollution AdBlue (code constructeur)",
+  "metaTitle": "Code défaut P16EB : causes et solution",
+  "metaDescription": "Code défaut P16EB : anomalie du système AdBlue/SCR (PSA/Stellantis). Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet (49), devis gratuit.",
+  "definitionCourte": "Le code P16EB est un code constructeur signalant une anomalie de dosage ou de fonctionnement du système de dépollution SCR à l'AdBlue.",
+  "signification": "Le code P16EB est un code spécifique constructeur, principalement relevé sur les véhicules du groupe PSA/Stellantis dotés d'un système SCR à l'AdBlue. Il fait partie de la même famille que le P16EA et concerne lui aussi la chaîne de réduction des oxydes d'azote (NOx), mais il oriente davantage vers une incohérence de dosage ou de fonctionnement du réducteur. Le système SCR injecte une quantité précise d'AdBlue dans l'échappement pour neutraliser les NOx ; le calculateur surveille en continu la pression, le débit et le résultat de cette injection via les capteurs et les sondes NOx. Lorsque la valeur attendue et la valeur mesurée divergent au-delà des tolérances, ce code est mémorisé. Comme il s'agit d'une référence propriétaire, son interprétation fine nécessite une valise adaptée à la marque. Il apparaît souvent en compagnie d'autres codes du système AdBlue qui aident à localiser précisément le défaut.",
+  "causes": [
+    {
+      "titre": "Dosage AdBlue hors tolérance",
+      "detail": "Le calculateur constate que la quantité de réducteur injectée ne correspond pas à la consigne, signe d'un problème de pompe, d'injecteur ou de pilotage."
+    },
+    {
+      "titre": "Injecteur AdBlue obstrué ou en fuite",
+      "detail": "Un injecteur partiellement bouché par la cristallisation, ou qui fuit, fausse le dosage et déséquilibre la dépollution."
+    },
+    {
+      "titre": "Pompe ou pression du circuit insuffisante",
+      "detail": "Une pompe AdBlue faible ou un circuit qui ne tient pas la pression empêche d'atteindre le débit programmé."
+    },
+    {
+      "titre": "AdBlue non conforme ou contaminé",
+      "detail": "Un fluide dilué, périmé ou de mauvaise qualité modifie la concentration en urée et dégrade le rendement du SCR."
+    },
+    {
+      "titre": "Capteur de qualité ou de pression faussé",
+      "detail": "Un capteur défaillant transmet des valeurs erronées, ce qui conduit le calculateur à détecter une anomalie de dosage."
+    },
+    {
+      "titre": "Catalyseur SCR vieilli",
+      "detail": "Un catalyseur en fin de vie réduit moins bien les NOx, et l'écart de rendement peut déclencher ce code."
+    },
+    {
+      "titre": "Connectique, faisceau ou calculateur en défaut",
+      "detail": "Une connexion défectueuse ou un calculateur de dépollution capricieux peut générer le P16EB sans panne mécanique franche."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant antipollution allumé",
+    "Message d'anomalie du système AdBlue au tableau de bord",
+    "Passage en mode dégradé avec perte de puissance",
+    "Compteur de démarrages restants avant blocage du véhicule",
+    "Consommation d'AdBlue trop élevée ou trop faible",
+    "Refus de redémarrage une fois le compte à rebours épuisé",
+    "Défaut intermittent qui revient après effacement"
+  ],
+  "diagnostic": "Le diagnostic du P16EB nécessite une valise compatible avec le constructeur pour lire correctement ce code propriétaire et les défauts associés. On observe en données réelles la pression et le débit du circuit AdBlue, le pilotage de l'injecteur et les valeurs des capteurs de qualité et de pression. Un test des actionneurs vérifie individuellement la pompe et l'injecteur, tandis qu'un contrôle de la qualité du fluide et de l'état du réservoir écarte une contamination. La comparaison entre dosage consigné et dosage réel permet de confirmer s'il s'agit d'un problème mécanique de dosage ou d'une mesure faussée. Cette étape évite de remplacer une pièce saine.",
+  "reparation": "La remise en état va du nettoyage ou remplacement de l'injecteur (250 à 600 €) et de la vidange du réservoir avec remplissage en AdBlue conforme, au remplacement d'un capteur (150 à 350 €), de la pompe AdBlue, voire du catalyseur SCR dans les cas les plus lourds (parfois plus de 1 000 €). Ces fourchettes sont indicatives et dépendent du modèle et de l'accessibilité des pièces. Toute neutralisation du système AdBlue/SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export). Ultimauto, à Cholet (49) ou en service mobile, dispose du matériel pour lire ces codes constructeur, identifier la cause exacte et établir un devis gratuit avant toute intervention.",
+  "gravite": "Élevée",
+  "graviteTexte": "Comme les autres défauts AdBlue, le P16EB déclenche souvent un compte à rebours pouvant immobiliser le véhicule. Il convient de le traiter sans attendre.",
+  "rouler": "Le véhicule reste habituellement conduisible au début, mais le mode dégradé puis le refus de démarrage peuvent survenir une fois le compteur écoulé. Effacer le code ne règle rien si la cause persiste : il réapparaîtra. Prévoyez un diagnostic rapidement, en particulier avant un long déplacement.",
+  "faq": [
+    {
+      "q": "Quelle différence entre P16EA et P16EB ?",
+      "r": "Les deux sont des codes constructeur du système SCR à l'AdBlue, souvent sur PSA/Stellantis. Ils concernent la même chaîne de dépollution, le P16EB orientant davantage vers une anomalie de dosage ou de fonctionnement du réducteur. En pratique, ils apparaissent fréquemment ensemble et exigent le même diagnostic ciblé."
+    },
+    {
+      "q": "Le P16EB peut-il venir d'un mauvais AdBlue ?",
+      "r": "Oui, c'est une cause possible. Un AdBlue dilué, périmé ou non conforme à la norme modifie la concentration en urée et peut déséquilibrer le dosage détecté par le calculateur. Une vidange du réservoir et un remplissage en fluide conforme font partie des premières vérifications."
+    },
+    {
+      "q": "Mon véhicule risque-t-il de se bloquer ?",
+      "r": "C'est possible. Les défauts AdBlue activent généralement un compte à rebours du nombre de démarrages restants ; une fois épuisé, le véhicule peut refuser de redémarrer. Il est préférable d'intervenir avant d'arriver à ce stade."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P16EB ?",
+      "r": "Le coût dépend de l'élément en cause : d'un capteur ou d'un nettoyage autour de 150 €, jusqu'à plus de 1 000 € si le catalyseur SCR doit être remplacé. Chez Ultimauto, le diagnostic cible le besoin réel et le devis est gratuit."
+    }
+  ]
+}

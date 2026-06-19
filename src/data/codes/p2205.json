@@ -1,0 +1,69 @@
+{
+  "code": "P2205",
+  "slug": "p2205",
+  "categorie": "Capteur NOx",
+  "service": "suppression-adblue",
+  "titre": "Capteur NOx — circuit de chauffage défaillant (Banc 1)",
+  "metaTitle": "Code défaut P2205 : causes et solution",
+  "metaDescription": "Code défaut P2205 : le circuit de chauffage du capteur NOx (banc 1) est en défaut. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet.",
+  "definitionCourte": "Le code P2205 indique un défaut sur le circuit de chauffage du capteur d'oxydes d'azote (NOx) du banc 1.",
+  "signification": "Le capteur NOx doit atteindre rapidement une température de service élevée pour mesurer correctement les oxydes d'azote dans l'échappement ; il intègre pour cela un élément chauffant piloté par le calculateur. Le code P2205 est mémorisé lorsque ce circuit de chauffage présente un défaut électrique : coupure, court-circuit ou résistance hors tolérance. Le calculateur surveille en permanence le courant et la résistance du chauffage ; si la valeur s'écarte de la plage attendue, il en déduit que la sonde ne pourra pas monter en température et fournir une mesure fiable. Tant que le chauffage n'est pas opérationnel, la régulation du système SCR (injection d'AdBlue) est dégradée et le moteur peut passer en mode de sécurité. Ce code concerne donc spécifiquement la fonction de chauffe, distincte du circuit de mesure du capteur.",
+  "causes": [
+    {
+      "titre": "Élément chauffant hors service",
+      "detail": "La résistance de chauffage intégrée au capteur NOx peut griller ou se couper avec l'âge, empêchant la sonde d'atteindre sa température de fonctionnement."
+    },
+    {
+      "titre": "Faisceau du chauffage coupé ou en court-circuit",
+      "detail": "Un câble du circuit de chauffage sectionné, dénudé ou frotté provoque une coupure ou un court-circuit que le calculateur détecte immédiatement."
+    },
+    {
+      "titre": "Connecteur corrodé ou mal enclenché",
+      "detail": "Une connectique oxydée ou desserrée crée une résistance parasite ou une coupure sur la ligne d'alimentation du chauffage."
+    },
+    {
+      "titre": "Fusible ou alimentation défaillant",
+      "detail": "Un fusible grillé ou une alimentation interrompue prive le chauffage de courant, ce qui déclenche le code de circuit de chauffage."
+    },
+    {
+      "titre": "Masse de mauvaise qualité",
+      "detail": "Une masse oxydée ou coupée empêche le bon passage du courant dans l'élément chauffant et fait sortir la résistance mesurée de la plage attendue."
+    },
+    {
+      "titre": "Module ou calculateur SCR en défaut",
+      "detail": "Plus rarement, l'étage de commande du chauffage dans le calculateur de dépollution est lui-même défaillant et génère le code P2205."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Voyant anti-pollution ou alerte SCR/AdBlue",
+    "Passage en mode dégradé avec puissance limitée",
+    "Mesure NOx peu fiable et dosage d'AdBlue perturbé",
+    "Surconsommation ou comptes à rebours du système SCR",
+    "Message « démarrage impossible dans X km » dans certains cas",
+    "Défaut apparaissant surtout au démarrage à froid"
+  ],
+  "diagnostic": "On lit d'abord les codes mémorisés, puis on mesure la résistance de l'élément chauffant du capteur NOx et on la compare à la valeur de référence du constructeur. On contrôle la présence de l'alimentation et de la masse du circuit de chauffage, l'état du fusible et du connecteur, ainsi que la continuité du faisceau dédié. Ces mesures permettent de distinguer un chauffage de capteur réellement HS d'un défaut d'alimentation ou de câblage. Chez Ultimauto, ce diagnostic électronique est réalisé systématiquement et gratuitement avant d'établir un devis.",
+  "reparation": "Selon le constat, on répare ou remplace le câblage et le connecteur du circuit de chauffage, on rétablit l'alimentation ou la masse, ou l'on remplace le capteur NOx lorsque son chauffage interne est défaillant. Le système est ensuite réinitialisé, les codes effacés, et un essai à froid vérifie la bonne montée en température. À titre indicatif, un capteur NOx coûte souvent entre 200 et 500 € selon le modèle ; une réparation de câblage ou un fusible revient bien moins cher. Ultimauto intervient à Cholet (49) ou en service mobile dans le Grand Ouest, diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste généralement roulant mais en mode dégradé, avec une dépollution dégradée. Non traité, le défaut peut conduire le système SCR à bloquer le démarrage.",
+  "rouler": "Rejoindre l'atelier reste habituellement possible, mais la puissance peut être bridée, surtout à froid, et un compte à rebours peut s'enclencher. Mieux vaut intervenir rapidement pour éviter une surconsommation d'AdBlue et une immobilisation.",
+  "faq": [
+    {
+      "q": "À quoi sert le chauffage du capteur NOx ?",
+      "r": "Il permet à la sonde d'atteindre rapidement sa température de service pour mesurer correctement les NOx, notamment au démarrage à froid. Sans chauffage opérationnel, la mesure n'est pas fiable et le système SCR ne peut pas réguler l'AdBlue."
+    },
+    {
+      "q": "Le P2205 oblige-t-il à changer le capteur ?",
+      "r": "Pas toujours. Le défaut peut venir du faisceau, du fusible, de la masse ou du connecteur. Le capteur n'est remplacé que si la mesure de résistance confirme un élément chauffant interne HS."
+    },
+    {
+      "q": "Pourquoi le défaut apparaît surtout à froid ?",
+      "r": "Parce que c'est au démarrage à froid que le chauffage est le plus sollicité pour faire monter le capteur en température. Un circuit de chauffe défaillant se révèle donc souvent à ce moment-là."
+    },
+    {
+      "q": "Combien coûte la réparation ?",
+      "r": "Un fusible ou une réparation de câblage reste économique ; le remplacement d'un capteur NOx se situe souvent entre 200 et 500 € selon le véhicule. Le devis Ultimauto est gratuit."
+    }
+  ]
+}

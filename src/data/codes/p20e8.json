@@ -1,0 +1,73 @@
+{
+  "code": "P20E8",
+  "slug": "p20e8",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Pression du réducteur SCR trop basse",
+  "metaTitle": "Code défaut P20E8 : causes et solution",
+  "metaDescription": "Code défaut P20E8 : la pression du réducteur (AdBlue) du système SCR est trop basse. Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",
+  "definitionCourte": "La pression du réducteur (AdBlue) dans le circuit SCR est inférieure à la valeur attendue par le calculateur.",
+  "signification": "Le code P20E8 relève de la famille des défauts du système SCR, chargé de réduire les oxydes d'azote (NOx) grâce à l'injection d'AdBlue dans l'échappement. Pour pulvériser l'urée au bon moment et en bonne quantité, la pompe doit établir et maintenir une pression précise dans le circuit de dosage. Un capteur de pression renseigne en continu le calculateur de dépollution sur la valeur réelle. Lorsque cette pression reste inférieure au seuil programmé, le calculateur en déduit que l'injection ne peut plus se faire correctement et enregistre le P20E8. Une pression trop basse signifie concrètement que l'AdBlue n'est pas pulvérisé comme prévu : la réaction avec les NOx devient insuffisante et la dépollution n'est plus garantie. Ce code oriente donc vers le côté hydraulique du circuit (pompe, conduites, filtre, niveau de réservoir) plutôt que vers le catalyseur lui-même.",
+  "causes": [
+    {
+      "titre": "Pompe AdBlue usée ou défaillante",
+      "detail": "Une pompe fatiguée ou en panne n'établit plus la pression requise dans le circuit : c'est la cause la plus directe d'une pression de réducteur trop basse."
+    },
+    {
+      "titre": "Conduite d'urée fuyarde ou bouchée",
+      "detail": "Une conduite percée laisse chuter la pression, tandis qu'une conduite pincée ou cristallisée empêche la pompe d'établir la valeur attendue."
+    },
+    {
+      "titre": "Filtre du circuit AdBlue colmaté",
+      "detail": "Un filtre d'urée encrassé restreint le débit en amont de la pompe ou de l'injecteur, ce qui fait baisser la pression mesurée."
+    },
+    {
+      "titre": "Niveau d'AdBlue trop bas ou réservoir vide",
+      "detail": "Sans réducteur en quantité suffisante, la pompe aspire de l'air et ne peut maintenir la pression : un simple niveau bas peut suffire à déclencher le code."
+    },
+    {
+      "titre": "Capteur de pression SCR erroné",
+      "detail": "Un capteur de pression défaillant peut signaler une pression basse alors que le circuit fonctionne, induisant le calculateur en erreur."
+    },
+    {
+      "titre": "AdBlue gelé ou réchauffeur défaillant",
+      "detail": "Par grand froid, un AdBlue gelé ou un réchauffeur de réservoir en panne empêche la pompe de mettre le circuit en pression tant que le produit n'est pas dégelé."
+    },
+    {
+      "titre": "AdBlue de mauvaise qualité",
+      "detail": "Un réducteur contaminé ou non conforme favorise la cristallisation et l'encrassement, qui finissent par limiter le débit et la pression du circuit."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue allumé, parfois clignotant",
+    "Message « démarrage impossible dans X km » ou nombre de démarrages restants",
+    "Mode dégradé avec perte de puissance",
+    "Bruit anormal ou silence inhabituel de la pompe AdBlue à la mise du contact",
+    "Voyant anti-pollution et système SCR inactif",
+    "Hausse des émissions de NOx, risque de contre-visite au contrôle technique",
+    "Appoints d'AdBlue sans effet sur l'extinction du voyant"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise pour confirmer le P20E8 et lire la pression réelle du circuit en direct. On commande la pompe AdBlue pour vérifier qu'elle établit bien la pression de consigne, puis on inspecte les conduites et le filtre à la recherche d'une fuite, d'un pincement ou d'une cristallisation. Le niveau et la qualité de l'AdBlue sont contrôlés, ainsi que le réchauffeur en période froide. Ultimauto réalise ce contrôle hydraulique et électronique à Cholet (49) ou en service mobile pour cibler précisément l'origine de la perte de pression.",
+  "reparation": "Selon le constat, la réparation consiste à remplacer la pompe AdBlue, à déboucher ou changer une conduite cristallisée ou percée, à remplacer le filtre ou le capteur de pression, puis à refaire un appoint d'AdBlue conforme avant effacement du défaut et essai. À titre indicatif, un capteur ou un filtre reste modéré, tandis qu'une pompe AdBlue complète représente un poste plus important selon le modèle ; comptez généralement de 90 € pour une pièce simple à plusieurs centaines d'euros pour une pompe. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et ne concerne pas un véhicule circulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule peut rester roulant quelque temps, mais la dépollution est compromise et le compte à rebours de démarrages mène à un blocage si rien n'est fait.",
+  "rouler": "Vous pouvez encore rouler à court terme, mais le système SCR ne dose plus correctement l'AdBlue : le moteur passe en mode dégradé et un compte à rebours « démarrage impossible dans X km » se déclenche sur la plupart des véhicules. À l'épuisement de ce décompte, le redémarrage devient impossible tant que la pression du circuit n'est pas rétablie.",
+  "faq": [
+    {
+      "q": "Le P20E8 peut-il venir d'un simple niveau d'AdBlue bas ?",
+      "r": "Oui, un réservoir presque vide fait aspirer de l'air à la pompe et chuter la pression. Commencez par un appoint conforme : si le code persiste, la cause est mécanique (pompe, conduite, filtre)."
+    },
+    {
+      "q": "Pourquoi le voyant reste-t-il allumé après l'appoint ?",
+      "r": "Parce que la pression reste basse pour une autre raison : pompe fatiguée, conduite bouchée ou capteur défaillant. Un diagnostic est nécessaire pour identifier et traiter la vraie cause."
+    },
+    {
+      "q": "Le froid peut-il déclencher ce code ?",
+      "r": "Oui. Par températures négatives, un AdBlue gelé ou un réchauffeur de réservoir en panne empêche la mise en pression. Le code peut alors apparaître au démarrage à froid."
+    },
+    {
+      "q": "Puis-je rouler longtemps avec le P20E8 ?",
+      "r": "Non. Le compte à rebours de démarrages finira par bloquer le moteur. Mieux vaut diagnostiquer rapidement pour éviter une immobilisation et une remise en route plus contraignante."
+    }
+  ]
+}

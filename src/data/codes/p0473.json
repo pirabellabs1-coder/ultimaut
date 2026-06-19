@@ -1,0 +1,69 @@
+{
+  "code": "P0473",
+  "slug": "p0473",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de pression d'échappement : signal trop haut",
+  "metaTitle": "Code défaut P0473 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P0473 : signal du capteur de pression d'échappement (FAP) trop haut. Causes, symptômes, diagnostic et solution chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P0473 signale un signal de pression d'échappement anormalement haut, électrique ou dû à un FAP bouché.",
+  "signification": "Le code P0473 indique que le signal du capteur de pression d'échappement est trop haut : la tension ou la pression mesurée dépasse le seuil maximal admis par le calculateur. Ce capteur mesure la pression des gaz, le plus souvent la pression différentielle du filtre à particules (FAP). Une valeur anormalement haute a deux grandes familles de causes. Soit elle est d'origine électrique (court-circuit du signal vers une tension d'alimentation, connecteur défaillant), auquel cas la pression affichée ne reflète pas la réalité. Soit elle est bien réelle, traduisant une contre-pression d'échappement excessive due à un FAP fortement colmaté ou à une ligne d'échappement bouchée en aval. C'est tout l'enjeu du diagnostic : distinguer une fausse valeur électrique d'un véritable colmatage du filtre.",
+  "causes": [
+    {
+      "titre": "FAP fortement colmaté",
+      "detail": "Un filtre saturé de suie ou de cendres génère une contre-pression réelle élevée, que le capteur traduit par un signal trop haut."
+    },
+    {
+      "titre": "Capteur en court-circuit au positif",
+      "detail": "Un capteur défaillant ou un court-circuit vers l'alimentation envoie une tension trop haute, sans rapport avec la pression réelle."
+    },
+    {
+      "titre": "Durite de prise de pression obstruée",
+      "detail": "Une durite bouchée par la suie peut piéger une pression et fausser la mesure vers le haut."
+    },
+    {
+      "titre": "Fil du signal en court-circuit avec une alimentation",
+      "detail": "Un contact entre le fil de signal et une ligne sous tension dans le faisceau fait monter la valeur au-delà du seuil."
+    },
+    {
+      "titre": "Connecteur corrodé",
+      "detail": "Un connecteur corrodé peut créer une fausse tension élevée interprétée comme une pression trop haute."
+    },
+    {
+      "titre": "Ligne d'échappement bouchée en aval",
+      "detail": "Un silencieux ou un catalyseur écrasé ou bouché crée une contre-pression réelle que le capteur signale."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP allumé",
+    "Mode dégradé et perte de puissance marquée",
+    "Régénérations forcées rapprochées",
+    "Surconsommation de carburant",
+    "Étouffement du moteur à l'accélération si la contre-pression est réelle",
+    "Lecture de pression FAP figée à une valeur haute au diagnostic"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise OBD pour confirmer le P0473 et observer la valeur du capteur. L'étape clé est de distinguer une cause électrique d'une contre-pression réelle : on contrôle le faisceau, le connecteur et l'état de la durite, puis on compare la pression mesurée au comportement du moteur. Si la contre-pression est confirmée réelle, on évalue l'état du FAP et de la ligne d'échappement. Chez Ultimauto, ce diagnostic électronique évite de remplacer un capteur sain quand c'est en fait le filtre qui est bouché, et inversement.",
+  "reparation": "La solution dépend directement de la cause. Si elle est électrique (court-circuit, connecteur, durite obstruée), la réparation du circuit ou le remplacement du capteur suffit, pour un coût raisonnable. Si la contre-pression est réelle à cause d'un FAP colmaté, un nettoyage en profondeur de l'ordre de 250 à 350 € selon le véhicule rétablit le débit et fait disparaître le code, pour bien moins cher qu'un FAP neuf. Ultimauto réalise le diagnostic, la réparation électrique et le nettoyage du filtre à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit.",
+  "gravite": "Élevée",
+  "graviteTexte": "Si la contre-pression est réelle, un FAP très bouché peut étouffer le moteur, déclencher un mode dégradé persistant et, à terme, endommager le turbo ou le moteur. Mieux vaut intervenir sans attendre.",
+  "rouler": "Si le code vient d'une vraie contre-pression (FAP bouché), il est déconseillé de rouler longtemps : le moteur s'étouffe, force sur le turbo et risque d'aggraver le colmatage. En cas d'origine électrique, le risque immédiat est moindre, mais le défaut perturbe les régénérations. Dans les deux cas, un diagnostic rapide est recommandé.",
+  "faq": [
+    {
+      "q": "Le P0473 veut-il dire que mon FAP est bouché ?",
+      "r": "Pas toujours. Le P0473 peut venir d'un défaut électrique (court-circuit, connecteur) donnant une fausse valeur haute, ou d'une contre-pression réelle due à un FAP colmaté. Seul le diagnostic permet de trancher entre les deux."
+    },
+    {
+      "q": "Quelle différence entre le P0473 et le P0472 ?",
+      "r": "Le P0473 correspond à un signal trop haut et le P0472 à un signal trop bas. Le P0473 peut traduire un FAP réellement colmaté, alors que le P0472 est presque toujours d'origine électrique ou une durite débranchée."
+    },
+    {
+      "q": "Le moteur s'étouffe à l'accélération, est-ce lié au P0473 ?",
+      "r": "Oui, c'est un signe que la contre-pression est probablement réelle et que le FAP est fortement colmaté. Dans ce cas, il est conseillé de ne pas insister et de faire diagnostiquer le véhicule rapidement."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P0473 ?",
+      "r": "Cela dépend de la cause : une réparation électrique ou le remplacement du capteur reste abordable, et un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un filtre neuf. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

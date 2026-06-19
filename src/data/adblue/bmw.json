@@ -1,0 +1,49 @@
+{
+  "slug": "bmw",
+  "nom": "BMW",
+  "metaTitle": "Problème AdBlue BMW : panne SCR, code défaut | Ultimauto",
+  "metaDescription": "Problème AdBlue BMW : voyant SCR, démarrage impossible, capteur NOx ou injecteur en panne sur moteurs B47/B57. Diagnostic à Cholet (49) ou mobile.",
+  "moteurs": "Moteurs diesel B47 (4 cylindres) et B57 (6 cylindres) équipés du système SCR/AdBlue.",
+  "modeles": [
+    "Série 1 (F40)",
+    "Série 2 Active/Gran Tourer",
+    "Série 3 (G20)",
+    "Série 5 (G30)",
+    "X1 (F48)",
+    "X3 (G01)",
+    "X5 (G05)",
+    "Série 4"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B",
+    "P207F"
+  ],
+  "symptomes": [
+    "Message « Démarrage moteur impossible dans X km » au combiné",
+    "Voyant antipollution ou témoin moteur jaune allumé",
+    "Refus de redémarrage après arrêt du moteur",
+    "Réduction de puissance et limitation du régime en mode dégradé",
+    "Alerte « Recharge AdBlue » malgré un réservoir rempli",
+    "Surconsommation d'AdBlue ou appoints très rapprochés",
+    "Dépôts blancs cristallisés au niveau de l'injecteur de réducteur"
+  ],
+  "pourquoi": "Sur les BMW à moteurs B47 et B57, le capteur NOx est une cause de panne récurrente : il dérive ou tombe en défaut et déclenche des codes comme P20E8 ou P163B. L'injecteur ou la pompe doseuse d'AdBlue peuvent se boucher par cristallisation, et le chauffage du réservoir d'AdBlue peut défaillir, ce qui empêche le dégel du fluide par temps froid. Une qualité d'AdBlue insuffisante ou un défaut du calculateur SCR aggravent souvent le problème.",
+  "solutions": "Nous commençons par un diagnostic électronique précis pour lire les défauts mémorisés et identifier le composant réellement fautif, afin d'éviter un remplacement inutile. Selon le diagnostic, nous remplaçons le capteur NOx ou l'injecteur SCR, nettoyons le circuit AdBlue et procédons au reparamétrage du système. Ultimauto intervient à Cholet (49) ou en service mobile, devis gratuit. La neutralisation logicielle du SCR reste strictement réservée à un usage hors voie publique.",
+  "faq": [
+    {
+      "q": "Mon BMW indique « Démarrage impossible dans 900 km », est-ce grave ?",
+      "r": "C'est une alerte SCR : le calculateur a détecté un défaut du système AdBlue et lance un compte à rebours. Une fois épuisé, la voiture ne redémarrera plus après l'arrêt du moteur. Il faut diagnostiquer rapidement la cause (souvent le capteur NOx ou l'injecteur) ; un simple appoint d'AdBlue n'efface pas toujours le défaut."
+    },
+    {
+      "q": "Quels codes défaut reviennent souvent sur les diesels BMW B47/B57 ?",
+      "r": "On rencontre fréquemment P20E8 (pression du réducteur), P229F et P163B liés au capteur NOx, ainsi que P204F et P207F sur le circuit SCR. Ces codes orientent le diagnostic mais ne désignent pas toujours la pièce exacte : un contrôle approfondi est nécessaire avant de remplacer un composant coûteux."
+    },
+    {
+      "q": "Combien de temps faut-il pour réparer une panne AdBlue sur BMW ?",
+      "r": "Cela dépend de la cause. Un remplacement de capteur NOx ou d'injecteur se traite souvent dans la journée une fois la pièce disponible, tandis qu'un problème de pompe ou de chauffage de réservoir peut demander davantage de temps. Nous établissons un devis gratuit après diagnostic, à Cholet ou en service mobile."
+    }
+  ]
+}

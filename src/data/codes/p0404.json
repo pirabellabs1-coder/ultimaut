@@ -1,0 +1,69 @@
+{
+  "code": "P0404",
+  "slug": "p0404",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Plage ou performance du circuit EGR incorrecte",
+  "metaTitle": "Code défaut P0404 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0404 indique une performance EGR incorrecte : causes, symptômes et solution par décalaminage hydrogène chez Ultimauto à Cholet (49).",
+  "definitionCourte": "Le P0404 signale que la vanne EGR n'atteint pas la position demandée ou répond de façon imprécise.",
+  "signification": "Le code P0404 est un code OBD-II générique qui signale un problème de plage ou de performance du circuit de commande EGR. La vanne EGR doit s'ouvrir d'une valeur précise selon le régime et la charge pour doser la recirculation des gaz d'échappement. Le calculateur moteur envoie une consigne d'ouverture, puis lit la position réellement atteinte grâce au capteur de position de la vanne. Lorsqu'il constate un écart durable entre la position demandée et la position mesurée, ou une réponse trop lente et imprécise du clapet, il en déduit que la vanne ne travaille pas dans la plage attendue et enregistre le défaut P0404. Sur les moteurs diesel, cette imprécision vient le plus souvent d'une vanne freinée par la calamine, qui n'atteint pas ou n'atteint que lentement la position commandée, parfois d'un capteur de position qui dérive.",
+  "causes": [
+    {
+      "titre": "Vanne EGR encrassée par la calamine",
+      "detail": "Les dépôts freinent le clapet qui n'atteint pas la position commandée, créant un écart entre consigne et position réelle."
+    },
+    {
+      "titre": "Calamine ralentissant la course du clapet",
+      "detail": "Une vanne qui répond trop lentement aux ordres sort de la plage de performance attendue par le calculateur."
+    },
+    {
+      "titre": "Capteur de position de la vanne EGR qui dérive",
+      "detail": "Un capteur dont la mesure se décale fausse la position lue et déclenche un défaut de plage."
+    },
+    {
+      "titre": "Vanne EGR usée mécaniquement",
+      "detail": "Un actionneur ou un clapet usé ne se positionne plus avec précision malgré une commande correcte."
+    },
+    {
+      "titre": "Conduits EGR partiellement bouchés",
+      "detail": "Des passages encrassés modifient le comportement réel du circuit et faussent la régulation de la vanne."
+    },
+    {
+      "titre": "Connecteur ou faisceau défaillant",
+      "detail": "Un faux contact ou un câblage abîmé perturbe la commande ou la lecture de la position de la vanne."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable",
+    "À-coups et hésitations à l'accélération",
+    "Perte de puissance et reprises molles",
+    "Surconsommation de carburant",
+    "Fonctionnement irrégulier, parfois en mode dégradé",
+    "Fumée à l'échappement dans certains cas"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise pour confirmer le P0404 et relever les données figées. On compare ensuite la consigne d'ouverture envoyée à la vanne et la position réellement atteinte, en pilotant le clapet en commande active pour évaluer sa rapidité et sa précision de réponse. Une inspection permet de mesurer le freinage dû à la calamine sur le clapet et de vérifier la cohérence du capteur de position. Chez Ultimauto, ce contrôle précède toute intervention afin de distinguer une vanne ralentie par l'encrassement d'un capteur ou d'un actionneur réellement hors service.",
+  "reparation": "Lorsque l'imprécision vient de la calamine qui freine le clapet, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage et rend au clapet une course complète et précise. Si le capteur de position dérive ou si la vanne est mécaniquement usée, le remplacement de la pièce concernée est conseillé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement d'une vanne étant nettement plus cher. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le moteur fonctionne de façon irrégulière et peut perdre en agrément, mais reste généralement conduisible. Le défaut doit être traité pour éviter une aggravation de l'encrassement.",
+  "rouler": "Vous pouvez rouler avec un P0404, mais la vanne ne dose plus correctement les gaz et le moteur peut manquer de reprises ou passer en mode dégradé. L'encrassement responsable continue de progresser. Un diagnostic rapide est conseillé.",
+  "faq": [
+    {
+      "q": "Que signifie une performance EGR incorrecte ?",
+      "r": "Cela veut dire que la vanne EGR n'atteint pas la position demandée par le calculateur ou répond trop lentement. C'est le plus souvent dû à la calamine qui freine le clapet."
+    },
+    {
+      "q": "Le décalaminage hydrogène corrige-t-il le code P0404 ?",
+      "r": "Oui dans la majorité des cas, car le P0404 vient surtout d'un clapet freiné par les dépôts. Le décalaminage nettoie la vanne sans démontage et lui rend une course précise. Si le capteur ou la vanne est HS, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0404 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Un remplacement de vanne est plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0404 ?",
+      "r": "Oui sur de courtes distances, mais pas durablement. Le moteur peut manquer de reprises et l'encrassement s'aggrave. Mieux vaut faire diagnostiquer rapidement."
+    }
+  ]
+}

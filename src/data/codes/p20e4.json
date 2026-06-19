@@ -1,0 +1,69 @@
+{
+  "code": "P20E4",
+  "slug": "p20e4",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Pression du réducteur SCR trop élevée",
+  "metaTitle": "Code défaut P20E4 : causes et solution",
+  "metaDescription": "Code défaut P20E4 : la pression du réducteur (AdBlue) du système SCR est trop élevée. Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",
+  "definitionCourte": "La pression du réducteur (AdBlue) dans le circuit SCR dépasse la valeur cible définie par le calculateur.",
+  "signification": "Le code P20E4 appartient à la famille des défauts du système SCR, qui réduit les oxydes d'azote (NOx) en injectant de l'AdBlue dans la ligne d'échappement. Le circuit qui achemine l'urée de la pompe jusqu'à l'injecteur doit rester dans une plage de pression précise, surveillée en continu par un capteur dédié. Lorsque le calculateur de dépollution mesure une pression supérieure à la valeur cible, il enregistre le P20E4. Une pression excessive traduit le plus souvent un obstacle en aval de la pompe : l'urée n'est plus évacuée normalement vers l'échappement et la pression monte anormalement dans le circuit. À l'inverse d'une pression trop basse, ce défaut oriente vers une obstruction (injecteur cristallisé, conduite bouchée) ou une régulation de pompe défectueuse. Non traitée, une surpression aggrave la cristallisation et peut endommager l'injecteur ou la pompe, d'où l'intérêt d'un diagnostic rapide.",
+  "causes": [
+    {
+      "titre": "Injecteur d'AdBlue bouché ou cristallisé",
+      "detail": "Un injecteur partiellement ou totalement obstrué empêche l'urée de s'écouler vers l'échappement : la pression s'accumule en amont et dépasse la cible."
+    },
+    {
+      "titre": "Conduite de dosage obstruée ou pincée",
+      "detail": "Une conduite cristallisée, écrasée ou bouchée en aval de la pompe crée une résistance qui fait monter anormalement la pression du circuit."
+    },
+    {
+      "titre": "Cristallisation au niveau du doseur ou de la buse",
+      "detail": "Les dépôts d'urée cristallisée au point d'injection réduisent la section de passage et provoquent une surpression progressive."
+    },
+    {
+      "titre": "Régulation de pompe AdBlue défaillante",
+      "detail": "Une pompe dont la régulation de pression ne fonctionne plus peut maintenir une pression trop élevée même lorsque le dosage est faible."
+    },
+    {
+      "titre": "Capteur de pression SCR erroné",
+      "detail": "Un capteur qui dérive peut signaler une pression excessive alors que le circuit est sain, induisant le calculateur en erreur."
+    },
+    {
+      "titre": "Vanne de régulation ou de retour grippée",
+      "detail": "Une vanne de retour ou de décharge du circuit d'urée bloquée empêche la pression de redescendre et déclenche le défaut de surpression."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant anti-pollution allumé",
+    "Avertissement « démarrage impossible dans X km » ou démarrages restants",
+    "Passage en mode dégradé et puissance réduite",
+    "Dépôts blanchâtres d'urée cristallisée visibles autour de l'injecteur",
+    "Voyant moteur selon le constructeur",
+    "Système SCR perturbé et émissions de NOx mal maîtrisées",
+    "Bruit de pompe inhabituel à la mise du contact"
+  ],
+  "diagnostic": "Le diagnostic s'appuie sur une lecture à la valise pour confirmer le P20E4 et observer la pression réelle du circuit en temps réel. On contrôle la commande et la régulation de la pompe, puis on inspecte l'injecteur, le doseur et les conduites à la recherche de cristallisation ou d'obstruction, principales causes de surpression. Le capteur de pression est également vérifié pour écarter une fausse mesure. Ultimauto réalise ce diagnostic ciblé à Cholet (49) ou en service mobile afin de localiser précisément le point de blocage à l'origine de la pression excessive.",
+  "reparation": "La réparation consiste le plus souvent à nettoyer ou remplacer l'injecteur d'urée cristallisé, à dégager ou changer la conduite obstruée, puis à contrôler la pompe et le capteur de pression avant d'effacer le défaut et de valider par un essai. À titre indicatif, un injecteur ou un capteur se situe généralement entre 90 et 250 €, davantage si la pompe doit être remplacée. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et n'est pas proposée pour un véhicule roulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste roulant un temps, mais la surpression favorise la casse de l'injecteur et le compte à rebours de démarrages conduit au blocage si rien n'est fait.",
+  "rouler": "Vous pouvez encore circuler à court terme, mais la surpression du circuit aggrave la cristallisation et peut endommager l'injecteur ou la pompe. Le calculateur enclenche le mode dégradé puis un compte à rebours « démarrage impossible dans X km » : passé ce seuil, le moteur ne redémarrera plus tant que la cause n'est pas corrigée.",
+  "faq": [
+    {
+      "q": "Qu'est-ce qui provoque une pression d'AdBlue trop élevée ?",
+      "r": "Le plus souvent un injecteur ou une conduite cristallisés en aval de la pompe : l'urée n'est plus évacuée et la pression monte. Une régulation de pompe défaillante peut aussi être en cause."
+    },
+    {
+      "q": "Les dépôts blancs autour de l'injecteur sont-ils liés au P20E4 ?",
+      "r": "Oui, ces traces sont de l'urée cristallisée. Elles signalent souvent l'obstruction responsable de la surpression et confirment qu'un nettoyage ou un remplacement de l'injecteur est nécessaire."
+    },
+    {
+      "q": "Le P20E4 peut-il endommager le système ?",
+      "r": "Une surpression prolongée sollicite anormalement l'injecteur et la pompe et accélère la cristallisation. Traiter le code rapidement évite des réparations plus lourdes par la suite."
+    },
+    {
+      "q": "Peut-on simplement effacer le code ?",
+      "r": "Non. Si l'obstruction reste présente, la pression remontera et le code reviendra, avec un compte à rebours de démarrages. Il faut traiter la cause physique, pas seulement effacer le défaut."
+    }
+  ]
+}

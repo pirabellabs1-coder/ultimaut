@@ -1,0 +1,69 @@
+{
+  "code": "P0546",
+  "slug": "p0546",
+  "categorie": "Température d'échappement",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de température des gaz d'échappement — signal haut (banc 1, capteur 1)",
+  "metaTitle": "Code défaut P0546 : causes et solution",
+  "metaDescription": "Code défaut P0546 : signal trop haut du capteur de température des gaz d'échappement (EGT). Causes, symptômes, diagnostic et réparation à Cholet (49).",
+  "definitionCourte": "Le signal du capteur de température des gaz d'échappement (EGT) banc 1, capteur 1, est jugé trop haut par le calculateur.",
+  "signification": "Le code P0546 indique que le calculateur moteur reçoit une tension trop élevée du capteur de température des gaz d'échappement (EGT) du banc 1, capteur 1. Le capteur signale alors une température anormalement haute, ou un signal hors plage vers le haut, incohérent avec le fonctionnement réel. Cette sonde surveille la chaleur de l'échappement pour protéger le turbo et le FAP et pour piloter les régénérations du filtre à particules. Une tension haute traduit en général un circuit ouvert (fil coupé), un capteur défaillant ou un connecteur débranché. Le souci, c'est que le calculateur peut alors croire l'échappement en surchauffe et brider la puissance par sécurité, ou au contraire mal gérer la régénération. Le P0546 oriente donc clairement le diagnostic vers un problème électrique côté signal haut, qu'il faut distinguer d'une vraie surchauffe.",
+  "causes": [
+    {
+      "titre": "Circuit ouvert (fil coupé)",
+      "detail": "Un faisceau interrompu fait grimper la tension du signal vers le haut : c'est la cause classique d'un défaut « signal haut » comme le P0546."
+    },
+    {
+      "titre": "Capteur EGT défectueux",
+      "detail": "Une sonde de température usée peut renvoyer en continu une valeur haute erronée, simulant une fausse surchauffe d'échappement."
+    },
+    {
+      "titre": "Connecteur débranché ou oxydé",
+      "detail": "Un connecteur déconnecté, corrodé ou desserré coupe le signal et provoque une lecture de tension maximale par le calculateur."
+    },
+    {
+      "titre": "Faisceau frotté ou rongé par la chaleur",
+      "detail": "Le câblage exposé aux fortes températures de l'échappement peut se rompre ou perdre le contact, déclenchant le code."
+    },
+    {
+      "titre": "Mauvaise masse du capteur",
+      "detail": "Une référence de masse défaillante peut faire monter artificiellement la tension du signal et générer un défaut signal haut."
+    },
+    {
+      "titre": "Capteur inadapté ou mal monté",
+      "detail": "Un capteur de référence incorrecte ou mal positionné peut fournir une valeur hors plage et déclencher le P0546."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Valeur de température d'échappement anormalement haute à la valise",
+    "Bridage possible de la puissance (fausse alerte de surchauffe)",
+    "Régénérations du FAP perturbées ou mal déclenchées",
+    "Passage éventuel en mode dégradé",
+    "Encrassement progressif du filtre à particules",
+    "Surconsommation liée aux régénérations mal gérées"
+  ],
+  "diagnostic": "Le diagnostic démarre par la lecture du code et des conditions d'apparition à la valise. On observe la valeur en direct du capteur EGT : une température figée au maximum, même moteur froid, trahit un circuit ouvert ou un capteur HS. On vérifie ensuite la résistance de la sonde, la continuité du faisceau et l'état du connecteur (déconnexion, oxydation). Chez Ultimauto à Cholet, ce contrôle permet de différencier une fausse alerte électrique d'une véritable surchauffe avant d'engager une réparation.",
+  "reparation": "La réparation passe par la réfection du faisceau ou du connecteur en cas de circuit ouvert, ou par le remplacement du capteur EGT si la sonde est défaillante. À titre indicatif, un capteur posé se situe souvent entre 90 et 220 € selon l'accessibilité ; une réparation de câblage reste généralement modérée. Ultimauto intervient à l'atelier de Cholet ou en service mobile (44·49·56·79·85), avec diagnostic et devis gratuits, et contrôle qu'il ne s'agit pas d'une vraie surchauffe avant tout remplacement.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P0546 est rarement dangereux en soi, mais une fausse alerte de surchauffe peut brider le moteur et perturber le FAP. Non traité, il peut conduire à un encrassement du filtre à particules.",
+  "rouler": "Vous pouvez généralement rouler à court terme si la puissance reste disponible. En revanche, si le véhicule se met en sécurité, ménagez le moteur et limitez les trajets. Faites contrôler le défaut rapidement plutôt que d'effacer le code : tant que le circuit reste ouvert ou la sonde HS, le P0546 reviendra.",
+  "faq": [
+    {
+      "q": "Que signifie « signal haut » pour le P0546 ?",
+      "r": "La tension renvoyée par le capteur EGT est trop élevée, le plus souvent à cause d'un fil coupé (circuit ouvert), d'un connecteur débranché ou d'un capteur défaillant. Le calculateur lit alors une température irréaliste."
+    },
+    {
+      "q": "Mon moteur est-il vraiment en surchauffe avec le P0546 ?",
+      "r": "Pas forcément. Le code traduit le plus souvent une fausse alerte électrique, pas une surchauffe réelle. Un diagnostic permet de confirmer la température réelle de l'échappement avant toute conclusion."
+    },
+    {
+      "q": "Faut-il changer le capteur ou le faisceau ?",
+      "r": "Cela dépend du diagnostic. Un signal haut vient souvent d'un circuit ouvert (faisceau ou connecteur). On vérifie le câblage avant de remplacer le capteur pour éviter une dépense inutile."
+    },
+    {
+      "q": "Combien coûte la réparation du P0546 ?",
+      "r": "Selon l'origine, de quelques dizaines d'euros pour un câblage à 90-220 € pour un capteur EGT posé. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

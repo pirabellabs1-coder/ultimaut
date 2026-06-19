@@ -1,0 +1,45 @@
+{
+  "slug": "dacia",
+  "nom": "Dacia",
+  "metaTitle": "Problème AdBlue Dacia : symptômes et solutions",
+  "metaDescription": "Problème AdBlue Dacia : voyant SCR, démarrage impossible, mode dégradé, codes P20E8/P229F sur Blue dCi. Diagnostic et solutions à Cholet (49), devis gratuit.",
+  "moteurs": "Les Dacia diesel récentes utilisent le moteur 1.5 Blue dCi (95/115 ch) issu de la banque d'organes Renault, équipé du système SCR à AdBlue pour respecter la norme antipollution Euro 6.",
+  "modeles": [
+    "Dacia Duster Blue dCi",
+    "Dacia Sandero Blue dCi",
+    "Dacia Logan Blue dCi",
+    "Dacia Jogger Blue dCi",
+    "Dacia Lodgy Blue dCi",
+    "Dacia Dokker Blue dCi"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F"
+  ],
+  "symptomes": [
+    "Alerte « Risque démarrage impossible » avec décompte des kilomètres restants",
+    "Démarrage impossible une fois le seuil AdBlue atteint",
+    "Voyant AdBlue allumé sur le combiné d'instruments",
+    "Mode dégradé : moteur bridé et accélérations limitées",
+    "Message d'erreur lié au système antipollution",
+    "Consommation d'AdBlue plus rapide que la normale"
+  ],
+  "pourquoi": "Les Dacia partageant la mécanique 1.5 Blue dCi de Renault, elles rencontrent les mêmes faiblesses SCR, avec un usage souvent rural ou utilitaire qui multiplie les courts trajets. Dans ces conditions, l'injecteur AdBlue et la pompe SCR montent peu en température et se cristallisent. Le capteur NOx s'encrasse également, et l'utilisation d'un AdBlue de qualité variable (bidons stockés trop longtemps, produit non conforme ISO 22241) aggrave le colmatage et fausse les relevés du calculateur.",
+  "solutions": "Nous réalisons d'abord un diagnostic électronique pour lire les codes SCR et identifier précisément la cause (injecteur, pompe, capteur NOx ou qualité du fluide). Selon le constat, on procède à un appoint d'AdBlue conforme, au nettoyage ou au remplacement de l'injecteur ou du capteur NOx, puis à un reparamétrage SCR pour sortir du mode dégradé. Ultimauto intervient à Cholet (49) ou en mobile autour, avec un devis gratuit avant toute action — une solution adaptée au budget maîtrisé propre à Dacia. La neutralisation logicielle reste strictement réservée aux véhicules hors voie publique.",
+  "faq": [
+    {
+      "q": "Mon Dacia Duster ne démarre plus à cause de l'AdBlue, c'est normal ?",
+      "r": "Oui, c'est une sécurité réglementaire : une fois le décompte AdBlue arrivé à zéro, le moteur ne redémarre plus tant que le défaut n'est pas corrigé. Il faut un diagnostic pour savoir s'il s'agit d'un simple niveau bas ou d'une panne d'injecteur/capteur, puis une réinitialisation du système."
+    },
+    {
+      "q": "Peut-on rouler longtemps avec le voyant AdBlue allumé sur une Dacia ?",
+      "r": "Le véhicule vous laisse une marge en kilomètres, mais il ne faut pas attendre : tant que la cause n'est pas réglée, le décompte continue et le mode dégradé peut s'enclencher. Mieux vaut faire poser un diagnostic dès l'apparition du voyant pour éviter l'immobilisation."
+    },
+    {
+      "q": "Le 1.5 Blue dCi de Dacia a-t-il les mêmes problèmes que chez Renault ?",
+      "r": "Oui, c'est le même moteur et le même système SCR : les pannes d'injecteur AdBlue, de pompe et de capteur NOx sont identiques. Les solutions sont donc les mêmes, et nous traitons ces véhicules avec la même méthode de diagnostic et de réparation."
+    }
+  ]
+}

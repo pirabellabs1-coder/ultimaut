@@ -1,0 +1,69 @@
+{
+  "code": "P0470",
+  "slug": "p0470",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Capteur de pression d'échappement : défaut de fonctionnement",
+  "metaTitle": "Code défaut P0470 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P0470 : défaut du capteur de pression d'échappement (différentiel FAP). Causes, symptômes, diagnostic et solution chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P0470 signale un défaut général du capteur de pression d'échappement, celui qui surveille le FAP.",
+  "signification": "Le code P0470 correspond à un défaut général du capteur de pression d'échappement. Ce capteur mesure la pression des gaz, le plus souvent en amont et en aval du filtre à particules (on parle alors de pression différentielle), afin d'estimer en permanence le taux de colmatage du FAP. C'est cette mesure qui permet au calculateur de décider quand déclencher une régénération. Lorsque le signal reçu devient incohérent, hors plage ou absent, sans que le calculateur puisse le classer en valeur « trop haute » ou « trop basse », il enregistre le code générique P0470. Il ne peut plus alors piloter correctement les régénérations, ce qui peut entraîner un colmatage du filtre et un passage en mode dégradé. Ce code pointe d'abord vers le capteur lui-même, mais aussi vers ses durites de prise de pression et son câblage.",
+  "causes": [
+    {
+      "titre": "Capteur de pression d'échappement défectueux",
+      "detail": "Le capteur de pression différentielle vieillit, dérive ou tombe en panne et envoie un signal incohérent au calculateur."
+    },
+    {
+      "titre": "Durites de prise de pression bouchées ou fissurées",
+      "detail": "Les petits tuyaux qui relient le capteur au FAP se bouchent de suie, se pincent ou se fissurent, faussant la mesure."
+    },
+    {
+      "titre": "Connecteur ou faisceau endommagé",
+      "detail": "Un connecteur corrodé, desserré ou un faisceau abîmé interrompt ou perturbe le signal du capteur."
+    },
+    {
+      "titre": "Fuite sur la ligne d'échappement",
+      "detail": "Une fuite autour du FAP modifie la pression réelle des gaz et trompe le capteur."
+    },
+    {
+      "titre": "FAP fortement colmaté",
+      "detail": "Un filtre très bouché génère une pression hors plage que le capteur ne peut plus interpréter correctement."
+    },
+    {
+      "titre": "Tension d'alimentation incorrecte",
+      "detail": "Une alimentation défaillante vers le capteur, côté calculateur ou faisceau, peut produire un signal aberrant."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP allumé",
+    "Mode dégradé possible avec perte de puissance",
+    "Régénérations du FAP désactivées ou mal gérées",
+    "Surconsommation de carburant",
+    "Ralenti parfois instable",
+    "Valeurs de pression FAP incohérentes au diagnostic"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise OBD pour confirmer le P0470 et relever la valeur transmise par le capteur. On compare cette valeur aux conditions réelles du moteur (au ralenti, la pression différentielle doit être très faible) pour juger de sa cohérence. Le contrôle des durites de prise de pression et un test du faisceau et du connecteur permettent d'isoler une cause mécanique ou électrique avant de mettre le capteur en cause. Chez Ultimauto, ce diagnostic électronique évite de remplacer un capteur sain alors qu'une simple durite bouchée est responsable.",
+  "reparation": "La réparation dépend de la cause exacte. Souvent, déboucher ou remplacer les durites de prise de pression suffit, pour un coût modeste. Si le capteur est réellement défaillant, son remplacement reste abordable comparé à d'autres pièces. Et si le FAP est fortement colmaté, un nettoyage en profondeur de l'ordre de 250 à 350 € selon le véhicule rétablit une pression normale. Ultimauto réalise le diagnostic, le contrôle du capteur et, si nécessaire, le nettoyage du filtre à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Sans capteur fiable, le calculateur ne pilote plus correctement les régénérations, ce qui peut colmater le FAP à terme. Le véhicule reste roulant mais le défaut doit être traité pour préserver le filtre.",
+  "rouler": "On peut rouler avec un P0470, mais ce n'est pas idéal : tant que le capteur n'est pas fiable, les régénérations sont mal gérées et le FAP peut se colmater progressivement. Si le véhicule passe en mode dégradé, il faut intervenir rapidement pour éviter une réparation plus lourde sur le filtre.",
+  "faq": [
+    {
+      "q": "Le P0470 vient-il toujours du capteur lui-même ?",
+      "r": "Non. Très souvent, ce sont les durites de prise de pression bouchées par la suie ou un connecteur défaillant qui sont en cause, alors que le capteur est sain. Le diagnostic permet d'isoler la vraie origine avant tout remplacement."
+    },
+    {
+      "q": "Peut-on rouler longtemps avec un P0470 ?",
+      "r": "Il vaut mieux éviter. Un capteur défaillant fausse le pilotage des régénérations et peut conduire à un colmatage du FAP. Mieux vaut diagnostiquer rapidement la cause pour ne pas transformer un petit défaut en réparation coûteuse."
+    },
+    {
+      "q": "Le P0470 peut-il être lié à un FAP colmaté ?",
+      "r": "Oui. Un FAP très bouché génère une pression hors plage que le capteur ne peut plus interpréter, ce qui peut déclencher le P0470. Dans ce cas, le nettoyage du filtre fait partie de la solution."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P0470 ?",
+      "r": "Cela varie selon la cause : déboucher une durite est peu coûteux, remplacer le capteur reste abordable, et un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

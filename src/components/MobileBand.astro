@@ -5,8 +5,8 @@ const { ville } = Astro.props;
 const waLink = `https://wa.me/${site.whatsapp}`;
 const lieu = ville ? `à ${ville}` : 'chez vous';
 const sousTitre = ville
-  ? `Pas le temps de passer à l'atelier ? Notre service mobile vient à ${ville}, à votre domicile ou sur votre lieu de travail. Vous récupérez un moteur plus propre, sans contrainte d'organisation.`
-  : `Pas le temps de passer à l'atelier ? Notre service mobile vient à vous, à domicile ou sur votre lieu de travail, partout dans le Grand Ouest. Vous récupérez un moteur plus propre, sans contrainte.`;
+  ? `Pas le temps de passer à l'atelier ? Notre service mobile vient à ${ville}, à votre domicile ou sur votre lieu de travail. Vous récupérez un moteur plus propre, sans contrainte d'organisation.`
+  : `Pas le temps de passer à l'atelier ? Notre service mobile vient à vous, à domicile ou sur votre lieu de travail, partout dans le Grand Ouest. Vous récupérez un moteur plus propre, sans contrainte.`;
 ---
 <section class="relative overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(100deg, rgba(21,101,192,0.93) 0%, rgba(25,106,213,0.82) 55%, rgba(25,106,213,0.55) 100%), url('/img/atelier.jpg');">
   <div class="mx-auto max-w-[1180px] px-6 py-16 text-white md:py-20">

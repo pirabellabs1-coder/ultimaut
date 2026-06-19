@@ -1,32 +1,152 @@
 {
-  "_source": "Avis clients réels Google Business Profile — Ultimauto (4,9/5, 449 avis). https://share.google/PfAcGnHPYRLCtGQPu. Réponses du propriétaire volontairement exclues.",
+  "_source": "Avis clients réels Google Business Profile — Ultimauto (4,9/5, 450 avis). https://share.google/PfAcGnHPYRLCtGQPu. Réponses du propriétaire volontairement exclues.",
   "rating": "4.9",
-  "count": 449,
+  "count": 450,
   "url": "https://share.google/PfAcGnHPYRLCtGQPu",
   "items": [
-    { "auteur": "Christopher Resnier", "note": 5, "texte": "J'ai appelé la veille et j'ai obtenu un rendez-vous dès le lendemain matin. Accueil professionnel, intervention rapide et efficace. Très satisfait du service, je recommande !", "meta": "Juin" },
-    { "auteur": "Babin Nicolas", "note": 5, "texte": "J'avais fait appel à Ronan pour un ancien véhicule. Il est intervenu sur ma 508 SW pour un nettoyage FAP. Ravi du résultat.", "meta": "Nettoyage FAP" },
-    { "auteur": "Richard Gaugain", "note": 5, "texte": "Personne super efficace, ponctuel dans le créneau horaire. Très satisfait de la prestation, j'ai retrouvé mon véhicule avec une bonne performance.", "meta": "6 avis" },
-    { "auteur": "Jean-Jacques Fadet", "note": 5, "texte": "Travail effectué rapidement, résultats immédiats. Très content du travail effectué. Je recommande.", "meta": "Reprogrammation" },
-    { "auteur": "Martin Bruno", "note": 5, "texte": "Très satisfait de la prestation, et des conseils donnés. Si besoin pour un autre véhicule je reviendrais sans hésitation.", "meta": "Local Guide · 38 avis" },
-    { "auteur": "Daniel Boulay", "note": 5, "texte": "Très bonne prestation réalisée dans les délais. Explications simples.", "meta": "Mai" },
-    { "auteur": "José Manuel Pereira", "note": 5, "texte": "Bon travail de nettoyage à l'hydrogène et gains de puissance. Merci.", "meta": "Local Guide" },
-    { "auteur": "Benj Bell", "note": 5, "texte": "Entreprise très sérieuse, qui communique bien avec ses clients, honnête car il m'a expliqué exactement le problème et il a ajusté son tarif. Très important : il était à l'heure. Je le recommande.", "meta": "Local Guide · 62 avis" },
-    { "auteur": "Ferdi Albayrak", "note": 5, "texte": "Intervention au top sur ma Mercedes ! Ça a duré 1h30-45 environ.", "meta": "Mercedes" },
-    { "auteur": "Gwenael Honoré", "note": 5, "texte": "Très content de la prestation avec Ultimauto. Ma voiture a retrouvé toute sa puissance et le FAP est comme neuf. Un nettoyage vraiment très efficace. Je recommande.", "meta": "Vannes (56)" },
-    { "auteur": "Ludo Giraud", "note": 5, "texte": "Prise de RDV rapide pour un problème d'AdBlue. Réparation effectuée en à peine 1 heure. C'est le top. Je conseille vivement ce professionnel.", "meta": "AdBlue" },
-    { "auteur": "Luc Soubigou", "note": 5, "texte": "Nettoyage du FAP réalisé avec succès (mon garagiste me recommandait de vendre mon véhicule de 250 000 km). Merci pour votre travail !", "meta": "Nettoyage FAP" },
-    { "auteur": "Emmanuel Garnon", "note": 5, "texte": "Toujours un excellent accueil et un travail très efficace. J'ai été reçu un jour de congé car j'allais ensuite sur Angers venant de Vendée. Je recommande vivement.", "meta": "Vendée" },
-    { "auteur": "Mathieu Guinaudeau", "note": 5, "texte": "Réactif, disponible. Explications rassurantes et claires sur l'aspect technique des interventions, même pour moi qui suis une bille en mécanique.", "meta": "Mars" },
-    { "auteur": "Sophie Leriche", "note": 5, "texte": "Sérieux, très pro, qualité, prix correct et abordable. Je recommande vivement.", "meta": "Local Guide · 24 avis" },
-    { "auteur": "Nicolas Gourdon", "note": 5, "texte": "Travail soigné, professionnel averti. Je lui confie mes deux véhicules une fois par an et c'est toujours une satisfaction maximum après intervention.", "meta": "Client fidèle" },
-    { "auteur": "Nassiri Lhoussine", "note": 5, "texte": "Très bon professionnel ! Il a parfaitement nettoyé le FAP de ma voiture et le résultat est impeccable. Service rapide, professionnel et soigné. Je recommande vivement !", "meta": "Nettoyage FAP" },
-    { "auteur": "Pierrick Iloaï", "note": 5, "texte": "Je recommande à 100 %. Je suis venu avec ma Mercedes pour un FAP obstrué, il a été très pro et très réactif pour prendre RDV !", "meta": "Mercedes" },
-    { "auteur": "Christophe Pinard", "note": 5, "texte": "Prise de RDV rapide. Bonne communication et explications sur le travail demandé. Je recommande !!!", "meta": "Local Guide · 20 avis" },
-    { "auteur": "Bourasseau Océane", "note": 5, "texte": "Contactée pour une reprogrammation moteur sur mon Audi A4 2.0 TDI 143 + EGR off et un nettoyage FAP. Après diagnostic, intervention nickel.", "meta": "Local Guide · reprogrammation" },
-    { "auteur": "Patrick Mabed", "note": 5, "texte": "Professionnel de bon conseil qui nous a dit que le nettoyage de notre FAP n'était pas utile. Le bon diagnostic a été fait. Honnête.", "meta": "Diagnostic honnête" },
-    { "auteur": "Aurélie Le Ray", "note": 5, "texte": "Ravie de la prestation avec Ultimauto. Après un premier diagnostic chez Peugeot m'indiquant un changement de FAP, Ultimauto a su trouver la bonne solution.", "meta": "Nettoyage FAP" },
-    { "auteur": "Goom Bth", "note": 5, "texte": "Personne très sympa et qui se déplace même dans le 56 ! Service nickel, nous sommes repartis contents.", "meta": "Service mobile (56)" },
-    { "auteur": "Daphnée Challet", "note": 5, "texte": "Personne très professionnelle, très réactive. Je suis très satisfaite des prestations réalisées. Je recommande.", "meta": "Février" }
+    {
+      "auteur": "Christopher Resnier",
+      "note": 5,
+      "texte": "J'ai appelé la veille et j'ai obtenu un rendez-vous dès le lendemain matin. Accueil professionnel, intervention rapide et efficace. Très satisfait du service, je recommande !",
+      "meta": "Juin"
+    },
+    {
+      "auteur": "Babin Nicolas",
+      "note": 5,
+      "texte": "J'avais fait appel à Ronan pour un ancien véhicule. Il est intervenu sur ma 508 SW pour un nettoyage FAP. Ravi du résultat.",
+      "meta": "Nettoyage FAP"
+    },
+    {
+      "auteur": "Richard Gaugain",
+      "note": 5,
+      "texte": "Personne super efficace, ponctuel dans le créneau horaire. Très satisfait de la prestation, j'ai retrouvé mon véhicule avec une bonne performance.",
+      "meta": "6 avis"
+    },
+    {
+      "auteur": "Jean-Jacques Fadet",
+      "note": 5,
+      "texte": "Travail effectué rapidement, résultats immédiats. Très content du travail effectué. Je recommande.",
+      "meta": "Reprogrammation"
+    },
+    {
+      "auteur": "Martin Bruno",
+      "note": 5,
+      "texte": "Très satisfait de la prestation, et des conseils donnés. Si besoin pour un autre véhicule je reviendrais sans hésitation.",
+      "meta": "Local Guide · 38 avis"
+    },
+    {
+      "auteur": "Daniel Boulay",
+      "note": 5,
+      "texte": "Très bonne prestation réalisée dans les délais. Explications simples.",
+      "meta": "Mai"
+    },
+    {
+      "auteur": "José Manuel Pereira",
+      "note": 5,
+      "texte": "Bon travail de nettoyage à l'hydrogène et gains de puissance. Merci.",
+      "meta": "Local Guide"
+    },
+    {
+      "auteur": "Benj Bell",
+      "note": 5,
+      "texte": "Entreprise très sérieuse, qui communique bien avec ses clients, honnête car il m'a expliqué exactement le problème et il a ajusté son tarif. Très important : il était à l'heure. Je le recommande.",
+      "meta": "Local Guide · 62 avis"
+    },
+    {
+      "auteur": "Ferdi Albayrak",
+      "note": 5,
+      "texte": "Intervention au top sur ma Mercedes ! Ça a duré 1h30-45 environ.",
+      "meta": "Mercedes"
+    },
+    {
+      "auteur": "Gwenael Honoré",
+      "note": 5,
+      "texte": "Très content de la prestation avec Ultimauto. Ma voiture a retrouvé toute sa puissance et le FAP est comme neuf. Un nettoyage vraiment très efficace. Je recommande.",
+      "meta": "Vannes (56)"
+    },
+    {
+      "auteur": "Ludo Giraud",
+      "note": 5,
+      "texte": "Prise de RDV rapide pour un problème d'AdBlue. Réparation effectuée en à peine 1 heure. C'est le top. Je conseille vivement ce professionnel.",
+      "meta": "AdBlue"
+    },
+    {
+      "auteur": "Luc Soubigou",
+      "note": 5,
+      "texte": "Nettoyage du FAP réalisé avec succès (mon garagiste me recommandait de vendre mon véhicule de 250 000 km). Merci pour votre travail !",
+      "meta": "Nettoyage FAP"
+    },
+    {
+      "auteur": "Emmanuel Garnon",
+      "note": 5,
+      "texte": "Toujours un excellent accueil et un travail très efficace. J'ai été reçu un jour de congé car j'allais ensuite sur Angers venant de Vendée. Je recommande vivement.",
+      "meta": "Vendée"
+    },
+    {
+      "auteur": "Mathieu Guinaudeau",
+      "note": 5,
+      "texte": "Réactif, disponible. Explications rassurantes et claires sur l'aspect technique des interventions, même pour moi qui suis une bille en mécanique.",
+      "meta": "Mars"
+    },
+    {
+      "auteur": "Sophie Leriche",
+      "note": 5,
+      "texte": "Sérieux, très pro, qualité, prix correct et abordable. Je recommande vivement.",
+      "meta": "Local Guide · 24 avis"
+    },
+    {
+      "auteur": "Nicolas Gourdon",
+      "note": 5,
+      "texte": "Travail soigné, professionnel averti. Je lui confie mes deux véhicules une fois par an et c'est toujours une satisfaction maximum après intervention.",
+      "meta": "Client fidèle"
+    },
+    {
+      "auteur": "Nassiri Lhoussine",
+      "note": 5,
+      "texte": "Très bon professionnel ! Il a parfaitement nettoyé le FAP de ma voiture et le résultat est impeccable. Service rapide, professionnel et soigné. Je recommande vivement !",
+      "meta": "Nettoyage FAP"
+    },
+    {
+      "auteur": "Pierrick Iloaï",
+      "note": 5,
+      "texte": "Je recommande à 100 %. Je suis venu avec ma Mercedes pour un FAP obstrué, il a été très pro et très réactif pour prendre RDV !",
+      "meta": "Mercedes"
+    },
+    {
+      "auteur": "Christophe Pinard",
+      "note": 5,
+      "texte": "Prise de RDV rapide. Bonne communication et explications sur le travail demandé. Je recommande !!!",
+      "meta": "Local Guide · 20 avis"
+    },
+    {
+      "auteur": "Bourasseau Océane",
+      "note": 5,
+      "texte": "Contactée pour une reprogrammation moteur sur mon Audi A4 2.0 TDI 143 + EGR off et un nettoyage FAP. Après diagnostic, intervention nickel.",
+      "meta": "Local Guide · reprogrammation"
+    },
+    {
+      "auteur": "Patrick Mabed",
+      "note": 5,
+      "texte": "Professionnel de bon conseil qui nous a dit que le nettoyage de notre FAP n'était pas utile. Le bon diagnostic a été fait. Honnête.",
+      "meta": "Diagnostic honnête"
+    },
+    {
+      "auteur": "Aurélie Le Ray",
+      "note": 5,
+      "texte": "Ravie de la prestation avec Ultimauto. Après un premier diagnostic chez Peugeot m'indiquant un changement de FAP, Ultimauto a su trouver la bonne solution.",
+      "meta": "Nettoyage FAP"
+    },
+    {
+      "auteur": "Goom Bth",
+      "note": 5,
+      "texte": "Personne très sympa et qui se déplace même dans le 56 ! Service nickel, nous sommes repartis contents.",
+      "meta": "Service mobile (56)"
+    },
+    {
+      "auteur": "Daphnée Challet",
+      "note": 5,
+      "texte": "Personne très professionnelle, très réactive. Je suis très satisfaite des prestations réalisées. Je recommande.",
+      "meta": "Février"
+    }
   ]
 }

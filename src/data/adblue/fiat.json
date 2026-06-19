@@ -1,0 +1,48 @@
+{
+  "slug": "fiat",
+  "nom": "Fiat",
+  "metaTitle": "Problème AdBlue Fiat : panne SCR diesel | Ultimauto",
+  "metaDescription": "Problème AdBlue Fiat à Cholet : panne SCR, démarrage impossible, voyant sur Ducato, Tipo et 500X (MultiJet). Diagnostic et devis gratuit chez Ultimauto.",
+  "moteurs": "Fiat équipe ses diesels récents des blocs MultiJet 1.3, 1.6 et 2.2 (norme Euro 6), avec le système SCR à l'AdBlue pour réduire les oxydes d'azote. Le célèbre utilitaire Ducato utilise le 2.2 MultiJet (parfois le 2.3 sur les générations antérieures), très répandu chez les professionnels et les camping-caristes.",
+  "modeles": [
+    "Fiat Ducato 2.2 MultiJet",
+    "Fiat Tipo 1.3 / 1.6 MultiJet",
+    "Fiat 500X 1.3 / 1.6 MultiJet",
+    "Fiat Doblo 1.6 MultiJet",
+    "Fiat Talento 1.6 / 2.0 dCi",
+    "Fiat Panda 1.3 MultiJet",
+    "Fiat 500L 1.6 MultiJet"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P20EE",
+    "P207F"
+  ],
+  "symptomes": [
+    "Message « démarrage impossible dans X km » au combiné",
+    "Voyant moteur ou anti-pollution allumé",
+    "Mode dégradé avec perte sensible de puissance",
+    "Alerte AdBlue récurrente malgré un appoint récent",
+    "Cristallisation de l'urée et défauts à répétition",
+    "Pannes fréquentes sur le Ducato (utilitaire et camping-car) à fort kilométrage",
+    "Démarrage bloqué après plusieurs alertes ignorées"
+  ],
+  "pourquoi": "Sur les Fiat MultiJet, et tout particulièrement le 2.2 du Ducato, le système SCR souffre d'un injecteur d'AdBlue sensible à la cristallisation et d'une sonde NOx qui s'use. Le Ducato, très utilisé en utilitaire et en camping-car, alterne longues immobilisations et trajets exigeants, ce qui favorise les dépôts d'urée et les défauts du circuit. Une qualité d'AdBlue inégale, des appoints irréguliers ou un calculateur SCR mal calibré peuvent aussi déclencher un compte à rebours bloquant et le mode dégradé.",
+  "solutions": "Ultimauto, à Cholet, réalise un diagnostic électronique complet du système SCR pour identifier le composant en cause : injecteur d'AdBlue, sonde NOx, pompe doseuse ou calculateur. Nous procédons ensuite au remplacement de la pièce défaillante, au nettoyage du circuit si besoin, puis au reparamétrage SCR avec effacement des défauts et essai de contrôle. Devis gratuit et sans engagement, à l'atelier ou en service mobile (pratique pour un Ducato ou un camping-car difficile à déplacer). La neutralisation du système est strictement réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué).",
+  "faq": [
+    {
+      "q": "Mon camping-car sur base Fiat Ducato est bloqué par l'AdBlue, intervenez-vous ?",
+      "r": "Oui. Le Ducato est l'un des véhicules que nous traitons le plus pour des pannes de système SCR. Comme un camping-car n'est pas toujours simple à déplacer, nous proposons aussi un service mobile depuis Cholet. Après diagnostic, nous identifions la cause (injecteur, sonde NOx, cristallisation) et vous remettons un devis gratuit."
+    },
+    {
+      "q": "Pourquoi l'AdBlue cristallise-t-il sur les Fiat MultiJet ?",
+      "r": "L'urée de l'AdBlue peut cristalliser au niveau de l'injecteur, surtout en cas de trajets courts, d'immobilisations prolongées (fréquentes sur les Ducato et camping-cars) ou d'une qualité d'AdBlue médiocre. Ces cristaux bouchent le circuit et provoquent des défauts à répétition. Un nettoyage et le remplacement du composant concerné résolvent durablement le problème."
+    },
+    {
+      "q": "Combien coûte la réparation d'un problème AdBlue sur une Fiat ?",
+      "r": "Le coût dépend du composant défaillant (sonde NOx, injecteur, pompe…) et du modèle. C'est pourquoi nous commençons toujours par un diagnostic, suivi d'un devis gratuit et transparent. Vous connaissez le montant exact avant toute intervention et décidez librement."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "mercedes",
+  "nom": "Mercedes-Benz",
+  "metaTitle": "Problème AdBlue Mercedes : panne, code défaut | Ultimauto",
+  "metaDescription": "Problème AdBlue Mercedes : démarrage bloqué, voyant SCR, capteur NOx ou injecteur en panne. Diagnostic et réparation à Cholet (49) ou mobile, devis gratuit.",
+  "moteurs": "Moteurs diesel OM651, OM654 et OM656 équipés du système SCR à injection d'AdBlue.",
+  "modeles": [
+    "Classe A (W177)",
+    "Classe C (W205, W206)",
+    "Classe E (W213)",
+    "GLC",
+    "GLE",
+    "Vito",
+    "Sprinter",
+    "Classe V"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Message « Départ impossible dans X km » ou compte à rebours au tableau de bord",
+    "Voyant moteur (MIL) ou voyant antipollution allumé",
+    "Refus de redémarrage une fois le moteur coupé",
+    "Mode dégradé : perte de puissance et régime moteur limité",
+    "Message « Faire l'appoint d'AdBlue » alors que le réservoir est plein",
+    "Consommation d'AdBlue anormalement élevée",
+    "Vapeurs ou cristallisation blanche autour de l'injecteur SCR"
+  ],
+  "pourquoi": "Sur les Mercedes, la panne vient le plus souvent du capteur NOx (amont ou aval), un composant fragile et coûteux qui dérive avec le temps et fausse la mesure de pollution. L'injecteur ou la pompe d'AdBlue peuvent aussi s'encrasser ou se gripper, tout comme le système de chauffage du réservoir qui empêche le dégel de l'AdBlue en hiver. Une qualité d'AdBlue médiocre ou cristallisée, ou un défaut du calculateur SCR, complètent les causes fréquentes.",
+  "solutions": "Nous réalisons d'abord un diagnostic électronique complet pour lire les codes défaut et cibler la pièce réellement en cause avant tout remplacement. Selon le résultat, nous procédons au remplacement du capteur NOx ou de l'injecteur SCR, au nettoyage du circuit et au reparamétrage du système. Ultimauto intervient à Cholet (49) ou en service mobile à domicile, avec devis gratuit. La neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (compétition, export).",
+  "faq": [
+    {
+      "q": "Ma Mercedes affiche « Départ impossible dans 20 démarrages », que faire ?",
+      "r": "Ce compte à rebours indique un défaut SCR détecté par le calculateur, pas forcément un manque d'AdBlue. Une fois à zéro, le moteur ne redémarrera plus. Il faut diagnostiquer la cause (souvent un capteur NOx) avant que le blocage ne survienne ; un appoint seul ne suffit généralement pas à effacer le message."
+    },
+    {
+      "q": "Le capteur NOx est-il vraiment la panne la plus fréquente sur Mercedes ?",
+      "r": "Oui. Sur les moteurs OM651, OM654 et OM656, le capteur NOx est un point de panne bien connu : il vieillit, dérive et déclenche des codes comme P20E8 ou P229F. Notre diagnostic permet de confirmer s'il s'agit du capteur amont, aval, de l'injecteur ou d'un autre composant avant de remplacer la bonne pièce."
+    },
+    {
+      "q": "Peut-on supprimer l'AdBlue sur une Mercedes ?",
+      "r": "La neutralisation du système SCR rend le véhicule non conforme et interdit sur la voie publique : elle est strictement réservée à un usage privé fermé, à la compétition ou à l'export. Pour une voiture qui roule sur route, nous recommandons toujours la réparation, plus durable et conforme à la réglementation."
+    }
+  ]
+}

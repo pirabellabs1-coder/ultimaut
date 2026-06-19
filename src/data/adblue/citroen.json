@@ -1,0 +1,51 @@
+{
+  "slug": "citroen",
+  "nom": "Citroën",
+  "metaTitle": "Problème AdBlue Citroën : symptômes et solutions",
+  "metaDescription": "Panne AdBlue Citroën BlueHDi : voyant anti-pollution allumé, démarrage impossible, surconsommation. Codes défaut SCR, diagnostic et réparation à Cholet (49).",
+  "moteurs": "1.5 et 2.0 BlueHDi",
+  "modeles": [
+    "C3",
+    "C4",
+    "C5 Aircross",
+    "C5 X",
+    "Berlingo",
+    "SpaceTourer",
+    "Jumpy"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P207F",
+    "P20EE",
+    "P229F"
+  ],
+  "symptomes": [
+    "Message « Démarrage impossible dans X km » à l'affichage",
+    "Voyant anti-pollution ou AdBlue allumé en continu",
+    "Voyant qui ne s'éteint pas après le plein d'AdBlue",
+    "Mode dégradé avec perte sensible de puissance",
+    "Surconsommation d'AdBlue d'un appoint à l'autre",
+    "Démarrages restants décomptés sur le tableau de bord"
+  ],
+  "pourquoi": "Les Citroën diesel récentes partagent les motorisations BlueHDi et le système SCR à l'AdBlue de l'ensemble du groupe Stellantis (mêmes blocs que Peugeot et DS). Les pannes constatées sont donc de même nature : en tête, un capteur de niveau d'AdBlue qui se dérègle et envoie une information erronée au calculateur, déclenchant voyant et blocage sans manque réel d'urée. S'y ajoutent la cristallisation de l'AdBlue à l'injecteur, une sonde NOx en défaut ou une pompe SCR affaiblie. Les utilitaires Citroën (Berlingo, Jumpy) à usage urbain et courts trajets y sont particulièrement exposés, la cristallisation étant favorisée par les arrêts fréquents.",
+  "solutions": "La première étape est un diagnostic électronique pour lire les codes défaut SCR et identifier précisément l'organe fautif, sans remplacer de pièces au hasard. Suivant le résultat : appoint d'AdBlue de qualité, nettoyage ou remplacement de l'injecteur ou du capteur de niveau, vérification de la sonde NOx et de la pompe, puis reparamétrage du système. Ultimauto intervient à Cholet (49) ou en service mobile, avec diagnostic et devis gratuits, en privilégiant la réparation conforme qui maintient le véhicule en règle pour le contrôle technique. Toute neutralisation du SCR est strictement réservée à un usage hors voie publique (circuit, export, véhicule non homologué) et demeure interdite sur la route.",
+  "faq": [
+    {
+      "q": "Mon voyant AdBlue ne s'éteint pas après le plein sur ma Citroën, que faire ?",
+      "r": "Si la procédure de réamorçage (ralenti puis court trajet) ne suffit pas, le capteur de niveau ou un autre composant SCR est probablement en cause. Un diagnostic permet de le confirmer."
+    },
+    {
+      "q": "Les utilitaires Citroën (Berlingo, Jumpy) sont-ils plus touchés par les pannes AdBlue ?",
+      "r": "Leur usage souvent urbain, fait de courts trajets, favorise la cristallisation de l'urée à l'injecteur. Rouler plus régulièrement et traiter les voyants rapidement limite le risque."
+    },
+    {
+      "q": "Combien de temps prend la réparation d'une panne AdBlue sur une Citroën ?",
+      "r": "Le remplacement d'un capteur de niveau se fait généralement dans la journée selon le modèle. Un diagnostic et une réinitialisation sont plus rapides. On vous communique un délai clair après le diagnostic."
+    },
+    {
+      "q": "Peut-on supprimer l'AdBlue sur une Citroën BlueHDi ?",
+      "r": "Pas pour un véhicule qui roule sur la voie publique : c'est interdit et entraîne un refus au contrôle technique. Réservé à un usage hors route. Sur route, la réponse reste la réparation conforme."
+    }
+  ]
+}

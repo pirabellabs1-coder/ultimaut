@@ -1,0 +1,69 @@
+{
+  "code": "P0409",
+  "slug": "p0409",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Défaut du circuit du capteur de recirculation EGR",
+  "metaTitle": "Code défaut P0409 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0409 signale un défaut du circuit du capteur EGR : causes, symptômes et solution par décalaminage hydrogène chez Ultimauto à Cholet (49).",
+  "definitionCourte": "Le P0409 indique une anomalie générale sur le circuit du capteur de la vanne EGR.",
+  "signification": "Le code P0409 est un code OBD-II générique qui signale un défaut sur le circuit électrique du capteur de recirculation des gaz d'échappement (capteur EGR A). Ce capteur informe le calculateur moteur de la position du clapet de la vanne EGR, indispensable pour doser correctement la recirculation des gaz et donc maîtriser les émissions d'oxydes d'azote (NOx). Le calculateur surveille en permanence ce circuit et vérifie la cohérence du signal reçu. Lorsqu'il détecte une anomalie générale sur ce circuit, sans qu'elle se limite à un signal trop haut ou trop bas, il enregistre le défaut P0409. Le P0409 pointe d'abord vers un problème du capteur ou de son câblage qui empêche une mesure fiable de la position de la vanne ; un clapet grippé par la calamine peut toutefois perturber la mesure et accompagner ce défaut.",
+  "causes": [
+    {
+      "titre": "Capteur de position EGR défectueux",
+      "detail": "Un capteur hors service renvoie un signal incohérent qui ne permet plus de connaître la position de la vanne."
+    },
+    {
+      "titre": "Faisceau du capteur coupé, pincé ou en court-circuit",
+      "detail": "Un câblage abîmé interrompt ou perturbe le signal du capteur et déclenche un défaut de circuit."
+    },
+    {
+      "titre": "Connecteur du capteur EGR défaillant",
+      "detail": "Un connecteur corrodé, desserré ou humide provoque un faux contact sur le circuit du capteur."
+    },
+    {
+      "titre": "Défaut d'alimentation, de référence ou de masse",
+      "detail": "Une alimentation, une tension de référence ou une masse défaillante empêche le capteur de fournir une mesure fiable."
+    },
+    {
+      "titre": "Vanne EGR grippée par la calamine",
+      "detail": "Un clapet bloqué par les dépôts perturbe la position lue par le capteur et peut accompagner le défaut de circuit."
+    },
+    {
+      "titre": "Conduits EGR encrassés",
+      "detail": "Des passages bouchés faussent le comportement de l'ensemble et peuvent contribuer à des mesures incohérentes."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable ou irrégulier",
+    "À-coups et hésitations à l'accélération",
+    "Perte de puissance, parfois mode dégradé",
+    "Surconsommation de carburant",
+    "Émissions de fumée à l'échappement",
+    "Comportement moteur irrégulier"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise pour confirmer le P0409 et observer le signal du capteur de position en temps réel. On contrôle ensuite au multimètre l'alimentation, la tension de référence, la masse, la continuité du faisceau et l'état du connecteur du capteur EGR. En pilotant la vanne en commande active, on vérifie la cohérence de la position lue et on s'assure que le clapet n'est pas grippé par la calamine. Chez Ultimauto, ce contrôle est réalisé avant toute intervention pour distinguer un capteur ou un câblage défaillant d'une vanne perturbée par l'encrassement.",
+  "reparation": "Lorsque le défaut est lié au capteur, à son connecteur ou à son faisceau, la réparation passe par la remise en état du câblage ou le remplacement du capteur de position. Si une vanne grippée par la calamine perturbe la mesure, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage pour fiabiliser le fonctionnement. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement d'un capteur ou d'une vanne étant plus coûteux. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Sans mesure fiable de la position de la vanne, le calculateur dose mal la recirculation des gaz, ce qui dégrade le fonctionnement moteur et peut entraîner un mode dégradé.",
+  "rouler": "Vous pouvez généralement rouler avec un P0409, mais la position de la vanne EGR n'est plus connue de façon fiable et le moteur peut perdre de la puissance ou passer en mode dégradé. Un défaut de câblage peut évoluer. Un diagnostic rapide est conseillé.",
+  "faq": [
+    {
+      "q": "Quelle différence entre P0409 et P0405 / P0406 ?",
+      "r": "Le P0405 signale un signal de capteur trop bas et le P0406 un signal trop haut, tandis que le P0409 indique une anomalie générale du circuit du capteur sans préciser le sens. Dans tous les cas, c'est la mesure de position de la vanne EGR qui est en défaut."
+    },
+    {
+      "q": "Le décalaminage hydrogène peut-il corriger le code P0409 ?",
+      "r": "Il aide lorsque la mesure est perturbée par un clapet grippé par la calamine, en libérant la vanne sans démontage. Si le capteur ou son faisceau est réellement défaillant, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0409 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Le remplacement d'un capteur ou d'une vanne, ou une réparation de faisceau, revient plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0409 ?",
+      "r": "Souvent oui, mais le moteur peut perdre de la puissance ou passer en mode dégradé car la position de la vanne n'est plus fiable. Un diagnostic rapide est recommandé."
+    }
+  ]
+}

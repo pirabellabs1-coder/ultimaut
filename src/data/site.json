@@ -15,32 +15,68 @@
     "region": "Maine-et-Loire",
     "country": "FR"
   },
-  "geo": { "latitude": 47.05158331775881, "longitude": -0.8882538441671843 },
+  "geo": {
+    "latitude": 47.05158331775881,
+    "longitude": -0.8882538441671843
+  },
   "serviceMobile": true,
   "bardahl": true,
   "openingHours": [
-    { "days": ["Mo", "Tu", "We", "Th", "Fr"], "opens": "08:30", "closes": "18:30" },
-    { "days": ["Sa"], "opens": "09:00", "closes": "12:00" }
+    {
+      "days": [
+        "Mo",
+        "Tu",
+        "We",
+        "Th",
+        "Fr"
+      ],
+      "opens": "08:30",
+      "closes": "18:30"
+    },
+    {
+      "days": [
+        "Sa"
+      ],
+      "opens": "09:00",
+      "closes": "12:00"
+    }
   ],
   "openingHoursDisplay": [
-    { "label": "Lundi – Vendredi", "hours": "08h30 – 18h30" },
-    { "label": "Samedi", "hours": "09h00 – 12h00" },
-    { "label": "Dimanche", "hours": "Fermé" }
+    {
+      "label": "Lundi – Vendredi",
+      "hours": "08h30 – 18h30"
+    },
+    {
+      "label": "Samedi",
+      "hours": "09h00 – 12h00"
+    },
+    {
+      "label": "Dimanche",
+      "hours": "Fermé"
+    }
   ],
   "priceRange": "€€",
-  "areaServedDepts": ["44", "49", "56", "79", "85"],
+  "areaServedDepts": [
+    "44",
+    "49",
+    "56",
+    "79",
+    "85"
+  ],
   "social": {
-    "facebook": "",
-    "linkedin": "",
-    "instagram": "",
+    "facebook": "https://www.facebook.com/Ultimauto",
+    "linkedin": "https://www.linkedin.com/company/ultimauto-d%C3%A9calaminage/",
+    "instagram": "https://www.instagram.com/ultimauto_decalaminage",
     "snapchat": ""
   },
   "googleBusinessProfile": "https://share.google/PfAcGnHPYRLCtGQPu",
   "googleRating": "4.9",
-  "googleReviewCount": 449,
+  "googleReviewCount": 450,
+  "siren": "421 216 524",
+  "gaMeasurementId": "G-9WEN8YZ9LK",
   "guarantees": [
     "Devis gratuit et sans engagement",
-    "Service mobile : à domicile ou au travail",
+    "Service mobile : à domicile ou au travail",
     "Sans démontage moteur",
     "Revendeur agréé Bardahl"
   ]

@@ -1,0 +1,69 @@
+{
+  "code": "P2BA9",
+  "slug": "p2ba9",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Dépassement du seuil d'émissions de NOx",
+  "metaTitle": "Code défaut P2BA9 : causes et solution",
+  "metaDescription": "Code défaut P2BA9 : les émissions de NOx dépassent le seuil malgré le système SCR. Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",
+  "definitionCourte": "Les émissions d'oxydes d'azote (NOx) mesurées dépassent le seuil autorisé malgré l'action du système SCR.",
+  "signification": "Le code P2BA9 appartient à la famille des défauts du système SCR, chargé de réduire les oxydes d'azote (NOx) grâce à l'injection d'AdBlue dans l'échappement. Le calculateur de dépollution surveille en permanence la sonde NOx placée en aval du catalyseur, qui mesure la quantité de polluants encore présente après traitement. Lorsque cette valeur dépasse le seuil maximal autorisé par le constructeur, le calculateur en conclut que la réduction des NOx est insuffisante et enregistre le P2BA9. Ce code est souvent la conséquence d'un autre défaut du système : un dosage d'AdBlue trop faible, un réducteur de mauvaise qualité, un catalyseur usé ou un capteur en dérive empêchent une neutralisation correcte des oxydes d'azote. Il peut aussi traduire une production de NOx anormalement élevée en amont, par exemple à cause d'une vanne EGR défaillante. Le P2BA9 est donc un indicateur de résultat : il signale que la voiture pollue au-delà de la limite, sans désigner directement la pièce responsable.",
+  "causes": [
+    {
+      "titre": "Dosage d'AdBlue insuffisant",
+      "detail": "Un injecteur d'urée bouché ou cristallisé délivre trop peu de réducteur : la réaction ne neutralise pas assez de NOx et les émissions dépassent le seuil."
+    },
+    {
+      "titre": "AdBlue de mauvaise qualité ou dilué",
+      "detail": "Un AdBlue non conforme à la norme ISO 22241 ou coupé avec de l'eau fournit trop peu d'ammoniac et laisse passer une quantité excessive d'oxydes d'azote."
+    },
+    {
+      "titre": "Catalyseur SCR vieillissant ou en fin de vie",
+      "detail": "Un catalyseur encrassé ou usé perd son efficacité de conversion : même avec un dosage correct, les NOx en sortie restent au-dessus de la limite."
+    },
+    {
+      "titre": "Sonde NOx amont ou aval défaillante",
+      "detail": "Une sonde NOx qui dérive donne une mesure erronée et peut signaler un dépassement de seuil alors que la dépollution fonctionne, ou masquer un vrai problème."
+    },
+    {
+      "titre": "Pompe ou doseur AdBlue défaillant",
+      "detail": "Une pompe qui ne tient pas la pression ou un doseur au débit irrégulier livre moins d'urée que nécessaire, ce qui dégrade la réduction des NOx."
+    },
+    {
+      "titre": "Vanne EGR défaillante ou problème moteur",
+      "detail": "Une EGR bloquée ou un défaut de combustion augmente la production de NOx en amont, au point que le SCR ne parvient plus à ramener les émissions sous le seuil."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur ou voyant anti-pollution allumé au tableau de bord",
+    "Message « démarrage impossible dans X km » ou nombre de démarrages restants selon le constructeur",
+    "Mode dégradé limitant la puissance du véhicule",
+    "Surconsommation d'AdBlue ou de carburant",
+    "Voyant AdBlue en complément selon le modèle",
+    "Émissions polluantes élevées entraînant un refus au contrôle technique",
+    "Bridage progressif des performances à l'approche du seuil de blocage"
+  ],
+  "diagnostic": "Le diagnostic repose sur une lecture à la valise pour confirmer le P2BA9 et comparer les valeurs des sondes NOx amont et aval avec le rendement attendu du catalyseur. On vérifie la qualité de l'AdBlue et le dosage réel délivré par l'injecteur et la pompe, puis on contrôle l'état des sondes NOx, sources fréquentes de fausse mesure. La vanne EGR et la combustion sont également examinées, car une surproduction de NOx en amont peut être à l'origine du dépassement. Ultimauto réalise ce diagnostic complet à Cholet (49) ou en service mobile pour identifier la cause réelle plutôt que de se limiter au symptôme.",
+  "reparation": "Selon le constat, la réparation combine un appoint ou une vidange du réservoir avec un AdBlue conforme, le nettoyage ou le remplacement de l'injecteur et de la sonde NOx en cause, le contrôle ou le nettoyage de la vanne EGR, et en dernier recours le remplacement du catalyseur SCR avéré usé. À titre indicatif, un capteur ou un injecteur se situe souvent entre 90 et 250 €, une vanne EGR ou un catalyseur SCR représentant un poste nettement plus élevé. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et n'est pas proposée pour un véhicule roulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le véhicule reste roulant un temps mais pollue hors seuil ; le compte à rebours de démarrages mène au blocage du moteur sans réparation.",
+  "rouler": "Vous pouvez encore rouler à court terme, mais le véhicule émet plus de NOx que la limite autorisée et le calculateur déclenche le mode dégradé puis, sur la plupart des modèles, un compte à rebours « démarrage impossible dans X km ». Tant que la cause n'est pas traitée, ce décompte progresse et finira par empêcher tout redémarrage du moteur.",
+  "faq": [
+    {
+      "q": "Le P2BA9 vient-il toujours d'un problème d'AdBlue ?",
+      "r": "Souvent, mais pas uniquement. Un dosage faible ou un mauvais AdBlue est fréquent, mais un catalyseur usé, une sonde NOx en dérive ou une EGR défaillante peuvent aussi faire dépasser le seuil de NOx."
+    },
+    {
+      "q": "Mon véhicule peut-il passer le contrôle technique avec ce code ?",
+      "r": "Non. Le P2BA9 traduit un dépassement des émissions de NOx : voyant allumé et pollution hors seuil entraînent une contre-visite. Il faut traiter la cause avant de repasser le contrôle."
+    },
+    {
+      "q": "Le P2BA9 peut-il accompagner d'autres codes SCR ?",
+      "r": "Oui, c'est fréquent. Étant un code de résultat, il apparaît souvent avec un code de dosage, de qualité ou de pression qui en explique la cause. Le diagnostic relie l'ensemble pour cibler la réparation."
+    },
+    {
+      "q": "Puis-je rouler longtemps avec le P2BA9 ?",
+      "r": "Non. Le compte à rebours de démarrages finira par bloquer le moteur, et la voiture pollue hors limite entre-temps. Un diagnostic rapide évite l'immobilisation et une remise en route plus lourde."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "code": "P204F",
+  "slug": "p204f",
+  "categorie": "AdBlue / SCR",
+  "service": "suppression-adblue",
+  "titre": "Performance du système de dosage du réducteur (SCR)",
+  "metaTitle": "Code défaut P204F : causes et solution",
+  "metaDescription": "Code défaut P204F : le système de dosage de l'AdBlue (SCR) sort de la plage attendue. Causes, symptômes, diagnostic et solution. Atelier à Cholet (49).",
+  "definitionCourte": "Le système de dosage du réducteur (AdBlue) ne délivre pas la performance attendue par le calculateur.",
+  "signification": "Le code P204F fait partie de la famille des défauts du système SCR, le dispositif qui injecte de l'AdBlue dans la ligne d'échappement pour neutraliser les oxydes d'azote (NOx). Ce code générique ne désigne pas un composant unique mais l'ensemble du circuit de dosage : pompe, doseur ou injecteur, conduites, capteurs de pression et de température. Le calculateur de dépollution pilote la quantité d'urée à injecter en fonction du régime moteur, de la charge et des valeurs des sondes NOx. Il compare ensuite en permanence la quantité réellement dosée à la quantité commandée. Lorsque l'écart sort de la plage de tolérance, ou que le système n'atteint plus la performance de réduction attendue, le P204F est mémorisé. C'est donc un défaut « de système » qui invite à inspecter toute la chaîne de dosage plutôt qu'une seule pièce, car un sous-dosage comme un sur-dosage peut le déclencher.",
+  "causes": [
+    {
+      "titre": "Injecteur ou doseur d'AdBlue bouché",
+      "detail": "Un injecteur d'urée cristallisé, grippé ou partiellement obstrué ne délivre plus la quantité commandée, ce qui fait sortir le dosage de la plage de performance attendue."
+    },
+    {
+      "titre": "Pompe AdBlue défaillante",
+      "detail": "Si la pompe ne maintient pas la pression de dosage correcte, le débit réel d'urée s'écarte de la consigne et le calculateur enregistre un défaut de performance du système."
+    },
+    {
+      "titre": "AdBlue de mauvaise qualité",
+      "detail": "Un réducteur dilué, contaminé ou non conforme à la norme ISO 22241 provoque des dépôts de cristaux et fausse le rendement de la réduction des NOx."
+    },
+    {
+      "titre": "Conduite d'urée obstruée ou gelée",
+      "detail": "Une conduite pincée, percée, cristallisée ou gelée par grand froid limite ou interrompt l'acheminement de l'AdBlue jusqu'à l'injecteur."
+    },
+    {
+      "titre": "Capteur de pression ou de température SCR défaillant",
+      "detail": "Une mesure erronée de pression ou de température du circuit empêche le calculateur de réguler correctement le dosage et déclenche le défaut."
+    },
+    {
+      "titre": "Sonde NOx en dérive",
+      "detail": "Une sonde NOx amont ou aval imprécise fausse l'estimation du rendement, conduisant le calculateur à juger le dosage non performant."
+    },
+    {
+      "titre": "Connectique ou faisceau du module de dosage",
+      "detail": "Une connexion oxydée, desserrée ou un câblage abîmé perturbe le pilotage du module de dosage et peut générer un P204F intermittent."
+    }
+  ],
+  "symptomes": [
+    "Voyant AdBlue ou voyant anti-pollution allumé au tableau de bord",
+    "Compte à rebours « démarrage impossible dans X km » ou nombre de démarrages restants",
+    "Mode dégradé limitant la puissance et parfois la vitesse",
+    "Consommation d'AdBlue anormale, à la hausse comme à la baisse",
+    "Voyant moteur en complément selon le constructeur",
+    "Démarrages difficiles une fois le seuil de blocage atteint",
+    "Émissions de NOx mal maîtrisées, risque de contre-visite"
+  ],
+  "diagnostic": "Le diagnostic repose sur une lecture à la valise pour relever les codes associés et observer les données en direct : pression du circuit de dosage, débit commandé et débit réel, températures et valeurs des sondes NOx. On mesure la pression établie par la pompe, on teste le débit du doseur et on inspecte les conduites à la recherche d'obstruction ou de fuite. La qualité de l'AdBlue est également contrôlée. Ce protocole permet à Ultimauto de déterminer si la pompe, l'injecteur, un capteur ou la connectique est en cause, à l'atelier de Cholet (49) comme en service mobile.",
+  "reparation": "Selon l'origine identifiée, la réparation consiste à nettoyer ou remplacer l'injecteur d'urée, à remettre en état la pompe SCR, à remplacer un capteur défectueux ou à dégager une conduite cristallisée, le tout complété par un appoint d'AdBlue conforme avant effacement du code et essai routier. À titre indicatif, un capteur ou un injecteur se situe souvent entre 90 et 250 €, une pompe AdBlue au-delà selon le modèle. Toute neutralisation logicielle du système SCR est strictement réservée à un usage hors voie publique (circuit, banc, export) et n'est jamais proposée pour un véhicule roulant sur route ouverte. Ultimauto intervient à Cholet ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "La voiture reste utilisable un temps, mais le compte à rebours de démarrages et le mode dégradé imposent une réparation avant l'immobilisation complète.",
+  "rouler": "Vous pouvez encore rouler à court terme, mais le calculateur déclenche le mode dégradé et, sur la plupart des véhicules, un compte à rebours « démarrage impossible dans X km ». Ce décompte progresse à chaque trajet : une fois le seuil atteint, le moteur ne redémarrera plus tant que le dosage d'AdBlue n'aura pas été remis en conformité.",
+  "faq": [
+    {
+      "q": "Le code P204F est-il grave ?",
+      "r": "Il n'immobilise pas immédiatement le véhicule, mais il enclenche un compte à rebours de démarrages. Sans réparation, la voiture finira bloquée : il faut donc le traiter rapidement."
+    },
+    {
+      "q": "Quelle différence entre P204F et un code de pression AdBlue ?",
+      "r": "Le P204F vise la performance globale du dosage, tandis qu'un code de pression (P20E4, P20E8) pointe précisément une pression trop haute ou trop basse. Le P204F peut d'ailleurs en découler."
+    },
+    {
+      "q": "Un mauvais AdBlue peut-il provoquer ce défaut ?",
+      "r": "Oui. Un AdBlue dilué ou non conforme dégrade le dosage et favorise la cristallisation de l'injecteur, deux causes fréquentes du P204F. Un produit conforme ISO 22241 est indispensable."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P204F ?",
+      "r": "Cela dépend de la pièce en cause : un capteur ou un injecteur reste modéré (souvent 90 à 250 €), une pompe AdBlue est plus onéreuse. Le diagnostic permet d'établir un devis précis et gratuit."
+    }
+  ]
+}

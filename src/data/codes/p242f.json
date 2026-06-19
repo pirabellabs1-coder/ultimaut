@@ -1,0 +1,69 @@
+{
+  "code": "P242F",
+  "slug": "p242f",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Filtre à particules colmaté par les cendres (restriction)",
+  "metaTitle": "Code défaut P242F : causes, symptômes et solution",
+  "metaDescription": "Code défaut P242F : filtre à particules (FAP) restreint par accumulation de cendres. Causes, symptômes, diagnostic et nettoyage du FAP chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P242F signale un FAP bouché par les cendres, des résidus qui ne brûlent pas pendant la régénération.",
+  "signification": "Le code P242F signale une restriction du filtre à particules (FAP) due à une accumulation excessive de cendres. Il faut distinguer deux types de dépôts : la suie, que la régénération brûle régulièrement, et les cendres, des résidus minéraux issus de l'huile moteur et des additifs qui, eux, ne brûlent jamais. Au fil des kilomètres, ces cendres s'accumulent durablement dans les canaux du filtre et finissent par réduire le passage des gaz. Le calculateur détecte alors une pression différentielle anormalement élevée, y compris juste après une régénération réussie : c'est le signe que la cause n'est plus la suie. Il enregistre le P242F pour indiquer que le FAP arrive en limite de charge et nécessite un nettoyage en profondeur, voire un remplacement s'il est vraiment en fin de vie.",
+  "causes": [
+    {
+      "titre": "Accumulation normale de cendres",
+      "detail": "Après un fort kilométrage, les cendres s'accumulent inévitablement dans le filtre : c'est l'usure naturelle d'un FAP non entretenu."
+    },
+    {
+      "titre": "Huile moteur inadaptée",
+      "detail": "Une huile non Low SAPS ou une surconsommation d'huile génère davantage de cendres et accélère le colmatage du filtre."
+    },
+    {
+      "titre": "Régénérations qui n'éliminent que la suie",
+      "detail": "Les cycles de régénération brûlent la suie mais sont sans effet sur les cendres, qui continuent de s'accumuler."
+    },
+    {
+      "titre": "Capteur de pression différentielle faussé",
+      "detail": "Un capteur défaillant ou des durites obstruées peuvent donner une pression trop élevée et déclencher le code à tort."
+    },
+    {
+      "titre": "Résidus d'additif de régénération",
+      "detail": "Sur les FAP à cérine, l'additif laisse avec le temps des dépôts qui participent au colmatage du substrat."
+    },
+    {
+      "titre": "FAP jamais nettoyé depuis l'origine",
+      "detail": "Un filtre qui n'a jamais été entretenu finit logiquement par atteindre sa limite de charge en cendres."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur et/ou voyant FAP allumés",
+    "Passage en mode dégradé limitant la puissance",
+    "Perte de puissance et reprises paresseuses",
+    "Régénérations très fréquentes mais sans effet durable",
+    "Surconsommation de carburant",
+    "Ralenti irrégulier dans les cas avancés",
+    "Démarrage difficile lorsque le filtre est très bouché"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise OBD pour confirmer le P242F et consulter le taux de cendres et de suie estimé par le calculateur. On mesure la pression différentielle réelle, y compris après une tentative de régénération, pour confirmer que ce sont bien les cendres et non la suie qui bouchent le filtre. Le contrôle du capteur de pression et de ses durites permet d'écarter une fausse mesure. Chez Ultimauto, cette étape est essentielle : elle distingue un filtre réellement chargé en cendres d'un simple problème de capteur, et oriente vers la bonne solution.",
+  "reparation": "Comme les cendres ne partent pas à la régénération, un additif ou une régénération forcée sont inefficaces : la solution adaptée est un nettoyage FAP en profondeur, qui désincruste le substrat et restaure le débit. Comptez de l'ordre de 250 à 350 € selon le véhicule, soit jusqu'à cinq fois moins qu'un FAP neuf souvent facturé plusieurs centaines à plusieurs milliers d'euros. Si le capteur est en cause, son remplacement est plus économique. Ultimauto réalise ce nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec diagnostic et devis gratuits, et ne facture rien si le filtre est irrécupérable.",
+  "gravite": "Modérée",
+  "graviteTexte": "Un FAP chargé en cendres n'explose pas du jour au lendemain, mais il finit par brider la puissance et peut empêcher le démarrage s'il est totalement bouché. Mieux vaut intervenir avant d'en arriver là.",
+  "rouler": "On peut rouler quelque temps avec un P242F, mais le filtre ne se débouchera pas tout seul puisque les cendres ne brûlent pas. La puissance va se dégrader et le mode dégradé peut s'installer durablement. Il est préférable de planifier un nettoyage plutôt que d'attendre un blocage complet.",
+  "faq": [
+    {
+      "q": "Pourquoi la régénération ne suffit-elle pas pour le P242F ?",
+      "r": "Parce que la régénération brûle la suie, pas les cendres. Les cendres sont des résidus minéraux qui restent dans le filtre quelle que soit la température. Seul un nettoyage en profondeur permet de les évacuer."
+    },
+    {
+      "q": "Un additif FAP peut-il régler le P242F ?",
+      "r": "Non. Les additifs aident à brûler la suie, mais ils n'ont aucun effet sur les cendres déjà accumulées. Pour un FAP bouché par les cendres, le nettoyage en profondeur est la seule solution efficace."
+    },
+    {
+      "q": "Le P242F veut-il dire que mon FAP est mort ?",
+      "r": "Pas nécessairement. Tant que la céramique n'est pas fissurée ni fondue, un nettoyage en profondeur restaure le débit et évite le remplacement. Le diagnostic permet de confirmer si le filtre est récupérable."
+    },
+    {
+      "q": "Combien coûte le nettoyage d'un FAP plein de cendres ?",
+      "r": "À titre indicatif, comptez de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un FAP neuf. Ultimauto remet un devis gratuit après diagnostic et ne facture pas le nettoyage si le filtre est irrécupérable."
+    }
+  ]
+}

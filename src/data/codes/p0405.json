@@ -1,0 +1,69 @@
+{
+  "code": "P0405",
+  "slug": "p0405",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Signal du capteur de position EGR trop bas",
+  "metaTitle": "Code défaut P0405 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0405 signale un signal du capteur de position EGR trop bas : causes, symptômes et solution chez Ultimauto à Cholet (49). Devis gratuit.",
+  "definitionCourte": "Le P0405 indique que la tension du capteur de position de la vanne EGR est anormalement basse.",
+  "signification": "Le code P0405 est un code OBD-II générique qui indique que le signal du capteur de position de la vanne EGR (souvent appelé capteur A) est trop bas. Ce capteur renseigne le calculateur moteur sur l'ouverture réelle du clapet de la vanne EGR, qui dose la recirculation des gaz d'échappement. Le calculateur surveille la tension renvoyée par ce capteur et la compare à une plage de fonctionnement normale. Lorsque cette tension descend durablement sous le seuil minimal admis, il considère l'information de position comme invalide et enregistre le défaut P0405. Une tension trop basse traduit le plus souvent une anomalie du capteur lui-même ou de son câblage (court-circuit à la masse, fil coupé), mais elle peut aussi accompagner un clapet bloqué fermé par la calamine, qui maintient le capteur en bout de course basse.",
+  "causes": [
+    {
+      "titre": "Capteur de position de la vanne EGR défectueux",
+      "detail": "Le capteur renvoie une tension anormalement basse même quand la vanne s'ouvre, faussant l'information de position."
+    },
+    {
+      "titre": "Faisceau coupé ou en court-circuit à la masse",
+      "detail": "Un fil du capteur sectionné ou en contact avec la masse fait chuter la tension du signal sous le seuil minimal."
+    },
+    {
+      "titre": "Connecteur du capteur EGR défaillant",
+      "detail": "Un connecteur corrodé, desserré ou humide provoque un faux contact et une tension de signal trop basse."
+    },
+    {
+      "titre": "Défaut d'alimentation ou de tension de référence",
+      "detail": "Une alimentation ou une référence défaillante prive le capteur de la tension nécessaire pour fonctionner correctement."
+    },
+    {
+      "titre": "Calamine bloquant le clapet fermé",
+      "detail": "Une vanne maintenue fermée par les dépôts garde le capteur en position basse et peut entretenir un signal bas permanent."
+    },
+    {
+      "titre": "Vanne EGR grippée",
+      "detail": "Un clapet grippé qui ne monte pas en ouverture empêche le capteur de progresser en tension."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable ou irrégulier",
+    "À-coups et perte de puissance",
+    "Passage possible du moteur en mode dégradé",
+    "Surconsommation de carburant",
+    "Hausse des émissions polluantes",
+    "Comportement moteur irrégulier"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise pour confirmer le P0405 et observer la tension du capteur de position en temps réel. On contrôle ensuite au multimètre l'alimentation, la tension de référence, la masse et la continuité du faisceau, ainsi que l'état du connecteur. En pilotant la vanne en commande active, on vérifie si la tension évolue normalement et si le clapet n'est pas bloqué fermé par la calamine. Chez Ultimauto, ce contrôle est réalisé avant toute intervention pour distinguer un capteur ou un câblage défaillant d'un clapet bloqué par l'encrassement.",
+  "reparation": "Si le clapet est bloqué fermé par la calamine et maintient un signal bas, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage pour libérer la course du clapet. Lorsque le capteur de position ou son faisceau est réellement défaillant, la pièce ou le câblage concerné est remplacé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement d'un capteur ou d'une vanne pouvant être plus coûteux. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le calculateur ne connaît plus précisément la position de la vanne, ce qui dégrade le fonctionnement moteur et peut entraîner un mode dégradé selon les véhicules.",
+  "rouler": "Vous pouvez généralement rouler avec un P0405, mais le pilotage de la vanne EGR est faussé et le moteur peut perdre de la puissance ou passer en mode dégradé. Si le défaut vient d'un câblage, il peut évoluer. Un diagnostic rapide est conseillé.",
+  "faq": [
+    {
+      "q": "Que signifie un signal de capteur EGR trop bas ?",
+      "r": "Cela veut dire que la tension renvoyée par le capteur de position de la vanne EGR est en dessous de la plage normale. C'est souvent dû au capteur, à son câblage, ou à un clapet bloqué fermé par la calamine."
+    },
+    {
+      "q": "Le décalaminage hydrogène peut-il corriger le code P0405 ?",
+      "r": "Oui lorsque le clapet est bloqué fermé par les dépôts et entretient un signal bas. Le décalaminage le libère sans démontage. Si le capteur ou le faisceau est défaillant, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0405 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Le remplacement d'un capteur ou d'une vanne, ou une réparation de faisceau, revient plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0405 ?",
+      "r": "Souvent oui, mais le moteur peut perdre de la puissance ou passer en mode dégradé car la position de la vanne n'est plus connue. Un diagnostic rapide est recommandé."
+    }
+  ]
+}

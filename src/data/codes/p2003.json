@@ -1,0 +1,69 @@
+{
+  "code": "P2003",
+  "slug": "p2003",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Efficacité du filtre à particules sous le seuil (Banc 2)",
+  "metaTitle": "Code défaut P2003 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P2003 : efficacité du filtre à particules (FAP) du banc 2 jugée insuffisante. Causes, symptômes, diagnostic et solution chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P2003 signale une efficacité de filtration insuffisante du FAP situé sur le banc 2 du moteur.",
+  "signification": "Le code P2003 indique que le calculateur estime l'efficacité de filtration du filtre à particules (FAP) du banc 2 inférieure au seuil attendu. Le principe est identique au P2002, mais il concerne la seconde ligne d'échappement : sur les moteurs en V, le « banc 2 » est la rangée de cylindres opposée à celle qui contient le cylindre numéro 1. Le calculateur compare la pression différentielle relevée autour de ce filtre et les températures d'échappement aux valeurs d'un FAP sain. Lorsque ces données s'écartent durablement du modèle, il en conclut que le filtre du banc 2 ne retient plus assez de particules et enregistre le défaut. Le voyant moteur s'allume alors pour signaler le problème et, selon le constructeur, le véhicule peut passer en mode dégradé pour protéger la ligne d'échappement.",
+  "causes": [
+    {
+      "titre": "FAP du banc 2 colmaté ou saturé",
+      "detail": "Un filtre chargé de suie ou de cendres en fin de vie ne filtre plus correctement et fausse le rapport de pression mesuré."
+    },
+    {
+      "titre": "Régénérations inefficaces",
+      "detail": "Un usage urbain ou des trajets courts empêchent le FAP d'atteindre la température de régénération, les suies s'accumulent."
+    },
+    {
+      "titre": "Capteur de pression différentielle du banc 2 défaillant",
+      "detail": "Un capteur HS ou des durites obstruées côté banc 2 donnent une lecture erronée de l'efficacité du filtre."
+    },
+    {
+      "titre": "Sonde de température d'échappement du banc 2 hors plage",
+      "detail": "Une sonde défectueuse empêche le pilotage correct des régénérations sur cette ligne d'échappement."
+    },
+    {
+      "titre": "Fuite d'échappement côté banc 2",
+      "detail": "Une fuite avant ou autour du filtre modifie la pression réelle des gaz et trompe le calculateur."
+    },
+    {
+      "titre": "Substrat du filtre endommagé",
+      "detail": "Une céramique fissurée, percée ou fondue laisse passer les particules : le FAP du banc 2 est mécaniquement défaillant."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP ou anti-pollution allumé",
+    "Mode dégradé et limitation de la puissance",
+    "Reprises molles et baisse de performance",
+    "Cycles de régénération rapprochés ou interrompus",
+    "Hausse de la consommation de carburant",
+    "Fumées à l'échappement dans les cas avancés"
+  ],
+  "diagnostic": "Le diagnostic débute par une lecture à la valise OBD pour confirmer le P2003 et repérer d'éventuels codes liés au banc 2. On analyse ensuite en données réelles la pression différentielle et les températures d'échappement de cette ligne, afin de distinguer un colmatage réel d'un capteur ou d'une sonde fautive. Le contrôle des durites de prise de pression et du faisceau du banc 2 permet d'écarter une cause électrique ou un tuyau obstrué. Chez Ultimauto, ce diagnostic électronique précède toujours l'intervention : il garantit qu'on traite la bonne pièce et évite de remplacer inutilement un filtre encore récupérable.",
+  "reparation": "La solution dépend de l'origine du défaut. Si le FAP du banc 2 est simplement encrassé, un nettoyage en profondeur restaure ses performances, de l'ordre de 250 à 350 € selon le véhicule, contre un FAP neuf souvent bien plus coûteux. Si le défaut vient d'un capteur de pression ou d'une sonde de température, leur remplacement reste plus économique. Ultimauto réalise le diagnostic et le nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit et conseil transparent sur la solution la plus adaptée.",
+  "gravite": "Modérée",
+  "graviteTexte": "Comme le P2002, le P2003 n'arrête pas le véhicule immédiatement mais signale un FAP qui se dégrade et un risque de mode dégradé. Il est préférable de le traiter rapidement pour éviter l'aggravation.",
+  "rouler": "Rouler reste possible à court terme, mais déconseillé sur la durée. Le filtre du banc 2 continue de se colmater tant que le défaut persiste, et le véhicule peut basculer en mode dégradé avec une puissance réduite. Un diagnostic rapide est la meilleure manière d'éviter une réparation plus lourde.",
+  "faq": [
+    {
+      "q": "Quelle différence entre le P2002 et le P2003 ?",
+      "r": "Les deux codes décrivent le même défaut d'efficacité du FAP, mais sur des lignes d'échappement différentes : le P2002 concerne le banc 1 et le P2003 le banc 2. Ils apparaissent surtout sur les moteurs en V équipés de deux filtres."
+    },
+    {
+      "q": "Le P2003 impose-t-il de remplacer le FAP ?",
+      "r": "Pas forcément. Si la céramique est intacte, un nettoyage en profondeur suffit généralement à restaurer l'efficacité du filtre. Le remplacement n'est requis qu'en cas de substrat fondu, fissuré ou percé."
+    },
+    {
+      "q": "Mon véhicule n'a qu'une ligne d'échappement, pourquoi ce code ?",
+      "r": "Sur certains moteurs, la cartographie du calculateur fait référence au banc 2 même avec une seule ligne. Le diagnostic permet de relier le code au composant réellement concerné sur votre motorisation précise."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P2003 ?",
+      "r": "À titre indicatif, comptez de l'ordre de 250 à 350 € pour un nettoyage FAP selon le véhicule, contre nettement plus pour un filtre neuf. Le remplacement d'un capteur est moins cher. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

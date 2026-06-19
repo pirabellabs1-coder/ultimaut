@@ -1,0 +1,49 @@
+{
+  "slug": "ford",
+  "nom": "Ford",
+  "metaTitle": "Problème AdBlue Ford : panne SCR diesel | Ultimauto",
+  "metaDescription": "Problème AdBlue Ford à Cholet : panne SCR, démarrage impossible, voyant moteur sur 2.0 EcoBlue, Transit et Kuga. Diagnostic et devis gratuit chez Ultimauto.",
+  "moteurs": "Le bloc diesel 2.0 EcoBlue (en versions 105 à 190 ch) équipe la quasi-totalité de la gamme Ford récente soumise à la norme Euro 6 et au système SCR. On retrouve aussi l'ancien 1.5 TDCi / EcoBlue sur les modèles compacts. Ces moteurs utilisent l'injection d'AdBlue dans la ligne d'échappement pour réduire les oxydes d'azote (NOx).",
+  "modeles": [
+    "Ford Focus 1.5 / 2.0 EcoBlue",
+    "Ford Kuga 2.0 EcoBlue",
+    "Ford Transit 2.0 EcoBlue",
+    "Ford Transit Custom 2.0 EcoBlue",
+    "Ford Transit Connect",
+    "Ford Mondeo 2.0 TDCi / EcoBlue",
+    "Ford S-Max / Galaxy 2.0 EcoBlue",
+    "Ford Ranger 2.0 EcoBlue"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Message « démarrage impossible dans X km » au tableau de bord",
+    "Voyant moteur ou anti-pollution allumé en orange",
+    "Passage en mode dégradé avec puissance bridée",
+    "Sur-consommation ou consommation anormale d'AdBlue",
+    "Message « contrôle additif émissions requis » sur le combiné Ford",
+    "Pannes répétées sur Transit et Transit Custom à fort kilométrage utilitaire",
+    "Démarrage impossible après plusieurs alertes ignorées"
+  ],
+  "pourquoi": "Sur les Ford 2.0 EcoBlue, l'injecteur d'AdBlue et la sonde NOx sont des points faibles connus, particulièrement sur les utilitaires Transit et Transit Custom qui cumulent les kilomètres en usage intensif. Les arrêts/démarrages fréquents et les trajets courts favorisent la cristallisation de l'urée dans l'injecteur, tandis que la qualité variable de l'AdBlue accélère l'encrassement. Le calculateur SCR détecte alors un défaut de dépollution, déclenche un compte à rebours et bride le véhicule. Une simple mise à jour logicielle ou un capteur fatigué peuvent aussi être en cause.",
+  "solutions": "Chez Ultimauto à Cholet, nous commençons par un diagnostic électronique complet du système SCR pour identifier précisément le composant défaillant : injecteur d'AdBlue, sonde NOx, pompe doseuse ou calculateur. Selon le cas, nous procédons au remplacement du capteur ou de l'injecteur, à un nettoyage du circuit, puis à un reparamétrage et à l'effacement des défauts. Le devis est gratuit et nous intervenons à l'atelier ou en service mobile. La neutralisation du système SCR est strictement réservée à un usage hors voie publique (circuit fermé, compétition, export, véhicule non homologué).",
+  "faq": [
+    {
+      "q": "Mon Ford Transit affiche « démarrage impossible dans 800 km », que faire ?",
+      "r": "Ce compte à rebours signale un défaut du système SCR détecté par le calculateur. Il ne disparaît pas en roulant et bloquera le redémarrage une fois à zéro. Venez nous voir rapidement à Cholet : un diagnostic identifie la cause exacte (injecteur, sonde NOx, niveau ou qualité d'AdBlue) et nous vous remettons un devis gratuit avant toute intervention."
+    },
+    {
+      "q": "Pourquoi le système AdBlue tombe-t-il souvent en panne sur les Transit ?",
+      "r": "Les Transit et Transit Custom roulent beaucoup, souvent sur des trajets courts et en charge, ce qui sollicite fortement le système SCR. L'injecteur d'AdBlue et la sonde NOx s'encrassent ou s'usent, et la cristallisation de l'urée est fréquente. C'est l'une des pannes les plus courantes que nous traitons sur le 2.0 EcoBlue."
+    },
+    {
+      "q": "Le diagnostic AdBlue Ford est-il payant ?",
+      "r": "Nous établissons un devis gratuit et sans engagement après lecture des codes défaut. Vous décidez ensuite en connaissance de cause, avec une présentation transparente des options (réparation conforme du système SCR ou autre solution selon l'usage de votre véhicule)."
+    }
+  ]
+}

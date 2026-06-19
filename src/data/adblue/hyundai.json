@@ -1,0 +1,48 @@
+{
+  "slug": "hyundai",
+  "nom": "Hyundai",
+  "metaTitle": "Problème AdBlue Hyundai : panne SCR | Ultimauto Cholet",
+  "metaDescription": "Problème AdBlue Hyundai : voyant, démarrage bloqué, défaut SCR sur 1.6 et 2.2 CRDi. Diagnostic capteur NOx et injecteur à Cholet (49). Devis gratuit.",
+  "moteurs": "Moteurs diesel Hyundai 1.6 CRDi et 2.2 CRDi, équipés du système SCR à AdBlue sur les versions Euro 6 pour réduire les émissions d'oxydes d'azote.",
+  "modeles": [
+    "Hyundai Tucson CRDi",
+    "Hyundai Santa Fe CRDi",
+    "Hyundai i30 CRDi",
+    "Hyundai Kona diesel",
+    "Hyundai i40 CRDi",
+    "Hyundai ix35 diesel",
+    "Hyundai Bayon diesel"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P207F",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Voyant moteur ou message AdBlue au tableau de bord",
+    "Alerte « démarrage impossible » avec décompte de kilomètres",
+    "Perte de puissance et mode dégradé (bridage moteur)",
+    "Consommation anormalement élevée d'AdBlue",
+    "Erreur de qualité ou de niveau AdBlue affichée à tort",
+    "Démarrage refusé après un arrêt prolongé du véhicule",
+    "Fumée à l'échappement et ralenti instable"
+  ],
+  "pourquoi": "Sur les diesels Hyundai 1.6 et 2.2 CRDi Euro 6, la panne AdBlue provient généralement du capteur de NOx, de l'injecteur ou de la pompe du circuit SCR, parfois d'un calculateur qui fige le système après plusieurs défauts mémorisés. Le froid et un AdBlue de qualité insuffisante favorisent la cristallisation et accélèrent l'usure des composants. Hyundai développe fortement l'hybride et l'électrique en France, si bien que moins de diesels AdBlue circulent, mais les Tucson, Santa Fe et i30 CRDi concernés restent courants sur le parc.",
+  "solutions": "Chez Ultimauto à Cholet (49), nous réalisons un diagnostic électronique complet pour localiser l'origine du défaut : capteur NOx, injecteur, pompe ou réservoir AdBlue. Nous remplaçons la pièce défaillante, puis effectuons le reparamétrage du système SCR afin de lever le blocage de démarrage et réinitialiser le compteur. Intervention à l'atelier ou en service mobile, devis gratuit. La neutralisation du système est strictement réservée à un usage hors voie publique (terrain privé, compétition).",
+  "faq": [
+    {
+      "q": "Mon Hyundai Tucson CRDi est en mode dégradé, est-ce l'AdBlue ?",
+      "r": "Souvent, oui. Un défaut SCR (capteur NOx, injecteur ou pompe AdBlue) déclenche la limitation de puissance pour protéger le système antipollution. Un diagnostic à Cholet permet de lire les codes défaut et de confirmer la cause avant toute réparation."
+    },
+    {
+      "q": "Peut-on lever un blocage de démarrage AdBlue sur un Santa Fe ?",
+      "r": "Oui, une fois la panne réparée, nous réinitialisons le compteur de blocage et reparamétrons le système SCR pour rétablir un démarrage normal. Il faut intervenir avant que le décompte n'atteigne zéro pour éviter une immobilisation totale du véhicule."
+    },
+    {
+      "q": "Tous les Hyundai diesel utilisent-ils de l'AdBlue ?",
+      "r": "Seuls les diesels Hyundai Euro 6 équipés du système SCR (1.6 et 2.2 CRDi récents) consomment de l'AdBlue. Les anciens diesels Euro 5 et les versions essence, hybrides ou électriques n'en ont pas. La trappe de remplissage bleue confirme la présence du système."
+    }
+  ]
+}

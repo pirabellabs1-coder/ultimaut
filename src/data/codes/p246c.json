@@ -1,0 +1,69 @@
+{
+  "code": "P246C",
+  "slug": "p246c",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Restriction du FAP : cendres au-delà de la limite (Banc 1)",
+  "metaTitle": "Code défaut P246C : causes, symptômes et solution",
+  "metaDescription": "Code défaut P246C : restriction du filtre à particules (FAP) banc 1 par les cendres au-delà du seuil. Causes, symptômes, diagnostic et nettoyage FAP à Cholet.",
+  "definitionCourte": "Le P246C signale que la charge en cendres du FAP du banc 1 dépasse la limite haute autorisée.",
+  "signification": "Le code P246C signale que la restriction du filtre à particules (FAP) du banc 1 dépasse la limite haute admise, principalement à cause d'une accumulation de cendres. Les cendres sont des résidus minéraux issus de l'huile moteur et des additifs : contrairement à la suie, elles ne brûlent pas pendant la régénération et s'accumulent définitivement au fond des canaux du filtre. Le calculateur surveille la charge en cendres via la pression différentielle et un modèle de calcul ; lorsque cette charge franchit le seuil maximal, il considère que le filtre est trop bouché pour fonctionner correctement, même après une régénération réussie. C'est un défaut très proche du P242F, mais ciblant spécifiquement le banc 1, c'est-à-dire la rangée de cylindres contenant le cylindre numéro 1.",
+  "causes": [
+    {
+      "titre": "Cendres accumulées après un fort kilométrage",
+      "detail": "L'accumulation de cendres dans le FAP du banc 1 est une usure naturelle qui finit par atteindre la limite haute sur un filtre non entretenu."
+    },
+    {
+      "titre": "Huile moteur inadaptée ou consommée",
+      "detail": "Une huile non Low SAPS ou une surconsommation d'huile produit davantage de cendres et accélère le colmatage."
+    },
+    {
+      "titre": "Régénérations sans effet sur les cendres",
+      "detail": "Les cycles de régénération éliminent la suie mais laissent les cendres en place, qui continuent de s'accumuler."
+    },
+    {
+      "titre": "Capteur de pression différentielle défaillant",
+      "detail": "Un capteur HS ou des durites obstruées peuvent surévaluer la restriction et déclencher le code à tort."
+    },
+    {
+      "titre": "FAP en fin de vie jamais nettoyé",
+      "detail": "Un filtre qui n'a jamais été entretenu atteint logiquement sa limite de charge en cendres."
+    },
+    {
+      "titre": "Résidus d'additif de régénération",
+      "detail": "Sur les systèmes à cérine, l'additif laisse des dépôts qui s'ajoutent aux cendres dans le substrat."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur et/ou voyant FAP allumés",
+    "Mode dégradé et limitation de la puissance",
+    "Perte de puissance notable",
+    "Régénérations fréquentes sans amélioration durable",
+    "Surconsommation de carburant",
+    "Ralenti instable dans les cas avancés",
+    "Démarrage difficile si le filtre est très bouché"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise OBD pour confirmer le P246C et consulter le taux de cendres estimé sur le banc 1. On mesure la pression différentielle réelle, y compris après régénération, pour confirmer que la restriction vient bien des cendres et non d'un capteur faussé. Le contrôle du capteur de pression et de ses durites permet d'écarter une fausse mesure. Chez Ultimauto, cette étape distingue un filtre réellement saturé en cendres d'un problème électronique et oriente vers la bonne intervention.",
+  "reparation": "Les cendres ne partant pas à la régénération, ni un additif ni une régénération forcée ne résolvent le P246C : la solution adaptée est un nettoyage FAP en profondeur, qui désincruste le substrat et restaure le débit. Comptez de l'ordre de 250 à 350 € selon le véhicule, soit jusqu'à cinq fois moins qu'un FAP neuf souvent facturé plusieurs centaines à plusieurs milliers d'euros. Si le capteur est en cause, son remplacement est plus abordable. Ultimauto réalise ce nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec diagnostic et devis gratuits.",
+  "gravite": "Modérée",
+  "graviteTexte": "Un FAP saturé de cendres ne se débloque pas seul et finit par brider durablement la puissance, voire empêcher le démarrage. Il est préférable d'intervenir avant le blocage complet.",
+  "rouler": "On peut rouler quelque temps avec un P246C, mais la situation ne s'améliorera pas d'elle-même puisque les cendres ne brûlent pas. La puissance va se dégrader et le mode dégradé peut s'installer. Mieux vaut planifier un nettoyage rapidement plutôt que d'attendre l'immobilisation.",
+  "faq": [
+    {
+      "q": "Quelle différence entre le P246C et le P242F ?",
+      "r": "Les deux codes décrivent un FAP bouché par les cendres. Le P246C est généralement plus précis car il cible le banc 1, alors que le P242F est un code de restriction plus général. La cause et la solution, un nettoyage en profondeur, sont identiques."
+    },
+    {
+      "q": "Une régénération peut-elle régler le P246C ?",
+      "r": "Non. Les cendres ne brûlent pas, donc aucune régénération, même forcée, ne les élimine. Seul un nettoyage en profondeur permet de désincruster le filtre et de restaurer le débit."
+    },
+    {
+      "q": "Le P246C signifie-t-il que mon FAP est foutu ?",
+      "r": "Pas forcément. Si la céramique est intacte, un nettoyage en profondeur restaure ses performances et évite le remplacement. Le diagnostic confirme si le filtre est récupérable avant toute décision."
+    },
+    {
+      "q": "Combien coûte le nettoyage après un P246C ?",
+      "r": "À titre indicatif, comptez de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un FAP neuf. Ultimauto remet un devis gratuit après diagnostic et ne facture pas le nettoyage si le filtre est irrécupérable."
+    }
+  ]
+}

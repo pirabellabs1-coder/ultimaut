@@ -1,0 +1,69 @@
+{
+  "code": "P2002",
+  "slug": "p2002",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Efficacité du filtre à particules sous le seuil (Banc 1)",
+  "metaTitle": "Code défaut P2002 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P2002 : le calculateur juge l'efficacité du filtre à particules (FAP) insuffisante. Causes, symptômes, diagnostic et solution chez Ultimauto.",
+  "definitionCourte": "Le P2002 signale que le filtre à particules du banc 1 ne filtre plus assez efficacement selon le calculateur.",
+  "signification": "Le code P2002 indique que le calculateur moteur estime l'efficacité de filtration du filtre à particules (FAP) du banc 1 inférieure au seuil prévu par le constructeur. Pour porter ce jugement, il s'appuie sur le capteur de pression différentielle placé en amont et en aval du filtre, ainsi que sur les sondes de température d'échappement. En conditions normales, un FAP sain crée une certaine contre-pression et permet des régénérations efficaces ; lorsque ces valeurs s'écartent durablement du modèle attendu, le système conclut que le filtre ne piège plus correctement les suies. Le calculateur mémorise alors le défaut et allume le voyant moteur pour protéger la ligne d'échappement et limiter les émissions. Le terme « banc 1 » désigne simplement la rangée de cylindres qui contient le cylindre numéro 1, notion utile surtout sur les moteurs en V à deux lignes d'échappement.",
+  "causes": [
+    {
+      "titre": "FAP colmaté ou en fin de vie",
+      "detail": "Un filtre saturé de suie ou de cendres ne filtre plus correctement et fausse le rapport de pression mesuré par le calculateur."
+    },
+    {
+      "titre": "Régénérations incomplètes",
+      "detail": "Les trajets courts et urbains empêchent le FAP d'atteindre la température nécessaire pour brûler les suies, qui s'accumulent au lieu d'être éliminées."
+    },
+    {
+      "titre": "Capteur de pression différentielle défectueux",
+      "detail": "Un capteur HS ou des durites de prise de pression bouchées, pincées ou fissurées faussent l'estimation de l'efficacité du filtre."
+    },
+    {
+      "titre": "Sonde de température d'échappement en défaut",
+      "detail": "Une sonde avant ou après FAP hors plage empêche le bon pilotage des régénérations et peut déclencher ce code."
+    },
+    {
+      "titre": "Fuite sur la ligne d'échappement",
+      "detail": "Une fuite avant ou autour du FAP modifie la pression réelle des gaz et trompe le calculateur sur l'efficacité du filtre."
+    },
+    {
+      "titre": "FAP percé ou substrat endommagé",
+      "detail": "Une céramique fissurée, fondue ou percée laisse passer les particules : le filtre est mécaniquement défaillant et doit être remplacé."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Voyant FAP ou anti-pollution allumé",
+    "Passage en mode dégradé avec bridage de la puissance",
+    "Perte de puissance et reprises molles",
+    "Régénérations plus fréquentes ou qui n'aboutissent pas",
+    "Surconsommation de carburant",
+    "Fumées à l'échappement dans les cas avancés"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise OBD pour confirmer le P2002 et relever les codes associés. On lit ensuite en données réelles la pression différentielle du FAP et les températures d'échappement avant/après filtre, afin de distinguer un vrai colmatage d'un capteur ou d'une sonde fautive. Un contrôle des durites de prise de pression et du faisceau permet d'écarter une cause électrique ou un tuyau bouché. Chez Ultimauto, ce diagnostic électronique est systématique avant toute intervention : il évite de remplacer un FAP encore récupérable et identifie précisément la pièce en cause.",
+  "reparation": "La réparation dépend de la cause réelle. Si le filtre est simplement encrassé, un nettoyage FAP en profondeur restaure sa capacité de filtration et de régénération, de l'ordre de 250 à 350 € selon le véhicule — bien moins qu'un FAP neuf, souvent facturé plusieurs centaines à plusieurs milliers d'euros en concession. Si un capteur de pression ou une sonde de température est en cause, son remplacement reste plus abordable. Ultimauto réalise le diagnostic et le nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit et conseil honnête, sans facturer de nettoyage si le filtre s'avère irrécupérable.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le P2002 n'immobilise pas immédiatement le véhicule, mais il traduit un FAP qui se dégrade et qui peut basculer en mode dégradé. Il faut le traiter sans tarder pour éviter une aggravation et des émissions excessives.",
+  "rouler": "On peut généralement encore rouler avec un P2002, mais ce n'est pas conseillé sur la durée. Tant que le défaut persiste, le FAP continue de se colmater et le véhicule risque de passer en mode dégradé avec une puissance bridée. Mieux vaut faire diagnostiquer la cause rapidement plutôt que de laisser la situation empirer.",
+  "faq": [
+    {
+      "q": "Le code P2002 signifie-t-il forcément un FAP à changer ?",
+      "r": "Non. Dans la majorité des cas, le filtre est seulement encrassé et un nettoyage en profondeur suffit à le remettre en état. Le remplacement n'est nécessaire que si la céramique est fondue, fissurée ou percée, ce que le diagnostic permet de vérifier."
+    },
+    {
+      "q": "Effacer le code P2002 suffit-il à régler le problème ?",
+      "r": "Non. Effacer le code sans traiter la cause ne fait que masquer le défaut : il revient dès que le calculateur réévalue l'efficacité du FAP. Il faut identifier et corriger l'origine (filtre, capteur, sonde) pour une solution durable."
+    },
+    {
+      "q": "Le P2002 peut-il être causé par un simple capteur ?",
+      "r": "Oui. Un capteur de pression différentielle défaillant ou des durites bouchées peuvent fausser la mesure et déclencher le P2002 alors que le FAP est sain. C'est précisément pour cela qu'un diagnostic électronique est indispensable avant toute réparation."
+    },
+    {
+      "q": "Combien coûte la remise en état après un P2002 ?",
+      "r": "À titre indicatif, un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule, contre plusieurs centaines à plusieurs milliers d'euros pour un FAP neuf. Le remplacement d'un capteur est moins onéreux. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

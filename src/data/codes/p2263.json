@@ -1,0 +1,69 @@
+{
+  "code": "P2263",
+  "slug": "p2263",
+  "categorie": "Suralimentation / turbo",
+  "service": "decalaminage-hydrogene",
+  "titre": "Performance du système turbo / compresseur",
+  "metaTitle": "Code défaut P2263 : causes et solution",
+  "metaDescription": "Code défaut P2263 : performance insuffisante du système de turbocompression (turbo). Causes, symptômes, diagnostic et solution à Cholet (49) et alentours.",
+  "definitionCourte": "Le système de turbocompression ne fournit pas la performance attendue de façon durable, sans que le défaut pointe un composant précis.",
+  "signification": "Le code P2263 signale un problème de performance du système de turbocompression (turbo ou compresseur). Le calculateur constate, sur la durée, que la suralimentation produite ne correspond pas à ce qu'il attend, sans désigner un capteur ou un actuateur précis. C'est un défaut plus global que l'underboost ou l'overboost : il traduit une efficacité dégradée de l'ensemble du système plutôt qu'une simple valeur hors plage. Les causes les plus fréquentes sont une géométrie variable grippée par la calamine, un encrassement de l'admission, une fuite d'air ou un capteur de pression qui dérive. Sur les diesels à fort kilométrage ou à usage urbain, l'accumulation de calamine est souvent en jeu. Le moteur perd alors en répondant, le calculateur peut brider la puissance, et la combustion dégradée perturbe à son tour le FAP. Le P2263 demande donc un diagnostic complet du circuit de suralimentation.",
+  "causes": [
+    {
+      "titre": "Turbo encrassé par la calamine",
+      "detail": "L'accumulation de calamine sur la géométrie variable et dans l'admission dégrade le rendement du turbo : cause très fréquente du P2263."
+    },
+    {
+      "titre": "Géométrie variable grippée",
+      "detail": "Des ailettes qui ne bougent plus librement empêchent le turbo de réguler correctement la pression, d'où une performance jugée insuffisante."
+    },
+    {
+      "titre": "Fuite d'air sur l'admission",
+      "detail": "Une durite, un manchon ou un intercooler qui fuit réduit la pression utile et dégrade durablement l'efficacité de la suralimentation."
+    },
+    {
+      "titre": "Actuateur de turbo défaillant",
+      "detail": "Un actuateur (à dépression ou électrique) grippé ou en panne ne pilote plus correctement la géométrie variable ou la wastegate."
+    },
+    {
+      "titre": "Capteur de pression de suralimentation encrassé",
+      "detail": "Un capteur (MAP) encrassé ou qui dérive fausse la régulation et la surveillance de performance du turbo."
+    },
+    {
+      "titre": "Usure mécanique du turbo",
+      "detail": "Un jeu excessif, un rotor endommagé ou des roulements fatigués réduisent le rendement du turbo et déclenchent ce défaut de performance."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé au tableau de bord",
+    "Perte de puissance et reprises molles",
+    "Suralimentation irrégulière (turbo qui pousse trop ou pas assez)",
+    "Passage possible en mode dégradé",
+    "Sifflement ou bruit anormal du turbo dans certains cas",
+    "Fumées à l'accélération en cas de combustion dégradée",
+    "Régénération du FAP perturbée"
+  ],
+  "diagnostic": "Le diagnostic commence par la lecture du code et des données figées, puis par l'observation en direct de la pression de suralimentation demandée et réelle sur plusieurs phases de conduite. On vérifie l'étanchéité du circuit d'admission (durites, manchons, intercooler), la mobilité de la géométrie variable, l'actuateur, le capteur de pression et le jeu mécanique éventuel du turbo. Chez Ultimauto à Cholet, ce diagnostic complet permet de cibler l'origine exacte de la perte de performance avant d'engager une réparation parfois coûteuse.",
+  "reparation": "La réparation dépend de la cause identifiée : suppression d'une fuite d'air, réfection de l'actuateur, remplacement du capteur de pression, ou intervention sur le turbo en cas d'usure mécanique. À titre indicatif, une durite coûte généralement peu, un capteur de pression de l'ordre de 50 à 150 € posé, tandis qu'un turbo représente une dépense bien plus élevée. Quand la calamine encrasse le turbo et grippe la géométrie variable, un décalaminage hydrogène peut améliorer son fonctionnement et restaurer une partie des performances. Ultimauto intervient à Cholet ou en service mobile (44·49·56·79·85), diagnostic et devis gratuits.",
+  "gravite": "Élevée",
+  "graviteTexte": "Le P2263 traduit une perte de performance réelle du turbo et met souvent le moteur en mode dégradé. Non traité, il peut s'aggraver, surtout si une usure mécanique du turbo est en cause.",
+  "rouler": "Évitez de solliciter le moteur et limitez les longs trajets tant que la cause n'est pas identifiée, en particulier si le véhicule est bridé. Forcer sur un turbo en souffrance peut aggraver les dégâts. Faites diagnostiquer le défaut rapidement plutôt que d'effacer le code, qui reviendra tant que la performance reste dégradée.",
+  "faq": [
+    {
+      "q": "Le code P2263 est-il grave ?",
+      "r": "Il est à prendre au sérieux : il traduit une perte de performance réelle du turbo et met souvent le moteur en mode dégradé. Une usure mécanique du turbo peut être en cause, d'où l'intérêt d'un diagnostic rapide."
+    },
+    {
+      "q": "Quelle différence entre P2263, P0299 et P0234 ?",
+      "r": "Le P0299 vise un manque de pression (underboost), le P0234 un excès de pression (overboost), tandis que le P2263 est plus global : il signale une performance insuffisante du système de turbocompression sur la durée."
+    },
+    {
+      "q": "Un décalaminage peut-il aider sur un P2263 ?",
+      "r": "Souvent, oui, lorsque la calamine encrasse le turbo et grippe la géométrie variable. Un décalaminage hydrogène peut restaurer une partie des performances. Si le turbo est mécaniquement usé, une réparation reste nécessaire."
+    },
+    {
+      "q": "Puis-je rouler avec le code P2263 ?",
+      "r": "Le moins possible, surtout en mode dégradé ou si vous entendez un bruit anormal du turbo. Forcer peut aggraver les dégâts. Chez Ultimauto, le diagnostic et le devis sont gratuits."
+    }
+  ]
+}

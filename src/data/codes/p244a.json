@@ -1,0 +1,69 @@
+{
+  "code": "P244A",
+  "slug": "p244a",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Pression différentielle du FAP trop basse (Banc 1)",
+  "metaTitle": "Code défaut P244A : causes, symptômes et solution",
+  "metaDescription": "Code défaut P244A : pression différentielle du filtre à particules (FAP) trop basse, banc 1. Causes, symptômes, diagnostic et solution chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P244A signale une pression différentielle du FAP anormalement basse : les gaz passent trop librement.",
+  "signification": "Le code P244A signale que la pression différentielle du filtre à particules (FAP) du banc 1 est trop basse, c'est-à-dire en dessous de la valeur attendue. Pour estimer le colmatage du filtre, le calculateur compare la pression des gaz en amont et en aval du FAP : un filtre sain crée toujours une certaine résistance, donc un écart de pression mesurable. Lorsque cet écart devient anormalement faible, le système en déduit que les gaz traversent le filtre trop librement. Cela peut venir d'un capteur qui sous-estime la pression, d'une durite de prise de pression débranchée, d'une fuite, ou d'un FAP percé voire purement et simplement absent. Le P244A est donc souvent associé à des filtres défaillants mécaniquement ou à des problèmes de mesure, plutôt qu'à un colmatage.",
+  "causes": [
+    {
+      "titre": "Durite de prise de pression débranchée ou percée",
+      "detail": "Si la durite ne transmet plus correctement la pression, le capteur lit un écart trop faible, voire nul."
+    },
+    {
+      "titre": "Capteur de pression différentielle défectueux",
+      "detail": "Un capteur HS ou imprécis peut sous-évaluer la pression différentielle et déclencher le code."
+    },
+    {
+      "titre": "FAP percé ou fissuré",
+      "detail": "Une céramique percée, fissurée ou fondue laisse passer les gaz sans résistance : l'écart de pression chute."
+    },
+    {
+      "titre": "FAP retiré ou vidé",
+      "detail": "Un filtre déposé ou un substrat retiré supprime toute résistance, ce qui fait apparaître une pression différentielle quasi nulle."
+    },
+    {
+      "titre": "Fuite sur la ligne d'échappement",
+      "detail": "Une fuite avant le point de mesure réduit la pression vue par le capteur et fausse le calcul."
+    },
+    {
+      "titre": "Connecteur ou câblage du capteur défaillant",
+      "detail": "Un faux contact peut amener le calculateur à lire une valeur trop basse."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur (MIL) allumé",
+    "Voyant FAP éventuellement allumé",
+    "Mode dégradé possible selon le constructeur",
+    "Régénérations mal pilotées (absentes ou inutiles)",
+    "Augmentation des émissions de particules à l'échappement",
+    "Valeur de pression différentielle proche de zéro au diagnostic",
+    "Fumées plus visibles si le FAP est percé"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise OBD pour confirmer le P244A et observer la pression différentielle en données réelles, souvent anormalement basse. On contrôle en priorité le branchement et l'état des durites de prise de pression, puis le capteur et son faisceau, car une fuite ou une durite débranchée est une cause fréquente. Si la mesure est fiable et la pression réellement très faible, on inspecte le FAP pour vérifier qu'il n'est ni percé ni vidé. Chez Ultimauto, ce diagnostic électronique et mécanique identifie précisément l'origine avant toute intervention.",
+  "reparation": "La réparation suit la cause. Souvent, rebrancher ou remplacer une durite, ou réparer le capteur et son connecteur, suffit pour un coût modéré. Si le diagnostic révèle un FAP percé ou absent, le filtre doit être remis en état ou remplacé : dans ce cas, un nettoyage seul ne suffit pas, et un FAP neuf est souvent coûteux (plusieurs centaines à plusieurs milliers d'euros). Ultimauto réalise le diagnostic, le contrôle des durites et du capteur, et vous conseille honnêtement sur la solution, à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Une pression trop basse peut signaler un FAP percé qui ne filtre plus les particules, avec un impact sur les émissions et le contrôle technique. Le véhicule reste roulant, mais le défaut doit être diagnostiqué pour en connaître la cause exacte.",
+  "rouler": "On peut rouler avec un P244A, mais si le FAP est percé, le véhicule ne filtre plus correctement les particules et risque l'échec au contrôle technique. Si seul un capteur ou une durite est en cause, l'urgence est moindre. Dans tous les cas, un diagnostic permet de savoir s'il faut intervenir vite.",
+  "faq": [
+    {
+      "q": "Le P244A signifie-t-il que mon FAP est percé ?",
+      "r": "C'est une possibilité, mais pas la seule. Une durite débranchée, une fuite ou un capteur défaillant peuvent aussi donner une pression trop basse. Le diagnostic permet de distinguer un vrai FAP percé d'un simple problème de mesure."
+    },
+    {
+      "q": "Un nettoyage FAP peut-il régler le P244A ?",
+      "r": "Pas directement, car le P244A traduit une pression trop basse, pas un colmatage. Si la cause est une durite ou un capteur, on répare ce composant ; si le FAP est percé, c'est sa remise en état ou son remplacement qui s'impose."
+    },
+    {
+      "q": "Le P244A peut-il apparaître après un FAP retiré ?",
+      "r": "Oui. Un FAP déposé ou vidé supprime la résistance attendue et fait chuter la pression différentielle, ce qui déclenche typiquement ce code. Remettre un filtre fonctionnel rétablit une mesure normale."
+    },
+    {
+      "q": "Combien coûte la réparation d'un P244A ?",
+      "r": "Cela dépend de la cause : rebrancher une durite ou remplacer un capteur reste abordable, tandis qu'un FAP percé à remplacer est plus coûteux (souvent plusieurs centaines à plusieurs milliers d'euros). Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}

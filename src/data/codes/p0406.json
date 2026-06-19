@@ -1,0 +1,69 @@
+{
+  "code": "P0406",
+  "slug": "p0406",
+  "categorie": "EGR",
+  "service": "decalaminage-hydrogene",
+  "titre": "Signal du capteur de position EGR trop haut",
+  "metaTitle": "Code défaut P0406 : causes, symptômes et solution",
+  "metaDescription": "Le code défaut P0406 signale un signal du capteur de position EGR trop haut : causes, symptômes et solution chez Ultimauto à Cholet (49). Devis gratuit.",
+  "definitionCourte": "Le P0406 indique que la tension du capteur de position de la vanne EGR est anormalement élevée.",
+  "signification": "Le code P0406 est un code OBD-II générique qui indique que le signal du capteur de position de la vanne EGR (souvent appelé capteur A) est trop haut. Ce capteur renseigne le calculateur moteur sur l'ouverture réelle du clapet de la vanne EGR, qui dose la recirculation des gaz d'échappement. Le calculateur surveille la tension renvoyée par le capteur et la compare à une plage normale. Lorsque cette tension dépasse durablement le seuil maximal admis, il considère l'information de position comme invalide et enregistre le défaut P0406. Une tension trop élevée traduit le plus souvent une anomalie du capteur ou de son câblage (court-circuit à une tension positive, défaut de masse), mais elle peut aussi accompagner un clapet bloqué ouvert par la calamine, qui maintient le capteur en bout de course haute.",
+  "causes": [
+    {
+      "titre": "Capteur de position de la vanne EGR défectueux",
+      "detail": "Le capteur renvoie une tension anormalement élevée même quand la vanne est fermée, faussant l'information de position."
+    },
+    {
+      "titre": "Faisceau en court-circuit à une tension positive",
+      "detail": "Un fil du capteur en contact avec une ligne d'alimentation fait monter la tension du signal au-dessus du seuil maximal."
+    },
+    {
+      "titre": "Défaut de masse du capteur",
+      "detail": "Une masse coupée ou résistive empêche la tension de redescendre et maintient un signal trop haut."
+    },
+    {
+      "titre": "Connecteur du capteur EGR défaillant",
+      "detail": "Un connecteur corrodé ou présentant un faux contact peut provoquer une lecture de tension anormalement élevée."
+    },
+    {
+      "titre": "Calamine bloquant le clapet ouvert",
+      "detail": "Une vanne maintenue ouverte par les dépôts garde le capteur en position haute et peut entretenir un signal haut permanent."
+    },
+    {
+      "titre": "Dépôts empêchant le retour en position fermée",
+      "detail": "Les dépôts empêchent le clapet de revenir au repos, ce qui maintient une tension élevée sur le capteur."
+    }
+  ],
+  "symptomes": [
+    "Allumage du voyant moteur",
+    "Ralenti instable, à-coups voire calages",
+    "Hésitations à l'accélération",
+    "Perte de puissance et reprises difficiles",
+    "Démarrage difficile",
+    "Surconsommation et émissions de fumée",
+    "Passage possible en mode dégradé"
+  ],
+  "diagnostic": "Le diagnostic commence par une lecture à la valise pour confirmer le P0406 et observer la tension du capteur de position en temps réel. On contrôle ensuite au multimètre le câblage, la masse et l'état du connecteur, et on recherche un éventuel court-circuit à une tension positive. En pilotant la vanne en commande active, on vérifie si la tension évolue normalement et si le clapet n'est pas bloqué ouvert par la calamine. Chez Ultimauto, ce contrôle précède toute intervention pour distinguer un capteur ou un câblage défaillant d'un clapet bloqué par l'encrassement.",
+  "reparation": "Si le clapet reste ouvert à cause de la calamine et maintient un signal haut, le décalaminage hydrogène d'Ultimauto décrasse la vanne EGR et le circuit d'admission sans démontage pour rétablir une fermeture franche. Lorsque le capteur de position, sa masse ou son faisceau est réellement en cause, la pièce ou le câblage concerné est remplacé. À titre indicatif, un nettoyage de vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €, le remplacement d'un capteur ou d'une vanne pouvant être plus coûteux. Intervention à l'atelier de Cholet (49) ou en service mobile, devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Le calculateur ne connaît plus précisément la position de la vanne, ce qui dégrade le fonctionnement moteur, peut faire caler le ralenti et entraîner un mode dégradé.",
+  "rouler": "Vous pouvez rouler avec un P0406, mais le moteur peut caler au ralenti, manquer de reprises ou passer en mode dégradé. Si le défaut vient d'un câblage, il peut évoluer. Un diagnostic rapide est conseillé.",
+  "faq": [
+    {
+      "q": "Que signifie un signal de capteur EGR trop haut ?",
+      "r": "Cela veut dire que la tension renvoyée par le capteur de position de la vanne EGR dépasse la plage normale. C'est souvent dû au capteur, à son câblage, ou à un clapet bloqué ouvert par la calamine."
+    },
+    {
+      "q": "Le décalaminage hydrogène peut-il corriger le code P0406 ?",
+      "r": "Oui lorsque le clapet reste ouvert à cause des dépôts et entretient un signal haut. Le décalaminage rétablit une fermeture franche sans démontage. Si le capteur ou le faisceau est défaillant, un remplacement reste nécessaire."
+    },
+    {
+      "q": "Combien coûte la réparation du code P0406 ?",
+      "r": "Un nettoyage de la vanne EGR par décalaminage se situe de l'ordre de 100 à 200 €. Le remplacement d'un capteur ou d'une vanne, ou une réparation de faisceau, revient plus cher. Ultimauto établit un devis gratuit après diagnostic."
+    },
+    {
+      "q": "Puis-je rouler avec le code P0406 ?",
+      "r": "Souvent oui, mais le moteur peut caler ou passer en mode dégradé car la position de la vanne n'est plus fiable. Un diagnostic rapide est recommandé."
+    }
+  ]
+}

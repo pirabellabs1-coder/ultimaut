@@ -1,0 +1,48 @@
+{
+  "slug": "nissan",
+  "nom": "Nissan",
+  "metaTitle": "Problème AdBlue Nissan : symptômes et solutions",
+  "metaDescription": "Problème AdBlue Nissan : voyant SCR, démarrage impossible, mode dégradé, codes P20E8/P204F sur dCi. Diagnostic et solutions à Cholet (49), devis gratuit.",
+  "moteurs": "Côté diesel, Nissan partage plusieurs motorisations avec l'alliance Renault — notamment le 1.5 dCi et le 1.7 dCi — et dispose aussi de son 2.3 dCi (utilitaires et SUV), tous équipés du système SCR à injection d'AdBlue.",
+  "modeles": [
+    "Nissan Qashqai dCi",
+    "Nissan X-Trail dCi",
+    "Nissan Juke dCi",
+    "Nissan Micra dCi",
+    "Nissan Pulsar dCi",
+    "Nissan Navara 2.3 dCi",
+    "Nissan NV300 / NV400 dCi"
+  ],
+  "codesDefaut": [
+    "P20E8",
+    "P204F",
+    "P229F",
+    "P163B",
+    "P20EE"
+  ],
+  "symptomes": [
+    "Message d'avertissement « démarrage impossible » avec compte à rebours",
+    "Refus de démarrage une fois la limite AdBlue atteinte",
+    "Voyant AdBlue / système SCR allumé au tableau de bord",
+    "Mode dégradé avec bridage de la puissance moteur",
+    "Alerte liée au système de réduction des émissions (NOx)",
+    "Surconsommation d'AdBlue ou appoints rapprochés",
+    "Voyant moteur (MIL) associé aux alertes antipollution"
+  ],
+  "pourquoi": "Sur Nissan, les pannes AdBlue concernent à la fois les moteurs issus de l'alliance Renault (1.5 et 1.7 dCi) et le 2.3 dCi plus sollicité sur les utilitaires et le Navara. La cristallisation de l'injecteur AdBlue et le colmatage de la pompe SCR sont fréquents, en particulier sur les usages mixtes ou en charge. Le capteur NOx, monté en aval du catalyseur SCR, s'encrasse ou dérive et déclenche alors un code défaut. Une qualité d'AdBlue non conforme à la norme ISO 22241 accentue l'encrassement et fausse la régulation du calculateur.",
+  "solutions": "Nous débutons par un diagnostic électronique complet pour lire les codes SCR et cibler l'élément fautif (injecteur, pompe AdBlue, capteur NOx ou qualité du fluide). Selon le diagnostic, on réalise un appoint d'AdBlue de qualité, le nettoyage ou le remplacement de l'injecteur ou du capteur NOx, puis un reparamétrage et une réinitialisation du système SCR pour lever le mode dégradé. Ultimauto intervient à Cholet (49) ou en mobile sur le secteur, avec devis gratuit avant toute intervention. La neutralisation logicielle du système reste strictement réservée aux véhicules circulant hors voie publique.",
+  "faq": [
+    {
+      "q": "Mon Nissan Qashqai affiche un défaut AdBlue, dois-je m'inquiéter ?",
+      "r": "Pas de panique immédiate : le véhicule vous laisse une marge kilométrique avant le blocage. En revanche, il faut faire poser un diagnostic rapidement, car le défaut peut venir d'un capteur NOx ou de l'injecteur, et un simple appoint ne suffira pas à l'éteindre durablement."
+    },
+    {
+      "q": "Le système AdBlue du Nissan Navara 2.3 dCi pose-t-il problème ?",
+      "r": "Le 2.3 dCi est très sollicité sur les utilitaires et le Navara, ce qui peut accélérer l'encrassement de l'injecteur et la dérive du capteur NOx. Nous diagnostiquons ces véhicules au cas par cas, puis proposons le nettoyage, le remplacement de pièce ou le reparamétrage adapté."
+    },
+    {
+      "q": "Les moteurs dCi Nissan et Renault ont-ils les mêmes pannes AdBlue ?",
+      "r": "Sur les moteurs partagés (1.5 et 1.7 dCi), oui : injecteur, pompe SCR et capteur NOx sont les mêmes points faibles. Le 2.3 dCi propre à Nissan suit la même logique de panne. Notre méthode de diagnostic et de réparation s'applique à l'ensemble de ces motorisations."
+    }
+  ]
+}

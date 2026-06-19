@@ -1,0 +1,69 @@
+{
+  "code": "P2463",
+  "slug": "p2463",
+  "categorie": "FAP",
+  "service": "nettoyage-fap",
+  "titre": "Filtre à particules : accumulation de suie trop élevée",
+  "metaTitle": "Code défaut P2463 : causes, symptômes et solution",
+  "metaDescription": "Code défaut P2463 : le filtre à particules (FAP) accumule trop de suie. Causes, symptômes, diagnostic et nettoyage du FAP chez Ultimauto à Cholet.",
+  "definitionCourte": "Le P2463 indique que le FAP est chargé de suie au-delà du seuil et que la régénération n'arrive pas à le nettoyer.",
+  "signification": "Le code P2463 indique que le filtre à particules (FAP) a accumulé une quantité de suie supérieure au seuil admissible. Contrairement aux cendres, la suie est censée être brûlée régulièrement lors des phases de régénération, lorsque la température d'échappement monte suffisamment. Le calculateur estime en permanence la charge de suie à partir de la pression différentielle mesurée autour du filtre et d'un modèle de calcul interne. Lorsque cette charge devient trop élevée et que la régénération ne parvient pas à la faire redescendre, il enregistre le P2463 pour protéger le moteur et la ligne d'échappement. Ce code traduit donc le plus souvent une régénération qui n'aboutit pas, plutôt qu'un filtre définitivement hors d'usage.",
+  "causes": [
+    {
+      "titre": "Régénérations interrompues ou impossibles",
+      "detail": "Des trajets trop courts ou des arrêts fréquents empêchent la régénération d'aller à son terme, la suie s'accumule."
+    },
+    {
+      "titre": "Conduite exclusivement urbaine",
+      "detail": "En ville, le moteur n'atteint pas la température nécessaire pour brûler les suies, ce qui colmate progressivement le filtre."
+    },
+    {
+      "titre": "Capteur de pression différentielle défectueux",
+      "detail": "Un capteur HS ou des durites bouchées peuvent surestimer la charge de suie et déclencher le code à tort."
+    },
+    {
+      "titre": "Sonde de température d'échappement en panne",
+      "detail": "Sans information fiable de température, le calculateur ne déclenche pas la régénération et la suie continue de s'accumuler."
+    },
+    {
+      "titre": "Système de post-injection ou injecteurs défaillants",
+      "detail": "Une post-injection défaillante empêche d'atteindre la température de régénération du FAP."
+    },
+    {
+      "titre": "FAP réellement saturé ou en fin de vie",
+      "detail": "Un filtre très chargé en suie incrustée ou en cendres ne se régénère plus correctement et nécessite un nettoyage en profondeur."
+    }
+  ],
+  "symptomes": [
+    "Voyant moteur et voyant FAP allumés",
+    "Mode dégradé avec bridage de la puissance",
+    "Perte de puissance et reprises molles",
+    "Tentatives de régénération répétées et rapprochées",
+    "Surconsommation de carburant et odeur d'échappement",
+    "Ventilateur de refroidissement tournant longtemps après l'arrêt",
+    "Ralenti irrégulier dans les cas avancés"
+  ],
+  "diagnostic": "Le diagnostic démarre par une lecture à la valise OBD pour confirmer le P2463 et relever le taux de suie estimé par le calculateur. On vérifie que les conditions de régénération sont réunies : pression différentielle réelle, températures d'échappement, état des sondes et de la post-injection. Si le filtre n'est pas trop chargé, une régénération forcée peut être tentée ; sinon, on confirme un colmatage qui nécessite un nettoyage. Chez Ultimauto, ce diagnostic électronique distingue une suie « brûlable » d'un filtre réellement saturé et oriente vers la solution la plus économique.",
+  "reparation": "Si la suie est récente et le filtre pas trop chargé, une régénération forcée à la valise peut suffire à faire redescendre le taux. Lorsque le filtre est trop colmaté ou que la suie est incrustée, un nettoyage FAP en profondeur s'impose, de l'ordre de 250 à 350 € selon le véhicule, contre un FAP neuf bien plus coûteux. Il faut aussi corriger la cause (sonde, post-injection, type de trajets) pour éviter une récidive. Ultimauto réalise diagnostic, régénération et nettoyage à l'atelier de Cholet (49) ou en service mobile dans le Grand Ouest, avec devis gratuit.",
+  "gravite": "Modérée",
+  "graviteTexte": "Un FAP trop chargé en suie peut s'enflammer de façon incontrôlée lors d'une régénération mal gérée et basculer le véhicule en mode dégradé. Il faut traiter le défaut rapidement pour éviter une aggravation.",
+  "rouler": "Tant que le taux de suie n'est pas critique, on peut parfois favoriser une régénération en roulant sur route ou autoroute à régime soutenu. Mais si le mode dégradé est déjà actif ou si le filtre est très chargé, mieux vaut ne pas insister et faire diagnostiquer le véhicule pour éviter d'endommager le FAP.",
+  "faq": [
+    {
+      "q": "Une régénération forcée peut-elle régler le P2463 ?",
+      "r": "Souvent oui, si la suie n'est pas trop incrustée et que le filtre n'est pas saturé. Si la régénération échoue ou si le taux remonte aussitôt, c'est qu'un nettoyage en profondeur ou la correction d'une autre cause est nécessaire."
+    },
+    {
+      "q": "Rouler sur autoroute peut-il nettoyer mon FAP ?",
+      "r": "Rouler à régime soutenu peut aider une régénération naturelle si le filtre n'est pas trop chargé. Mais en cas de mode dégradé ou de colmatage avancé, cela ne suffit plus et il faut intervenir avec une valise puis, si besoin, un nettoyage."
+    },
+    {
+      "q": "Quelle différence entre le P2463 et le P242F ?",
+      "r": "Le P2463 concerne un excès de suie, censée pouvoir brûler à la régénération, tandis que le P242F concerne les cendres, qui ne brûlent jamais. La suie peut parfois être éliminée par régénération ; les cendres exigent un nettoyage."
+    },
+    {
+      "q": "Combien coûte la remise en état après un P2463 ?",
+      "r": "Une régénération forcée est peu coûteuse ; un nettoyage FAP se situe de l'ordre de 250 à 350 € selon le véhicule, contre nettement plus pour un filtre neuf. Ultimauto remet un devis gratuit après diagnostic."
+    }
+  ]
+}
