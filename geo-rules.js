@@ -10,8 +10,11 @@ export const BLOCKED = new Set([
   'PK', // Pakistan
 ]);
 
-// Robots des moteurs de recherche / IA / réseaux sociaux — TOUJOURS autorisés (sinon désindexation).
-export const BOTS = /(googlebot|google-inspectiontool|googleother|google-extended|mediapartners-google|adsbot-google|storebot-google|bingbot|bingpreview|msnbot|adidxbot|slurp|duckduckbot|duckassistbot|baiduspider|yandex|sogou|facebookexternalhit|facebot|twitterbot|linkedinbot|pinterest|applebot|ia_archiver|archive\.org_bot|gptbot|oai-searchbot|chatgpt-user|claudebot|claude-web|anthropic-ai|perplexitybot|ccbot|bytespider|amazonbot|petalbot|semrushbot|ahrefsbot|mj12bot|dotbot|uptimerobot|vercel|lighthouse)/i;
+// Robots moteurs / IA / outils (vérification GSC, PageSpeed, Rich Results…) / aperçus réseaux sociaux
+// — TOUJOURS autorisés (sinon désindexation OU échec de validation de propriété).
+// 'google' et 'bing' larges couvrent TOUS leurs fetchers (Googlebot, Google-Site-Verification,
+// Google-InspectionTool, AdsBot, Google-Read-Aloud, BingPreview, etc.), quel que soit le pays.
+export const BOTS = /(google|bing|msnbot|adidxbot|slurp|duckduckbot|duckassistbot|baiduspider|yandex|sogou|facebookexternalhit|facebookcatalog|facebot|twitterbot|linkedinbot|pinterest|applebot|ia_archiver|archive\.org_bot|gptbot|oai-searchbot|chatgpt-user|claudebot|claude-web|anthropic-ai|perplexitybot|ccbot|bytespider|amazonbot|petalbot|semrushbot|ahrefsbot|mj12bot|dotbot|uptimerobot|vercel|lighthouse|pagespeed|headlesschrome|whatsapp|telegrambot|discordbot|embedly)/i;
 
 // Renvoie 'allow' ou 'block'.
 export function decide(country, ua) {
