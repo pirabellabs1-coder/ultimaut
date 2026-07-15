@@ -259,7 +259,12 @@ const allJsonLd = [organization(site), website(site), localBusiness(site, avis),
       </div>
       <div class="border-t border-white/15">
         <div class="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-white sm:flex-row">
-          <p>© 2026 {site.legalName}. Tous droits réservés.</p>
+          <div class="text-center sm:text-left">
+            <p>© 2026 {site.legalName}. Tous droits réservés.</p>
+            <p class="mt-1 text-white/70">
+              Réalisé par <a href="https://pirabellabs.com" target="_blank" rel="noopener" class="font-semibold text-white transition-colors hover:text-accent">Pirabel Labs</a> — agence marketing &amp; SEO
+            </p>
+          </div>
           <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
             <a href="/mentions-legales" class="hover:text-accent">Mentions légales</a>
             <a href="/politique-de-confidentialite" class="hover:text-accent">Politique de confidentialité</a>
