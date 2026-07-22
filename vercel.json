@@ -176,6 +176,16 @@
       "statusCode": 301
     },
     {
+      "source": "/solutions-reparation-desactivation-adblue/",
+      "destination": "/suppression-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/solutions-reparation-desactivation-adblue",
+      "destination": "/suppression-adblue",
+      "statusCode": 301
+    },
+    {
       "source": "/2025/09/30/suppression-adblue/",
       "destination": "/suppression-adblue",
       "statusCode": 301
