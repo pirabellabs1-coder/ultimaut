@@ -74,6 +74,13 @@
   "googleReviewCount": 450,
   "siren": "421 216 524",
   "gaMeasurementId": "G-9WEN8YZ9LK",
+  "annonce": {
+    "actif": true,
+    "titre": "Absence temporaire",
+    "texte": "Ultimauto est actuellement indisponible pour les interventions.",
+    "reprise": "Reprise à partir du 4 septembre.",
+    "invitation": "Vous pouvez déjà nous contacter dès maintenant pour fixer votre rendez-vous"
+  },
   "guarantees": [
     "Devis gratuit et sans engagement",
     "Service mobile : à domicile ou au travail",
