@@ -1,7 +1,7 @@
 ---
-// Page de pilotage du mode maintenance (bouton ON/OFF).
+// Page de pilotage du site (maintenance + bandeau d'annonce).
 // Accès : https://ultimauto.fr/pilote?cle=VOTRE_SECRET
-// La bascule réelle est protégée par le secret côté API (/api/maintenance).
+// Les bascules sont protégées par le secret côté API.
 export const prerender = true;
 ---
 <!doctype html>
@@ -14,29 +14,32 @@ export const prerender = true;
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#eef2f7;color:#0f172a;min-height:100vh;display:grid;place-items:center;padding:20px}
-    .card{background:#fff;width:100%;max-width:440px;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(15,76,146,.18)}
+    .card{background:#fff;width:100%;max-width:460px;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(15,76,146,.18)}
     .head{background:linear-gradient(160deg,#0f4c92,#1565C0);color:#fff;padding:26px 26px 22px;text-align:center}
     .logo{font-weight:800;font-size:22px;letter-spacing:-.5px}
     .logo b{color:#8BC53F}
     .head p{margin-top:4px;font-size:13px;color:#cfe0f5}
-    .body{padding:26px}
-    .state{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;font-weight:700;font-size:16px;margin-bottom:22px}
-    .state .dot{width:14px;height:14px;border-radius:50%;flex:none}
+    .body{padding:24px 26px 26px}
+    .block+.block{margin-top:26px;padding-top:24px;border-top:1px solid #e6edf5}
+    .lbl{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#1565C0;margin-bottom:12px}
+    .state{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;font-weight:700;font-size:15px;margin-bottom:14px}
+    .state .dot{width:13px;height:13px;border-radius:50%;flex:none}
     .on{background:#fef2f2;color:#b91c1c}.on .dot{background:#ef4444;box-shadow:0 0 0 4px #fee2e2}
     .off{background:#f0fdf4;color:#15803d}.off .dot{background:#22c55e;box-shadow:0 0 0 4px #dcfce7}
     .loading{background:#f1f5f9;color:#64748b}.loading .dot{background:#94a3b8}
-    button{width:100%;border:0;border-radius:999px;padding:16px;font-size:16px;font-weight:800;cursor:pointer;transition:transform .1s,filter .15s}
+    button{width:100%;border:0;border-radius:999px;padding:15px;font-size:15.5px;font-weight:800;cursor:pointer;transition:transform .1s,filter .15s}
     button:active{transform:scale(.98)}
     button:disabled{opacity:.5;cursor:not-allowed}
     .btn-on{background:#ef4444;color:#fff}
     .btn-off{background:#22c55e;color:#fff}
-    .hint{margin-top:16px;font-size:13px;line-height:1.5;color:#64748b;text-align:center}
-    .hint a{color:#1565C0;font-weight:600;text-decoration:none}
-    .keybox{display:flex;gap:8px;margin-bottom:18px}
+    .note{margin-top:9px;font-size:12.5px;line-height:1.5;color:#64748b}
+    .msg{margin-top:10px;font-size:13px;text-align:center;min-height:17px;font-weight:600}
+    .msg.err{color:#b91c1c}.msg.ok{color:#15803d}
+    .keybox{display:flex;gap:8px}
     .keybox input{flex:1;padding:13px 14px;border:1px solid #cbd5e1;border-radius:12px;font-size:15px}
     .keybox button{width:auto;padding:13px 20px;background:#1565C0;color:#fff;font-size:14px}
-    .msg{margin-top:14px;font-size:13.5px;text-align:center;min-height:18px;font-weight:600}
-    .msg.err{color:#b91c1c}.msg.ok{color:#15803d}
+    .foot{margin-top:22px;text-align:center;font-size:13px}
+    .foot a{color:#1565C0;font-weight:600;text-decoration:none}
   </style>
 </head>
 <body>
@@ -52,83 +55,120 @@ export const prerender = true;
           <input id="key" type="password" placeholder="Clé secrète" autocomplete="off" />
           <button id="keybtn" type="button">OK</button>
         </div>
+        <div id="keymsg" class="msg"></div>
       </div>
 
       <div id="panel" hidden>
-        <div id="state" class="state loading"><span class="dot"></span><span id="statetxt">Vérification…</span></div>
-        <button id="toggle" type="button" disabled>…</button>
-        <div id="msg" class="msg"></div>
-        <p class="hint">
-          En maintenance, seuls les visiteurs voient la page « bientôt de retour » (les moteurs reçoivent un code&nbsp;503, sans impact SEO). <br />
-          <a id="seesite" href="#" target="_blank" rel="noopener">Voir le site en tant que propriétaire →</a>
-        </p>
+        <div class="block">
+          <p class="lbl">Mode maintenance</p>
+          <div id="m-state" class="state loading"><span class="dot"></span><span id="m-txt">Vérification…</span></div>
+          <button id="m-btn" type="button" disabled>…</button>
+          <p class="note">Effet immédiat. Les visiteurs voient une page « bientôt de retour » ; vous, non.</p>
+          <div id="m-msg" class="msg"></div>
+        </div>
+
+        <div class="block">
+          <p class="lbl">Bandeau d'annonce</p>
+          <div id="a-state" class="state loading"><span class="dot"></span><span id="a-txt">Vérification…</span></div>
+          <button id="a-btn" type="button" disabled>…</button>
+          <p class="note">Le bandeau « Absence temporaire » en haut de toutes les pages. La bascule relance une reconstruction du site&nbsp;: comptez <strong>1 à 2 minutes</strong> avant que le changement soit visible.</p>
+          <div id="a-msg" class="msg"></div>
+        </div>
+
+        <p class="foot"><a id="seesite" href="/?acces=acces-prive-ultimauto" target="_blank" rel="noopener">Voir le site en tant que propriétaire →</a></p>
       </div>
     </div>
   </div>
 
   <script is:inline>
     (function () {
-      var params = new URLSearchParams(location.search);
-      var cle = params.get('cle') || sessionStorage.getItem('ua_cle') || '';
+      var cle = new URLSearchParams(location.search).get('cle') || sessionStorage.getItem('ua_cle') || '';
       var needkey = document.getElementById('needkey');
       var panel = document.getElementById('panel');
-      var stateEl = document.getElementById('state');
-      var stateTxt = document.getElementById('statetxt');
-      var toggle = document.getElementById('toggle');
-      var msg = document.getElementById('msg');
-      document.getElementById('seesite').href = '/?acces=acces-prive-ultimauto';
 
-      var current = null;
-
-      function render(on) {
-        current = on;
-        stateEl.className = 'state ' + (on ? 'on' : 'off');
-        stateTxt.textContent = on ? 'Site EN MAINTENANCE' : 'Site EN LIGNE';
-        toggle.className = on ? 'btn-off' : 'btn-on';
-        toggle.textContent = on ? '✅ Remettre le site en ligne' : '🛠️ Activer la maintenance';
-        toggle.disabled = false;
-      }
-      function setMsg(t, ok) { msg.textContent = t || ''; msg.className = 'msg ' + (ok ? 'ok' : 'err'); }
-
-      function api(method, body) {
-        var url = '/api/maintenance' + (method === 'GET' ? '?cle=' + encodeURIComponent(cle) : '');
+      function api(endpoint, method, body) {
+        var url = '/api/' + endpoint + (method === 'GET' ? '?cle=' + encodeURIComponent(cle) : '');
         var opt = { method: method, headers: { 'Content-Type': 'application/json' } };
-        if (body) opt.body = JSON.stringify(Object.assign({ cle: cle }, body));
-        return fetch(url, opt).then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); });
+        if (body) opt.body = JSON.stringify({ cle: cle, on: body.on });
+        return fetch(url, opt).then(function (r) {
+          return r.json().then(function (j) { return { status: r.status, j: j }; });
+        });
       }
 
-      function load() {
-        api('GET').then(function (res) {
-          if (res.status === 401) { showKey(true); setMsg('Clé incorrecte.', false); return; }
-          if (res.status >= 500) { panel.hidden = false; needkey.hidden = true; setMsg('Configuration Vercel manquante (Edge Config / token).', false); return; }
+      function control(cfg) {
+        var stateEl = document.getElementById(cfg.id + '-state');
+        var txtEl = document.getElementById(cfg.id + '-txt');
+        var btn = document.getElementById(cfg.id + '-btn');
+        var msg = document.getElementById(cfg.id + '-msg');
+        var current = null;
+
+        function render(on) {
+          current = on;
+          stateEl.className = 'state ' + (on ? 'on' : 'off');
+          txtEl.textContent = on ? cfg.labelOn : cfg.labelOff;
+          btn.className = on ? 'btn-off' : 'btn-on';
+          btn.textContent = on ? cfg.actionOff : cfg.actionOn;
+          btn.disabled = false;
+        }
+        function say(t, ok) { msg.textContent = t || ''; msg.className = 'msg ' + (ok ? 'ok' : 'err'); }
+
+        btn.onclick = function () {
+          var next = !current;
+          if (next && cfg.confirm && !confirm(cfg.confirm)) return;
+          btn.disabled = true; say('…', true);
+          api(cfg.endpoint, 'POST', { on: next }).then(function (res) {
+            if (res.status === 200) {
+              render(res.j.on);
+              say(cfg.done(res.j), true);
+            } else { btn.disabled = false; say((res.j && res.j.error) || 'Échec.', false); }
+          }).catch(function () { btn.disabled = false; say('Erreur réseau.', false); });
+        };
+
+        return { load: function () { return api(cfg.endpoint, 'GET').then(function (res) { if (res.status === 200) render(res.j.on === true); return res; }); } };
+      }
+
+      var maintenance = control({
+        id: 'm', endpoint: 'maintenance',
+        labelOn: 'Site EN MAINTENANCE', labelOff: 'Site EN LIGNE',
+        actionOn: '🛠️ Activer la maintenance', actionOff: '✅ Remettre le site en ligne',
+        confirm: 'Activer le mode maintenance ? Les visiteurs ne verront plus le site.',
+        done: function (j) { return j.on ? 'Maintenance activée.' : 'Site remis en ligne.'; },
+      });
+
+      var annonce = control({
+        id: 'a', endpoint: 'annonce',
+        labelOn: 'Bandeau AFFICHÉ', labelOff: 'Bandeau MASQUÉ',
+        actionOn: '📢 Afficher le bandeau', actionOff: '🚫 Retirer le bandeau',
+        confirm: null,
+        done: function (j) {
+          return (j.on ? 'Bandeau activé. ' : 'Bandeau retiré. ') +
+            (j.rebuild ? 'Reconstruction lancée (1-2 min).' : 'Reconstruction NON lancée — relancez un déploiement.');
+        },
+      });
+
+      function start() {
+        maintenance.load().then(function (res) {
+          if (res.status === 401) {
+            needkey.hidden = false; panel.hidden = true;
+            document.getElementById('keymsg').textContent = 'Clé incorrecte.';
+            document.getElementById('keymsg').className = 'msg err';
+            return;
+          }
           sessionStorage.setItem('ua_cle', cle);
           needkey.hidden = true; panel.hidden = false;
-          render(res.j.on === true);
-        }).catch(function () { setMsg('Erreur réseau.', false); });
-      }
-
-      function showKey(force) {
-        if (cle && !force) { load(); return; }
-        needkey.hidden = false; panel.hidden = true;
+          annonce.load();
+        }).catch(function () { needkey.hidden = false; });
       }
 
       document.getElementById('keybtn').onclick = function () {
         cle = document.getElementById('key').value.trim();
-        if (cle) load();
+        if (cle) start();
       };
-      document.getElementById('key').addEventListener('keydown', function (e) { if (e.key === 'Enter') document.getElementById('keybtn').click(); });
+      document.getElementById('key').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') document.getElementById('keybtn').click();
+      });
 
-      toggle.onclick = function () {
-        var next = !current;
-        if (next && !confirm('Activer le mode maintenance ? Les visiteurs ne verront plus le site.')) return;
-        toggle.disabled = true; setMsg('…', true);
-        api('POST', { on: next }).then(function (res) {
-          if (res.status === 200) { render(res.j.on); setMsg(res.j.on ? 'Maintenance activée.' : 'Site remis en ligne.', true); }
-          else { toggle.disabled = false; setMsg(res.j && res.j.error ? res.j.error : 'Échec.', false); }
-        }).catch(function () { toggle.disabled = false; setMsg('Erreur réseau.', false); });
-      };
-
-      showKey(false);
+      if (cle) start(); else { needkey.hidden = false; }
     })();
   </script>
 </body>

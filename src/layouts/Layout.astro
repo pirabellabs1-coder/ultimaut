@@ -7,6 +7,9 @@ import services from '../data/services.json';
 import avis from '../data/avis.json';
 import { WA_PATH, ICONS, TAGLINE, socialLinks } from '../lib/ui.js';
 import { localBusiness, organization, website } from '../lib/jsonld.js';
+import { annonceActive } from '../lib/annonce.js';
+
+const showAnnonce = (await annonceActive()) && !!site.annonce;
 
 const {
   title,
@@ -81,7 +84,7 @@ const allJsonLd = [organization(site), website(site), localBusiness(site, avis),
   <body class="bg-white text-ink">
     <a href="#contenu" class="skip-link rounded-full bg-brand px-4 py-2 font-semibold text-white">Aller au contenu</a>
 
-    {site.annonce?.actif && (
+    {showAnnonce && (
       <aside role="status" class="bg-amber-400 text-ink">
         <div class="mx-auto flex max-w-[1180px] flex-col items-center gap-2 px-5 py-3 text-center text-sm leading-snug sm:flex-row sm:justify-center sm:gap-4 sm:px-6 sm:text-left">
           <span class="flex items-center gap-2 font-bold">
