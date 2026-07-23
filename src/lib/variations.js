@@ -42,6 +42,7 @@ export function buildContext({ service, ville, villes }) {
     ? "directement dans notre atelier, au cœur de l'agglomération du Choletais"
     : `à environ ${dist.km} km de notre atelier de Cholet (~${formatTemps(dist.minutes)} de route)`;
   const distanceCourte = dist.surPlace ? 'à Cholet même' : `à ${formatTemps(dist.minutes)} de route`;
+  const distKm = dist.surPlace ? 'à Cholet' : `~${dist.km} km`;
   const mobilePhrase = dist.surPlace
     ? "Notre atelier vous accueille au cœur de Cholet, et notre service mobile peut aussi intervenir directement chez vous."
     : `Nous accueillons votre véhicule à l'atelier de Cholet et, grâce à notre service mobile, nous pouvons aussi intervenir à ${ville.nom}, à votre domicile ou sur votre lieu de travail (frais de déplacement selon la distance).`;
@@ -49,9 +50,10 @@ export function buildContext({ service, ville, villes }) {
   return {
     seed, slug, ville: ville.nom, dept: ville.dept, deptNom, zone: ville.zone,
     surPlace: dist.surPlace, km: dist.km, temps: formatTemps(dist.minutes),
-    distancePhrase, distanceCourte, mobilePhrase, voisines,
+    distancePhrase, distanceCourte, distKm, mobilePhrase, voisines,
     voisinesText: listeFr(voisines.slice(0, 3)),
     populationPhrase: phrasePopulation(ville.population),
+    populationNum: ville.population.toLocaleString('fr-FR'),
     population: ville.population, service, serviceLower,
   };
 }
@@ -61,6 +63,9 @@ const introPool = [
   (c) => `Votre véhicule a besoin d'un ${c.serviceLower} et vous habitez ${c.ville} ou ses alentours ? Ultimauto met son savoir-faire au service des conducteurs de cette ${c.populationPhrase} du ${c.deptNom}. Comptez ${c.distanceCourte} pour rejoindre notre atelier de Cholet depuis ${c.ville}, aux côtés de communes voisines comme ${listeFr(c.voisines.slice(0, 3))}. Nous détaillons ci-dessous notre méthode, les signes à surveiller et le déroulé de l'intervention.`,
   (c) => `${c.service.nom} à ${c.ville} : Ultimauto est votre interlocuteur de confiance dans le ${c.deptNom}. Implanté ${c.distancePhrase}, notre centre intervient pour ${c.ville} (${c.populationPhrase}) et l'ensemble du secteur ${c.zone}, jusqu'à ${listeFr(c.voisines.slice(0, 3))}. Découvrez comment nous redonnons à votre véhicule tout son potentiel, en toute transparence et avec un devis gratuit.`,
   (c) => `Besoin d'un ${c.serviceLower} fiable du côté de ${c.ville} (${c.deptNom}) ? Faites confiance à Ultimauto. Depuis notre atelier situé ${c.distancePhrase}, nous prenons en charge les véhicules de ${c.ville} et des communes proches — ${listeFr(c.voisines.slice(0, 3))} — avec la même exigence de qualité. Cette page vous explique en détail notre prestation et la marche à suivre.`,
+  (c) => `Le ${c.serviceLower} n'a rien d'anodin, et à ${c.ville}, ${c.populationPhrase} du ${c.deptNom}, mieux vaut un vrai spécialiste. Ultimauto, basé à Cholet (${c.distKm} de ${c.ville}), reçoit régulièrement des véhicules de la commune et des environs. Diagnostic d'abord, devis gratuit ensuite, et on n'intervient qu'avec votre accord — pour ${c.ville} comme pour ${listeFr(c.voisines.slice(1, 3))}.`,
+  (c) => `Où faire un ${c.serviceLower} près de ${c.ville} ? Avec ses ${c.populationNum} habitants environ, ${c.ville} compte de nombreux automobilistes confrontés à ces soucis. Ultimauto y répond depuis son atelier de Cholet et via un service mobile qui se déplace jusque chez vous, dans tout le secteur ${c.zone}. Explications claires, tarifs annoncés, résultat au rendez-vous.`,
+  (c) => `${c.service.nom} à ${c.ville} et alentours : Ultimauto joue la carte de la transparence. Situés ${c.distancePhrase}, nous accompagnons les conducteurs de ${c.ville}, du ${c.deptNom} et de communes proches comme ${listeFr(c.voisines.slice(1, 4))}. Notre philosophie tient en une phrase : réparer intelligemment plutôt que remplacer par réflexe. Voici comment nous procédons.`,
 ];
 
 const pourquoiLocalPool = [
@@ -68,6 +73,9 @@ const pourquoiLocalPool = [
   (c) => `À ${c.ville}, trouver un professionnel sérieux pour un ${c.serviceLower} n'est pas toujours simple. Ultimauto s'est fait une réputation dans tout le secteur ${c.zone} en misant sur la pédagogie et la durabilité : on vous explique le problème, on privilégie la réparation à la dépose systématique, et on s'engage sur le résultat. C'est ce qui amène jusqu'à nous des clients de ${c.ville} comme de ${listeFr(c.voisines.slice(1, 3))}. ${c.mobilePhrase}`,
   (c) => `Confier son ${c.serviceLower} à Ultimauto, c'est choisir un atelier qui prend le temps. Pour les conducteurs de ${c.ville} et du ${c.deptNom}, nous réalisons un diagnostic clair, un devis gratuit et détaillé, et nous n'intervenons qu'avec votre accord. Cette exigence vaut pour ${c.ville} comme pour ${listeFr(c.voisines.slice(0, 2))}. ${c.mobilePhrase}`,
   (c) => `Les automobilistes du secteur ${c.zone} apprécient de trouver en Ultimauto un spécialiste qui ne pousse pas à la consommation. Pour votre ${c.serviceLower} à ${c.ville}, nous cherchons la solution la plus pertinente et la plus économique, en expliquant chaque étape. Que vous veniez de ${c.ville}, de ${listeFr(c.voisines.slice(0, 2))} ou d'ailleurs dans le ${c.deptNom}, vous bénéficiez du même soin. ${c.mobilePhrase}`,
+  (c) => `Le bon réflexe à ${c.ville} ? Un atelier qui diagnostique avant de facturer. Pour votre ${c.serviceLower}, Ultimauto commence toujours par un contrôle, vous explique ce qui se passe, puis propose la solution la plus adaptée — pas la plus chère. Des conducteurs de ${c.ville}, de ${listeFr(c.voisines.slice(0, 2))} et de tout le ${c.deptNom} nous suivent pour cette raison. ${c.mobilePhrase}`,
+  (c) => `Ce qui fait la différence pour un ${c.serviceLower} à ${c.ville}, c'est l'honnêteté du diagnostic. Chez Ultimauto, pas de dépose systématique ni de pièces changées « au cas où » : on cible la vraie cause, on la traite, on vérifie le résultat. Cette rigueur, les automobilistes du secteur ${c.zone} — de ${c.ville} à ${listeFr(c.voisines.slice(2, 4))} — la reconnaissent. ${c.mobilePhrase}`,
+  (c) => `Choisir Ultimauto pour votre ${c.serviceLower}, même depuis ${c.ville} (${c.distKm}), c'est miser sur du matériel professionnel et une vraie pédagogie. Nous prenons le temps d'expliquer, de chiffrer précisément et de vous laisser décider. C'est ce qui nous vaut la confiance de conducteurs de ${c.ville} comme de ${listeFr(c.voisines.slice(0, 2))}. ${c.mobilePhrase}`,
 ];
 
 const zoneContextPool = [
@@ -75,6 +83,9 @@ const zoneContextPool = [
   (c) => `Notre zone d'intervention couvre le ${c.deptNom} et, plus largement, le Grand Ouest (44, 49, 56, 79 et 85). Pour un ${c.serviceLower} à ${c.ville}, vous êtes au bon endroit : la commune est rattachée au secteur ${c.zone} que nous connaissons bien, comme les communes voisines de ${listeFr(c.voisines.slice(0, 4))}. ${c.surPlace ? "Notre atelier est sur place, à Cholet." : `Comptez environ ${c.temps} de route entre ${c.ville} et Cholet.`}`,
   (c) => `Que vous soyez en centre-ville de ${c.ville} ou dans les communes alentours, Ultimauto vous accompagne pour votre ${c.serviceLower}. Le secteur ${c.zone} fait partie de nos zones de prédilection ; nous y recevons fréquemment des véhicules de ${c.ville} ainsi que de ${listeFr(c.voisines.slice(1, 4))}. Notre service mobile complète l'accueil à l'atelier de Cholet pour vous simplifier la vie.`,
   (c) => `${c.ville} et ses environs font pleinement partie de notre rayon d'action. Depuis Cholet, nous rayonnons sur le ${c.deptNom} et le Grand Ouest, et le secteur ${c.zone} compte parmi les territoires que nous desservons le plus, aux côtés de ${listeFr(c.voisines.slice(0, 4))}. ${c.surPlace ? "Tout se passe à notre atelier de Cholet, ou chez vous via notre service mobile." : `À environ ${c.temps} de route, l'atelier reste facilement accessible — et notre service mobile peut venir à vous.`}`,
+  (c) => `Concrètement, ${c.ville} se situe ${c.surPlace ? 'au cœur de notre zone, à Cholet' : `à environ ${c.km} km de Cholet, soit ${c.temps} de route`}. C'est une distance que parcourent volontiers nos clients du secteur ${c.zone}, d'autant que notre service mobile peut aussi venir à ${c.ville}. Nous y intervenons aussi souvent que dans les communes voisines de ${listeFr(c.voisines.slice(0, 4))}.`,
+  (c) => `Rattachée au secteur ${c.zone} dans le ${c.deptNom}, ${c.ville} fait partie des communes que nous desservons le plus. Que vous choisissiez de venir à l'atelier de Cholet ou de faire appel à notre service mobile, la prise en charge est identique. Nous connaissons bien le coin : ${listeFr(c.voisines.slice(1, 5))} font aussi appel à nous.`,
+  (c) => `Notre rayon d'action englobe naturellement ${c.ville} et les alentours. Depuis Cholet, nous couvrons le ${c.deptNom} et le Grand Ouest ; le secteur ${c.zone} — avec ${listeFr(c.voisines.slice(0, 4))} — compte parmi nos territoires habituels. ${c.surPlace ? 'Tout se passe à notre atelier, ou chez vous en mobile.' : `Comptez ${c.temps} de route, ou laissez notre service mobile venir à vous.`}`,
 ];
 
 const deroulementIntroPool = [
@@ -82,6 +93,8 @@ const deroulementIntroPool = [
   (c) => `De la prise de rendez-vous à la restitution, votre ${c.serviceLower} se passe simplement :`,
   (c) => `Pour un ${c.serviceLower} à ${c.ville} et ses environs, nous procédons toujours par étapes :`,
   (c) => `Concrètement, votre ${c.serviceLower} suit un déroulé précis et maîtrisé :`,
+  (c) => `À ${c.ville} comme ailleurs, un ${c.serviceLower} réussi suit une méthode rigoureuse. Les étapes :`,
+  (c) => `Pas d'improvisation : que vous veniez de ${c.ville} ou d'une commune voisine, votre ${c.serviceLower} se déroule ainsi :`,
 ];
 
 const closingPool = [
@@ -89,6 +102,9 @@ const closingPool = [
   (c) => `Prêt à passer à l'action pour votre véhicule à ${c.ville} ? Demandez votre devis gratuit : nous étudions votre cas, nous expliquons les options et planifions l'intervention au plus près de vos disponibilités, à l'atelier ou en service mobile. Une simple photo suffit souvent à orienter le diagnostic.`,
   (c) => `Pour toute question sur le ${c.serviceLower} à ${c.ville} ou dans le secteur ${c.zone}, l'équipe Ultimauto est à votre écoute. Devis gratuit, conseils personnalisés et rendez-vous rapide, par téléphone ou WhatsApp.`,
   (c) => `Un ${c.serviceLower} à ${c.ville}, ça commence ici : demandez votre devis sans engagement. Nous vous accueillons à Cholet, ${c.distanceCourte}, ou nous venons à vous grâce à notre service mobile, partout dans le ${c.deptNom}.`,
+  (c) => `Envie d'y voir clair pour votre ${c.serviceLower} à ${c.ville} ? Un appel, un message WhatsApp ou le formulaire suffisent : nous étudions votre cas et vous proposons un créneau, à Cholet (${c.distanceCourte}) ou en service mobile. Devis gratuit et sans engagement, et une photo aide souvent à préparer l'intervention.`,
+  (c) => `Pour votre véhicule à ${c.ville}, la marche à suivre est simple : contactez Ultimauto, décrivez le symptôme, recevez un devis gratuit et clair. Nous planifions ensuite l'intervention selon vos disponibilités, à l'atelier ou chez vous dans le ${c.deptNom}. Aucune surprise sur la facture.`,
+  (c) => `Un doute, une question, un devis pour un ${c.serviceLower} à ${c.ville} ou dans le secteur ${c.zone} ? Écrivez-nous ou appelez : réponse rapide, conseils honnêtes et rendez-vous au plus près de votre emploi du temps. Vous repartez avec un moteur en meilleure forme, sans avoir changé de voiture.`,
 ];
 
 const metaPool = [
@@ -96,6 +112,8 @@ const metaPool = [
   (c) => `Besoin d'un ${c.serviceLower} à ${c.ville} ? Ultimauto, atelier de confiance près de ${c.ville} (${c.deptNom}). Devis gratuit, conseils transparents, RDV rapide.`,
   (c) => `${c.service.nom} à ${c.ville} et alentours avec Ultimauto. ${c.service.prixIndicatif}, service mobile, devis gratuit. Prenez rendez-vous.`,
   (c) => `Ultimauto réalise votre ${c.serviceLower} pour ${c.ville} (${c.dept}) et le secteur ${c.zone}. ${c.service.prixIndicatif}. Devis gratuit en ligne ou par WhatsApp.`,
+  (c) => `${c.service.nom} à ${c.ville} : atelier à Cholet + service mobile. ${c.service.prixIndicatif}, diagnostic et devis gratuits. Ultimauto, secteur ${c.zone}.`,
+  (c) => `Spécialiste du ${c.serviceLower} pour ${c.ville} et le ${c.deptNom}. Ultimauto : conseils transparents, ${c.service.prixIndicatif}, RDV rapide par téléphone ou WhatsApp.`,
 ];
 
 function clamp(str, max = 155) {
@@ -114,6 +132,14 @@ function faqLocaleVille(c) {
       q: `Faut-il venir jusqu'à Cholet depuis ${c.ville} ?`,
       r: `Pas forcément. Vous pouvez nous amener votre véhicule à l'atelier de Cholet (${c.surPlace ? 'sur place à ' + c.ville : '~' + c.temps + ' depuis ' + c.ville}), mais notre service mobile peut aussi se déplacer à ${c.ville}, à votre domicile ou sur votre lieu de travail. Beaucoup de clients de ${listeFr(c.voisines.slice(0, 2))} choisissent l'une ou l'autre formule selon leur emploi du temps.`,
     }),
+    (c) => ({
+      q: `Ultimauto se déplace-t-il à ${c.ville} ?`,
+      r: `Oui. Notre service mobile intervient à ${c.ville} et dans le secteur ${c.zone}, à votre domicile ou sur votre lieu de travail (des frais de déplacement peuvent s'appliquer selon la distance depuis Cholet, ${c.distKm}). Vous pouvez aussi nous amener le véhicule à l'atelier. Nous servons régulièrement ${listeFr(c.voisines.slice(0, 3))}.`,
+    }),
+    (c) => ({
+      q: `Pourquoi choisir Ultimauto pour un ${c.serviceLower} près de ${c.ville} ?`,
+      r: `Parce que nous diagnostiquons avant d'intervenir, expliquons chaque étape et privilégions la réparation à la dépose systématique. Les automobilistes de ${c.ville} (${c.deptNom}) et des communes voisines comme ${listeFr(c.voisines.slice(0, 2))} apprécient cette transparence et le devis gratuit et détaillé.`,
+    }),
   ];
   const q2 = [
     (c) => ({
@@ -123,6 +149,14 @@ function faqLocaleVille(c) {
     (c) => ({
       q: `Sous quel délai un rendez-vous depuis ${c.ville} ?`,
       r: `Nous organisons les rendez-vous au plus près de vos disponibilités. Contactez-nous par téléphone ou WhatsApp en précisant votre véhicule et votre besoin ; nous vous proposons rapidement un créneau, à l'atelier de Cholet ou en intervention mobile à ${c.ville} et alentours (${listeFr(c.voisines.slice(1, 3))}).`,
+    }),
+    (c) => ({
+      q: `Puis-je avoir un devis avant de venir depuis ${c.ville} ?`,
+      r: `Bien sûr. Décrivez-nous votre véhicule et le symptôme par téléphone ou WhatsApp (une photo ou une vidéo aident beaucoup) : nous vous donnons une première estimation, puis un devis gratuit et détaillé avant toute intervention. Valable pour ${c.ville} comme pour ${listeFr(c.voisines.slice(1, 3))}.`,
+    }),
+    (c) => ({
+      q: `L'intervention prend-elle la journée si je viens de ${c.ville} ?`,
+      r: `Cela dépend de la prestation. Beaucoup d'interventions se réalisent dans la journée, et nous organisons le rendez-vous pour limiter votre immobilisation. Depuis ${c.ville} (${c.surPlace ? 'à Cholet' : '~' + c.temps + ' de route'}), pensez au service mobile : il évite le déplacement en venant directement à vous.`,
     }),
   ];
   return [pick(q1, c.seed + 'fq1')(c), pick(q2, c.seed + 'fq2')(c)];
