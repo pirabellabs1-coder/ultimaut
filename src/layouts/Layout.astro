@@ -37,7 +37,7 @@ const navLinks = [
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href) => (href === '/' ? path === '/' : path === href || path.startsWith(href + '/'));
 
-const canonical = new URL(Astro.url.pathname, site.url).href;
+const canonical = new URL(Astro.url.pathname.replace(/\/+$/, '') || '/', site.url).href;
 const ogImageAbs = new URL(ogImage, site.url).href;
 const allJsonLd = [organization(site), website(site), localBusiness(site, avis), ...jsonLd];
 ---
