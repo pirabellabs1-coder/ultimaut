@@ -1320,7 +1320,13 @@
       "source": "/contre-visite-:rest(.*)",
       "destination": "/blog/decalaminage-avant-controle-technique",
       "statusCode": 301
-    }
+    },
+    { "source": "/2023/:rest(.*)", "destination": "/blog", "statusCode": 301 },
+    { "source": "/2024/:rest(.*)", "destination": "/blog", "statusCode": 301 },
+    { "source": "/2025/:rest(.*)", "destination": "/blog", "statusCode": 301 },
+    { "source": "/category/:rest(.*)", "destination": "/blog", "statusCode": 301 },
+    { "source": "/tag/:rest(.*)", "destination": "/blog", "statusCode": 301 },
+    { "source": "/author/:rest(.*)", "destination": "/", "statusCode": 301 }
   ],
   "headers": [
     {

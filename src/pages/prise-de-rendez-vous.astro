@@ -71,4 +71,12 @@ const etapes = [
   <MapBlock bg="bg-white" />
 
   <script is:inline type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script is:inline>
+    // Conversion RÉELLE : rendez-vous effectivement réservé via Calendly (et non simple vue de la page).
+    window.addEventListener('message', function (e) {
+      if (e && e.data && e.data.event === 'calendly.event_scheduled') {
+        if (window.gtag) gtag('event', 'prise_de_rendez_vous', { event_category: 'rdv', event_label: 'calendly' });
+      }
+    });
+  </script>
 </Layout>

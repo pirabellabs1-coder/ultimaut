@@ -65,6 +65,8 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
                 if (res.ok) {
                   form.reset();
                   setStatus('✅ Message envoyé&#8239;! Nous vous répondons sous 24 h ouvrées.', 'text-accent-700');
+                  // Conversion réelle : formulaire de contact effectivement envoyé
+                  if (window.gtag) gtag('event', 'contact_formulaire', { event_category: 'lead', event_label: 'contact' });
                 } else {
                   setStatus('❌ Une erreur est survenue. Réessayez ou appelez-nous au 06 52 19 36 05.', 'text-red-600');
                 }
