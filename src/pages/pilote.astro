@@ -1,5 +1,5 @@
 ---
-// Page de pilotage du site (maintenance + bandeau d'annonce).
+// Page de pilotage du site (mode maintenance).
 // Accès : https://ultimauto.fr/pilote?cle=VOTRE_SECRET
 // Les bascules sont protégées par le secret côté API.
 export const prerender = true;
@@ -67,14 +67,6 @@ export const prerender = true;
           <div id="m-msg" class="msg"></div>
         </div>
 
-        <div class="block">
-          <p class="lbl">Bandeau d'annonce</p>
-          <div id="a-state" class="state loading"><span class="dot"></span><span id="a-txt">Vérification…</span></div>
-          <button id="a-btn" type="button" disabled>…</button>
-          <p class="note">Le bandeau « Absence temporaire » en haut de toutes les pages. La bascule relance une reconstruction du site&nbsp;: comptez <strong>1 à 2 minutes</strong> avant que le changement soit visible.</p>
-          <div id="a-msg" class="msg"></div>
-        </div>
-
         <p class="foot"><a id="seesite" href="/?acces=acces-prive-ultimauto" target="_blank" rel="noopener">Voir le site en tant que propriétaire →</a></p>
       </div>
     </div>
@@ -135,17 +127,6 @@ export const prerender = true;
         done: function (j) { return j.on ? 'Maintenance activée.' : 'Site remis en ligne.'; },
       });
 
-      var annonce = control({
-        id: 'a', endpoint: 'annonce',
-        labelOn: 'Bandeau AFFICHÉ', labelOff: 'Bandeau MASQUÉ',
-        actionOn: '📢 Afficher le bandeau', actionOff: '🚫 Retirer le bandeau',
-        confirm: null,
-        done: function (j) {
-          return (j.on ? 'Bandeau activé. ' : 'Bandeau retiré. ') +
-            (j.rebuild ? 'Reconstruction lancée (1-2 min).' : 'Reconstruction NON lancée — relancez un déploiement.');
-        },
-      });
-
       function start() {
         maintenance.load().then(function (res) {
           if (res.status === 401) {
@@ -156,7 +137,6 @@ export const prerender = true;
           }
           sessionStorage.setItem('ua_cle', cle);
           needkey.hidden = true; panel.hidden = false;
-          annonce.load();
         }).catch(function () { needkey.hidden = false; });
       }
 

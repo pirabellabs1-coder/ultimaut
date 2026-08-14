@@ -125,7 +125,7 @@ story += bullets([
     "Bouton WhatsApp et appel en un clic",
     "Simulateur de gain de puissance (reprogrammation Stage 1)",
     "Page avis clients (4,9/5 · 450 avis Google)",
-    "Bandeau d’annonce pilotable (absence, promo…) et mode maintenance",
+    "Mode maintenance pilotable en un clic",
     "Affichage parfait sur mobile, tablette et ordinateur",
 ])
 story += [PageBreak()]
