@@ -2,8 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import services from '../../data/services.json';
 import site from '../../data/site.json';
+import ZoneCheck from '../../components/ZoneCheck.astro';
 import { ICONS, WA_PATH, SERVICE_PHOTO } from '../../lib/ui.js';
 import { breadcrumb, faqPage } from '../../lib/jsonld.js';
+import { LISTE_COURTE } from '../../lib/zones.js';
 
 export function getStaticPaths() {
   const mods = import.meta.glob('../../data/codes/*.json', { eager: true });
@@ -213,11 +215,14 @@ const jsonLd = [
     </section>
   )}
 
+  <!-- Vérification de la zone avant toute prise de rendez-vous -->
+  <ZoneCheck variant="compact" bg="bg-cloud" ctaLabel="Prendre rendez-vous" />
+
   <!-- CTA -->
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
       <h2 class="text-3xl font-extrabold text-white md:text-4xl">Le code {cd.code} sur votre tableau de bord&#8239;?</h2>
-      <p class="mx-auto mt-4 max-w-xl text-white/90">Ne roulez pas en mode dégradé. Diagnostic et devis gratuits — on identifie la cause et on vous remet en route, à Cholet ou en service mobile.</p>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">Ne roulez pas en mode dégradé. Diagnostic et devis gratuits — on identifie la cause et on vous remet en route, à Cholet ou en service mobile, dans le {LISTE_COURTE} uniquement.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
         <a href={waLink} target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d={WA_PATH} /></svg>Devis WhatsApp</a>

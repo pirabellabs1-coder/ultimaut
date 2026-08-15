@@ -1,0 +1,192 @@
+---
+/**
+ * Vérificateur de zone d'intervention.
+ * Le visiteur indique son département AVANT de pouvoir prendre rendez-vous :
+ *  - département couvert  → message de confirmation + bouton de rendez-vous
+ *  - hors zone            → message clair, aucun bouton de réservation
+ *
+ * variant="full"    : section complète (page de prise de rendez-vous)
+ * variant="compact" : encadré à insérer dans une page (codes défaut, prestations)
+ *
+ * Tout élément de la page portant [data-zone-gated] reste masqué tant qu'un
+ * département couvert n'a pas été choisi (ex. le calendrier Calendly).
+ * Le choix est mémorisé pour la session (sessionStorage), donc valable de page en page.
+ */
+import { DEPARTEMENTS, LISTE_COURTE } from '../lib/zones.js';
+
+const {
+  variant = 'compact',
+  bg = 'bg-cloud',
+  ctaHref = '/prise-de-rendez-vous',
+  ctaLabel = 'Prendre rendez-vous',
+  gate = false,
+} = Astro.props;
+
+const full = variant === 'full';
+---
+<section class={`${full ? 'section' : 'section py-10 md:py-12'} ${bg}`} data-zone-check id="zone">
+  <div class={`mx-auto px-6 ${full ? 'max-w-[900px]' : 'max-w-[1180px]'}`}>
+    <div class="rounded-3xl border-2 border-brand-200 bg-white p-6 shadow-[var(--shadow-soft)] sm:p-8">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <div>
+          {full && <span class="eyebrow">Étape 1 — obligatoire</span>}
+          <h2 class={full ? 'mt-1 text-2xl font-extrabold md:text-3xl' : 'text-xl font-extrabold md:text-2xl'}>
+            Dans quel département êtes-vous&#8239;?
+          </h2>
+        </div>
+      </div>
+
+      <p class="mt-4 text-ink-700">
+        Ultimauto intervient <strong>uniquement</strong> dans les départements <strong>{LISTE_COURTE}</strong>
+        (atelier de Cholet ou service mobile). Indiquez le vôtre pour {full ? 'accéder au calendrier' : 'savoir si nous pouvons intervenir'}.
+      </p>
+
+      <!-- Boutons départements -->
+      <div class="mt-6 flex flex-wrap gap-3" data-zone-buttons>
+        {DEPARTEMENTS.map((d) => (
+          <button
+            type="button"
+            data-dept={d.code}
+            data-dept-nom={d.nom}
+            class="group flex min-w-[150px] flex-1 items-center gap-3 rounded-2xl border-2 border-line bg-cloud px-4 py-3 text-left transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-white hover:shadow-[var(--shadow-card)]"
+          >
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand font-display text-base font-extrabold text-white">{d.code}</span>
+            <span class="text-sm font-bold leading-tight text-ink group-hover:text-brand">{d.nom}</span>
+          </button>
+        ))}
+        <button
+          type="button"
+          data-dept="autre"
+          class="flex min-w-[150px] flex-1 items-center gap-3 rounded-2xl border-2 border-dashed border-line bg-white px-4 py-3 text-left transition-all hover:-translate-y-0.5 hover:border-ink-500"
+        >
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ink-500 font-display text-base font-extrabold text-white">?</span>
+          <span class="text-sm font-bold leading-tight text-ink-700">Un autre département</span>
+        </button>
+      </div>
+
+      <!-- Résultat : dans la zone -->
+      <div data-zone-ok hidden class="mt-6 rounded-2xl border-2 border-accent bg-accent-50 p-5">
+        <p class="flex items-start gap-3 font-bold text-ink">
+          <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent-600 text-white">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+          </span>
+          <span>Parfait&#8239;: nous intervenons en <span data-zone-nom>votre département</span>.</span>
+        </p>
+        <p class="mt-2 pl-10 text-sm text-ink-700">
+          {gate
+            ? 'Le calendrier de réservation est débloqué juste en dessous — choisissez votre créneau.'
+            : 'Diagnostic et devis gratuits, à l’atelier de Cholet ou chez vous en service mobile.'}
+        </p>
+        {!gate && (
+          <a href={ctaHref} class="mt-4 ml-10 inline-flex rounded-full bg-accent px-6 py-3 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5" data-zone-cta>{ctaLabel}</a>
+        )}
+      </div>
+
+      <!-- Résultat : hors zone -->
+      <div data-zone-ko hidden class="mt-6 rounded-2xl border-2 border-amber-400 bg-amber-50 p-5">
+        <p class="flex items-start gap-3 font-bold text-ink">
+          <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-amber-500 text-white">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v5"/><path d="M12 17h.01"/></svg>
+          </span>
+          <span>Désolé, nous n'intervenons pas dans votre département.</span>
+        </p>
+        <p class="mt-2 pl-10 text-sm text-ink-700">
+          Notre zone se limite au {LISTE_COURTE} — merci de <strong>ne pas réserver de créneau</strong> ni de nous contacter
+          pour une intervention hors de cette zone&#8239;: nous ne pourrons pas y donner suite.
+          <a href="/zones-d-intervention" class="font-semibold text-brand underline">Voir toutes les communes desservies</a>.
+        </p>
+      </div>
+
+      <!-- Changer de réponse -->
+      <button type="button" data-zone-reset hidden class="mt-4 text-sm font-semibold text-brand underline underline-offset-2">
+        Ce n'est pas mon département — changer
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { CODES } from '../lib/zones.js';
+
+  const CLE = 'ua_departement';
+
+  function appliquer(racine, dept, nom, scroller) {
+    const couvert = CODES.includes(dept);
+    const ok = racine.querySelector('[data-zone-ok]');
+    const ko = racine.querySelector('[data-zone-ko]');
+    const reset = racine.querySelector('[data-zone-reset]');
+    const boutons = racine.querySelector('[data-zone-buttons]');
+
+    if (ok) ok.hidden = !couvert;
+    if (ko) ko.hidden = couvert;
+    if (reset) reset.hidden = false;
+    if (boutons) boutons.hidden = true;
+
+    const cible = racine.querySelector('[data-zone-nom]');
+    if (cible && nom) cible.textContent = `${nom} (${dept})`;
+
+    // Blocs conditionnés par la zone (calendrier de réservation…)
+    document.querySelectorAll('[data-zone-gated]').forEach((el) => {
+      el.hidden = !couvert;
+    });
+
+    if (couvert && scroller) {
+      const gated = document.querySelector('[data-zone-gated]');
+      if (gated) requestAnimationFrame(() => gated.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    }
+  }
+
+  function reinitialiser(racine) {
+    const boutons = racine.querySelector('[data-zone-buttons]');
+    const reset = racine.querySelector('[data-zone-reset]');
+    const ok = racine.querySelector('[data-zone-ok]');
+    const ko = racine.querySelector('[data-zone-ko]');
+    if (boutons) boutons.hidden = false;
+    if (reset) reset.hidden = true;
+    if (ok) ok.hidden = true;
+    if (ko) ko.hidden = true;
+    document.querySelectorAll('[data-zone-gated]').forEach((el) => { el.hidden = true; });
+  }
+
+  const racines = document.querySelectorAll('[data-zone-check]');
+  if (racines.length) {
+    let memo = null;
+    try {
+      memo = JSON.parse(sessionStorage.getItem(CLE) || 'null');
+    } catch { memo = null; }
+
+    // Sans choix mémorisé, les blocs conditionnés démarrent masqués.
+    // (Ils sont visibles dans le HTML : sans JS, rien n'est bloqué.)
+    if (!memo) document.querySelectorAll('[data-zone-gated]').forEach((el) => { el.hidden = true; });
+
+    racines.forEach((racine) => {
+      if (memo) appliquer(racine, memo.dept, memo.nom, false);
+
+      racine.querySelectorAll('[data-dept]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const dept = btn.getAttribute('data-dept');
+          const nom = btn.getAttribute('data-dept-nom') || '';
+          try { sessionStorage.setItem(CLE, JSON.stringify({ dept, nom })); } catch {}
+          racines.forEach((r) => appliquer(r, dept, nom, r === racine));
+          if (window.gtag) {
+            gtag('event', 'zone_departement', {
+              event_category: 'zone',
+              event_label: CODES.includes(dept) ? dept : 'hors_zone',
+            });
+          }
+        });
+      });
+
+      const reset = racine.querySelector('[data-zone-reset]');
+      if (reset) {
+        reset.addEventListener('click', () => {
+          try { sessionStorage.removeItem(CLE); } catch {}
+          racines.forEach(reinitialiser);
+        });
+      }
+    });
+  }
+</script>

@@ -34,21 +34,44 @@ function shell(headerRight, bodyHtml) {
 </body></html>`;
 }
 
-function notificationHtml({ nom, telephone, email, message }) {
+// Départements couverts — doit rester aligné avec src/lib/zones.js
+const DEPTS = {
+  '44': 'Loire-Atlantique',
+  '49': 'Maine-et-Loire',
+  '56': 'Morbihan',
+  '79': 'Deux-Sèvres',
+  '85': 'Vendée',
+};
+
+function zoneInfo(departement) {
+  const nom = DEPTS[departement];
+  return {
+    couvert: !!nom,
+    libelle: nom ? `${departement} — ${nom}` : departement ? 'Hors zone (autre département)' : 'non renseigné',
+  };
+}
+
+function notificationHtml({ nom, telephone, email, message, zone }) {
   const emailCell = email
     ? `<a href="mailto:${esc(email)}" style="color:${BRAND.blue};text-decoration:none;">${esc(email)}</a>`
     : '<span style="color:#94a3b8;">non renseigné</span>';
   const replyBtn = email
     ? `<a href="mailto:${esc(email)}" style="display:inline-block;background:#ffffff;color:${BRAND.blue};font:700 14px Arial,sans-serif;text-decoration:none;padding:11px 22px;border-radius:999px;border:2px solid ${BRAND.blue};">Répondre par e-mail</a>`
     : '';
+  const bandeauZone = zone.couvert
+    ? `<div style="background:#f1f8e4;border:1px solid #c9e49a;border-radius:12px;padding:12px 18px;margin:0 0 18px;font:700 14px Arial,sans-serif;color:${BRAND.ink};">✅ Dans la zone d'intervention — ${esc(zone.libelle)}</div>`
+    : `<div style="background:#fef3c7;border:1px solid #fbbf24;border-radius:12px;padding:12px 18px;margin:0 0 18px;font:700 14px Arial,sans-serif;color:${BRAND.ink};">⚠️ HORS ZONE — ${esc(zone.libelle)}<br><span style="font-weight:400;color:${BRAND.muted};">Demande située en dehors des départements 44 · 49 · 56 · 79 · 85.</span></div>`;
+
   return shell('Formulaire du site', `
           <h1 style="margin:0 0 4px;font:800 20px Arial,sans-serif;color:${BRAND.ink};">Nouvelle demande de contact</h1>
-          <p style="margin:0 0 22px;font:400 14px Arial,sans-serif;color:${BRAND.muted};">Reçue via le formulaire de contact d'ultimauto.fr</p>
+          <p style="margin:0 0 18px;font:400 14px Arial,sans-serif;color:${BRAND.muted};">Reçue via le formulaire de contact d'ultimauto.fr</p>
+          ${bandeauZone}
           <table role="presentation" width="100%" style="background:#f6f9fc;border:1px solid #e2e8f0;border-radius:12px;"><tr><td style="padding:14px 20px;">
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
               <tr><td style="padding:7px 0;font:700 13px Arial,sans-serif;color:${BRAND.muted};width:110px;vertical-align:top;">Nom</td><td style="padding:7px 0;font:600 15px Arial,sans-serif;color:${BRAND.ink};">${esc(nom)}</td></tr>
               <tr><td style="padding:7px 0;font:700 13px Arial,sans-serif;color:${BRAND.muted};vertical-align:top;">Téléphone</td><td style="padding:7px 0;font:700 15px Arial,sans-serif;"><a href="tel:${esc(telephone)}" style="color:${BRAND.blue};text-decoration:none;">${esc(telephone)}</a></td></tr>
               <tr><td style="padding:7px 0;font:700 13px Arial,sans-serif;color:${BRAND.muted};vertical-align:top;">E-mail</td><td style="padding:7px 0;font:600 15px Arial,sans-serif;">${emailCell}</td></tr>
+              <tr><td style="padding:7px 0;font:700 13px Arial,sans-serif;color:${BRAND.muted};vertical-align:top;">Département</td><td style="padding:7px 0;font:600 15px Arial,sans-serif;color:${zone.couvert ? BRAND.ink : '#b45309'};">${esc(zone.libelle)}</td></tr>
             </table>
           </td></tr></table>
           <p style="margin:24px 0 8px;font:700 12px Arial,sans-serif;color:${BRAND.muted};text-transform:uppercase;letter-spacing:.6px;">Message</p>
@@ -96,7 +119,9 @@ export default async function handler(req, res) {
     const telephone = String(body.telephone || '').trim();
     const email = String(body.email || '').trim();
     const message = String(body.message || '').trim();
+    const departement = String(body.departement || '').trim();
     const botcheck = String(body.botcheck || '').trim();
+    const zone = zoneInfo(departement);
 
     if (botcheck) return res.status(200).json({ ok: true }); // honeypot anti-spam
     if (!nom || !telephone || !message) return res.status(400).json({ error: 'champs_requis' });
@@ -109,15 +134,16 @@ export default async function handler(req, res) {
       .split(',').map((s) => s.trim()).filter(Boolean);
 
     const text =
-      `Nouveau message depuis ultimauto.fr\n\nNom : ${nom}\nTéléphone : ${telephone}\nE-mail : ${email || '—'}\n\nMessage :\n${message}\n`;
+      `Nouveau message depuis ultimauto.fr\n\n${zone.couvert ? '' : '⚠️ HORS ZONE D\'INTERVENTION\n\n'}` +
+      `Nom : ${nom}\nTéléphone : ${telephone}\nE-mail : ${email || '—'}\nDépartement : ${zone.libelle}\n\nMessage :\n${message}\n`;
 
     // 1) Notification à l'atelier
     const notif = {
       from,
       to,
-      subject: `Nouveau message du site — ${nom}`,
+      subject: `${zone.couvert ? '' : '[HORS ZONE] '}Nouveau message du site — ${nom}${zone.couvert ? ` (${departement})` : ''}`,
       text,
-      html: notificationHtml({ nom, telephone, email, message }),
+      html: notificationHtml({ nom, telephone, email, message, zone }),
     };
     if (email) notif.reply_to = email;
 

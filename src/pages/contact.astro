@@ -5,6 +5,7 @@ import services from '../data/services.json';
 import { WA_PATH, socialLinks } from '../lib/ui.js';
 import { breadcrumb } from '../lib/jsonld.js';
 import MapBlock from '../components/MapBlock.astro';
+import { DEPARTEMENTS, LISTE_COURTE } from '../lib/zones.js';
 
 const waLink = `https://wa.me/${site.whatsapp}`;
 const socials = socialLinks(site);
@@ -23,6 +24,10 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
       <nav aria-label="Fil d'Ariane" class="text-sm text-white/75"><a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span> <span class="text-white">Contact</span></nav>
       <h1 class="mt-4 text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Contactez Ultimauto</h1>
       <p class="mt-4 max-w-2xl text-lg text-white/90">Une question, un doute, un devis&#8239;? Écrivez-nous ou appelez-nous. Le plus rapide reste WhatsApp&#160;: vous pouvez même nous envoyer une photo ou une vidéo de votre problème.</p>
+      <p class="mt-4 inline-flex max-w-2xl items-start gap-2.5 rounded-2xl bg-white/15 px-4 py-3 text-sm text-white ring-1 ring-white/25">
+        <svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Nous intervenons <strong class="text-white">uniquement</strong> dans le {LISTE_COURTE} — merci d'indiquer votre département dans le formulaire.</span>
+      </p>
     </div>
   </section>
 
@@ -38,14 +43,46 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
             <label class="block"><span class="text-sm font-semibold">Nom *</span><input required name="nom" type="text" autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
             <label class="block"><span class="text-sm font-semibold">Téléphone *</span><input required name="telephone" type="tel" autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
           </div>
-          <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block">
+              <span class="text-sm font-semibold">Votre département *</span>
+              <select required name="departement" id="contact-dept" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand">
+                <option value="">— Choisir —</option>
+                {DEPARTEMENTS.map((d) => <option value={d.code}>{d.code} — {d.nom}</option>)}
+                <option value="autre">Autre département</option>
+              </select>
+            </label>
+          </div>
+          <p id="dept-hors-zone" hidden class="rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-sm text-ink-700">
+            <strong class="text-ink">Nous n'intervenons pas dans votre département.</strong> Ultimauto se déplace uniquement
+            dans le {LISTE_COURTE} — nous ne pourrons pas donner suite à une demande d'intervention hors de cette zone.
+          </p>
           <label class="block"><span class="text-sm font-semibold">Message *</span><textarea required name="message" rows="5" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand"></textarea></label>
           <button type="submit" class="btn-primary w-full">Envoyer le message</button>
           <p data-form-status role="status" aria-live="polite" class="hidden text-sm"></p>
           <p class="text-xs text-ink-500">En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour traiter votre demande (voir notre <a href="/politique-de-confidentialite" class="underline">politique de confidentialité</a>).</p>
         </form>
         <script>
+          import { CODES } from '../lib/zones.js';
+
           const form = document.getElementById('contact-form');
+          const dept = document.getElementById('contact-dept');
+          const horsZone = document.getElementById('dept-hors-zone');
+
+          if (dept && horsZone) {
+            // Reprend le département déjà indiqué ailleurs sur le site (composant ZoneCheck)
+            try {
+              const memo = JSON.parse(sessionStorage.getItem('ua_departement') || 'null');
+              if (memo && memo.dept) dept.value = memo.dept;
+            } catch {}
+            const majZone = () => {
+              horsZone.hidden = !dept.value || CODES.includes(dept.value);
+            };
+            dept.addEventListener('change', majZone);
+            majZone();
+          }
+
           if (form) {
             const status = form.querySelector('[data-form-status]');
             const btn = form.querySelector('button[type="submit"]');
@@ -103,6 +140,7 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
           </ul>
         </div>
         <a href="/prise-de-rendez-vous" class="btn-primary w-full">Prendre rendez-vous en ligne</a>
+        <p class="text-center text-xs text-ink-500">Rendez-vous réservés aux départements {LISTE_COURTE}.</p>
       </div>
     </div>
   </section>

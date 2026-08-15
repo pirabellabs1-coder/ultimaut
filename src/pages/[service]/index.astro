@@ -6,6 +6,8 @@ import tarifs from '../../data/tarifs.json';
 import { ICONS, WA_PATH, SERVICE_PHOTO } from '../../lib/ui.js';
 import EcoValues from '../../components/EcoValues.astro';
 import Gallery from '../../components/Gallery.astro';
+import ZoneCheck from '../../components/ZoneCheck.astro';
+import { LISTE_COURTE } from '../../lib/zones.js';
 import { villeSlug } from '../../lib/slug.js';
 import { getCollection } from 'astro:content';
 import { villesPourService } from '../../lib/pages.js';
@@ -288,11 +290,14 @@ const jsonLd = [
     </div>
   </section>
 
+  <!-- Vérification de la zone avant toute prise de rendez-vous -->
+  <ZoneCheck variant="compact" bg="bg-white" ctaLabel="Prendre rendez-vous" />
+
   <!-- CTA -->
   <section class="bg-gradient-to-br from-deep to-brand py-16 text-white">
     <div class="mx-auto max-w-3xl px-6 text-center">
       <h2 class="text-3xl font-extrabold text-white md:text-4xl">{service.nom}&#160;: demandez votre devis gratuit</h2>
-      <p class="mx-auto mt-4 max-w-xl text-white/90">{service.accroche}</p>
+      <p class="mx-auto mt-4 max-w-xl text-white/90">{service.accroche} Interventions dans le {LISTE_COURTE} uniquement.</p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a href="/prise-de-rendez-vous" class="rounded-full bg-accent px-7 py-3.5 font-display font-extrabold text-ink shadow-lg transition-transform hover:-translate-y-0.5">Prendre rendez-vous</a>
         <a href={`tel:${site.phone}`} class="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10">{site.phoneDisplay}</a>
