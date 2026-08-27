@@ -15,15 +15,15 @@ export function getStaticPaths() {
 
 const { mq, marques } = Astro.props;
 const autresMarques = marques.filter((m) => m.slug !== mq.slug);
-const svc = services.find((s) => s.slug === 'suppression-adblue');
-const cat = tarifs.categories.find((c) => c.service === 'suppression-adblue');
-const photo = SERVICE_PHOTO['suppression-adblue'];
-const icon = ICONS['suppression-adblue'];
+const svc = services.find((s) => s.slug === 'gestion-probleme-adblue');
+const cat = tarifs.categories.find((c) => c.service === 'gestion-probleme-adblue');
+const photo = SERVICE_PHOTO['gestion-probleme-adblue'];
+const icon = ICONS['gestion-probleme-adblue'];
 
 const waText = `Bonjour Ultimauto, j'ai un problème d'AdBlue sur ma ${mq.nom}.`;
 const waLink = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(waText)}`;
 const url = new URL(`/probleme-adblue/${mq.slug}`, site.url).href;
-const hubUrl = new URL('/suppression-adblue', site.url).href;
+const hubUrl = new URL('/gestion-probleme-adblue', site.url).href;
 const faqComplete = [...mq.faq, ...(svc?.faqLocale || [])];
 
 const jsonLd = [
@@ -40,7 +40,7 @@ const jsonLd = [
   faqPage(faqComplete),
   breadcrumb([
     { name: 'Accueil', url: site.url },
-    { name: 'Suppression AdBlue', url: hubUrl },
+    { name: 'Gestion des problèmes AdBlue', url: hubUrl },
     { name: `Problème AdBlue ${mq.nom}`, url },
   ]),
 ];
@@ -51,7 +51,7 @@ const jsonLd = [
     <div class="mx-auto max-w-[1180px] px-6 py-14 text-white md:py-20">
       <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
         <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
-        <a href="/suppression-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
+        <a href="/gestion-probleme-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
         <a href="/probleme-adblue" class="hover:text-white">Par marque</a> <span class="px-1.5">/</span>
         <span class="text-white">{mq.nom}</span>
       </nav>

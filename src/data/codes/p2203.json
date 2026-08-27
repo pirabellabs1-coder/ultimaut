@@ -2,7 +2,7 @@
   "code": "P2203",
   "slug": "p2203",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — signal du circuit trop haut (Banc 1)",
   "metaTitle": "Code défaut P2203 : causes et solution",
   "metaDescription": "Code défaut P2203 : le signal du capteur NOx (banc 1) est trop haut. Causes, symptômes, diagnostic et réparation du circuit par Ultimauto à Cholet.",

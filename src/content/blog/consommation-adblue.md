@@ -4,7 +4,7 @@ description: "Consommation d'AdBlue : combien de litres aux 1000 km, pourquoi e
 date: 2026-06-07
 image: "/img/hero-1.jpg"
 tags: ["AdBlue", "Consommation", "Guide"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** une voiture consomme en moyenne **~1 à 1,5 L d'AdBlue par 1000 km**, soit environ **3 à 6 % de la consommation de gasoil**. Une surconsommation soudaine n'est pas normale : elle signale souvent un **souci de capteur NOx, d'injecteur SCR** ou un changement de conduite. Avant de paniquer, un simple diagnostic permet de savoir si le système réel a un problème ou si la conso reste dans la fourchette attendue.
@@ -151,13 +151,13 @@ Plus on intervient tôt, moins la facture est lourde : un capteur diagnostiqué
 
 ## La gestion des pannes AdBlue : ce que dit la loi
 
-Certains automobilistes, lassés des pannes à répétition, s'interrogent sur la **suppression du système AdBlue**. Soyons clairs et responsables : sur un véhicule circulant sur la voie publique, le système antipollution doit rester **opérationnel et conforme**. Toute neutralisation est **strictement réservée à un usage hors voie publique** : véhicule de **circuit**, destiné à l'**export**, ou **non homologué** pour la route en France. Nous ne faisons en aucun cas la promotion d'une suppression sur route ouverte.
+Certains automobilistes, lassés des pannes à répétition, s'interrogent sur le **retrait du système AdBlue**. Soyons clairs et responsables : sur un véhicule circulant sur la voie publique, le système antipollution doit rester **opérationnel et conforme**. Toute neutralisation est **strictement réservée à un usage hors voie publique** : véhicule de **circuit**, destiné à l'**export**, ou **non homologué** pour la route en France. Nous ne faisons en aucun cas la promotion d'un retrait sur route ouverte.
 
-En revanche, notre rôle légitime est de vous aider à **diagnostiquer** précisément l'origine d'une panne SCR et à choisir la **réparation conforme** la plus adaptée. Pour comprendre l'ensemble du sujet, de la réparation aux cadres d'usage spécifiques, consultez notre page dédiée à la [gestion AdBlue](/suppression-adblue), qui détaille notre approche encadrée et responsable.
+En revanche, notre rôle légitime est de vous aider à **diagnostiquer** précisément l'origine d'une panne SCR et à choisir la **réparation conforme** la plus adaptée. Pour comprendre l'ensemble du sujet, de la réparation aux cadres d'usage spécifiques, consultez notre page dédiée à la [gestion AdBlue](/gestion-probleme-adblue), qui détaille notre approche encadrée et responsable.
 
 ## Réparer plutôt que subir
 
-Dans la grande majorité des cas, une surconsommation ou un voyant AdBlue se règle par une **réparation ciblée** : remplacement d'un capteur NOx, nettoyage ou changement d'injecteur, réparation d'une fuite. Encore faut-il poser le bon diagnostic. C'est tout l'intérêt d'un passage à l'atelier : on évite de changer des pièces coûteuses « au hasard ». Notre service de [gestion AdBlue](/suppression-adblue) commence toujours par cette étape de diagnostic, afin de vous proposer la solution la plus pertinente et la moins chère possible, dans le respect du cadre légal.
+Dans la grande majorité des cas, une surconsommation ou un voyant AdBlue se règle par une **réparation ciblée** : remplacement d'un capteur NOx, nettoyage ou changement d'injecteur, réparation d'une fuite. Encore faut-il poser le bon diagnostic. C'est tout l'intérêt d'un passage à l'atelier : on évite de changer des pièces coûteuses « au hasard ». Notre service de [gestion AdBlue](/gestion-probleme-adblue) commence toujours par cette étape de diagnostic, afin de vous proposer la solution la plus pertinente et la moins chère possible, dans le respect du cadre légal.
 
 ## Conclusion : maîtriser sa consommation d'AdBlue, c'est avant tout diagnostiquer
 

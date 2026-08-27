@@ -2,7 +2,7 @@
   "code": "P2200",
   "slug": "p2200",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — circuit défaillant (Banc 1)",
   "metaTitle": "Code défaut P2200 : causes et solution",
   "metaDescription": "Code défaut P2200 : le calculateur détecte un défaut sur le circuit du capteur NOx (banc 1). Causes, symptômes, diagnostic et réparation par Ultimauto.",

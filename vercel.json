@@ -2,6 +2,46 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/suppression-adblue-ce-quil-faut-savoir",
+      "destination": "/blog/gestion-probleme-adblue-ce-quil-faut-savoir",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/suppression-adblue-ce-quil-faut-savoir/",
+      "destination": "/blog/gestion-probleme-adblue-ce-quil-faut-savoir",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/suppression-adblue-egr-marseille",
+      "destination": "/blog/gestion-probleme-adblue-egr-marseille",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/suppression-adblue-egr-marseille/",
+      "destination": "/blog/gestion-probleme-adblue-egr-marseille",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/:ville",
+      "destination": "/gestion-probleme-adblue/:ville",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/:ville/",
+      "destination": "/gestion-probleme-adblue/:ville",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/enlever-tache-siege-voiture",
       "destination": "/blog",
       "statusCode": 301
@@ -178,22 +218,22 @@
     },
     {
       "source": "/solutions-reparation-desactivation-adblue/",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/solutions-reparation-desactivation-adblue",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/2025/09/30/suppression-adblue/",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/2025/09/30/suppression-adblue",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
@@ -358,22 +398,22 @@
     },
     {
       "source": "/2025/11/15/reprogrammation-adblue-innovation-et-meilleures-pratiques/",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/2025/11/15/reprogrammation-adblue-innovation-et-meilleures-pratiques",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/2025/11/15/reprogrammation-adblue-solution-systeme-scr-diesel/",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
       "source": "/2025/11/15/reprogrammation-adblue-solution-systeme-scr-diesel",
-      "destination": "/suppression-adblue",
+      "destination": "/gestion-probleme-adblue",
       "statusCode": 301
     },
     {
@@ -1321,40 +1361,176 @@
       "destination": "/blog/decalaminage-avant-controle-technique",
       "statusCode": 301
     },
-    { "source": "/2023/:rest(.*)", "destination": "/blog", "statusCode": 301 },
-    { "source": "/2024/:rest(.*)", "destination": "/blog", "statusCode": 301 },
-    { "source": "/2025/:rest(.*)", "destination": "/blog", "statusCode": 301 },
-    { "source": "/category/:rest(.*)", "destination": "/blog", "statusCode": 301 },
-    { "source": "/tag/:rest(.*)", "destination": "/blog", "statusCode": 301 },
-    { "source": "/author/:rest(.*)", "destination": "/", "statusCode": 301 },
-    { "source": "/reservation", "destination": "/prise-de-rendez-vous", "statusCode": 301 },
-    { "source": "/simulateur-gain-puissance", "destination": "/simulateur-gain-de-puissance", "statusCode": 301 },
-    { "source": "/recharge-de-climatisation-de-voiture-a-cholet-et-villes-alentours", "destination": "/", "statusCode": 301 },
-    { "source": "/entretien-vanne-egr", "destination": "/blog/vanne-egr-encrassee-symptomes-solutions", "statusCode": 301 },
-    { "source": "/nettoyage-turbo-diesel", "destination": "/decalaminage-hydrogene", "statusCode": 301 },
-    { "source": "/messages-erreur-adblue-demarrage-impossible", "destination": "/blog/adblue-demarrage-impossible-que-faire", "statusCode": 301 },
-    { "source": "/probleme-adblue-les-pannes-les-plus-courantes-et-leurs-causes", "destination": "/probleme-adblue", "statusCode": 301 },
-    { "source": "/problemes-adblue-marques-locales", "destination": "/probleme-adblue", "statusCode": 301 },
-    { "source": "/systeme-adblue-fonctionnement", "destination": "/suppression-adblue", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/difference-stage-1-stage-2", "destination": "/blog/reprogrammation-stage-1-ou-stage-2", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/gain-puissance-stage-1", "destination": "/simulateur-gain-de-puissance", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/pourquoi-faire-reprogrammation-stage-1", "destination": "/reprogrammation-moteur", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/reprogrammation-moteur-a-cholet-angers-saumur-49", "destination": "/reprogrammation-moteur/cholet", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/reprogrammation-moteur-a-lorient-vannes-lanester-ploemeur", "destination": "/reprogrammation-moteur/lorient", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/reprogrammation-moteur-niort-bressuire-thouars-79", "destination": "/reprogrammation-moteur/niort", "statusCode": 301 },
-    { "source": "/reprogrammation-moteur/reprogrammation-moteur-roche-sur-yon-sables-dolonne-challans-85", "destination": "/reprogrammation-moteur/la-roche-sur-yon", "statusCode": 301 },
-    { "source": "/suppression-adblue-cholet", "destination": "/suppression-adblue/cholet", "statusCode": 301 },
-    { "source": "/suppression-adblue-la-roche-sur-yon-desactivation-scr-vendee-85-ultimauto", "destination": "/suppression-adblue/la-roche-sur-yon", "statusCode": 301 },
-    { "source": "/suppression-adblue-les-sables-dolonne-desactivation-scr-vendee-85-ultimauto", "destination": "/suppression-adblue/les-sables-d-olonne", "statusCode": 301 },
-    { "source": "/suppression-adblue-lorient-desactivation-scr-morbihan-56-ultimauto", "destination": "/suppression-adblue/lorient", "statusCode": 301 },
-    { "source": "/suppression-adblue-nantes-desactivation-scr-loire-atlantique-44", "destination": "/suppression-adblue/nantes", "statusCode": 301 },
-    { "source": "/suppression-adblue-niort-desactivation-scr-deux-sevres-79-ultimauto", "destination": "/suppression-adblue/niort", "statusCode": 301 },
-    { "source": "/suppression-adblue-vannes-desactivation-scr-morbihan-56-ultimauto", "destination": "/suppression-adblue/vannes", "statusCode": 301 },
-    { "source": "/decalaminage-moteur-hydrogene", "destination": "/decalaminage-hydrogene", "statusCode": 301 },
-    { "source": "/decalaminage-moteur-hydrogene/:rest(.*)", "destination": "/decalaminage-hydrogene", "statusCode": 301 },
-    { "source": "/suppression-dadblue", "destination": "/suppression-adblue", "statusCode": 301 },
-    { "source": "/suppression-dadblue/:rest(.*)", "destination": "/suppression-adblue", "statusCode": 301 },
-    { "source": "/suppression-adblue-:rest(.*)", "destination": "/suppression-adblue", "statusCode": 301 }
+    {
+      "source": "/2023/:rest(.*)",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/2024/:rest(.*)",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/2025/:rest(.*)",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:rest(.*)",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/tag/:rest(.*)",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:rest(.*)",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/reservation",
+      "destination": "/prise-de-rendez-vous",
+      "statusCode": 301
+    },
+    {
+      "source": "/simulateur-gain-puissance",
+      "destination": "/simulateur-gain-de-puissance",
+      "statusCode": 301
+    },
+    {
+      "source": "/recharge-de-climatisation-de-voiture-a-cholet-et-villes-alentours",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/entretien-vanne-egr",
+      "destination": "/blog/vanne-egr-encrassee-symptomes-solutions",
+      "statusCode": 301
+    },
+    {
+      "source": "/nettoyage-turbo-diesel",
+      "destination": "/decalaminage-hydrogene",
+      "statusCode": 301
+    },
+    {
+      "source": "/messages-erreur-adblue-demarrage-impossible",
+      "destination": "/blog/adblue-demarrage-impossible-que-faire",
+      "statusCode": 301
+    },
+    {
+      "source": "/probleme-adblue-les-pannes-les-plus-courantes-et-leurs-causes",
+      "destination": "/probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/problemes-adblue-marques-locales",
+      "destination": "/probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/systeme-adblue-fonctionnement",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/difference-stage-1-stage-2",
+      "destination": "/blog/reprogrammation-stage-1-ou-stage-2",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/gain-puissance-stage-1",
+      "destination": "/simulateur-gain-de-puissance",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/pourquoi-faire-reprogrammation-stage-1",
+      "destination": "/reprogrammation-moteur",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/reprogrammation-moteur-a-cholet-angers-saumur-49",
+      "destination": "/reprogrammation-moteur/cholet",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/reprogrammation-moteur-a-lorient-vannes-lanester-ploemeur",
+      "destination": "/reprogrammation-moteur/lorient",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/reprogrammation-moteur-niort-bressuire-thouars-79",
+      "destination": "/reprogrammation-moteur/niort",
+      "statusCode": 301
+    },
+    {
+      "source": "/reprogrammation-moteur/reprogrammation-moteur-roche-sur-yon-sables-dolonne-challans-85",
+      "destination": "/reprogrammation-moteur/la-roche-sur-yon",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-cholet",
+      "destination": "/gestion-probleme-adblue/cholet",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-la-roche-sur-yon-desactivation-scr-vendee-85-ultimauto",
+      "destination": "/gestion-probleme-adblue/la-roche-sur-yon",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-les-sables-dolonne-desactivation-scr-vendee-85-ultimauto",
+      "destination": "/gestion-probleme-adblue/les-sables-d-olonne",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-lorient-desactivation-scr-morbihan-56-ultimauto",
+      "destination": "/gestion-probleme-adblue/lorient",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-nantes-desactivation-scr-loire-atlantique-44",
+      "destination": "/gestion-probleme-adblue/nantes",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-niort-desactivation-scr-deux-sevres-79-ultimauto",
+      "destination": "/gestion-probleme-adblue/niort",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-vannes-desactivation-scr-morbihan-56-ultimauto",
+      "destination": "/gestion-probleme-adblue/vannes",
+      "statusCode": 301
+    },
+    {
+      "source": "/decalaminage-moteur-hydrogene",
+      "destination": "/decalaminage-hydrogene",
+      "statusCode": 301
+    },
+    {
+      "source": "/decalaminage-moteur-hydrogene/:rest(.*)",
+      "destination": "/decalaminage-hydrogene",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-dadblue",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-dadblue/:rest(.*)",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-:rest(.*)",
+      "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    }
   ],
   "headers": [
     {

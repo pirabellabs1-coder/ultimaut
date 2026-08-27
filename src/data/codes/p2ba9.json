@@ -2,7 +2,7 @@
   "code": "P2BA9",
   "slug": "p2ba9",
   "categorie": "AdBlue / SCR",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Dépassement du seuil d'émissions de NOx",
   "metaTitle": "Code défaut P2BA9 : causes et solution",
   "metaDescription": "Code défaut P2BA9 : les émissions de NOx dépassent le seuil malgré le système SCR. Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",

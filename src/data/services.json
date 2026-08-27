@@ -305,7 +305,7 @@
       "Conversion au bioéthanol E85",
       "Gestion FAP / EGR / AdBlue (cadre réservé hors route)"
     ],
-    "legalNote": "Certaines options (gestion FAP, EGR, AdBlue, suppression du start & stop) modifient le comportement anti-pollution du véhicule. Elles sont proposées dans un cadre strictement réservé à un usage non soumis à homologation route (circuit fermé, compétition, export ou véhicule non destiné à la voie publique). Le client demeure responsable du respect de la réglementation. Nous vous conseillons en toute transparence.",
+    "legalNote": "Certaines options (gestion FAP, EGR, AdBlue, désactivation du start & stop) modifient le comportement anti-pollution du véhicule. Elles sont proposées dans un cadre strictement réservé à un usage non soumis à homologation route (circuit fermé, compétition, export ou véhicule non destiné à la voie publique). Le client demeure responsable du respect de la réglementation. Nous vous conseillons en toute transparence.",
     "faqLocale": [
       {
         "q": "Quels gains de puissance puis-je espérer ?",
@@ -334,9 +334,9 @@
     ]
   },
   {
-    "slug": "suppression-adblue",
-    "nom": "Suppression AdBlue",
-    "titreCourt": "Suppression AdBlue",
+    "slug": "gestion-probleme-adblue",
+    "nom": "Gestion des problèmes AdBlue",
+    "titreCourt": "Gestion des problèmes AdBlue",
     "local": true,
     "couleurCarte": "bleu-fonce",
     "icone": "droplet",
@@ -417,10 +417,10 @@
       "Engins et véhicules non homologués pour la route",
       "Recherche d'un avis transparent avant décision"
     ],
-    "legalNote": "La suppression / gestion AdBlue modifie un système anti-pollution d'origine. En France, elle n'est pas autorisée sur un véhicule circulant sur la voie publique : cette prestation est proposée exclusivement pour un usage sur circuit fermé, en compétition, à l'export ou sur un véhicule non homologué pour la route. Le client demeure responsable du respect de la réglementation en vigueur. Nous vous conseillons en toute transparence avant toute intervention.",
+    "legalNote": "La gestion des problèmes AdBlue modifie un système anti-pollution d'origine. En France, elle n'est pas autorisée sur un véhicule circulant sur la voie publique : cette prestation est proposée exclusivement pour un usage sur circuit fermé, en compétition, à l'export ou sur un véhicule non homologué pour la route. Le client demeure responsable du respect de la réglementation en vigueur. Nous vous conseillons en toute transparence avant toute intervention.",
     "faqLocale": [
       {
-        "q": "La suppression AdBlue est-elle légale sur route ?",
+        "q": "La gestion des problèmes AdBlue est-elle légale sur route ?",
         "r": "Non. Modifier un dispositif anti-pollution sur un véhicule circulant sur la voie publique n'est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit, compétition, export, véhicule non homologué). Nous vous informons clairement de ce cadre avant toute décision."
       },
       {

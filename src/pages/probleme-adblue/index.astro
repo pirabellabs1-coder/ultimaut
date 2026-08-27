@@ -14,7 +14,7 @@ const url = new URL('/probleme-adblue', site.url).href;
 const jsonLd = [
   breadcrumb([
     { name: 'Accueil', url: site.url },
-    { name: 'Suppression AdBlue', url: new URL('/suppression-adblue', site.url).href },
+    { name: 'Gestion des problèmes AdBlue', url: new URL('/gestion-probleme-adblue', site.url).href },
     { name: 'Problème AdBlue par marque', url },
   ]),
 ];
@@ -29,7 +29,7 @@ const jsonLd = [
     <div class="mx-auto max-w-[1180px] px-5 py-14 text-white sm:px-6 md:py-20">
       <nav aria-label="Fil d'Ariane" class="text-sm text-white/75">
         <a href="/" class="hover:text-white">Accueil</a> <span class="px-1.5">/</span>
-        <a href="/suppression-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
+        <a href="/gestion-probleme-adblue" class="hover:text-white">AdBlue</a> <span class="px-1.5">/</span>
         <span class="text-white">Par marque</span>
       </nav>
       <h1 class="mt-4 max-w-3xl text-4xl font-extrabold text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] md:text-5xl">Problème AdBlue par marque</h1>
@@ -54,7 +54,7 @@ const jsonLd = [
       </div>
       <div class="mt-8 rounded-2xl border border-line bg-brand-50 p-6 text-center">
         <p class="font-semibold text-ink">Votre marque n'est pas listée&#8239;?</p>
-        <p class="mt-1 text-sm text-ink-700">Nous gérons les pannes AdBlue de tous les constructeurs. <a href="/suppression-adblue" class="font-semibold text-brand hover:underline">Découvrir notre prestation AdBlue</a> ou contactez-nous directement.</p>
+        <p class="mt-1 text-sm text-ink-700">Nous gérons les pannes AdBlue de tous les constructeurs. <a href="/gestion-probleme-adblue" class="font-semibold text-brand hover:underline">Découvrir notre prestation AdBlue</a> ou contactez-nous directement.</p>
       </div>
     </div>
   </section>

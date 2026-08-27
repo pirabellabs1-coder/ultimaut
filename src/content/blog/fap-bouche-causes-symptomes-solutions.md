@@ -104,7 +104,7 @@ Quelques réflexes prolongent le résultat : rouler régulièrement sur route, 
 
 Un FAP défaillant ou retiré est un motif de **contre-visite** : le contrôle technique surveille les émissions de particules. Un filtre propre et fonctionnel est donc indispensable pour passer sereinement le volet pollution.
 
-## Suppression du FAP (déFAP) : que dit la loi ?
+## Retirer le FAP (déFAP) : que dit la loi ?
 
 Soyons factuels : **retirer ou neutraliser un FAP sur un véhicule circulant sur la voie publique n'est pas autorisé** en France. C'est aussi un motif de refus au contrôle technique. Le nettoyage, lui, est parfaitement légal et restitue la fonction d'origine du filtre — c'est la voie à privilégier.
 

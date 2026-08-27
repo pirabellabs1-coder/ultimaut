@@ -4,7 +4,7 @@ description: "Vanne EGR encrassée : 8 symptômes (perte de puissance, voyant, 
 date: 2026-05-12
 image: "/img/photo-2.jpg"
 tags: ["EGR", "Diagnostic", "Guide"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** Une **vanne EGR encrassée** se manifeste par une perte de puissance, un ralenti instable, des à-coups, une fumée noire, une surconsommation et souvent un **voyant moteur** (codes P0401, P0402, P0404). Tant qu'elle n'est pas mécaniquement HS, elle peut le plus souvent être **nettoyée** plutôt que remplacée — par spray, dépose mécanique ou décalaminage. Comptez de l'ordre de **100 à 200 €** en garage pour un nettoyage, contre 150 à 500 € pour un remplacement. Un **diagnostic** tranche.

@@ -4,7 +4,7 @@ description: "Le voyant AdBlue reste allumé après le plein ? Procédure de r
 date: 2026-05-15
 image: "/img/photo-2.jpg"
 tags: ["AdBlue", "Voyant", "Conseils"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** Un **voyant AdBlue qui reste allumé après le plein** est souvent normal pendant quelques minutes : le système doit **détecter l'appoint**. La procédure : ajouter **au moins 4 à 5 litres**, fermer les portes, démarrer, laisser tourner au ralenti **5 à 10 minutes**, puis rouler un peu. Si le voyant **persiste** au-delà, le problème n'est plus le niveau mais un **défaut** (capteur de niveau, cristallisation, injecteur) qui nécessite un **diagnostic**.

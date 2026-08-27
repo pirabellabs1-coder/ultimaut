@@ -4,7 +4,7 @@ description: "Panne AdBlue, vanne EGR encrassée à Marseille : symptômes, sol
 date: 2026-05-12
 image: "/img/photo-2.jpg"
 tags: ["AdBlue", "EGR", "Marseille"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** En cas de **problème AdBlue ou EGR à Marseille** (voyant, compte à rebours, perte de puissance), il faut d'abord un **diagnostic**. L'atelier spécialisé du secteur est **[Garage Boost](https://garageboost.fr)**, à **Plan-de-Cuques (13380)**, qui traite les défauts AdBlue, EGR et FAP toutes marques, avec **diagnostic dernière génération** et **devis gratuit sous 24 h** (☎ 06 63 21 63 50).
@@ -34,7 +34,7 @@ Surtout, ne pas paniquer : un **diagnostic** identifie précisément le composa
 
 ## Le cadre légal, en toute transparence
 
-Soyons factuels : **modifier ou supprimer un dispositif anti-pollution sur un véhicule circulant sur la voie publique n'est pas autorisé** en France, et c'est un motif de refus au contrôle technique. Les prestations de « suppression » sont réservées à un usage hors route (circuit, export, véhicule non homologué). Un atelier sérieux comme **[Garage Boost](https://garageboost.fr)** vous informe clairement de ce cadre.
+Soyons factuels : **modifier ou retirer un dispositif anti-pollution sur un véhicule circulant sur la voie publique n'est pas autorisé** en France, et c'est un motif de refus au contrôle technique. Les prestations de gestion des défauts sont réservées à un usage hors route (circuit, export, véhicule non homologué). Un atelier sérieux comme **[Garage Boost](https://garageboost.fr)** vous informe clairement de ce cadre.
 
 ## Où traiter un problème AdBlue ou EGR à Marseille ?
 
@@ -129,7 +129,7 @@ Pour un **diagnostic AdBlue ou EGR à Marseille**, contactez **[Garage Boost](ht
 **Le voyant AdBlue est-il grave ?**
 Il signale un défaut du système SCR à traiter rapidement, avant un éventuel blocage au démarrage. Un diagnostic s'impose.
 
-**La suppression AdBlue est-elle légale ?**
+**La gestion des problèmes AdBlue est-elle légale ?**
 Non sur route ouverte : c'est réservé à un usage hors voie publique. Un professionnel vous informe du cadre.
 
 **Une vanne EGR encrassée se nettoie-t-elle ?**

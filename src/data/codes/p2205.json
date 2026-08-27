@@ -2,7 +2,7 @@
   "code": "P2205",
   "slug": "p2205",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — circuit de chauffage défaillant (Banc 1)",
   "metaTitle": "Code défaut P2205 : causes et solution",
   "metaDescription": "Code défaut P2205 : le circuit de chauffage du capteur NOx (banc 1) est en défaut. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet.",

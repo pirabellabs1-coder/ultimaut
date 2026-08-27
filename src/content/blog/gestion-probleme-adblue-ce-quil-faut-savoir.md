@@ -1,10 +1,10 @@
 ---
-title: "Suppression AdBlue : ce qu'il faut savoir (et la légalité)"
+title: "Problème AdBlue : ce qu'il faut savoir (et la légalité)"
 description: "Pannes AdBlue à répétition, devis constructeur élevés… On fait le point sur le système SCR, les solutions possibles et le cadre légal, en toute transparence."
 date: 2026-02-10
 image: /img/photo-2.jpg
 tags: ["AdBlue", "Dépollution", "Conseils"]
-service: suppression-adblue
+service: gestion-probleme-adblue
 ---
 
 > **En bref —** Une **panne AdBlue** (voyant, message « démarrage impossible dans X km », mode dégradé) vient presque toujours d'un composant du système **SCR** : injecteur, pompe, sonde NOx ou calculateur. La bonne démarche : un **diagnostic** pour cibler la pièce en cause, puis le choix entre **réparation conforme** (la seule option pour rouler sur la voie publique) et gestion du défaut (réservée à un usage hors route). Le consommable AdBlue, lui, est peu cher : ce sont les pannes qui coûtent.
@@ -32,11 +32,11 @@ Le scénario type : un message « démarrage impossible dans X km » s'affich
 Face à une panne, deux voies existent :
 
 1. **La réparation conforme** : remplacer la pièce défaillante (injecteur, pompe, sonde…). C'est la solution qui maintient le véhicule en règle pour la route, mais elle peut être onéreuse.
-2. **La gestion / suppression du défaut AdBlue** : reparamétrer la gestion du système SCR pour neutraliser les blocages récurrents. C'est techniquement efficace, mais **encadré légalement** (voir ci-dessous).
+2. **La gestion du défaut AdBlue** : reparamétrer la gestion du système SCR pour neutraliser les blocages récurrents. C'est techniquement efficace, mais **encadré légalement** (voir ci-dessous).
 
 ## Le point légal, sans détour
 
-Il faut être clair : **modifier ou supprimer un dispositif anti-pollution sur un véhicule qui circule sur la voie publique n'est pas autorisé en France.** La gestion AdBlue est donc proposée **exclusivement pour un usage hors route** : circuit fermé, compétition, export, ou véhicule non homologué pour la voie publique. Le client reste responsable du respect de la réglementation.
+Il faut être clair : **modifier ou retirer un dispositif anti-pollution sur un véhicule qui circule sur la voie publique n'est pas autorisé en France.** La gestion AdBlue est donc proposée **exclusivement pour un usage hors route** : circuit fermé, compétition, export, ou véhicule non homologué pour la voie publique. Le client reste responsable du respect de la réglementation.
 
 Chez Ultimauto, nous ne vous cachons rien : nous réalisons d'abord un **diagnostic complet**, nous vous présentons **toutes les options** (y compris la réparation conforme) avec leurs implications, et vous décidez en connaissance de cause. La transparence fait partie de notre métier.
 
@@ -112,7 +112,7 @@ Non durablement : une fois le système en défaut et le compte à rebours écou
 **L'appoint d'AdBlue suffit-il à éteindre le voyant ?**
 S'il s'agit d'un simple niveau bas, oui. Si le voyant persiste après l'appoint, c'est un défaut du système : un diagnostic s'impose.
 
-**La suppression AdBlue est-elle légale ?**
+**La gestion des problèmes AdBlue est-elle légale ?**
 Non sur route ouverte : c'est interdit et sanctionné au contrôle technique. Elle est réservée à un usage hors voie publique (circuit, export, véhicule non homologué).
 
 **Combien coûte une réparation AdBlue ?**

@@ -61,7 +61,7 @@ Oui, et c'est souvent **pertinent**. Puisque l'EGR alimente le FAP en suie, nett
 
 ## EGR, FAP… et AdBlue : le trio anti-pollution
 
-Sur beaucoup de diesels récents s'ajoute un troisième dispositif : l'**AdBlue (SCR)**, qui traite aussi les NOx, en aval. EGR, FAP et AdBlue forment alors un **trio** dont les éléments interagissent. Un problème sur l'un pèse sur les autres. Pour l'AdBlue, voir **[suppression AdBlue : ce qu'il faut savoir](/blog/suppression-adblue-ce-quil-faut-savoir)**.
+Sur beaucoup de diesels récents s'ajoute un troisième dispositif : l'**AdBlue (SCR)**, qui traite aussi les NOx, en aval. EGR, FAP et AdBlue forment alors un **trio** dont les éléments interagissent. Un problème sur l'un pèse sur les autres. Pour l'AdBlue, voir **[Problème AdBlue : ce qu'il faut savoir](/blog/gestion-probleme-adblue-ce-quil-faut-savoir)**.
 
 ## Combien coûte l'entretien de chacun ?
 

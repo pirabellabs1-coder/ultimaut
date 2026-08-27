@@ -42,7 +42,7 @@
       "r": "Oui. Sur les moteurs OM651, OM654 et OM656, le capteur NOx est un point de panne bien connu : il vieillit, dérive et déclenche des codes comme P20E8 ou P229F. Notre diagnostic permet de confirmer s'il s'agit du capteur amont, aval, de l'injecteur ou d'un autre composant avant de remplacer la bonne pièce."
     },
     {
-      "q": "Peut-on supprimer l'AdBlue sur une Mercedes ?",
+      "q": "Peut-on se passer du système AdBlue sur une Mercedes ?",
       "r": "La neutralisation du système SCR rend le véhicule non conforme et interdit sur la voie publique : elle est strictement réservée à un usage privé fermé, à la compétition ou à l'export. Pour une voiture qui roule sur route, nous recommandons toujours la réparation, plus durable et conforme à la réglementation."
     }
   ]

@@ -4,10 +4,10 @@ description: "Pannes AdBlue sur Peugeot et Citroën BlueHDi : capteur de niveau
 date: 2026-05-22
 image: "/img/photo-2.jpg"
 tags: ["AdBlue", "Peugeot", "Citroën"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
-> **En bref —** Les **Peugeot et Citroën BlueHDi** sont particulièrement touchées par les pannes AdBlue, le **capteur de niveau** étant un point faible bien connu : il fausse la mesure et déclenche voyant et message « démarrage impossible » alors que le réservoir est plein. Cristallisation, injecteur et pompe complètent la liste. La bonne démarche : un **diagnostic** pour cibler le composant, puis une **réparation conforme**. La suppression n'est autorisée que hors voie publique.
+> **En bref —** Les **Peugeot et Citroën BlueHDi** sont particulièrement touchées par les pannes AdBlue, le **capteur de niveau** étant un point faible bien connu : il fausse la mesure et déclenche voyant et message « démarrage impossible » alors que le réservoir est plein. Cristallisation, injecteur et pompe complètent la liste. La bonne démarche : un **diagnostic** pour cibler le composant, puis une **réparation conforme**. Le retrait n'est autorisé que hors voie publique.
 
 Si vous roulez en Peugeot ou Citroën diesel récente (BlueHDi) et que l'AdBlue vous joue des tours, vous n'êtes pas seul. Ces modèles concentrent certaines pannes bien identifiées. Voici lesquelles, comment les diagnostiquer et comment les régler durablement.
 
@@ -59,9 +59,9 @@ La solution durable et **conforme** consiste à remplacer le composant défailla
 
 Les ordres de grandeur : un **diagnostic + réinitialisation** autour de 50 à 150 € ; le remplacement du **capteur de niveau**, souvent 200 à 400 € ; une **pompe** ou un **réservoir**, plusieurs centaines à plus de mille euros. Cibler le bon composant au diagnostic évite des dépenses inutiles. Demandez un **[devis gratuit](/prise-de-rendez-vous)**.
 
-## La « suppression » AdBlue : que dit la loi ?
+## Retirer le système AdBlue : que dit la loi ?
 
-Tenté par la suppression pour en finir ? Soyons clairs : **supprimer un dispositif anti-pollution sur un véhicule qui roule sur la voie publique n'est pas autorisé** en France et entraîne un refus au contrôle technique. Ces prestations sont réservées à un usage **hors route**. Sur route, la réponse reste la **réparation conforme**. On en parle franchement dans **[suppression AdBlue : ce qu'il faut savoir](/blog/suppression-adblue-ce-quil-faut-savoir)**.
+Tenté par le retrait pur et simple pour en finir ? Soyons clairs : **retirer un dispositif anti-pollution sur un véhicule qui roule sur la voie publique n'est pas autorisé** en France et entraîne un refus au contrôle technique. Ces prestations sont réservées à un usage **hors route**. Sur route, la réponse reste la **réparation conforme**. On en parle franchement dans **[Problème AdBlue : ce qu'il faut savoir](/blog/gestion-probleme-adblue-ce-quil-faut-savoir)**.
 
 ## Comment limiter les pannes AdBlue ?
 
@@ -81,7 +81,7 @@ Une fois la panne identifiée, le remplacement d'un **capteur de niveau** se ré
 
 ## AdBlue et contrôle technique sur Peugeot / Citroën
 
-Un voyant anti-pollution allumé ou un défaut du système AdBlue peuvent entraîner une **contre-visite** au contrôle technique. Sur un BlueHDi, régler le problème **en amont** — par une réparation conforme — permet de présenter un véhicule en règle. À l'inverse, une suppression non conforme se solderait par un refus : la voie conforme est donc aussi la plus sûre pour le contrôle.
+Un voyant anti-pollution allumé ou un défaut du système AdBlue peuvent entraîner une **contre-visite** au contrôle technique. Sur un BlueHDi, régler le problème **en amont** — par une réparation conforme — permet de présenter un véhicule en règle. À l'inverse, un retrait non conforme se solderait par un refus : la voie conforme est donc aussi la plus sûre pour le contrôle.
 
 ## Faut-il craindre pour le moteur de la BlueHDi ?
 
@@ -98,7 +98,7 @@ Comptez fréquemment de l'ordre de 200 à 400 €, diagnostic compris selon les 
 **Puis-je continuer à rouler avec le message de blocage ?**
 Le temps du compte à rebours seulement. Passé zéro, le redémarrage est refusé. Mieux vaut diagnostiquer rapidement.
 
-**La suppression AdBlue est-elle possible sur ces modèles ?**
+**Peut-on se passer de l’AdBlue sur ces modèles ?**
 Pas pour un usage routier : c'est interdit et sanctionné au contrôle technique. Réservé à un usage hors voie publique. La solution conforme est la réparation.
 
 **Comment éviter que la panne revienne ?**
@@ -106,4 +106,4 @@ Appoint régulier, AdBlue de qualité, trajets pas uniquement urbains et traitem
 
 ---
 
-Panne AdBlue sur votre Peugeot ou Citroën ? **[Demandez un diagnostic et un devis gratuit](/prise-de-rendez-vous)** : on confirme si le capteur (ou un autre composant) est en cause avant toute dépense. Découvrez notre prestation **[AdBlue](/suppression-adblue)**.
+Panne AdBlue sur votre Peugeot ou Citroën ? **[Demandez un diagnostic et un devis gratuit](/prise-de-rendez-vous)** : on confirme si le capteur (ou un autre composant) est en cause avant toute dépense. Découvrez notre prestation **[AdBlue](/gestion-probleme-adblue)**.

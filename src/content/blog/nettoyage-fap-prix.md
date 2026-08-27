@@ -125,15 +125,15 @@ L'écart est sans appel : un nettoyage coûte **2 à 4 fois moins cher** qu'un 
 
 À première vue, un FAP d'occasion à 400 € semble séduisant. En réalité, c'est souvent un pari. Vous **ignorez le taux de cendres résiduel** de la pièce : un filtre d'occasion peut déjà être à moitié saturé, ce qui veut dire qu'il se rebouchera vite. Vous n'avez **aucun historique** sur les conditions d'usage du véhicule d'origine, ni de garantie réelle. Pour quelques dizaines d'euros de plus qu'un nettoyage, vous prenez un risque que vous ne maîtrisez pas. Dans la plupart des cas, **nettoyer votre propre filtre** (dont vous connaissez l'histoire) est plus fiable que d'en monter un dont vous ne savez rien.
 
-## Les arnaques à éviter : la « suppression » FAP
+## Les arnaques à éviter : le FAP retiré (déFAP)
 
-Un point de vigilance majeur : certains ateliers proposent de **« supprimer »** le FAP, c'est-à-dire de retirer physiquement la céramique et de reprogrammer le calculateur pour ignorer le filtre. C'est tentant sur le papier (plus jamais de colmatage), mais **c'est illégal sur la route**.
+Un point de vigilance majeur : certains ateliers proposent de **retirer** le FAP, c'est-à-dire de retirer physiquement la céramique et de reprogrammer le calculateur pour ignorer le filtre. C'est tentant sur le papier (plus jamais de colmatage), mais **c'est illégal sur la route**.
 
-La suppression du FAP rend le véhicule **non conforme**, entraîne un **refus au contrôle technique**, expose à une **amende** et à l'**immobilisation**, et augmente fortement les émissions de particules. C'est aussi une mauvaise affaire à la revente. Aucune « optimisation » ne justifie de rouler hors-la-loi. La bonne approche reste de **nettoyer** le filtre quand c'est possible, ou de le **remplacer** quand il est HS — pas de le supprimer. Méfiez-vous de tout devis qui présente la suppression comme une solution d'entretien banale.
+Retirer le FAP rend le véhicule **non conforme**, entraîne un **refus au contrôle technique**, expose à une **amende** et à l'**immobilisation**, et augmente fortement les émissions de particules. C'est aussi une mauvaise affaire à la revente. Aucune « optimisation » ne justifie de rouler hors-la-loi. La bonne approche reste de **nettoyer** le filtre quand c'est possible, ou de le **remplacer** quand il est HS — pas de le retirer. Méfiez-vous de tout devis qui présente ce retrait comme une solution d'entretien banale.
 
 ## Autres pièges tarifaires
 
-Au-delà de la suppression, restez attentif à :
+Au-delà de ce cas, restez attentif à :
 
 - **Le remplacement automatique** : un garage qui annonce un changement de FAP sans avoir mesuré la contre-pression ni tenté un nettoyage cherche peut-être la facture la plus lourde.
 - **Le nettoyage sans diagnostic** : payer un nettoyage sur un filtre déjà fissuré, c'est jeter l'argent par les fenêtres.

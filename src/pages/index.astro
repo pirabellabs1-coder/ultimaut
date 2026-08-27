@@ -16,7 +16,7 @@ const bySlug = Object.fromEntries(services.map((s) => [s.slug, s]));
 const deca = bySlug['decalaminage-hydrogene'];
 const fap = bySlug['nettoyage-fap'];
 const reprog = bySlug['reprogrammation-moteur'];
-const adblue = bySlug['suppression-adblue'];
+const adblue = bySlug['gestion-probleme-adblue'];
 
 const reassurance = [
   'Sans démontage moteur',
@@ -73,7 +73,7 @@ const faq = [
   { q: 'Qu’est-ce que le décalaminage à l’hydrogène, concrètement ?', r: 'Avec une station professionnelle, on injecte de l’hydrogène dans l’admission pendant que le moteur tourne. Ce gaz améliore la combustion et aide à décoller la calamine (les dépôts de carbone) accumulée sur les soupapes, les injecteurs, la vanne EGR et le turbo. Les résidus sont ensuite évacués par l’échappement, sans démontage et sans produit chimique versé dans le moteur.' },
   { q: 'Tous les combien faut-il faire un décalaminage ?', r: 'Pour un usage urbain ou de petits trajets, un décalaminage tous les 15 000 à 30 000 km est un bon rythme préventif. Sur un moteur déjà encrassé, il agit comme une cure ponctuelle. On vous conseille selon votre kilométrage et votre façon de rouler.' },
   { q: 'Vaut-il mieux nettoyer ou remplacer un FAP ?', r: 'Tant que la céramique du filtre n’est ni fondue ni fissurée, le nettoyage est presque toujours possible — et coûte bien moins cher qu’un FAP neuf. On vérifie l’état du filtre avant toute intervention et on vous dit honnêtement ce qui est récupérable.' },
-  { q: 'La suppression AdBlue est-elle autorisée sur route ?', r: 'Non. Modifier un système anti-pollution sur un véhicule qui circule sur la voie publique n’est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit fermé, compétition, export, véhicule non homologué). On vous informe clairement de ce cadre avant toute décision.' },
+  { q: 'La gestion des problèmes AdBlue est-elle autorisée sur route ?', r: 'Non. Modifier un système anti-pollution sur un véhicule qui circule sur la voie publique n’est pas autorisé en France. Cette prestation est strictement réservée à un usage hors route (circuit fermé, compétition, export, véhicule non homologué). On vous informe clairement de ce cadre avant toute décision.' },
   { q: 'Combien de temps prend une intervention ?', r: 'Un décalaminage dure 30 à 60 minutes selon la cylindrée. Un nettoyage FAP ou une reprogrammation se réalisent généralement dans la journée. On organise le rendez-vous pour limiter votre immobilisation.' },
   { q: 'Intervenez-vous à domicile ?', r: 'Oui. En plus de notre atelier de Cholet, notre service mobile se déplace chez vous ou sur votre lieu de travail dans le Maine-et-Loire, la Loire-Atlantique, la Vendée, les Deux-Sèvres et le Morbihan (des frais de déplacement peuvent s’appliquer selon la distance).' },
 ];
@@ -342,7 +342,7 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
           <div class="mt-5 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
             <strong>Cadre légal&#160;:</strong> prestation réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué). Nous vous conseillons en toute transparence.
           </div>
-          <a href="/suppression-adblue" class="btn-primary mt-6">En savoir plus — dès 350 €</a>
+          <a href="/gestion-probleme-adblue" class="btn-primary mt-6">En savoir plus — dès 350 €</a>
         </div>
       </div>
     </div>

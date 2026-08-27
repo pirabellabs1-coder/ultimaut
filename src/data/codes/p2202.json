@@ -2,7 +2,7 @@
   "code": "P2202",
   "slug": "p2202",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — signal du circuit trop bas (Banc 1)",
   "metaTitle": "Code défaut P2202 : causes et solution",
   "metaDescription": "Code défaut P2202 : le signal du capteur NOx (banc 1) est trop bas. Causes, symptômes, diagnostic et réparation du circuit par Ultimauto à Cholet.",

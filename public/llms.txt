@@ -13,7 +13,7 @@
 - Décalaminage hydrogène : élimine la calamine (soupapes, EGR, turbo, injecteurs) sans démontage. Dès 80 €. Durée 30 à 60 min.
 - Nettoyage FAP : nettoyage chimique en profondeur d'un filtre à particules colmaté, alternative économique au remplacement. Dès 250 € (décalaminage hydrogène offert).
 - Reprogrammation moteur (Stage 1) : gain de puissance et de couple, cartographie sur mesure, cartographie d'origine conservée. 350 €.
-- Suppression / gestion AdBlue : neutralisation des pannes du système SCR. Dès 350 €. Strictement réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué).
+- Gestion des problèmes AdBlue : neutralisation des pannes du système SCR. Dès 350 €. Strictement réservée à un usage hors voie publique (circuit, compétition, export, véhicule non homologué).
 
 ## Pages clés
 - Accueil : https://ultimauto.fr/
@@ -21,7 +21,7 @@
 - Décalaminage hydrogène : https://ultimauto.fr/decalaminage-hydrogene
 - Nettoyage FAP : https://ultimauto.fr/nettoyage-fap
 - Reprogrammation moteur : https://ultimauto.fr/reprogrammation-moteur
-- Suppression AdBlue : https://ultimauto.fr/suppression-adblue
+- Gestion des problèmes AdBlue : https://ultimauto.fr/gestion-probleme-adblue
 - Simulateur de gain de puissance : https://ultimauto.fr/simulateur-gain-de-puissance
 - Zones d'intervention : https://ultimauto.fr/zones-d-intervention
 - Blog : https://ultimauto.fr/blog

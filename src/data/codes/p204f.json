@@ -2,7 +2,7 @@
   "code": "P204F",
   "slug": "p204f",
   "categorie": "AdBlue / SCR",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Performance du système de dosage du réducteur (SCR)",
   "metaTitle": "Code défaut P204F : causes et solution",
   "metaDescription": "Code défaut P204F : le système de dosage de l'AdBlue (SCR) sort de la plage attendue. Causes, symptômes, diagnostic et solution. Atelier à Cholet (49).",

@@ -2,7 +2,7 @@
   "code": "P2201",
   "slug": "p2201",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — plage/performances du circuit (Banc 1)",
   "metaTitle": "Code défaut P2201 : causes et solution",
   "metaDescription": "Code défaut P2201 : le signal du capteur NOx (banc 1) sort de la plage ou manque de cohérence. Causes, symptômes, diagnostic et réparation par Ultimauto.",

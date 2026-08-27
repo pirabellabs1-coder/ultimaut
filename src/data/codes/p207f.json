@@ -2,7 +2,7 @@
   "code": "P207F",
   "slug": "p207f",
   "categorie": "AdBlue / SCR",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Qualité du réducteur SCR insuffisante",
   "metaTitle": "Code défaut P207F : causes et solution",
   "metaDescription": "Code défaut P207F : la qualité du réducteur (AdBlue) est jugée insuffisante par le SCR. Causes, symptômes, diagnostic et solution. Atelier à Cholet (49).",

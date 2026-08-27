@@ -2,7 +2,7 @@
   "code": "P20EE",
   "slug": "p20ee",
   "categorie": "AdBlue / SCR",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Efficacité du catalyseur SCR sous le seuil (banc 1)",
   "metaTitle": "Code défaut P20EE : causes et solution",
   "metaDescription": "Code défaut P20EE : le rendement du catalyseur SCR est trop faible pour réduire les NOx. Causes, symptômes et solution. Diagnostic AdBlue à Cholet (49).",

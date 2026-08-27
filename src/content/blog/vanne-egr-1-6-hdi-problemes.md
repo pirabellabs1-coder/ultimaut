@@ -4,7 +4,7 @@ description: "Vanne EGR 1.6 HDi encrassée : pourquoi ce moteur est sensible, s
 date: 2026-06-02
 image: "/img/photo-2.jpg"
 tags: ["EGR", "1.6 HDi", "Motorisation"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** Le **1.6 HDi** est un moteur très répandu, mais sa **vanne EGR** compte parmi les plus sujettes à l'encrassement, surtout en usage urbain. Les symptômes typiques : perte de puissance, à-coups, voyant moteur (souvent **code P0401**), parfois mode dégradé. Dans la plupart des cas, la vanne se **nettoie** plutôt qu'elle ne se remplace. Un **décalaminage** régulier et des trajets routiers limitent le réencrassement.
@@ -75,9 +75,9 @@ Cela dépend de la méthode. Un **décalaminage hydrogène** prend 30 à 60 minu
 
 Un voyant moteur allumé lié à l'EGR, ou des fumées excessives, peuvent valoir une **contre-visite** au contrôle technique (volet pollution). Sur un 1.6 HDi sujet à l'encrassement, c'est un motif fréquent. Faire nettoyer la vanne et **effacer les défauts** en amont permet de présenter un véhicule en règle et d'éviter une immobilisation au mauvais moment.
 
-## Faut-il supprimer la vanne EGR du 1.6 HDi ?
+## Faut-il retirer la vanne EGR du 1.6 HDi ?
 
-La tentation existe, mais soyons clairs : **supprimer ou neutraliser une vanne EGR sur un véhicule qui circule sur la voie publique n'est pas autorisé** en France, et c'est un motif de refus au contrôle technique. Ces prestations sont strictement réservées à un usage hors route. Sur un 1.6 HDi, la bonne réponse à un encrassement reste le **nettoyage** (ou le remplacement si la vanne est HS), pas la suppression. Un professionnel sérieux vous informe de ce cadre.
+La tentation existe, mais soyons clairs : **retirer ou neutraliser une vanne EGR sur un véhicule qui circule sur la voie publique n'est pas autorisé** en France, et c'est un motif de refus au contrôle technique. Ces prestations sont strictement réservées à un usage hors route. Sur un 1.6 HDi, la bonne réponse à un encrassement reste le **nettoyage** (ou le remplacement si la vanne est HS), pas son retrait. Un professionnel sérieux vous informe de ce cadre.
 
 ## 1.6 HDi : les autres points d'entretien à surveiller
 

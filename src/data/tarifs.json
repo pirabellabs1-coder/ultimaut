@@ -34,8 +34,8 @@
       "note": "Pour toute demande personnalisée ou combinaison spécifique, contactez-nous directement."
     },
     {
-      "titre": "Suppression AdBlue",
-      "service": "suppression-adblue",
+      "titre": "Gestion des problèmes AdBlue",
+      "service": "gestion-probleme-adblue",
       "formules": [
         { "nom": "Gestion problème AdBlue", "desc": "Reparamétrage du système SCR après diagnostic", "prix": "350 €" },
         { "nom": "Pack AdBlue + Stage 1", "desc": "Gestion AdBlue + reprogrammation Stage 1", "prix": "500 €" },

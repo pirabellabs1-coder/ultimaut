@@ -2,7 +2,7 @@
   "code": "P208A",
   "slug": "p208a",
   "categorie": "AdBlue / SCR",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Circuit de commande du module de dosage du réducteur",
   "metaTitle": "Code défaut P208A : causes et solution",
   "metaDescription": "Code défaut P208A : défaut du circuit de commande du module de dosage AdBlue (SCR). Causes, symptômes, diagnostic et solution. Atelier AdBlue à Cholet (49).",

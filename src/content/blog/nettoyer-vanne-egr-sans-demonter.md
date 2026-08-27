@@ -4,7 +4,7 @@ description: "Nettoyer sa vanne EGR sans démontage : nettoyage en roulant, spr
 date: 2026-05-19
 image: "/img/photo-1.jpg"
 tags: ["EGR", "Nettoyage", "Conseils"]
-service: "suppression-adblue"
+service: "gestion-probleme-adblue"
 ---
 
 > **En bref —** On peut **nettoyer une vanne EGR sans la démonter** par plusieurs méthodes : le **nettoyage en roulant** (préventif), le **spray nettoyant EGR**, le **décalaminage hydrogène** et l'**additif** carburant. Ces solutions fonctionnent bien sur un encrassement **léger à modéré**. Sur une vanne fortement colmatée ou grippée, le nettoyage **avec dépose** reste plus efficace. Dans tous les cas, on termine par l'**effacement des défauts** pour repartir proprement.

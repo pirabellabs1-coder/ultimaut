@@ -2,7 +2,7 @@
   "code": "P2204",
   "slug": "p2204",
   "categorie": "Capteur NOx",
-  "service": "suppression-adblue",
+  "service": "gestion-probleme-adblue",
   "titre": "Capteur NOx — circuit intermittent (Banc 1)",
   "metaTitle": "Code défaut P2204 : causes et solution",
   "metaDescription": "Code défaut P2204 : le circuit du capteur NOx (banc 1) présente un défaut intermittent. Causes, symptômes, diagnostic et réparation par Ultimauto à Cholet.",
