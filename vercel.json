@@ -32,6 +32,111 @@
       "statusCode": 301
     },
     {
+      "source": "/suppression-adblue/audi",
+      "destination": "/probleme-adblue/audi",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/bmw",
+      "destination": "/probleme-adblue/bmw",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/citroen",
+      "destination": "/probleme-adblue/citroen",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/dacia",
+      "destination": "/probleme-adblue/dacia",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/ds",
+      "destination": "/probleme-adblue/ds",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/fiat",
+      "destination": "/probleme-adblue/fiat",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/ford",
+      "destination": "/probleme-adblue/ford",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/hyundai",
+      "destination": "/probleme-adblue/hyundai",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/jaguar",
+      "destination": "/probleme-adblue/jaguar",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/kia",
+      "destination": "/probleme-adblue/kia",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/land-rover",
+      "destination": "/probleme-adblue/land-rover",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/mercedes",
+      "destination": "/probleme-adblue/mercedes",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/mini",
+      "destination": "/probleme-adblue/mini",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/nissan",
+      "destination": "/probleme-adblue/nissan",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/opel",
+      "destination": "/probleme-adblue/opel",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/peugeot",
+      "destination": "/probleme-adblue/peugeot",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/renault",
+      "destination": "/probleme-adblue/renault",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/seat",
+      "destination": "/probleme-adblue/seat",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/toyota",
+      "destination": "/probleme-adblue/toyota",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/volkswagen",
+      "destination": "/probleme-adblue/volkswagen",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue/volvo",
+      "destination": "/probleme-adblue/volvo",
+      "statusCode": 301
+    },
+    {
       "source": "/suppression-adblue/:ville",
       "destination": "/gestion-probleme-adblue/:ville",
       "statusCode": 301
@@ -1524,6 +1629,111 @@
     {
       "source": "/suppression-dadblue/:rest(.*)",
       "destination": "/gestion-probleme-adblue",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-audi",
+      "destination": "/probleme-adblue/audi",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-bmw",
+      "destination": "/probleme-adblue/bmw",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-citroen",
+      "destination": "/probleme-adblue/citroen",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-dacia",
+      "destination": "/probleme-adblue/dacia",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-ds",
+      "destination": "/probleme-adblue/ds",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-fiat",
+      "destination": "/probleme-adblue/fiat",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-ford",
+      "destination": "/probleme-adblue/ford",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-hyundai",
+      "destination": "/probleme-adblue/hyundai",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-jaguar",
+      "destination": "/probleme-adblue/jaguar",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-kia",
+      "destination": "/probleme-adblue/kia",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-land-rover",
+      "destination": "/probleme-adblue/land-rover",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-mercedes",
+      "destination": "/probleme-adblue/mercedes",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-mini",
+      "destination": "/probleme-adblue/mini",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-nissan",
+      "destination": "/probleme-adblue/nissan",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-opel",
+      "destination": "/probleme-adblue/opel",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-peugeot",
+      "destination": "/probleme-adblue/peugeot",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-renault",
+      "destination": "/probleme-adblue/renault",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-seat",
+      "destination": "/probleme-adblue/seat",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-toyota",
+      "destination": "/probleme-adblue/toyota",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-volkswagen",
+      "destination": "/probleme-adblue/volkswagen",
+      "statusCode": 301
+    },
+    {
+      "source": "/suppression-adblue-volvo",
+      "destination": "/probleme-adblue/volvo",
       "statusCode": 301
     },
     {
