@@ -13,8 +13,13 @@ const BYPASS = 'acces-prive-ultimauto';
 // Page de pilotage du mode maintenance (bouton ON/OFF) — toujours accessible.
 const ADMIN_PATH = '/pilote';
 
+// Forçage temporaire du mode maintenance via le code (mot de passe /pilote oublié).
+// Mettre à false puis redéployer pour revenir au pilotage normal via Edge Config.
+const FORCE_MAINTENANCE = true;
+
 // Lit le flag maintenance depuis Edge Config. Fail-safe : si non configuré / erreur -> false (site normal).
 async function isMaintenance() {
+  if (FORCE_MAINTENANCE) return true;
   if (!process.env.EDGE_CONFIG) return false;
   try {
     return (await get('maintenance')) === true;
