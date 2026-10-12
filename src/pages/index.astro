@@ -18,10 +18,9 @@ const fap = bySlug['nettoyage-fap'];
 const reprog = bySlug['reprogrammation-moteur'];
 const adblue = bySlug['gestion-probleme-adblue'];
 
-const reassurance = [
-  'Sans démontage moteur',
-  'Devis gratuit & sans engagement',
-  'Service mobile à domicile ou au travail',
+const bandeau = [
+  'Service mobile · 5 départements',
+  'Diagnostic honnête avant tout',
   'Revendeur agréé Bardahl',
 ];
 
@@ -136,17 +135,27 @@ const description = "Spécialiste du décalaminage hydrogène et du nettoyage FA
     </div>
   </section>
 
-  <!-- ===================== RÉASSURANCE ===================== -->
+  <!-- ===================== BANDEAU CONFIANCE ===================== -->
   <div class="border-b border-line bg-white">
-    <div class="mx-auto grid max-w-[1180px] grid-cols-2 gap-x-6 gap-y-4 px-6 py-6 lg:grid-cols-4">
-      {reassurance.map((t) => (
-        <div class="flex items-center gap-3">
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-accent-50 text-accent-700">
-            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
-          </span>
-          <span class="text-sm font-semibold leading-tight text-ink">{t}</span>
-        </div>
-      ))}
+    <div class="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-4 px-6 py-5 lg:flex-row lg:gap-6">
+      <a href={avisData.url} target="_blank" rel="noopener" class="group inline-flex shrink-0 items-center gap-3" aria-label={`Note ${avisData.rating} sur 5 — ${avisData.count} avis Google`}>
+        <span class="flex text-accent" aria-hidden="true">
+          {[0, 1, 2, 3, 4].map(() => <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.8L12 17.8 5.9 20.8 7.1 14l-5-4.8 6.9-.9z" /></svg>)}
+        </span>
+        <span class="text-sm leading-tight">
+          <strong class="font-display text-base font-extrabold text-ink group-hover:text-brand">{avisData.rating}/5</strong>
+          <span class="text-ink-500"> · {avisData.count} avis Google</span>
+        </span>
+      </a>
+      <span class="hidden h-6 w-px bg-line lg:block" aria-hidden="true"></span>
+      <ul class="flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
+        {bandeau.map((t) => (
+          <li class="inline-flex items-center gap-2 text-sm font-semibold leading-tight text-ink">
+            <svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-accent-600" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+            {t}
+          </li>
+        ))}
+      </ul>
     </div>
   </div>
 
