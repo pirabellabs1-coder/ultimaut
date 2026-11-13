@@ -1,5 +1,5 @@
-// Cœur du formulaire de contact, partagé entre la fonction Vercel (api/contact.js)
-// et le Worker Cloudflare (worker/index.js). Envoie une notification à l'atelier
+// Cœur du formulaire de contact, appelé par le Worker (worker/index.js, route /api/contact).
+// Envoie une notification à l'atelier
 // ET un accusé de réception au visiteur, via Resend.
 // Config lue dans l'objet env fourni par l'appelant : RESEND_API_KEY, CONTACT_FROM, CONTACT_TO.
 

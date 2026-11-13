@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import worker from './index.js';
 import { findRedirect } from './redirects.js';
-import vercel from '../vercel.json' with { type: 'json' };
+import rules from './redirects.json' with { type: 'json' };
 import { match, compile } from 'path-to-regexp';
 
 const SECRET = 'secret-de-test';
@@ -55,19 +55,19 @@ test('redirections à motif (paramètres reportés)', () => {
   assert.equal(findRedirect('/sitemap-index.xml'), null);
 });
 
-// Oracle indépendant : path-to-regexp (moteur des redirections Vercel), slash final optionnel,
+// Oracle indépendant : path-to-regexp (moteur historique des redirections Vercel), slash final optionnel,
 // insensible à la casse, première règle gagnante — la sémantique retenue pour le Worker.
 function oracle(pathname) {
-  for (const r of vercel.redirects) {
+  for (const r of rules) {
     const m = match(r.source, { strict: false, sensitive: false, decode: decodeURIComponent })(pathname);
     if (m) return compile(r.destination)(m.params);
   }
   return null;
 }
 
-test('toutes les redirections de vercel.json = oracle path-to-regexp', () => {
+test('toutes les redirections de redirects.json = oracle path-to-regexp', () => {
   const samples = new Set();
-  for (const r of vercel.redirects) {
+  for (const r of rules) {
     const base = r.source.replace(/:(\w+)\(\.\*\)/g, 'a/b-c').replace(/:(\w+)/g, 'valeur');
     for (const p of [base, base.replace(/\/$/, ''), base.replace(/\/?$/, '/'), base.toUpperCase()]) if (p) samples.add(p);
   }
@@ -120,7 +120,7 @@ test('géo-blocage : humains bloqués, robots et propriétaire autorisés', asyn
   assert.equal((await run('/', { country: 'US', cookie: 'ua_ok=acces-prive-ultimauto' })).status, 200);
   assert.equal((await run('/', { country: 'FR' })).status, 200);
   assert.equal((await run('/', { country: '' })).status, 200);
-  assert.equal((await run('/robots.txt', { country: 'US' })).status, 200, 'fichiers non bloqués (comme le matcher Vercel)');
+  assert.equal((await run('/robots.txt', { country: 'US' })).status, 200, 'fichiers non bloqués par le géo-blocage');
 });
 
 test('API maintenance : secret, lecture, écriture', async () => {
@@ -225,16 +225,6 @@ test('API contact : envoi Resend (notification + accusé), erreurs masquées', a
     globalThis.fetch = realFetch;
     console.error = realErr;
   }
-});
-
-test('adaptateur Vercel api/contact.js (repli) toujours fonctionnel', async () => {
-  const { default: handler } = await import('../api/contact.js');
-  const out = [];
-  const res = { setHeader() {}, status(s) { this.s = s; return this; }, json(b) { out.push([this.s, b]); } };
-  await handler({ method: 'GET' }, res);
-  await handler({ method: 'POST', body: '{"nom":"a"}' }, res);
-  await handler({ method: 'POST', body: { botcheck: '1' } }, res);
-  assert.deepEqual(out, [[405, { error: 'method_not_allowed' }], [400, { error: 'champs_requis' }], [200, { ok: true }]]);
 });
 
 test('limite de débit : 429 au-delà du quota, par API', async () => {

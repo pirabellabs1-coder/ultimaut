@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // URL de prod EXACTE — sert au sitemap, aux canonical et au JSON-LD.
   site: 'https://ultimauto.fr',
-  // URLs sans slash final (cohérent avec les liens internes + Vercel) — évite les doublons canoniques.
+  // URLs sans slash final (cohérent avec les liens internes + le Worker Cloudflare) — évite les doublons canoniques.
   trailingSlash: 'never',
   // Astro 7 compresse par défaut avec les règles JSX ('jsx'), qui suppriment les espaces
   // contenant un retour à la ligne entre éléments (mots collés à l'affichage).

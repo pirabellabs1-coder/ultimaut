@@ -1,8 +1,8 @@
-// Worker Cloudflare d'ultimauto.fr — remplace le middleware et les fonctions Vercel.
+// Worker Cloudflare d'ultimauto.fr (hébergement depuis le 13/11/2026, en remplacement de Vercel).
 // Ordre de traitement :
 //   1) API : /api/contact, /api/maintenance
-//   2) Redirections 301 (vercel.json) puis suppression du slash final (308).
-//      Écart voulu avec Vercel (qui retire d'abord le slash) : « /ancienne-url/ » part en 301 en un seul saut,
+//   2) Redirections 301 (worker/redirects.json) puis suppression du slash final (308).
+//      Écart voulu avec l'ancien comportement Vercel (qui retirait d'abord le slash) : « /ancienne-url/ » part en 301 en un seul saut,
 //      et « /2024/ » redirige vers /blog au lieu de finir en 404.
 //   3) Pages : /pilote toujours joignable -> accès privé propriétaire -> maintenance (503) -> géo-blocage (403)
 //   4) Fichiers statiques de dist/ (binding ASSETS)
@@ -77,7 +77,7 @@ async function isMaintenance(env) {
   }
 }
 
-// Corps JSON décodé ; {} si vide (comme Vercel) ; null si le JSON est invalide.
+// Corps JSON décodé ; {} si vide ; null si le JSON est invalide.
 // Limite de débit par IP (binding Workers Rate Limiting). Absent ou en erreur -> pas de blocage.
 async function tooManyRequests(limiter, request) {
   if (!limiter) return false;
@@ -137,12 +137,12 @@ async function contactApi(request, env) {
   if (request.method !== 'POST') return json(405, { error: 'method_not_allowed' }, { Allow: 'POST' });
   if (await tooManyRequests(env.CONTACT_LIMITER, request)) return RATE_LIMITED();
   const body = await readJson(request);
-  if (!body) return json(500, { error: 'erreur_serveur' }); // JSON invalide : même réponse que la version Vercel
+  if (!body) return json(500, { error: 'erreur_serveur' }); // JSON invalide
   const r = await handleContact(body, env);
   return json(r.status, r.body);
 }
 
-// Pages soumises à la logique d'accès (même périmètre que le matcher du middleware Vercel) :
+// Pages soumises à la logique d'accès :
 // tout sauf /api/, /_astro/ et les chemins contenant un point (fichiers).
 const isPagePath = (p) => !p.startsWith('/api/') && !p.startsWith('/_astro/') && !p.includes('.');
 
@@ -155,7 +155,7 @@ const router = {
     if (path === '/api/contact') return withSecurity(await contactApi(request, env));
     if (path === '/api/maintenance') return withSecurity(await maintenanceApi(request, env, url));
 
-    // 2) Redirections permanentes (la requête conserve sa query string, comme sur Vercel)
+    // 2) Redirections permanentes (la requête conserve sa query string)
     const dest = findRedirect(path);
     if (dest) return withSecurity(Response.redirect(new URL(dest + url.search, url).toString(), 301));
     if (path.length > 1 && path.endsWith('/')) {

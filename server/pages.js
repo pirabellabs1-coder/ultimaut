@@ -1,4 +1,4 @@
-// Pages HTML autonomes servies par le middleware (Vercel) et le Worker (Cloudflare).
+// Pages HTML autonomes servies par le Worker : maintenance (503) et géo-blocage (403).
 
 const SVC_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1565C0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>';
 

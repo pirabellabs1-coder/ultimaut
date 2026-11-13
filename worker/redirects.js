@@ -1,9 +1,9 @@
-// Redirections 301 — source unique : la liste "redirects" de vercel.json (tant que Vercel sert de repli).
-// Reproduit la sémantique Vercel (path-to-regexp) :
+// Redirections 301 — source unique : worker/redirects.json (liste ordonnée { source, destination }).
+// Sémantique héritée des redirections Vercel (path-to-regexp) :
 //   - la première règle qui correspond l'emporte (ordre du fichier) ;
 //   - slash final optionnel, comparaison insensible à la casse ;
 //   - ":param" = un segment, ":param(.*)" = tout le reste ; les paramètres sont reportés dans la destination.
-import vercel from '../vercel.json' with { type: 'json' };
+import rules from './redirects.json' with { type: 'json' };
 
 const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\/-]/g, '\\$&');
 
@@ -31,7 +31,7 @@ function compile(source) {
 const exact = new Map(); // clé normalisée -> { idx, destination }
 const patterns = []; // { idx, re, destination }, dans l'ordre du fichier
 
-(vercel.redirects || []).forEach((r, idx) => {
+rules.forEach((r, idx) => {
   if (/[:(*]/.test(r.source)) {
     patterns.push({ idx, re: compile(r.source), destination: r.destination });
   } else {
