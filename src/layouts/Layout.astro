@@ -314,6 +314,17 @@ const allJsonLd = [organization(site), website(site), localBusiness(site, avis),
       menu?.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
       window.addEventListener('resize', () => { if (window.innerWidth >= 1280) setMenu(false); }, { passive: true });
+
+      // GA4 : clics sur le téléphone et WhatsApp (à marquer comme « événements clés » dans GA4).
+      document.addEventListener('click', (e) => {
+        const a = e.target instanceof Element ? e.target.closest('a[href^="tel:"], a[href*="wa.me/"]') : null;
+        if (!a || typeof window.gtag !== 'function') return;
+        const tel = a.getAttribute('href')?.startsWith('tel:');
+        window.gtag('event', tel ? 'clic_telephone' : 'clic_whatsapp', {
+          event_category: 'lead',
+          emplacement: a.closest('[data-origine]')?.getAttribute('data-origine') || 'autre',
+        });
+      });
     </script>
   </body>
 </html>

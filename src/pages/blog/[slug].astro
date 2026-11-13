@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import site from '../../data/site.json';
 import { WA_PATH } from '../../lib/ui.js';
+import LocalCallout from '../../components/LocalCallout.astro';
 import { article, breadcrumb } from '../../lib/jsonld.js';
 
 export async function getStaticPaths() {
@@ -45,6 +46,7 @@ const jsonLd = [
         <article class="rte">
           <Content />
         </article>
+        <LocalCallout waText={`Bonjour Ultimauto, je viens de lire votre article « ${post.data.title} ».`} origine="blog" />
         <div class="mt-10 flex items-start gap-4 rounded-2xl border border-line bg-cloud p-5">
           <div class="grid h-12 w-12 flex-none place-items-center rounded-full bg-brand font-display text-lg font-extrabold text-white">R</div>
           <div>
