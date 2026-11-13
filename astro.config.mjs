@@ -9,6 +9,10 @@ export default defineConfig({
   site: 'https://ultimauto.fr',
   // URLs sans slash final (cohérent avec les liens internes + Vercel) — évite les doublons canoniques.
   trailingSlash: 'never',
+  // Astro 7 compresse par défaut avec les règles JSX ('jsx'), qui suppriment les espaces
+  // contenant un retour à la ligne entre éléments (mots collés à l'affichage).
+  // `true` garde la compression sans perte d'Astro 6.
+  compressHTML: true,
   integrations: [
     sitemap({
       changefreq: 'weekly',
