@@ -48,7 +48,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     body = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
   }
-  const cle = String((req.method === 'POST' ? body.cle : (req.query && req.query.cle)) || '');
+  const cle = String((req.method === 'POST' ? body.cle : req.headers['x-cle'] || (req.query && req.query.cle)) || '');
   if (cle !== secret) return res.status(401).json({ error: 'non_autorise' });
 
   try {

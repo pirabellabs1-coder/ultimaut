@@ -1,0 +1,10 @@
+# En-têtes Cloudflare pour les fichiers servis sans passer par le Worker (/_astro/*, /img/*).
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
+
+# Fichiers fingerprintés par Astro : contenu immuable, cache long.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

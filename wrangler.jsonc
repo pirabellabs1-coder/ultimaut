@@ -1,0 +1,22 @@
+// Configuration Cloudflare Worker d'ultimauto.fr (Worker + fichiers statiques Astro).
+// Build : `npm run build` (dist/) ; local : `npm run cf:dev` ; prod : `npm run cf:deploy`.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ultimauto",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // URLs sans slash final : /contact sert dist/contact/index.html (pas de redirection vers /contact/).
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page",
+    // Le Worker passe en premier partout (redirections, maintenance, géo-blocage),
+    // sauf pour les assets fingerprintés et les images, servis directement (aucune requête Worker facturée).
+    "run_worker_first": ["/*", "!/_astro/*", "!/img/*"]
+  },
+  // Flag "maintenance" ("true"/"false"). Sans id : créé automatiquement au premier déploiement.
+  "kv_namespaces": [{ "binding": "FLAGS" }],
+  "observability": { "enabled": true },
+  "preview_urls": false
+}

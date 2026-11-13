@@ -10,7 +10,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "indexnow": "node indexnow.mjs"
+    "indexnow": "node indexnow.mjs",
+    "cf:dev": "astro build && wrangler dev",
+    "cf:deploy": "astro build && wrangler deploy",
+    "test:worker": "node --test \"worker/*.test.mjs\""
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -24,5 +27,9 @@
   },
   "overrides": {
     "vite": "7.3.3"
+  },
+  "devDependencies": {
+    "path-to-regexp": "^6.3.0",
+    "wrangler": "^4.161.0"
   }
 }

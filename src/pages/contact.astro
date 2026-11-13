@@ -40,11 +40,11 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
         <form id="contact-form" class="mt-6 space-y-4" novalidate>
           <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="grid gap-4 sm:grid-cols-2">
-            <label class="block"><span class="text-sm font-semibold">Nom *</span><input required name="nom" type="text" autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
-            <label class="block"><span class="text-sm font-semibold">Téléphone *</span><input required name="telephone" type="tel" autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block"><span class="text-sm font-semibold">Nom *</span><input required name="nom" type="text" maxlength="100" autocomplete="name" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block"><span class="text-sm font-semibold">Téléphone *</span><input required name="telephone" type="tel" maxlength="30" autocomplete="tel" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
           </div>
           <div class="grid gap-4 sm:grid-cols-2">
-            <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
+            <label class="block"><span class="text-sm font-semibold">E-mail</span><input name="email" type="email" maxlength="254" autocomplete="email" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand" /></label>
             <label class="block">
               <span class="text-sm font-semibold">Votre département *</span>
               <select required name="departement" id="contact-dept" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand">
@@ -58,7 +58,7 @@ const jsonLd = [breadcrumb([{ name: 'Accueil', url: site.url }, { name: 'Contact
             <strong class="text-ink">Nous n'intervenons pas dans votre département.</strong> Ultimauto se déplace uniquement
             dans le {LISTE_COURTE} — nous ne pourrons pas donner suite à une demande d'intervention hors de cette zone.
           </p>
-          <label class="block"><span class="text-sm font-semibold">Message *</span><textarea required name="message" rows="5" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand"></textarea></label>
+          <label class="block"><span class="text-sm font-semibold">Message *</span><textarea required name="message" rows="5" maxlength="5000" class="mt-1.5 w-full rounded-xl border border-line bg-white px-4 py-2.5 outline-none focus:border-brand"></textarea></label>
           <button type="submit" class="btn-primary w-full">Envoyer le message</button>
           <p data-form-status role="status" aria-live="polite" class="hidden text-sm"></p>
           <p class="text-xs text-ink-500">En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour traiter votre demande (voir notre <a href="/politique-de-confidentialite" class="underline">politique de confidentialité</a>).</p>

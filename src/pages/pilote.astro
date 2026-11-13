@@ -63,7 +63,7 @@ export const prerender = true;
           <p class="lbl">Mode maintenance</p>
           <div id="m-state" class="state loading"><span class="dot"></span><span id="m-txt">Vérification…</span></div>
           <button id="m-btn" type="button" disabled>…</button>
-          <p class="note">Effet immédiat. Les visiteurs voient une page « bientôt de retour » ; vous, non.</p>
+          <p class="note">Effet en une à deux minutes. Les visiteurs voient une page « bientôt de retour » ; vous, non.</p>
           <div id="m-msg" class="msg"></div>
         </div>
 
@@ -75,12 +75,15 @@ export const prerender = true;
   <script is:inline>
     (function () {
       var cle = new URLSearchParams(location.search).get('cle') || sessionStorage.getItem('ua_cle') || '';
+      // Retire la clé de la barre d'adresse (historique du navigateur).
+      if (/[?&]cle=/.test(location.search)) history.replaceState(null, '', location.pathname);
       var needkey = document.getElementById('needkey');
       var panel = document.getElementById('panel');
 
       function api(endpoint, method, body) {
-        var url = '/api/' + endpoint + (method === 'GET' ? '?cle=' + encodeURIComponent(cle) : '');
-        var opt = { method: method, headers: { 'Content-Type': 'application/json' } };
+        // La clé part dans un en-tête (jamais dans l'URL : elle finirait dans les logs).
+        var url = '/api/' + endpoint;
+        var opt = { method: method, headers: { 'Content-Type': 'application/json', 'X-Cle': cle } };
         if (body) opt.body = JSON.stringify({ cle: cle, on: body.on });
         return fetch(url, opt).then(function (r) {
           return r.json().then(function (j) { return { status: r.status, j: j }; });
