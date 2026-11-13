@@ -6,7 +6,8 @@
 //      et « /2024/ » redirige vers /blog au lieu de finir en 404.
 //   3) Pages : /pilote toujours joignable -> accès privé propriétaire -> maintenance (503) -> géo-blocage (403)
 //   4) Fichiers statiques de dist/ (binding ASSETS)
-// Bindings : ASSETS (fichiers statiques), FLAGS (KV, clé "maintenance").
+// Bindings : ASSETS (fichiers statiques), FLAGS (KV, clé "maintenance"),
+//   CONTACT_LIMITER et MAINTENANCE_LIMITER (limites de débit par IP).
 // Secrets : MAINTENANCE_SECRET, RESEND_API_KEY, CONTACT_FROM, CONTACT_TO.
 import { decide } from '../geo-rules.js';
 import { MAINT_PAGE, BLOCK_PAGE } from '../server/pages.js';
@@ -77,6 +78,19 @@ async function isMaintenance(env) {
 }
 
 // Corps JSON décodé ; {} si vide (comme Vercel) ; null si le JSON est invalide.
+// Limite de débit par IP (binding Workers Rate Limiting). Absent ou en erreur -> pas de blocage.
+async function tooManyRequests(limiter, request) {
+  if (!limiter) return false;
+  try {
+    const { success } = await limiter.limit({ key: request.headers.get('cf-connecting-ip') || 'inconnu' });
+    return !success;
+  } catch {
+    return false;
+  }
+}
+
+const RATE_LIMITED = () => json(429, { error: 'trop_de_requetes' }, { 'retry-after': '60' });
+
 async function readJson(request) {
   try {
     const text = await request.text();
@@ -94,6 +108,7 @@ async function maintenanceApi(request, env, url) {
   if (request.method !== 'GET' && request.method !== 'POST') {
     return json(405, { error: 'method_not_allowed' }, { Allow: 'GET, POST' });
   }
+  if (await tooManyRequests(env.MAINTENANCE_LIMITER, request)) return RATE_LIMITED();
   if (!env.MAINTENANCE_SECRET || !env.FLAGS) return json(500, { error: 'config_manquante' });
 
   let body = {};
@@ -120,6 +135,7 @@ async function maintenanceApi(request, env, url) {
 
 async function contactApi(request, env) {
   if (request.method !== 'POST') return json(405, { error: 'method_not_allowed' }, { Allow: 'POST' });
+  if (await tooManyRequests(env.CONTACT_LIMITER, request)) return RATE_LIMITED();
   const body = await readJson(request);
   if (!body) return json(500, { error: 'erreur_serveur' }); // JSON invalide : même réponse que la version Vercel
   const r = await handleContact(body, env);
@@ -130,8 +146,8 @@ async function contactApi(request, env) {
 // tout sauf /api/, /_astro/ et les chemins contenant un point (fichiers).
 const isPagePath = (p) => !p.startsWith('/api/') && !p.startsWith('/_astro/') && !p.includes('.');
 
-export default {
-  async fetch(request, env) {
+const router = {
+  async route(request, env) {
     const url = new URL(request.url);
     const path = url.pathname;
 
@@ -175,5 +191,23 @@ export default {
 
     // 4) Fichier statique
     return withSecurity(await env.ASSETS.fetch(request));
+  },
+};
+
+export default {
+  async fetch(request, env) {
+    // www.ultimauto.fr -> ultimauto.fr (domaine canonique, sans www), chemin et query conservés.
+    const host = new URL(request.url).hostname;
+    if (host.startsWith('www.')) {
+      const to = new URL(request.url);
+      to.hostname = host.slice(4);
+      return withSecurity(Response.redirect(to.toString(), 301));
+    }
+    const response = await router.route(request, env);
+    // Adresse de test *.workers.dev : jamais indexée (évite le contenu dupliqué avec ultimauto.fr).
+    if (new URL(request.url).hostname.endsWith('.workers.dev')) {
+      response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+    }
+    return response;
   },
 };

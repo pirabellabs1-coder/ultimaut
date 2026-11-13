@@ -236,3 +236,29 @@ test('adaptateur Vercel api/contact.js (repli) toujours fonctionnel', async () =
   await handler({ method: 'POST', body: { botcheck: '1' } }, res);
   assert.deepEqual(out, [[405, { error: 'method_not_allowed' }], [400, { error: 'champs_requis' }], [200, { ok: true }]]);
 });
+
+test('limite de débit : 429 au-delà du quota, par API', async () => {
+  const limiter = (max) => { let n = 0; return { limit: async () => ({ success: ++n <= max }) }; };
+  const env = { ...makeEnv(), CONTACT_LIMITER: limiter(1), MAINTENANCE_LIMITER: limiter(1) };
+  const post = () => worker.fetch(req('/api/contact', { method: 'POST', body: '{}' }), env);
+  assert.equal((await post()).status, 400);
+  const r = await post();
+  assert.equal(r.status, 429);
+  assert.equal(r.headers.get('retry-after'), '60');
+  assert.equal((await worker.fetch(req('/api/maintenance'), env)).status, 401);
+  assert.equal((await worker.fetch(req('/api/maintenance'), env)).status, 429);
+  const broken = { ...makeEnv(), CONTACT_LIMITER: { limit: async () => { throw new Error('x'); } } };
+  assert.equal((await worker.fetch(req('/api/contact', { method: 'POST', body: '{}' }), broken)).status, 400, 'limiteur en panne = pas de blocage');
+});
+
+test('adresse *.workers.dev : noindex ; ultimauto.fr : indexable', async () => {
+  const r = await worker.fetch(new Request('https://ultimauto.compte.workers.dev/contact'), makeEnv());
+  assert.equal(r.headers.get('x-robots-tag'), 'noindex, nofollow');
+  assert.equal((await run('/contact')).headers.get('x-robots-tag'), null);
+});
+
+test('www.ultimauto.fr redirige en 301 vers ultimauto.fr (chemin + query conservés)', async () => {
+  const r = await worker.fetch(new Request('https://www.ultimauto.fr/contact?x=1'), makeEnv());
+  assert.equal(r.status, 301);
+  assert.equal(r.headers.get('location'), 'https://ultimauto.fr/contact?x=1');
+});
